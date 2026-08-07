@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>David Sommerer — Electrical & Systems Engineer Portfolio</title>
-  <meta name="description" content="Portfolio of David Sommerer, an Electrical & Systems Engineer specializing in bare-metal C/C++, ROS2 swarm robotics, MPC flight controllers, and SORA aerospace safety.">
+  <meta name="description" content="Portfolio of David Sommerer, an Electrical & Systems Engineer at HTL Elektrotechnik Salzburg specializing in embedded C/C++, AI autonomous RC cars, 6DoF simulators, and control systems.">
 
   <!-- Tailwind CSS CDN & Config -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -34,7 +34,7 @@
 </head>
 <body class="bg-[#05050a] text-zinc-200 antialiased selection:bg-sky-500/30 selection:text-sky-300 min-h-screen relative">
 
-  <!-- SUBTLE AMBIENT BACKGROUND GLOWS (PREVENTS EMPTY FEELING) -->
+  <!-- SUBTLE AMBIENT BACKGROUND GLOWS -->
   <div class="pointer-events-none fixed inset-0 z-0">
     <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[radial-gradient(ellipse_at_top,rgba(56,189,248,0.12),transparent_70%)]"></div>
     <div class="absolute top-1/3 left-0 w-[500px] h-[500px] bg-[radial-gradient(circle_at_left,rgba(16,185,129,0.04),transparent_60%)]"></div>
@@ -55,9 +55,9 @@
       <div class="flex items-center space-x-6 text-xs font-mono text-muted">
         <nav class="hidden md:flex items-center space-x-6">
           <a href="#about" class="hover:text-foreground transition-colors" data-i18n="nav_about">About</a>
+          <a href="#experience" class="hover:text-foreground transition-colors" data-i18n="nav_experience">Experience</a>
           <a href="#skills" class="hover:text-foreground transition-colors" data-i18n="nav_skills">Skills</a>
           <a href="#projects" class="hover:text-foreground transition-colors" data-i18n="nav_projects">Projects</a>
-          <a href="#experience" class="hover:text-foreground transition-colors" data-i18n="nav_experience">Education</a>
         </nav>
 
         <!-- Language Switcher EN | DE -->
@@ -96,22 +96,26 @@
 
           <div class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium text-muted leading-tight tracking-tight font-heading">
             <span data-i18n="hero_role_prefix">I'm an</span> <span class="text-foreground font-semibold" data-i18n="hero_role">Electrical & Systems Engineer</span> <br class="hidden sm:block"/>
-            <span data-i18n="hero_specializing">specializing in</span> <span class="text-primary font-bold" data-i18n="hero_focus">Embedded C++, Autonomous Flight & Controls.</span>
+            <span data-i18n="hero_specializing">specializing in</span> <span class="text-primary font-bold" data-i18n="hero_focus">Embedded C++, Controls & Autonomous Systems.</span>
           </div>
         </div>
 
-        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6 mt-2">
-          <a href="mailto:contact@davidsommerer.engineering" class="group relative inline-flex items-center justify-center gap-2 rounded-full bg-foreground text-background px-7 py-3.5 text-xs font-mono font-bold transition-all hover:scale-105 hover:shadow-[0_8px_30px_rgba(56,189,248,0.25)]">
-            <span data-i18n="hero_cta_book">Erasmus+ 2027</span>
+        <p data-i18n="hero_subtitle" class="text-sm sm:text-base text-muted font-mono leading-relaxed max-w-2xl">
+          Student at HTL Elektrotechnik Salzburg. Building embedded micro-architecture, AI-driven autonomous RC cars, 6DoF simulators, and control systems.
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 mt-2 font-mono text-xs">
+          <a href="#projects" class="px-6 py-3 rounded-full bg-foreground text-background font-bold transition-all hover:scale-105 hover:shadow-[0_8px_30px_rgba(56,189,248,0.25)] flex items-center gap-2">
+            <span data-i18n="hero_cta_projects">Explore Projects</span>
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
           </a>
-          <p data-i18n="hero_cta_sub" class="text-xs text-muted font-mono max-w-md">
-            Open for 4-week EU Mobility Internships in Aerospace & Systems Engineering.
-          </p>
+          <a href="mailto:contact@davidsommerer.engineering" class="px-6 py-3 rounded-full bg-zinc-900 border border-border text-foreground hover:border-primary/50 transition-all">
+            <span data-i18n="hero_cta_contact">Direct Contact</span>
+          </a>
         </div>
       </div>
 
-      <!-- HERO CONTAINER: TERMINAL (LEFT) + OSCILLOSCOPE & SIGNAL MONITOR CARD (RIGHT - BRAND NEW REPLACEMENT) -->
+      <!-- HERO CONTAINER: TERMINAL (LEFT) + OSCILLOSCOPE MONITOR CARD (RIGHT) -->
       <div class="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] overflow-hidden rounded-2xl border border-white/10 bg-[#05050a]/90 shadow-[0_24px_80px_rgba(0,0,0,0.45)] backdrop-blur-md">
         
         <!-- Left: System Terminal Card -->
@@ -160,16 +164,16 @@
             <div class="space-y-1">
               <p class="text-primary"><span class="text-sky-300">$</span> <span data-i18n="term_cmd_products">./projects --list</span></p>
               <div class="pl-3 text-muted space-y-1">
-                <p data-i18n="term_p1">&gt; Tri-Tilt-Rotor SAR VTOL - Heavy-lift drone with 80-page SORA TDD.</p>
-                <p data-i18n="term_p2">&gt; C++ Custom Physics Engine - Deterministic 6DoF simulator with RK4 integration.</p>
-                <p data-i18n="term_p3">&gt; DIN A4 Ground Effect Vehicle - STM32H7 MPC vehicle with 1:6.5 power-to-weight.</p>
-                <p data-i18n="term_p4">&gt; EDI-to-JSONL Streaming Parser - High-throughput zero-copy C++20 engine.</p>
+                <p data-i18n="term_p1">&gt; Crazy Car Autonomous RL - AI agent in Unity ML-Agents driving RC car.</p>
+                <p data-i18n="term_p2">&gt; 6DoF Driving Simulator - Dynamic motion platform with inverse kinematics.</p>
+                <p data-i18n="term_p3">&gt; Tri-Tilt-Rotor SAR VTOL - Heavy-lift drone with SORA TDD concept.</p>
+                <p data-i18n="term_p4">&gt; C++ Custom Physics Engine - Deterministic 6DoF simulator with RK4 integration.</p>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Right: Oscilloscope & Flight Signal Telemetry Card (BRAND NEW INTERACTIVE REPLACEMENT) -->
+        <!-- Right: Oscilloscope & Flight Signal Telemetry Card -->
         <div class="flex flex-col justify-between gap-4 p-5 relative font-mono text-xs">
           <div class="flex items-center justify-between border-b border-border pb-3">
             <div>
@@ -178,10 +182,9 @@
               </div>
               <p data-i18n="sig_card_sub" class="text-[11px] text-muted">ch1: pwm_actuator_out</p>
             </div>
-            <!-- Flight State Selector Pills -->
             <div class="flex gap-1">
-              <span data-i18n="sig_mode_hover" class="px-2 py-0.5 rounded text-[10px] bg-sky-950/60 text-sky-400 border border-sky-800/50">HOVER</span>
-              <span data-i18n="sig_mode_transition" class="px-2 py-0.5 rounded text-[10px] bg-emerald-950/60 text-emerald-400 border border-emerald-800/50">TRANSITION</span>
+              <span data-i18n="sig_mode_hover" class="px-2 py-0.5 rounded text-[10px] bg-sky-950/60 text-sky-400 border border-sky-800/50">ACTIVE</span>
+              <span data-i18n="sig_mode_transition" class="px-2 py-0.5 rounded text-[10px] bg-emerald-950/60 text-emerald-400 border border-emerald-800/50">PWM SYNC</span>
             </div>
           </div>
 
@@ -211,16 +214,16 @@
               <span data-i18n="sig_ch1_val" class="text-foreground font-bold">1500 µs</span>
             </div>
             <div class="p-2 rounded bg-zinc-900/60 border border-border flex justify-between">
-              <span data-i18n="sig_ch2_lbl" class="text-muted">CH2 Servo</span>
-              <span data-i18n="sig_ch2_val" class="text-foreground font-bold">1500 µs</span>
+              <span data-i18n="sig_ch2_lbl" class="text-muted">CH2 Motor</span>
+              <span data-i18n="sig_ch2_val" class="text-emerald-400 font-bold">1620 µs</span>
             </div>
             <div class="p-2 rounded bg-zinc-900/60 border border-border flex justify-between">
-              <span data-i18n="sig_ch3_lbl" class="text-muted">CH3 Motor 1</span>
-              <span data-i18n="sig_ch3_val" class="text-emerald-400 font-bold">84.2%</span>
+              <span data-i18n="sig_ch3_lbl" class="text-muted">MCU Clock</span>
+              <span data-i18n="sig_ch3_val" class="text-foreground font-bold">480 MHz</span>
             </div>
             <div class="p-2 rounded bg-zinc-900/60 border border-border flex justify-between">
-              <span data-i18n="sig_ch4_lbl" class="text-muted">CH4 Motor 2</span>
-              <span data-i18n="sig_ch4_val" class="text-emerald-400 font-bold">84.2%</span>
+              <span data-i18n="sig_ch4_lbl" class="text-muted">Bus Type</span>
+              <span data-i18n="sig_ch4_val" class="text-sky-300 font-bold">CAN / DroneCAN</span>
             </div>
           </div>
 
@@ -232,14 +235,14 @@
       </div>
 
       <!-- 3 QUICK SPEC CARDS BELOW HERO -->
-      <div id="experience" class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
         
-        <!-- Card 1 -->
+        <!-- Card 1: Education -->
         <div class="sub-card rounded-2xl p-6 flex flex-col justify-between">
           <div class="space-y-4">
             <div class="flex items-center gap-2 text-xs font-mono text-muted uppercase tracking-wider">
               <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0112 20.055a11.952 11.952 0 01-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
-              <span data-i18n="card1_title">Education & Milestones</span>
+              <span data-i18n="card1_title">Education & Schooling</span>
             </div>
             
             <div class="space-y-3 font-mono text-xs">
@@ -248,62 +251,62 @@
                 <p data-i18n="card1_date1" class="text-[11px] text-muted">Higher Technical Institute • 2022 - 2027</p>
               </div>
               <div class="border-l-2 border-slate-700 pl-3 space-y-0.5">
-                <h4 class="font-bold text-foreground text-sm" data-i18n="card1_role2">AustroControl SORA SAIL II R&D</h4>
-                <p data-i18n="card1_date2" class="text-[11px] text-muted">Diplomarbeit Aerospace Safety • 2025 - 2026</p>
+                <h4 class="font-bold text-foreground text-sm" data-i18n="card1_role2">Diplomarbeit R&D Project</h4>
+                <p data-i18n="card1_date2" class="text-[11px] text-muted">Electrical Engineering Systems • 2025 - 2026</p>
               </div>
               <div class="border-l-2 border-slate-700 pl-3 space-y-0.5">
-                <h4 class="font-bold text-foreground text-sm" data-i18n="card1_role3">EU Erasmus+ Applicant</h4>
-                <p data-i18n="card1_date3" class="text-[11px] text-muted">Summer Mobility Program • 2027</p>
+                <h4 class="font-bold text-foreground text-sm" data-i18n="card1_role3">Specialization</h4>
+                <p data-i18n="card1_date3" class="text-[11px] text-muted">Embedded Software, CAD & Automation</p>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Card 2 -->
+        <!-- Card 2: Featured Projects -->
         <div class="sub-card rounded-2xl p-6 flex flex-col justify-between">
           <div class="space-y-4">
             <div class="flex items-center gap-2 text-xs font-mono text-muted uppercase tracking-wider">
               <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
-              <span data-i18n="card2_title">Currently Engineering</span>
+              <span data-i18n="card2_title">Featured Projects</span>
             </div>
 
             <div class="space-y-3 font-mono text-xs">
               <div>
-                <h4 class="font-bold text-foreground" data-i18n="card2_topic1">Model Predictive Control</h4>
-                <p data-i18n="card2_desc1" class="text-[11px] text-muted">Real-time quad-programming on STM32H7 dual Cortex-M7 at 480 MHz.</p>
+                <h4 class="font-bold text-foreground" data-i18n="card2_topic1">Crazy Car Autonomous RL</h4>
+                <p data-i18n="card2_desc1" class="text-[11px] text-muted">RC car rebuilt with MCU & servos, AI trained in Unity ML-Agents.</p>
               </div>
               <div>
-                <h4 class="font-bold text-foreground" data-i18n="card2_topic2">ROS2 Swarm VTOL</h4>
-                <p data-i18n="card2_desc2" class="text-[11px] text-muted">Vector transition algorithms for 90° tilt-rotor actuation.</p>
+                <h4 class="font-bold text-foreground" data-i18n="card2_topic2">6DoF Driving Simulator</h4>
+                <p data-i18n="card2_desc2" class="text-[11px] text-muted">6 Degrees-of-Freedom motion platform with real-time inverse kinematics.</p>
               </div>
               <div>
-                <h4 class="font-bold text-foreground" data-i18n="card2_topic3">Deterministic Physics</h4>
-                <p data-i18n="card2_desc3" class="text-[11px] text-muted">C++20 RK4 6DoF simulator with NACA 0012 aerofoil models.</p>
+                <h4 class="font-bold text-foreground" data-i18n="card2_topic3">Tri-Tilt-Rotor SAR VTOL</h4>
+                <p data-i18n="card2_desc3" class="text-[11px] text-muted">Heavy-lift Search & Rescue tilt-rotor vehicle concept.</p>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Card 3 -->
+        <!-- Card 3: Currently Learning (REPLACED HARDWARE & CAD LAB) -->
         <div class="sub-card rounded-2xl p-6 flex flex-col justify-between">
           <div class="space-y-4">
             <div class="flex items-center gap-2 text-xs font-mono text-muted uppercase tracking-wider">
-              <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
-              <span data-i18n="card3_handle">hardware & cad lab</span>
+              <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+              <span data-i18n="card3_handle" class="text-emerald-400">currently learning</span>
             </div>
 
             <div class="grid grid-cols-2 gap-2 font-mono text-xs">
               <div class="p-2.5 rounded bg-zinc-900/60 border border-border">
-                <span data-i18n="card3_topic1" class="text-foreground font-semibold">SolidEdge 3D CAD</span>
+                <span data-i18n="card3_topic1" class="text-foreground font-semibold">ROS2 & Gazebo</span>
               </div>
               <div class="p-2.5 rounded bg-zinc-900/60 border border-border">
-                <span data-i18n="card3_topic2" class="text-foreground font-semibold">Ansys FEA</span>
+                <span data-i18n="card3_topic2" class="text-foreground font-semibold">STM32H7 & PX4</span>
               </div>
               <div class="p-2.5 rounded bg-zinc-900/60 border border-border">
-                <span data-i18n="card3_topic3" class="text-foreground font-semibold">PCB Layout</span>
+                <span data-i18n="card3_topic3" class="text-foreground font-semibold">Simulink & DroneCAN</span>
               </div>
               <div class="p-2.5 rounded bg-zinc-900/60 border border-border">
-                <span data-i18n="card3_topic4" class="text-foreground font-semibold">Opto EMI Board</span>
+                <span data-i18n="card3_topic4" class="text-foreground font-semibold">Nvidia Jetson</span>
               </div>
             </div>
           </div>
@@ -312,53 +315,113 @@
       </div>
     </section>
 
-    <!-- 2. TECHNICAL SKILLS & STACK MARQUEE / GRID -->
+    <!-- NEW EXPERIENCE SECTION -->
+    <section id="experience" class="py-16 md:py-24 max-w-6xl mx-auto px-6 md:px-12 space-y-10 scroll-mt-24">
+      <div>
+        <h2 data-i18n="exp_heading" class="text-4xl md:text-5xl font-bold text-foreground font-heading tracking-tight">engineering experience & education</h2>
+        <p data-i18n="exp_sub" class="text-base text-muted max-w-2xl mt-2 font-mono">Practical technical education at HTL Elektrotechnik Salzburg, hands-on project engineering, and hardware lab training.</p>
+      </div>
+
+      <div class="space-y-6">
+        
+        <!-- Experience Entry 1 -->
+        <div class="sub-card rounded-3xl p-6 lg:p-8 space-y-3 font-mono">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-border pb-3">
+            <h3 data-i18n="exp_1_title" class="text-lg font-bold text-foreground">Student in Electrical Engineering</h3>
+            <span data-i18n="exp_1_org" class="text-xs text-sky-400">HTL Elektrotechnik Salzburg • 2022 - Present</span>
+          </div>
+          <p data-i18n="exp_1_desc" class="text-xs text-muted leading-relaxed font-sans">
+            Comprehensive 5-year technical education covering electrical power systems, control engineering, embedded microcontrollers, CAD design, and automation technology.
+          </p>
+        </div>
+
+        <!-- Experience Entry 2 -->
+        <div class="sub-card rounded-3xl p-6 lg:p-8 space-y-3 font-mono">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-border pb-3">
+            <h3 data-i18n="exp_2_title" class="text-lg font-bold text-foreground">Diplomarbeit & Autonomous Systems R&D</h3>
+            <span data-i18n="exp_2_org" class="text-xs text-emerald-400">HTL Salzburg Engineering Labs • 2025 - Present</span>
+          </div>
+          <p data-i18n="exp_2_desc" class="text-xs text-muted leading-relaxed font-sans">
+            Designing and programming custom embedded hardware, 6DoF motion simulators, and reinforcement learning AI agents for autonomous vehicle navigation.
+          </p>
+        </div>
+
+        <!-- Experience Entry 3 -->
+        <div class="sub-card rounded-3xl p-6 lg:p-8 space-y-3 font-mono">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-border pb-3">
+            <h3 data-i18n="exp_3_title" class="text-lg font-bold text-foreground">Hardware Lab & Machining Training</h3>
+            <span data-i18n="exp_3_org" class="text-xs text-amber-400">HTL Workshop & CAD Labs</span>
+          </div>
+          <p data-i18n="exp_3_desc" class="text-xs text-muted leading-relaxed font-sans">
+            Hands-on experience in TNC 640 CNC machine programming, EPlan circuit schematic design, PCB layout in KiCad, and low-level C/C++ microcontrollers.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 2. TECHNICAL SKILLS & STACK SECTION (TAILORED TO USER KNOWLEDGE) -->
     <section id="skills" class="py-16 md:py-24 bg-[#030306] border-y border-white/5 scroll-mt-24">
       <div class="max-w-6xl mx-auto px-6 md:px-12 space-y-12">
         <div>
           <h2 data-i18n="skills_title" class="text-4xl md:text-5xl font-bold text-foreground font-heading tracking-tight">technical skills & stack</h2>
-          <p data-i18n="skills_sub" class="text-base text-muted max-w-2xl mt-2 font-mono">My engineering toolkit spans low-level microcontrollers, flight control simulation, robotics middleware, and aerospace safety standards.</p>
+          <p data-i18n="skills_sub" class="text-base text-muted max-w-2xl mt-2 font-mono">Software, embedded microcontrollers, CAD tools, and AI technologies I work with daily alongside active learning for upcoming projects.</p>
         </div>
 
-        <!-- Skills Grid Categories -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 font-mono text-xs">
+        <!-- Skills Grid Categories (4 PANELS) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 font-mono text-xs">
           
-          <!-- Cat 1 -->
+          <!-- Cat 1: Languages & Microcontrollers -->
           <div class="p-6 rounded-2xl bg-zinc-950 border border-border space-y-4">
-            <h3 data-i18n="skills_cat1" class="font-bold text-foreground text-sm border-b border-border pb-2 uppercase tracking-wider text-primary">Embedded & Languages</h3>
+            <h3 data-i18n="skills_cat1" class="font-bold text-foreground text-sm border-b border-border pb-2 uppercase tracking-wider text-primary">Languages & Microcontrollers</h3>
             <div class="flex flex-wrap gap-2">
-              <span class="px-2.5 py-1 rounded bg-zinc-900 border border-border text-foreground">C++17/20</span>
-              <span class="px-2.5 py-1 rounded bg-zinc-900 border border-border text-foreground">Bare-Metal C</span>
-              <span class="px-2.5 py-1 rounded bg-zinc-900 border border-border text-foreground">STM32H7</span>
-              <span class="px-2.5 py-1 rounded bg-zinc-900 border border-border text-foreground">Cortex-M7 FPU</span>
-              <span class="px-2.5 py-1 rounded bg-zinc-900 border border-border text-foreground">FreeRTOS</span>
-              <span class="px-2.5 py-1 rounded bg-zinc-900 border border-border text-foreground">Linux Device Drivers</span>
+              <span class="px-2.5 py-1 rounded bg-zinc-900 border border-border text-foreground">C</span>
+              <span class="px-2.5 py-1 rounded bg-zinc-900 border border-border text-foreground">C++</span>
+              <span class="px-2.5 py-1 rounded bg-zinc-900 border border-border text-foreground">Python (basics)</span>
+              <span class="px-2.5 py-1 rounded bg-zinc-900 border border-border text-foreground">Arduino Framework</span>
+              <span class="px-2.5 py-1 rounded bg-zinc-900 border border-border text-foreground">MSP430</span>
+              <span class="px-2.5 py-1 rounded bg-zinc-900 border border-border text-foreground">VSCode</span>
             </div>
           </div>
 
-          <!-- Cat 2 -->
+          <!-- Cat 2: CAD, Simulation & Software -->
           <div class="p-6 rounded-2xl bg-zinc-950 border border-border space-y-4">
-            <h3 data-i18n="skills_cat2" class="font-bold text-foreground text-sm border-b border-border pb-2 uppercase tracking-wider text-emerald-400">Control & Simulation</h3>
+            <h3 data-i18n="skills_cat2" class="font-bold text-foreground text-sm border-b border-border pb-2 uppercase tracking-wider text-emerald-400">CAD, Simulation & Software</h3>
             <div class="flex flex-wrap gap-2">
-              <span class="px-2.5 py-1 rounded bg-zinc-900 border border-border text-foreground">Model Predictive Control</span>
-              <span class="px-2.5 py-1 rounded bg-zinc-900 border border-border text-foreground">MATLAB / Simulink</span>
-              <span class="px-2.5 py-1 rounded bg-zinc-900 border border-border text-foreground">Gazebo 3D</span>
-              <span class="px-2.5 py-1 rounded bg-zinc-900 border border-border text-foreground">Extended Kalman Filter</span>
-              <span class="px-2.5 py-1 rounded bg-zinc-900 border border-border text-foreground">RK4 Integrator</span>
-              <span class="px-2.5 py-1 rounded bg-zinc-900 border border-border text-foreground">Eigen Matrix</span>
-            </div>
-          </div>
-
-          <!-- Cat 3 -->
-          <div class="p-6 rounded-2xl bg-zinc-950 border border-border space-y-4">
-            <h3 data-i18n="skills_cat3" class="font-bold text-foreground text-sm border-b border-border pb-2 uppercase tracking-wider text-sky-400">Hardware, CAD & Safety</h3>
-            <div class="flex flex-wrap gap-2">
-              <span class="px-2.5 py-1 rounded bg-zinc-900 border border-border text-foreground">ROS2 Humble Swarm</span>
-              <span class="px-2.5 py-1 rounded bg-zinc-900 border border-border text-foreground">PX4 Autopilot</span>
+              <span class="px-2.5 py-1 rounded bg-zinc-900 border border-border text-foreground">NEPlan</span>
+              <span class="px-2.5 py-1 rounded bg-zinc-900 border border-border text-foreground">EPlan</span>
               <span class="px-2.5 py-1 rounded bg-zinc-900 border border-border text-foreground">SolidEdge 3D CAD</span>
-              <span class="px-2.5 py-1 rounded bg-zinc-900 border border-border text-foreground">Ansys FEA</span>
-              <span class="px-2.5 py-1 rounded bg-zinc-900 border border-border text-foreground">AustroControl SORA</span>
-              <span class="px-2.5 py-1 rounded bg-zinc-900 border border-border text-foreground">CAN open / Ethernet IP</span>
+              <span class="px-2.5 py-1 rounded bg-zinc-900 border border-border text-foreground">MATLAB</span>
+              <span class="px-2.5 py-1 rounded bg-zinc-900 border border-border text-foreground">KiCad PCB</span>
+              <span class="px-2.5 py-1 rounded bg-zinc-900 border border-border text-foreground">TNC 640 (CNC)</span>
+              <span class="px-2.5 py-1 rounded bg-zinc-900 border border-border text-foreground">Unity 3D</span>
+              <span class="px-2.5 py-1 rounded bg-zinc-900 border border-border text-foreground">LaTeX</span>
+              <span class="px-2.5 py-1 rounded bg-zinc-900 border border-border text-foreground">MS Office (Excel, PPT, Word)</span>
+            </div>
+          </div>
+
+          <!-- Cat 3: AI Tools & Workflow -->
+          <div class="p-6 rounded-2xl bg-zinc-950 border border-border space-y-4">
+            <h3 data-i18n="skills_cat3" class="font-bold text-foreground text-sm border-b border-border pb-2 uppercase tracking-wider text-sky-400">AI Tools & Workflow</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2.5 py-1 rounded bg-zinc-900 border border-border text-foreground">Gemini</span>
+              <span class="px-2.5 py-1 rounded bg-zinc-900 border border-border text-foreground">NotebookLM</span>
+              <span class="px-2.5 py-1 rounded bg-zinc-900 border border-border text-foreground">Antigravity CLI</span>
+              <span class="px-2.5 py-1 rounded bg-zinc-900 border border-border text-foreground">Unity ML-Agents (RL)</span>
+            </div>
+          </div>
+
+          <!-- Cat 4: Currently Learning for Projects -->
+          <div class="p-6 rounded-2xl bg-zinc-950 border border-emerald-500/30 space-y-4">
+            <h3 data-i18n="skills_cat4" class="font-bold text-emerald-400 text-sm border-b border-border pb-2 uppercase tracking-wider">Currently Learning for Projects</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2.5 py-1 rounded bg-emerald-950/60 border border-emerald-500/40 text-emerald-300">ROS2</span>
+              <span class="px-2.5 py-1 rounded bg-emerald-950/60 border border-emerald-500/40 text-emerald-300">Gazebo</span>
+              <span class="px-2.5 py-1 rounded bg-emerald-950/60 border border-emerald-500/40 text-emerald-300">Simulink</span>
+              <span class="px-2.5 py-1 rounded bg-emerald-950/60 border border-emerald-500/40 text-emerald-300">PX4</span>
+              <span class="px-2.5 py-1 rounded bg-emerald-950/60 border border-emerald-500/40 text-emerald-300">STM32H7</span>
+              <span class="px-2.5 py-1 rounded bg-emerald-950/60 border border-emerald-500/40 text-emerald-300">Nvidia Jetson</span>
+              <span class="px-2.5 py-1 rounded bg-emerald-950/60 border border-emerald-500/40 text-emerald-300">DroneCAN</span>
             </div>
           </div>
 
@@ -370,7 +433,7 @@
     <section id="projects" class="py-16 md:py-24 max-w-6xl mx-auto px-6 md:px-12 space-y-10 scroll-mt-24">
       <div>
         <h2 data-i18n="projects_title" class="text-4xl md:text-5xl font-bold text-foreground font-heading tracking-tight">featured engineering projects</h2>
-        <p data-i18n="projects_sub" class="text-base text-muted max-w-2xl mt-2 font-mono">Fully documented deep-tech engineering projects with concrete performance metrics, schematics, and design documents.</p>
+        <p data-i18n="projects_sub" class="text-base text-muted max-w-2xl mt-2 font-mono">Fully documented engineering projects featuring AI reinforcement learning, 6DoF motion simulation, and custom embedded hardware.</p>
       </div>
 
       <!-- Filter Tabs -->
@@ -378,42 +441,108 @@
         <button data-filter-btn="all" class="px-4 py-1.5 rounded-full text-xs font-mono font-semibold transition-all bg-sky-500/20 text-sky-400 border border-sky-500/40" data-i18n="filter_all">
           All Systems
         </button>
-        <button data-filter-btn="flight" class="px-4 py-1.5 rounded-full text-xs font-mono transition-all text-muted border border-border hover:text-foreground hover:border-zinc-700 bg-zinc-900/60" data-i18n="filter_flight">
-          Flight & Autonomy
+        <button data-filter-btn="ai" class="px-4 py-1.5 rounded-full text-xs font-mono transition-all text-muted border border-border hover:text-foreground hover:border-zinc-700 bg-zinc-900/60" data-i18n="filter_ai">
+          AI & Autonomy
         </button>
         <button data-filter-btn="lowlevel" class="px-4 py-1.5 rounded-full text-xs font-mono transition-all text-muted border border-border hover:text-foreground hover:border-zinc-700 bg-zinc-900/60" data-i18n="filter_lowlevel">
-          Low-Level C++
+          Embedded C/C++
         </button>
         <button data-filter-btn="hardware" class="px-4 py-1.5 rounded-full text-xs font-mono transition-all text-muted border border-border hover:text-foreground hover:border-zinc-700 bg-zinc-900/60" data-i18n="filter_hardware">
-          Hardware & Control
+          Hardware & Sim
         </button>
       </div>
 
       <!-- Project Cards -->
       <div class="space-y-6">
 
-        <!-- Project 1 -->
-        <article data-category="flight hardware" class="sub-card rounded-3xl p-6 lg:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <!-- Project 1: Crazy Car RL -->
+        <article data-category="ai lowlevel hardware" class="sub-card rounded-3xl p-6 lg:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           <div class="lg:col-span-8 space-y-4">
             <div class="flex flex-wrap gap-2">
-              <span class="px-2.5 py-0.5 text-[11px] font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">C++17</span>
-              <span class="px-2.5 py-0.5 text-[11px] font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">ROS2 Humble</span>
-              <span class="px-2.5 py-0.5 text-[11px] font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">STM32H7</span>
-              <span class="px-2.5 py-0.5 text-[11px] font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">SORA SAIL II</span>
+              <span class="px-2.5 py-0.5 text-[11px] font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">Microcontroller & Servos</span>
+              <span class="px-2.5 py-0.5 text-[11px] font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">Unity ML-Agents (RL)</span>
+              <span class="px-2.5 py-0.5 text-[11px] font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">Autonomous Navigation</span>
             </div>
 
-            <h3 data-i18n="proj1_title" class="text-2xl font-bold text-foreground font-heading tracking-tight">Tri-Tilt-Rotor SAR VTOL Platform</h3>
-            <p data-i18n="proj1_desc" class="text-xs text-muted leading-relaxed">Heavy-lift Search and Rescue tilt-rotor vehicle featuring failsafe ROS2 swarm nodes, custom dual-battery redundancy, and an AustroControl SORA TDD.</p>
+            <h3 data-i18n="proj1_title" class="text-2xl font-bold text-foreground font-heading tracking-tight">Crazy Car: Autonomous AI/RL RC Car</h3>
+            <p data-i18n="proj1_desc" class="text-xs text-muted leading-relaxed">Rebuilt an RC car with microcontrollers and custom servo steering. Trained a Reinforcement Learning (RL) AI agent in Unity ML-Agents to navigate complex tracks autonomously.</p>
 
             <ul class="space-y-2 text-xs text-zinc-300 list-disc list-inside font-mono border-t border-border pt-4">
-              <li data-i18n="proj1_b1">Authored an 80-page AustroControl SORA SAIL II Technical Design Document detailing failure mode risk mitigation.</li>
-              <li data-i18n="proj1_b2">Designed dual-redundant battery failover circuitry with zero voltage drop switching (&lt;5µs MOS-FET latching).</li>
-              <li data-i18n="proj1_b3">Developed custom ROS2 C++ flight node calculating real-time vector transition matrices for 90° tilt-rotors.</li>
+              <li data-i18n="proj1_b1">Overhauled stock RC vehicle chassis with custom microcontroller hardware and precision steering servo feedback.</li>
+              <li data-i18n="proj1_b2">Constructed 3D track simulation environment in Unity using ML-Agents for neural network reward optimization.</li>
+              <li data-i18n="proj1_b3">Deployed trained AI policy models onto onboard hardware for real-world autonomous obstacle avoidance.</li>
             </ul>
 
             <div class="flex items-center space-x-4 pt-2 text-xs font-mono">
               <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="text-muted hover:text-sky-400 flex items-center gap-1" data-i18n="link_github">GitHub Repo</a>
-              <a href="projects/tri-tilt-vtol.html" class="text-muted hover:text-sky-400 flex items-center gap-1" data-i18n="link_spec">Design Spec (PDF)</a>
+              <a href="projects/crazy-car.html" class="text-sky-400 hover:text-sky-300 font-semibold" data-i18n="link_deepdive">Technical Deep-Dive →</a>
+            </div>
+          </div>
+
+          <div class="lg:col-span-4 h-48 rounded-2xl bg-zinc-950 border border-border p-4 relative overflow-hidden flex items-center justify-center">
+            <svg class="w-full h-full text-sky-400/80" viewBox="0 0 300 120" fill="none">
+              <rect x="30" y="30" width="100" height="60" rx="8" stroke="#38bdf8" stroke-width="1.5" fill="rgba(56,189,248,0.05)"/>
+              <path d="M 135 60 L 165 60" stroke="#10b981" stroke-width="2" stroke-dasharray="4 4"/>
+              <rect x="170" y="30" width="100" height="60" rx="8" stroke="#10b981" stroke-width="1.5" fill="rgba(16,185,129,0.05)"/>
+              <text x="15" y="112" font-family="monospace" font-size="8" fill="#71717a">UNITY ML-AGENTS RL POLICY → EMBEDDED RC MCU</text>
+            </svg>
+          </div>
+        </article>
+
+        <!-- Project 2: 6DoF Driving Simulator -->
+        <article data-category="hardware lowlevel" class="sub-card rounded-3xl p-6 lg:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-8 space-y-4">
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2.5 py-0.5 text-[11px] font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">6DoF Motion Platform</span>
+              <span class="px-2.5 py-0.5 text-[11px] font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">SolidEdge CAD</span>
+              <span class="px-2.5 py-0.5 text-[11px] font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">CAN Actuation</span>
+            </div>
+
+            <h3 data-i18n="proj2_title" class="text-2xl font-bold text-foreground font-heading tracking-tight">6DoF Dynamic Driving Simulator</h3>
+            <p data-i18n="proj2_desc" class="text-xs text-muted leading-relaxed">Custom 6 Degrees-of-Freedom motion platform designed for immersive driving simulation with real-time kinematic calculations and multi-axis motor actuation.</p>
+
+            <ul class="space-y-2 text-xs text-zinc-300 list-disc list-inside font-mono border-t border-border pt-4">
+              <li data-i18n="proj2_b1">Calculated Denavit-Hartenberg inverse kinematics for 6 linear actuators running in real time.</li>
+              <li data-i18n="proj2_b2">Designed CAD mechanical frame assembly in SolidEdge with Ansys stress analysis.</li>
+              <li data-i18n="proj2_b3">Wrote high-speed motor control firmware over CAN bus interface with smooth motion profiling.</li>
+            </ul>
+
+            <div class="flex items-center space-x-4 pt-2 text-xs font-mono">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="text-muted hover:text-sky-400 flex items-center gap-1" data-i18n="link_github">GitHub Repo</a>
+              <a href="projects/6dof-driving-sim.html" class="text-sky-400 hover:text-sky-300 font-semibold" data-i18n="link_deepdive">Technical Deep-Dive →</a>
+            </div>
+          </div>
+
+          <div class="lg:col-span-4 h-48 rounded-2xl bg-zinc-950 border border-border p-4 relative overflow-hidden flex items-center justify-center">
+            <svg class="w-full h-full text-sky-400/80" viewBox="0 0 300 120" fill="none">
+              <path d="M 60 100 L 100 60 L 170 60 L 220 30" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round"/>
+              <circle cx="60" cy="100" r="5" fill="#10b981"/>
+              <circle cx="100" cy="60" r="5" fill="#10b981"/>
+              <text x="15" y="112" font-family="monospace" font-size="8" fill="#71717a">STEWART PLATFORM 6DoF KINEMATICS</text>
+            </svg>
+          </div>
+        </article>
+
+        <!-- Project 3: Tri-Tilt VTOL -->
+        <article data-category="ai hardware" class="sub-card rounded-3xl p-6 lg:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-8 space-y-4">
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2.5 py-0.5 text-[11px] font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">C++17</span>
+              <span class="px-2.5 py-0.5 text-[11px] font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">ROS2 / PX4</span>
+              <span class="px-2.5 py-0.5 text-[11px] font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">STM32H7</span>
+            </div>
+
+            <h3 data-i18n="proj3_title" class="text-2xl font-bold text-foreground font-heading tracking-tight">Tri-Tilt-Rotor SAR VTOL Platform</h3>
+            <p data-i18n="proj3_desc" class="text-xs text-muted leading-relaxed">Heavy-lift Search and Rescue tilt-rotor vehicle concept featuring failsafe ROS2 swarm nodes and custom dual-battery redundancy.</p>
+
+            <ul class="space-y-2 text-xs text-zinc-300 list-disc list-inside font-mono border-t border-border pt-4">
+              <li data-i18n="proj3_b1">Designed dual-redundant battery failover circuitry with zero voltage drop switching (&lt;5µs MOS-FET latching).</li>
+              <li data-i18n="proj3_b2">Developed C++ flight node calculating real-time vector transition matrices for 90° tilt-rotors.</li>
+              <li data-i18n="proj3_b3">Structured SORA SAIL II safety documentation for AustroControl compliance.</li>
+            </ul>
+
+            <div class="flex items-center space-x-4 pt-2 text-xs font-mono">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="text-muted hover:text-sky-400 flex items-center gap-1" data-i18n="link_github">GitHub Repo</a>
               <a href="projects/tri-tilt-vtol.html" class="text-sky-400 hover:text-sky-300 font-semibold" data-i18n="link_deepdive">Technical Deep-Dive →</a>
             </div>
           </div>
@@ -429,8 +558,8 @@
           </div>
         </article>
 
-        <!-- Project 2 -->
-        <article data-category="flight lowlevel" class="sub-card rounded-3xl p-6 lg:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <!-- Project 4: C++ Physics Engine -->
+        <article data-category="lowlevel" class="sub-card rounded-3xl p-6 lg:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           <div class="lg:col-span-8 space-y-4">
             <div class="flex flex-wrap gap-2">
               <span class="px-2.5 py-0.5 text-[11px] font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">C++20</span>
@@ -438,13 +567,13 @@
               <span class="px-2.5 py-0.5 text-[11px] font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">RK4 Integrator</span>
             </div>
 
-            <h3 data-i18n="proj2_title" class="text-2xl font-bold text-foreground font-heading tracking-tight">Deterministic 6DoF C++ Physics Engine</h3>
-            <p data-i18n="proj2_desc" class="text-xs text-muted leading-relaxed">Zero-dependency rigid body flight simulator built from scratch in C++20 with RK4 integration and NACA 0012 aerofoil aerodynamics.</p>
+            <h3 data-i18n="proj4_title" class="text-2xl font-bold text-foreground font-heading tracking-tight">Deterministic 6DoF C++ Physics Engine</h3>
+            <p data-i18n="proj4_desc" class="text-xs text-muted leading-relaxed">Zero-dependency rigid body flight simulator built from scratch in C++20 with RK4 integration and NACA 0012 aerofoil aerodynamics.</p>
 
             <ul class="space-y-2 text-xs text-zinc-300 list-disc list-inside font-mono border-t border-border pt-4">
-              <li data-i18n="proj2_b1">Programmed 4th-Order Runge-Kutta (RK4) numerical integrator running at a deterministic 1,000 Hz simulation step.</li>
-              <li data-i18n="proj2_b2">Implemented quaternion attitude math preventing gimbal lock during high-angle tilt maneuvers.</li>
-              <li data-i18n="proj2_b3">Integrated UDP streaming telemetry pipe connecting physics states to Ground Control Station visualizers.</li>
+              <li data-i18n="proj4_b1">Programmed 4th-Order Runge-Kutta (RK4) numerical integrator running at a deterministic 1,000 Hz simulation step.</li>
+              <li data-i18n="proj4_b2">Implemented quaternion attitude math preventing gimbal lock during high-angle tilt maneuvers.</li>
+              <li data-i18n="proj4_b3">Integrated UDP streaming telemetry pipe connecting physics states to Ground Control Station visualizers.</li>
             </ul>
 
             <div class="flex items-center space-x-4 pt-2 text-xs font-mono">
@@ -462,8 +591,8 @@
           </div>
         </article>
 
-        <!-- Project 3 -->
-        <article data-category="hardware flight" class="sub-card rounded-3xl p-6 lg:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <!-- Project 5: Ground Effect Vehicle -->
+        <article data-category="hardware lowlevel" class="sub-card rounded-3xl p-6 lg:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           <div class="lg:col-span-8 space-y-4">
             <div class="flex flex-wrap gap-2">
               <span class="px-2.5 py-0.5 text-[11px] font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">STM32H743</span>
@@ -471,13 +600,13 @@
               <span class="px-2.5 py-0.5 text-[11px] font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">Bare-Metal C</span>
             </div>
 
-            <h3 data-i18n="proj3_title" class="text-2xl font-bold text-foreground font-heading tracking-tight">DIN A4 Ground Effect Autonomous Vehicle</h3>
-            <p data-i18n="proj3_desc" class="text-xs text-muted leading-relaxed">Ultra-compact high-speed vehicle utilizing aerodynamic ground effect cushions driven by STM32H7 dual-core controllers.</p>
+            <h3 data-i18n="proj5_title" class="text-2xl font-bold text-foreground font-heading tracking-tight">DIN A4 Ground Effect Autonomous Vehicle</h3>
+            <p data-i18n="proj5_desc" class="text-xs text-muted leading-relaxed">Ultra-compact high-speed vehicle utilizing aerodynamic ground effect cushions driven by STM32H7 dual-core controllers.</p>
 
             <ul class="space-y-2 text-xs text-zinc-300 list-disc list-inside font-mono border-t border-border pt-4">
-              <li data-i18n="proj3_b1">Achieved a 1:6.5 power-to-weight ratio with custom carbon fiber aero-chassis and ground-seal skirts.</li>
-              <li data-i18n="proj3_b2">Programmed Model Predictive Controller (MPC) on Cortex-M7 maintaining 3.5mm ground clearance at speed.</li>
-              <li data-i18n="proj3_b3">Designed 4-layer custom PCB integrating optical distance sensors, dual BLDC drivers, and CAN telemetry.</li>
+              <li data-i18n="proj5_b1">Achieved a 1:6.5 power-to-weight ratio with custom carbon fiber aero-chassis and ground-seal skirts.</li>
+              <li data-i18n="proj5_b2">Programmed Model Predictive Controller (MPC) maintaining 3.5mm ground clearance at speed.</li>
+              <li data-i18n="proj5_b3">Designed 4-layer custom PCB integrating optical distance sensors, dual BLDC drivers, and CAN telemetry.</li>
             </ul>
 
             <div class="flex items-center space-x-4 pt-2 text-xs font-mono">
@@ -495,74 +624,6 @@
           </div>
         </article>
 
-        <!-- Project 4 -->
-        <article data-category="lowlevel" class="sub-card rounded-3xl p-6 lg:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          <div class="lg:col-span-8 space-y-4">
-            <div class="flex flex-wrap gap-2">
-              <span class="px-2.5 py-0.5 text-[11px] font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">C++20</span>
-              <span class="px-2.5 py-0.5 text-[11px] font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">POSIX mmap</span>
-              <span class="px-2.5 py-0.5 text-[11px] font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">Zero-Copy</span>
-            </div>
-
-            <h3 data-i18n="proj4_title" class="text-2xl font-bold text-foreground font-heading tracking-tight">EDI-to-JSONL High-Performance Parser</h3>
-            <p data-i18n="proj4_desc" class="text-xs text-muted leading-relaxed">Zero-allocation C++20 streaming engine parsing multi-gigabyte industrial EDI files into structured JSONL data.</p>
-
-            <ul class="space-y-2 text-xs text-zinc-300 list-disc list-inside font-mono border-t border-border pt-4">
-              <li data-i18n="proj4_b1">Achieved 2.4 GB/s streaming throughput via POSIX memory mapping (mmap) and string_view token evaluation.</li>
-              <li data-i18n="proj4_b2">Eliminated dynamic heap allocation in hot processing loops, bounding memory overhead to O(1).</li>
-              <li data-i18n="proj4_b3">Engineered lock-free ring buffer queue for SIMD-accelerated multi-threaded batch output.</li>
-            </ul>
-
-            <div class="flex items-center space-x-4 pt-2 text-xs font-mono">
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="text-muted hover:text-sky-400 flex items-center gap-1" data-i18n="link_github">GitHub Repo</a>
-              <a href="projects/edi-jsonl-parser.html" class="text-sky-400 hover:text-sky-300 font-semibold" data-i18n="link_deepdive">Technical Deep-Dive →</a>
-            </div>
-          </div>
-
-          <div class="lg:col-span-4 h-48 rounded-2xl bg-zinc-950 border border-border p-4 relative overflow-hidden flex items-center justify-center">
-            <svg class="w-full h-full text-sky-400/80" viewBox="0 0 300 120" fill="none">
-              <rect x="20" y="30" width="80" height="60" rx="6" stroke="#38bdf8" stroke-width="1.5" fill="rgba(56,189,248,0.05)"/>
-              <path d="M 105 60 L 185 60" stroke="#10b981" stroke-width="2" stroke-dasharray="4 4"/>
-              <rect x="190" y="30" width="90" height="60" rx="6" stroke="#38bdf8" stroke-width="1.5" fill="rgba(56,189,248,0.05)"/>
-              <text x="15" y="112" font-family="monospace" font-size="8" fill="#71717a">ZERO-ALLOCATION STREAMING (2.4 GB/s)</text>
-            </svg>
-          </div>
-        </article>
-
-        <!-- Project 5 -->
-        <article data-category="hardware lowlevel" class="sub-card rounded-3xl p-6 lg:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          <div class="lg:col-span-8 space-y-4">
-            <div class="flex flex-wrap gap-2">
-              <span class="px-2.5 py-0.5 text-[11px] font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">Embedded C++</span>
-              <span class="px-2.5 py-0.5 text-[11px] font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">Optocoupler PCB</span>
-              <span class="px-2.5 py-0.5 text-[11px] font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">CANopen</span>
-            </div>
-
-            <h3 data-i18n="proj5_title" class="text-2xl font-bold text-foreground font-heading tracking-tight">6DoF Industrial Robotic Arm Restoration</h3>
-            <p data-i18n="proj5_desc" class="text-xs text-muted leading-relaxed">Complete hardware overhaul of a 6-axis manipulator, featuring custom opto-isolated drive PCBs and kinematics.</p>
-
-            <ul class="space-y-2 text-xs text-zinc-300 list-disc list-inside font-mono border-t border-border pt-4">
-              <li data-i18n="proj5_b1">Eliminated severe motor encoder glitching by designing optocoupler differential signal interface PCBs.</li>
-              <li data-i18n="proj5_b2">Wrote real-time forward and inverse kinematics solvers in C++ with Denavit-Hartenberg (D-H) algorithms.</li>
-              <li data-i18n="proj5_b3">Implemented smooth S-curve trajectory acceleration profiling over high-speed CANopen bus.</li>
-            </ul>
-
-            <div class="flex items-center space-x-4 pt-2 text-xs font-mono">
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="text-muted hover:text-sky-400 flex items-center gap-1" data-i18n="link_github">GitHub Repo</a>
-              <a href="projects/robotic-arm-restoration.html" class="text-sky-400 hover:text-sky-300 font-semibold" data-i18n="link_deepdive">Technical Deep-Dive →</a>
-            </div>
-          </div>
-
-          <div class="lg:col-span-4 h-48 rounded-2xl bg-zinc-950 border border-border p-4 relative overflow-hidden flex items-center justify-center">
-            <svg class="w-full h-full text-sky-400/80" viewBox="0 0 300 120" fill="none">
-              <path d="M 60 100 L 100 60 L 170 60 L 220 30" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round"/>
-              <circle cx="60" cy="100" r="5" fill="#10b981"/>
-              <circle cx="100" cy="60" r="5" fill="#10b981"/>
-              <text x="15" y="112" font-family="monospace" font-size="8" fill="#71717a">6-AXIS DENAVIT-HARTENBERG KINEMATICS</text>
-            </svg>
-          </div>
-        </article>
-
       </div>
     </section>
 
@@ -574,8 +635,8 @@
       <div data-i18n="footer_copy">
         © 2026 David Sommerer — HTL Elektrotechnik Salzburg.
       </div>
-      <div data-i18n="footer_erasmus" class="text-muted text-center sm:text-right">
-        Applicant for 4-week EU Erasmus+ Mobility Program in Aerospace Systems Engineering (Summer 2027).
+      <div class="text-muted text-center sm:text-right">
+        Electrical & Systems Engineering Portfolio
       </div>
     </div>
   </footer>
