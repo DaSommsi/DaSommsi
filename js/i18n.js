@@ -8,9 +8,9 @@ export const translations = {
   en: {
     // Navigation & General
     nav_about: "About",
-    nav_experience: "Experience",
     nav_skills: "Skills",
     nav_projects: "Projects",
+    nav_experience: "Experience & Education",
     back_overview: "← Back to Overview",
 
     // Hero Section
@@ -62,21 +62,44 @@ export const translations = {
     card3_topic3: "Simulink & DroneCAN",
     card3_topic4: "Nvidia Jetson",
 
-    // Experience Section
-    exp_heading: "engineering experience & education",
-    exp_sub: "Practical technical education at HTL Elektrotechnik Salzburg, hands-on project engineering, and hardware lab training.",
+    // Experience & Education Section (SPLIT LAYOUT)
+    exp_heading: "work experience & education",
+    exp_sub: "Industrial engineering internships, municipal power grid calculations, custom switchgear manufacturing, and hands-on workshop fabrication.",
 
-    exp_1_title: "Student in Electrical Engineering",
-    exp_1_org: "HTL Elektrotechnik Salzburg • 2022 - Present",
-    exp_1_desc: "Comprehensive 5-year technical education covering electrical power systems, control engineering, embedded microcontrollers, CAD design, and automation technology.",
+    // Work Experience Split
+    work_heading: "Practical Work Experience",
 
-    exp_2_title: "Diplomarbeit & Autonomous Systems R&D",
-    exp_2_org: "HTL Salzburg Engineering Labs • 2025 - Present",
-    exp_2_desc: "Designing and programming custom embedded hardware, 6DoF motion simulators, and reinforcement learning AI agents for autonomous vehicle navigation.",
+    intern_1_title: "Electrical Grid Planning & Calculation Intern",
+    intern_1_company: "Salzburg AG (Municipal Power Grid Operator)",
+    intern_1_date: "Summer 2026 • 4 Weeks",
+    intern_1_b1: "Utilized NEPlan power analytics software to perform complex power flow & grid capacity calculations across the city distribution network.",
+    intern_1_b2: "Planned new electrical switching states and executed short-circuit (Ik'') and earth-fault current calculations for network safety.",
+    intern_1_b3: "Assisted senior grid engineers in optimizing municipal transformer substation configurations.",
 
-    exp_3_title: "Hardware Lab & Machining Training",
-    exp_3_org: "HTL Workshop & CAD Labs",
-    exp_3_desc: "Hands-on experience in TNC 640 CNC machine programming, EPlan circuit schematic design, PCB layout in KiCad, and low-level C/C++ microcontrollers.",
+    intern_2_title: "Industrial Switchgear & Fuse Box Engineering Intern",
+    intern_2_company: "ERA - Elektrotechnik Ramsauer GmbH",
+    intern_2_date: "Summer 2025 • 4 Weeks",
+    intern_2_b1: "Independently built and wired large-scale industrial fuse boxes, main distribution switchgear, and control cabinets.",
+    intern_2_b2: "Constructed high-power electrical distribution assemblies tailored for major industrial companies across Austria.",
+    intern_2_b3: "Performed busbar bending, DIN rail component assembly, thermal load planning, and rigorous continuity testing.",
+
+    // Education & Workshop Split
+    edu_heading: "Education & Workshop Fabrication Skills",
+
+    edu_1_title: "HTL Elektrotechnik Salzburg",
+    edu_1_subtitle: "Higher Technical Institute for Electrical Engineering • 2022 - 2027",
+    edu_1_desc: "5-year intensive engineering program covering power systems, control engineering, embedded C/C++, CAD design, and automation technology.",
+
+    workshop_title: "Hands-on Workshop & Manufacturing Competencies",
+    ws_1: "Welding (MIG/MAG/TIG)",
+    ws_2: "TNC 640 CNC Machining",
+    ws_3: "Precision Drilling & Milling",
+    ws_4: "Polishing & Metalworking",
+    ws_5: "3D Printing & FDM Prototyping",
+    ws_6: "High-Voltage Electrical Wiring",
+    ws_7: "SMD & Through-Hole Soldering",
+    ws_8: "Custom PCB Design (KiCad)",
+    ws_9: "Systemic Troubleshooting",
 
     // Technical Skills Section
     skills_title: "technical skills & stack",
@@ -84,7 +107,7 @@ export const translations = {
 
     skills_cat1: "Languages & Microcontrollers",
     skills_cat2: "CAD, Simulation & Software",
-    skills_cat3: "AI Tools & Documentation",
+    skills_cat3: "AI Tools & Workflow",
     skills_cat4: "Currently Learning for Projects",
 
     // Projects Section
@@ -149,9 +172,9 @@ export const translations = {
   de: {
     // Navigation & General
     nav_about: "Über Mich",
-    nav_experience: "Erfahrung",
     nav_skills: "Skillset",
     nav_projects: "Projekte",
+    nav_experience: "Erfahrung & Ausbildung",
     back_overview: "← Zurück zur Übersicht",
 
     // Hero Section
@@ -203,21 +226,44 @@ export const translations = {
     card3_topic3: "Simulink & DroneCAN",
     card3_topic4: "Nvidia Jetson",
 
-    // Experience Section
-    exp_heading: "INGENIEUR-ERFAHRUNG & AUSBILDUNG",
-    exp_sub: "Praktische technische Ausbildung an der HTL Elektrotechnik Salzburg, Projektentwicklung und Laborerfahrung.",
+    // Experience & Education Section (SPLIT LAYOUT)
+    exp_heading: "berufserfahrung & ausbildung",
+    exp_sub: "Industrielle Ingenieur-Praktika, Stromnetzberechnungen, Verteilerbau und praktische Werkstattausbildung.",
 
-    exp_1_title: "Schüler im Bereich Elektrotechnik",
-    exp_1_org: "HTL Elektrotechnik Salzburg • 2022 - Heute",
-    exp_1_desc: "Fundierte 5-jährige technische Ausbildung in Energietechnik, Regelungstechnik, Embedded Mikrocontrollern, CAD-Konstruktion und Automatisierung.",
+    // Work Experience Split
+    work_heading: "Berufserfahrung & Praktika",
 
-    exp_2_title: "Diplomarbeit & Autonome Systeme F&E",
-    exp_2_org: "HTL Salzburg Laboratorien • 2025 - Heute",
-    exp_2_desc: "Entwicklung von Embedded Hardware, 6DoF Bewegungssimulatoren und Reinforcement-Learning KI-Modellen für autonome Fahrzeuge.",
+    intern_1_title: "Praktikant Netzplanung & Stromnetzberechnung",
+    intern_1_company: "Salzburg AG (Regionaler Stromnetzbetreiber)",
+    intern_1_date: "Sommer 2026 • 4 Wochen",
+    intern_1_b1: "Einsatz von NEPlan zur Berechnung komplexer Lastflüsse und Netzkapazitäten im städtischen Verteilernetz.",
+    intern_1_b2: "Planung neuer Schaltzustände sowie Durchführung von Kurzschluss- (Ik'') und Erdschlussberechnungen.",
+    intern_1_b3: "Unterstützung der Netzingenieure bei der Optimierung städtischer Umspannwerke.",
 
-    exp_3_title: "Werkstatt & CNC-Laborausbildung",
-    exp_3_org: "HTL Werkstätten & CAD-Labore",
-    exp_3_desc: "Praktische Erfahrung in TNC 640 CNC-Maschinenprogrammierung, EPlan Schaltplanerstellung, KiCad PCB-Layout und C/C++ Programmierung.",
+    intern_2_title: "Praktikant Schaltanlagenbau & Verteilerbau",
+    intern_2_company: "ERA - Elektrotechnik Ramsauer GmbH",
+    intern_2_date: "Sommer 2025 • 4 Wochen",
+    intern_2_b1: "Eigenständiger Aufbau und Verdrahtung großer industrieller Sicherungs- und Verteilerschränke.",
+    intern_2_b2: "Fertigung hochstromfester Schaltanlagen für namhafte österreichische Industrieunternehmen.",
+    intern_2_b3: "Durchführung von Kupferschienenbiegung, DIN-Schienen-Bestückung und thermischen Prüfungen.",
+
+    // Education & Workshop Split
+    edu_heading: "Ausbildung & Werkstattkompetenzen",
+
+    edu_1_title: "HTL Elektrotechnik Salzburg",
+    edu_1_subtitle: "Höhere Technische Lehranstalt für Elektrotechnik • 2022 - 2027",
+    edu_1_desc: "5-jährige fundierte Ingenieurausbildung in Energietechnik, Regelungstechnik, Embedded C/C++, CAD-Konstruktion und Automatisierung.",
+
+    workshop_title: "Praktische Werkstatt- & Fertigungsskills",
+    ws_1: "Schweißen (MIG/MAG/WIG)",
+    ws_2: "TNC 640 CNC-Bearbeitung",
+    ws_3: "Präzisionsbohren & Fräsen",
+    ws_4: "Polieren & Metallbearbeitung",
+    ws_5: "3D-Druck & FDM Prototyping",
+    ws_6: "Elektro-Verdrahtung & Starkstrom",
+    ws_7: "SMD & THT Löten",
+    ws_8: "Eigenes PCB Layout (KiCad)",
+    ws_9: "Systemische Fehlersuche",
 
     // Technical Skills Section
     skills_title: "technische skills & stack",
@@ -225,7 +271,7 @@ export const translations = {
 
     skills_cat1: "Sprachen & Mikrocontroller",
     skills_cat2: "CAD, Simulation & Software",
-    skills_cat3: "KI-Tools & Dokumentation",
+    skills_cat3: "KI-Tools & Workflow",
     skills_cat4: "Aktuell am Lernen für Projekte",
 
     // Projects Section

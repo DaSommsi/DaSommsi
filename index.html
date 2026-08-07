@@ -55,9 +55,9 @@
       <div class="flex items-center space-x-6 text-xs font-mono text-muted">
         <nav class="hidden md:flex items-center space-x-6">
           <a href="#about" class="hover:text-foreground transition-colors" data-i18n="nav_about">About</a>
-          <a href="#experience" class="hover:text-foreground transition-colors" data-i18n="nav_experience">Experience</a>
           <a href="#skills" class="hover:text-foreground transition-colors" data-i18n="nav_skills">Skills</a>
           <a href="#projects" class="hover:text-foreground transition-colors" data-i18n="nav_projects">Projects</a>
+          <a href="#experience" class="hover:text-foreground transition-colors" data-i18n="nav_experience">Experience & Education</a>
         </nav>
 
         <!-- Language Switcher EN | DE -->
@@ -315,51 +315,6 @@
       </div>
     </section>
 
-    <!-- NEW EXPERIENCE SECTION -->
-    <section id="experience" class="py-16 md:py-24 max-w-6xl mx-auto px-6 md:px-12 space-y-10 scroll-mt-24">
-      <div>
-        <h2 data-i18n="exp_heading" class="text-4xl md:text-5xl font-bold text-foreground font-heading tracking-tight">engineering experience & education</h2>
-        <p data-i18n="exp_sub" class="text-base text-muted max-w-2xl mt-2 font-mono">Practical technical education at HTL Elektrotechnik Salzburg, hands-on project engineering, and hardware lab training.</p>
-      </div>
-
-      <div class="space-y-6">
-        
-        <!-- Experience Entry 1 -->
-        <div class="sub-card rounded-3xl p-6 lg:p-8 space-y-3 font-mono">
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-border pb-3">
-            <h3 data-i18n="exp_1_title" class="text-lg font-bold text-foreground">Student in Electrical Engineering</h3>
-            <span data-i18n="exp_1_org" class="text-xs text-sky-400">HTL Elektrotechnik Salzburg • 2022 - Present</span>
-          </div>
-          <p data-i18n="exp_1_desc" class="text-xs text-muted leading-relaxed font-sans">
-            Comprehensive 5-year technical education covering electrical power systems, control engineering, embedded microcontrollers, CAD design, and automation technology.
-          </p>
-        </div>
-
-        <!-- Experience Entry 2 -->
-        <div class="sub-card rounded-3xl p-6 lg:p-8 space-y-3 font-mono">
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-border pb-3">
-            <h3 data-i18n="exp_2_title" class="text-lg font-bold text-foreground">Diplomarbeit & Autonomous Systems R&D</h3>
-            <span data-i18n="exp_2_org" class="text-xs text-emerald-400">HTL Salzburg Engineering Labs • 2025 - Present</span>
-          </div>
-          <p data-i18n="exp_2_desc" class="text-xs text-muted leading-relaxed font-sans">
-            Designing and programming custom embedded hardware, 6DoF motion simulators, and reinforcement learning AI agents for autonomous vehicle navigation.
-          </p>
-        </div>
-
-        <!-- Experience Entry 3 -->
-        <div class="sub-card rounded-3xl p-6 lg:p-8 space-y-3 font-mono">
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-border pb-3">
-            <h3 data-i18n="exp_3_title" class="text-lg font-bold text-foreground">Hardware Lab & Machining Training</h3>
-            <span data-i18n="exp_3_org" class="text-xs text-amber-400">HTL Workshop & CAD Labs</span>
-          </div>
-          <p data-i18n="exp_3_desc" class="text-xs text-muted leading-relaxed font-sans">
-            Hands-on experience in TNC 640 CNC machine programming, EPlan circuit schematic design, PCB layout in KiCad, and low-level C/C++ microcontrollers.
-          </p>
-        </div>
-
-      </div>
-    </section>
-
     <!-- 2. TECHNICAL SKILLS & STACK SECTION -->
     <section id="skills" class="py-16 md:py-24 bg-[#030306] border-y border-white/5 scroll-mt-24">
       <div class="max-w-6xl mx-auto px-6 md:px-12 space-y-12">
@@ -429,7 +384,7 @@
       </div>
     </section>
 
-    <!-- 3. FEATURED ENGINEERING PROJECTS (6 PROJECTS TOTAL) -->
+    <!-- 3. FEATURED ENGINEERING PROJECTS -->
     <section id="projects" class="py-16 md:py-24 max-w-6xl mx-auto px-6 md:px-12 space-y-10 scroll-mt-24">
       <div>
         <h2 data-i18n="projects_title" class="text-4xl md:text-5xl font-bold text-foreground font-heading tracking-tight">featured engineering projects</h2>
@@ -657,6 +612,123 @@
             </svg>
           </div>
         </article>
+
+      </div>
+    </section>
+
+    <!-- 4. WORK EXPERIENCE & EDUCATION (MOVED AFTER PROJECTS WITH SPLIT LAYOUT!) -->
+    <section id="experience" class="py-16 md:py-24 max-w-6xl mx-auto px-6 md:px-12 space-y-12 scroll-mt-24 border-t border-white/5">
+      <div>
+        <h2 data-i18n="exp_heading" class="text-4xl md:text-5xl font-bold text-foreground font-heading tracking-tight">work experience & education</h2>
+        <p data-i18n="exp_sub" class="text-base text-muted max-w-2xl mt-2 font-mono">Industrial engineering internships, municipal power grid calculations, custom switchgear manufacturing, and hands-on workshop fabrication.</p>
+      </div>
+
+      <!-- SPLIT LAYOUT GRID -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        
+        <!-- LEFT COLUMN: PRACTICAL WORK EXPERIENCE (INTERNSHIPS) -->
+        <div class="space-y-6">
+          <div class="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-primary border-b border-border pb-3">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            <span data-i18n="work_heading" class="font-bold">Practical Work Experience</span>
+          </div>
+
+          <!-- Internship 1: Salzburg AG -->
+          <div class="sub-card rounded-3xl p-6 space-y-4 font-mono">
+            <div class="space-y-1 border-b border-border pb-3">
+              <span data-i18n="intern_1_date" class="text-[10px] text-emerald-400 uppercase font-semibold">Summer 2026 • 4 Weeks</span>
+              <h3 data-i18n="intern_1_title" class="text-base font-bold text-foreground">Electrical Grid Planning & Calculation Intern</h3>
+              <p data-i18n="intern_1_company" class="text-xs text-sky-400 font-semibold">Salzburg AG (Municipal Power Grid Operator)</p>
+            </div>
+            
+            <ul class="space-y-2 text-xs text-zinc-300 list-disc list-inside font-sans leading-relaxed">
+              <li data-i18n="intern_1_b1">Utilized NEPlan power analytics software to perform complex power flow & grid capacity calculations across the city distribution network.</li>
+              <li data-i18n="intern_1_b2">Planned new electrical switching states and executed short-circuit (Ik'') and earth-fault current calculations for network safety.</li>
+              <li data-i18n="intern_1_b3">Assisted senior grid engineers in optimizing municipal transformer substation configurations.</li>
+            </ul>
+          </div>
+
+          <!-- Internship 2: ERA Ramsauer -->
+          <div class="sub-card rounded-3xl p-6 space-y-4 font-mono">
+            <div class="space-y-1 border-b border-border pb-3">
+              <span data-i18n="intern_2_date" class="text-[10px] text-amber-400 uppercase font-semibold">Summer 2025 • 4 Weeks</span>
+              <h3 data-i18n="intern_2_title" class="text-base font-bold text-foreground">Industrial Switchgear & Fuse Box Engineering Intern</h3>
+              <p data-i18n="intern_2_company" class="text-xs text-sky-400 font-semibold">ERA - Elektrotechnik Ramsauer GmbH</p>
+            </div>
+
+            <ul class="space-y-2 text-xs text-zinc-300 list-disc list-inside font-sans leading-relaxed">
+              <li data-i18n="intern_2_b1">Independently built and wired large-scale industrial fuse boxes, main distribution switchgear, and control cabinets.</li>
+              <li data-i18n="intern_2_b2">Constructed high-power electrical distribution assemblies tailored for major industrial companies across Austria.</li>
+              <li data-i18n="intern_2_b3">Performed busbar bending, DIN rail component assembly, thermal load planning, and rigorous continuity testing.</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- RIGHT COLUMN: EDUCATION & WORKSHOP SKILLS -->
+        <div class="space-y-6">
+          <div class="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-emerald-400 border-b border-border pb-3">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0112 20.055a11.952 11.952 0 01-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
+            <span data-i18n="edu_heading" class="font-bold">Education & Workshop Fabrication Skills</span>
+          </div>
+
+          <!-- Education -->
+          <div class="sub-card rounded-3xl p-6 space-y-3 font-mono">
+            <h3 data-i18n="edu_1_title" class="text-base font-bold text-foreground">HTL Elektrotechnik Salzburg</h3>
+            <p data-i18n="edu_1_subtitle" class="text-xs text-sky-400 font-semibold">Higher Technical Institute for Electrical Engineering • 2022 - 2027</p>
+            <p data-i18n="edu_1_desc" class="text-xs text-zinc-300 font-sans leading-relaxed">
+              5-year intensive engineering program covering power systems, control engineering, embedded C/C++, CAD design, and automation technology.
+            </p>
+          </div>
+
+          <!-- Workshop Skills Pill Matrix -->
+          <div class="sub-card rounded-3xl p-6 space-y-4 font-mono">
+            <h4 data-i18n="workshop_title" class="text-xs font-bold text-foreground uppercase tracking-wider border-b border-border pb-2">
+              Hands-on Workshop & Manufacturing Competencies
+            </h4>
+
+            <div class="grid grid-cols-2 gap-2 text-xs">
+              <div class="p-2.5 rounded bg-zinc-900/60 border border-border text-foreground font-semibold flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-sky-400"></span>
+                <span data-i18n="ws_1">Welding (MIG/MAG/TIG)</span>
+              </div>
+              <div class="p-2.5 rounded bg-zinc-900/60 border border-border text-foreground font-semibold flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                <span data-i18n="ws_2">TNC 640 CNC Machining</span>
+              </div>
+              <div class="p-2.5 rounded bg-zinc-900/60 border border-border text-foreground font-semibold flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-sky-400"></span>
+                <span data-i18n="ws_3">Precision Drilling & Milling</span>
+              </div>
+              <div class="p-2.5 rounded bg-zinc-900/60 border border-border text-foreground font-semibold flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                <span data-i18n="ws_4">Polishing & Metalworking</span>
+              </div>
+              <div class="p-2.5 rounded bg-zinc-900/60 border border-border text-foreground font-semibold flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-sky-400"></span>
+                <span data-i18n="ws_5">3D Printing & FDM Prototyping</span>
+              </div>
+              <div class="p-2.5 rounded bg-zinc-900/60 border border-border text-foreground font-semibold flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                <span data-i18n="ws_6">High-Voltage Wiring</span>
+              </div>
+              <div class="p-2.5 rounded bg-zinc-900/60 border border-border text-foreground font-semibold flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-sky-400"></span>
+                <span data-i18n="ws_7">SMD & THT Soldering</span>
+              </div>
+              <div class="p-2.5 rounded bg-zinc-900/60 border border-border text-foreground font-semibold flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                <span data-i18n="ws_8">Custom PCB Design (KiCad)</span>
+              </div>
+            </div>
+
+            <div class="pt-2 text-[11px] text-muted border-t border-border flex items-center justify-between">
+              <span data-i18n="ws_9" class="text-sky-300 font-semibold">Systemic Troubleshooting & Problem Solving</span>
+              <span class="text-emerald-400">100% Practical</span>
+            </div>
+          </div>
+
+        </div>
 
       </div>
     </section>
