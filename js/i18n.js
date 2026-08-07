@@ -63,7 +63,7 @@ export const translations = {
     card3_topic4: "Nvidia Jetson",
 
     // Experience Section
-    exp_heading: "ENGINEERING EXPERIENCE & EDUCATION",
+    exp_heading: "engineering experience & education",
     exp_sub: "Practical technical education at HTL Elektrotechnik Salzburg, hands-on project engineering, and hardware lab training.",
 
     exp_1_title: "Student in Electrical Engineering",
@@ -89,7 +89,7 @@ export const translations = {
 
     // Projects Section
     projects_title: "featured engineering projects",
-    projects_sub: "Fully documented engineering projects featuring AI reinforcement learning, 6DoF motion simulation, and custom embedded hardware.",
+    projects_sub: "Fully documented engineering projects featuring AI reinforcement learning, 6DoF motion simulation, high-performance parsers, and custom embedded hardware.",
 
     filter_all: "All Systems",
     filter_ai: "AI & Autonomy",
@@ -111,25 +111,32 @@ export const translations = {
     proj2_b3: "Wrote high-speed motor control firmware over CAN bus interface with smooth motion profiling.",
 
     // Project 3
-    proj3_title: "Tri-Tilt-Rotor SAR VTOL Platform",
-    proj3_desc: "Heavy-lift Search and Rescue tilt-rotor vehicle concept featuring failsafe ROS2 swarm nodes and custom dual-battery redundancy.",
-    proj3_b1: "Designed dual-redundant battery failover circuitry with zero voltage drop switching (<5µs MOS-FET latching).",
-    proj3_b2: "Developed C++ flight node calculating real-time vector transition matrices for 90° tilt-rotors.",
-    proj3_b3: "Structured SORA SAIL II safety documentation for AustroControl compliance.",
+    proj3_title: "EDI-to-JSONL High-Performance Parser",
+    proj3_desc: "Zero-allocation C++20 streaming engine parsing multi-gigabyte industrial EDI files into structured JSONL data.",
+    proj3_b1: "Achieved 2.4 GB/s streaming throughput via POSIX memory mapping (mmap) and string_view token evaluation.",
+    proj3_b2: "Eliminated dynamic heap allocation in hot processing loops, bounding memory overhead to O(1).",
+    proj3_b3: "Engineered lock-free ring buffer queue for SIMD-accelerated multi-threaded batch output.",
 
     // Project 4
-    proj4_title: "Deterministic 6DoF C++ Physics Engine",
-    proj4_desc: "Zero-dependency rigid body flight simulator built from scratch in C++20 with RK4 integration and NACA 0012 aerofoil aerodynamics.",
-    proj4_b1: "Programmed 4th-Order Runge-Kutta (RK4) numerical integrator running at a deterministic 1,000 Hz simulation step.",
-    proj4_b2: "Implemented quaternion attitude math preventing gimbal lock during high-angle tilt maneuvers.",
-    proj4_b3: "Integrated UDP streaming telemetry pipe connecting physics states to Ground Control Station visualizers.",
+    proj4_title: "Tri-Tilt-Rotor SAR VTOL Platform",
+    proj4_desc: "Heavy-lift Search and Rescue tilt-rotor vehicle concept featuring failsafe ROS2 swarm nodes and custom dual-battery redundancy.",
+    proj4_b1: "Designed dual-redundant battery failover circuitry with zero voltage drop switching (<5µs MOS-FET latching).",
+    proj4_b2: "Developed C++ flight node calculating real-time vector transition matrices for 90° tilt-rotors.",
+    proj4_b3: "Structured SORA SAIL II safety documentation for AustroControl compliance.",
 
     // Project 5
-    proj5_title: "DIN A4 Ground Effect Autonomous Vehicle",
-    proj5_desc: "Ultra-compact high-speed vehicle utilizing aerodynamic ground effect cushions driven by STM32H7 dual-core controllers.",
-    proj5_b1: "Achieved a 1:6.5 power-to-weight ratio with custom carbon fiber aero-chassis and ground-seal skirts.",
-    proj5_b2: "Programmed Model Predictive Controller (MPC) maintaining 3.5mm ground clearance at speed.",
-    proj5_b3: "Designed 4-layer custom PCB integrating optical distance sensors, dual BLDC drivers, and CAN telemetry.",
+    proj5_title: "Deterministic 6DoF C++ Physics Engine",
+    proj5_desc: "Zero-dependency rigid body flight simulator built from scratch in C++20 with RK4 integration and NACA 0012 aerofoil aerodynamics.",
+    proj5_b1: "Programmed 4th-Order Runge-Kutta (RK4) numerical integrator running at a deterministic 1,000 Hz simulation step.",
+    proj5_b2: "Implemented quaternion attitude math preventing gimbal lock during high-angle tilt maneuvers.",
+    proj5_b3: "Integrated UDP streaming telemetry pipe connecting physics states to Ground Control Station visualizers.",
+
+    // Project 6
+    proj6_title: "DIN A4 Ground Effect Autonomous Vehicle",
+    proj6_desc: "Ultra-compact high-speed vehicle utilizing aerodynamic ground effect cushions driven by STM32H7 dual-core controllers.",
+    proj6_b1: "Achieved a 1:6.5 power-to-weight ratio with custom carbon fiber aero-chassis and ground-seal skirts.",
+    proj6_b2: "Programmed Model Predictive Controller (MPC) maintaining 3.5mm ground clearance at speed.",
+    proj6_b3: "Designed 4-layer custom PCB integrating optical distance sensors, dual BLDC drivers, and CAN telemetry.",
 
     // Action Links
     link_github: "GitHub Repo",
@@ -223,7 +230,7 @@ export const translations = {
 
     // Projects Section
     projects_title: "ausgewählte ingenieurprojekte",
-    projects_sub: "Dokumentierte Projekte mit KI Reinforcement Learning, 6DoF Bewegungssimulation und eigener Hardware.",
+    projects_sub: "Dokumentierte Projekte mit KI Reinforcement Learning, 6DoF Bewegungssimulation, High-Performance Parsern und eigener Hardware.",
 
     filter_all: "Alle Systeme",
     filter_ai: "KI & Autonomie",
@@ -245,25 +252,32 @@ export const translations = {
     proj2_b3: "Programmierung der High-Speed Motoransteuerung über CAN-Bus Schnittstelle.",
 
     // Project 3
-    proj3_title: "Tri-Tilt-Rotor SAR VTOL Plattform",
-    proj3_desc: "Schwerlast-Such- und Rettungs-Kipprotorfahrzeug mit ausfallsicheren ROS2-Knoten und Akku-Redundanz.",
-    proj3_b1: "Entwurf redundanter Akku-Umschaltlogik ohne Spannungsabfall (<5µs MOS-FET Latching).",
-    proj3_b2: "Entwicklung eines C++ Flugknotens zur Echtzeit-Vektorberechnung der 90°-Kipprotoren.",
-    proj3_b3: "Strukturierte SORA SAIL II Sicherheitsdokumentation für AustroControl.",
+    proj3_title: "EDI-zu-JSONL High-Performance Parser",
+    proj3_desc: "Allokationsfreie C++20 Streaming-Engine zur Umwandlung riesiger EDI-Dateien in JSONL-Daten.",
+    proj3_b1: "Erreichte 2,4 GB/s Durchsatz durch POSIX Memory Mapping (mmap) und string_view Auswertung.",
+    proj3_b2: "Vermeidung dynamischer Heap-Allokation in der Hauptschleife mit O(1) Speicherbedarf.",
+    proj3_b3: "Entwicklung lock-freier Ringpuffer-Warteschlangen für SIMD-beschleunigte Batch-Ausgabe.",
 
     // Project 4
-    proj4_title: "Deterministische 6DoF C++ Physik-Engine",
-    proj4_desc: "Abhängigkeitsfreier 6DoF Flugsimulator von Grund auf in C++20 entwickelt mit RK4-Integration und NACA 0012 Profilen.",
-    proj4_b1: "Implementierung eines Runge-Kutta Integrators 4. Ordnung (RK4) bei festem 1.000 Hz Simulationsschritt.",
-    proj4_b2: "Quaternionen-Lageregelung verhindert Gimbal-Lock bei steilen Manövern.",
-    proj4_b3: "Integration einer UDP-Telemetrie-Pipe zur Übertragung an Ground Control Station Tools.",
+    proj4_title: "Tri-Tilt-Rotor SAR VTOL Plattform",
+    proj4_desc: "Schwerlast-Such- und Rettungs-Kipprotorfahrzeug mit ausfallsicheren ROS2-Knoten und Akku-Redundanz.",
+    proj4_b1: "Entwurf redundanter Akku-Umschaltlogik ohne Spannungsabfall (<5µs MOS-FET Latching).",
+    proj4_b2: "Entwicklung eines C++ Flugknotens zur Echtzeit-Vektorberechnung der 90°-Kipprotoren.",
+    proj4_b3: "Strukturierte SORA SAIL II Sicherheitsdokumentation für AustroControl.",
 
     // Project 5
-    proj5_title: "DIN A4 Autonomes Bodeneffekt-Fahrzeug",
-    proj5_desc: "Ultrakompaktes Fahrzeug zur Maximierung des Bodeneffekts gesteuert von STM32H7 Dual-Core Mikrocontrollern.",
-    proj5_b1: "Erreichte ein Leistungsgewicht von 1:6,5 mit Karbon-Aerodynamikchassis.",
-    proj5_b2: "Model Predictive Controller (MPC) hält 3,5mm Luftpolster bei hoher Geschwindigkeit.",
-    proj5_b3: "Entwicklung eines 4-Lagen-PCBs mit optischen Distanzsensoren, BLDC-Treibern und CAN-Telemetrie.",
+    proj5_title: "Deterministische 6DoF C++ Physik-Engine",
+    proj5_desc: "Abhängigkeitsfreier 6DoF Flugsimulator von Grund auf in C++20 entwickelt mit RK4-Integration und NACA 0012 Profilen.",
+    proj5_b1: "Implementierung eines Runge-Kutta Integrators 4. Ordnung (RK4) bei festem 1.000 Hz Simulationsschritt.",
+    proj5_b2: "Quaternionen-Lageregelung verhindert Gimbal-Lock bei steilen Manövern.",
+    proj5_b3: "Integration einer UDP-Telemetrie-Pipe zur Übertragung an Ground Control Station Tools.",
+
+    // Project 6
+    proj6_title: "DIN A4 Autonomes Bodeneffekt-Fahrzeug",
+    proj6_desc: "Ultrakompaktes Fahrzeug zur Maximierung des Bodeneffekts gesteuert von STM32H7 Dual-Core Mikrocontrollern.",
+    proj6_b1: "Erreichte ein Leistungsgewicht von 1:6,5 mit Karbon-Aerodynamikchassis.",
+    proj6_b2: "Model Predictive Controller (MPC) hält 3,5mm Luftpolster bei hoher Geschwindigkeit.",
+    proj6_b3: "Entwicklung eines 4-Lagen-PCBs mit optischen Distanzsensoren, BLDC-Treibern und CAN-Telemetrie.",
 
     // Action Links
     link_github: "GitHub Repo",

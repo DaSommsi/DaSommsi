@@ -166,8 +166,8 @@
               <div class="pl-3 text-muted space-y-1">
                 <p data-i18n="term_p1">&gt; Crazy Car Autonomous RL - AI agent in Unity ML-Agents driving RC car.</p>
                 <p data-i18n="term_p2">&gt; 6DoF Driving Simulator - Dynamic motion platform with inverse kinematics.</p>
-                <p data-i18n="term_p3">&gt; Tri-Tilt-Rotor SAR VTOL - Heavy-lift drone with SORA TDD concept.</p>
-                <p data-i18n="term_p4">&gt; C++ Custom Physics Engine - Deterministic 6DoF simulator with RK4 integration.</p>
+                <p data-i18n="term_p3">&gt; EDI-to-JSONL Parser - Zero-allocation 2.4 GB/s C++20 streaming engine.</p>
+                <p data-i18n="term_p4">&gt; Tri-Tilt-Rotor SAR VTOL - Heavy-lift drone with SORA TDD concept.</p>
               </div>
             </div>
           </div>
@@ -287,7 +287,7 @@
           </div>
         </div>
 
-        <!-- Card 3: Currently Learning (REPLACED HARDWARE & CAD LAB) -->
+        <!-- Card 3: Currently Learning -->
         <div class="sub-card rounded-2xl p-6 flex flex-col justify-between">
           <div class="space-y-4">
             <div class="flex items-center gap-2 text-xs font-mono text-muted uppercase tracking-wider">
@@ -360,7 +360,7 @@
       </div>
     </section>
 
-    <!-- 2. TECHNICAL SKILLS & STACK SECTION (TAILORED TO USER KNOWLEDGE) -->
+    <!-- 2. TECHNICAL SKILLS & STACK SECTION -->
     <section id="skills" class="py-16 md:py-24 bg-[#030306] border-y border-white/5 scroll-mt-24">
       <div class="max-w-6xl mx-auto px-6 md:px-12 space-y-12">
         <div>
@@ -429,11 +429,11 @@
       </div>
     </section>
 
-    <!-- 3. FEATURED ENGINEERING PROJECTS -->
+    <!-- 3. FEATURED ENGINEERING PROJECTS (6 PROJECTS TOTAL) -->
     <section id="projects" class="py-16 md:py-24 max-w-6xl mx-auto px-6 md:px-12 space-y-10 scroll-mt-24">
       <div>
         <h2 data-i18n="projects_title" class="text-4xl md:text-5xl font-bold text-foreground font-heading tracking-tight">featured engineering projects</h2>
-        <p data-i18n="projects_sub" class="text-base text-muted max-w-2xl mt-2 font-mono">Fully documented engineering projects featuring AI reinforcement learning, 6DoF motion simulation, and custom embedded hardware.</p>
+        <p data-i18n="projects_sub" class="text-base text-muted max-w-2xl mt-2 font-mono">Fully documented engineering projects featuring AI reinforcement learning, 6DoF motion simulation, high-performance parsers, and custom embedded hardware.</p>
       </div>
 
       <!-- Filter Tabs -->
@@ -452,7 +452,7 @@
         </button>
       </div>
 
-      <!-- Project Cards -->
+      <!-- Project Cards Grid -->
       <div class="space-y-6">
 
         <!-- Project 1: Crazy Car RL -->
@@ -523,7 +523,41 @@
           </div>
         </article>
 
-        <!-- Project 3: Tri-Tilt VTOL -->
+        <!-- Project 3: EDI-to-JSONL Streaming Parser -->
+        <article data-category="lowlevel" class="sub-card rounded-3xl p-6 lg:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-8 space-y-4">
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2.5 py-0.5 text-[11px] font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">C++20</span>
+              <span class="px-2.5 py-0.5 text-[11px] font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">POSIX mmap</span>
+              <span class="px-2.5 py-0.5 text-[11px] font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">Zero-Copy</span>
+            </div>
+
+            <h3 data-i18n="proj3_title" class="text-2xl font-bold text-foreground font-heading tracking-tight">EDI-to-JSONL High-Performance Parser</h3>
+            <p data-i18n="proj3_desc" class="text-xs text-muted leading-relaxed">Zero-allocation C++20 streaming engine parsing multi-gigabyte industrial EDI files into structured JSONL data.</p>
+
+            <ul class="space-y-2 text-xs text-zinc-300 list-disc list-inside font-mono border-t border-border pt-4">
+              <li data-i18n="proj3_b1">Achieved 2.4 GB/s streaming throughput via POSIX memory mapping (mmap) and string_view token evaluation.</li>
+              <li data-i18n="proj3_b2">Eliminated dynamic heap allocation in hot processing loops, bounding memory overhead to O(1).</li>
+              <li data-i18n="proj3_b3">Engineered lock-free ring buffer queue for SIMD-accelerated multi-threaded batch output.</li>
+            </ul>
+
+            <div class="flex items-center space-x-4 pt-2 text-xs font-mono">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="text-muted hover:text-sky-400 flex items-center gap-1" data-i18n="link_github">GitHub Repo</a>
+              <a href="projects/edi-jsonl-parser.html" class="text-sky-400 hover:text-sky-300 font-semibold" data-i18n="link_deepdive">Technical Deep-Dive →</a>
+            </div>
+          </div>
+
+          <div class="lg:col-span-4 h-48 rounded-2xl bg-zinc-950 border border-border p-4 relative overflow-hidden flex items-center justify-center">
+            <svg class="w-full h-full text-sky-400/80" viewBox="0 0 300 120" fill="none">
+              <rect x="20" y="30" width="80" height="60" rx="6" stroke="#38bdf8" stroke-width="1.5" fill="rgba(56,189,248,0.05)"/>
+              <path d="M 105 60 L 185 60" stroke="#10b981" stroke-width="2" stroke-dasharray="4 4"/>
+              <rect x="190" y="30" width="90" height="60" rx="6" stroke="#38bdf8" stroke-width="1.5" fill="rgba(56,189,248,0.05)"/>
+              <text x="15" y="112" font-family="monospace" font-size="8" fill="#71717a">ZERO-ALLOCATION STREAMING (2.4 GB/s)</text>
+            </svg>
+          </div>
+        </article>
+
+        <!-- Project 4: Tri-Tilt VTOL -->
         <article data-category="ai hardware" class="sub-card rounded-3xl p-6 lg:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           <div class="lg:col-span-8 space-y-4">
             <div class="flex flex-wrap gap-2">
@@ -532,13 +566,13 @@
               <span class="px-2.5 py-0.5 text-[11px] font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">STM32H7</span>
             </div>
 
-            <h3 data-i18n="proj3_title" class="text-2xl font-bold text-foreground font-heading tracking-tight">Tri-Tilt-Rotor SAR VTOL Platform</h3>
-            <p data-i18n="proj3_desc" class="text-xs text-muted leading-relaxed">Heavy-lift Search and Rescue tilt-rotor vehicle concept featuring failsafe ROS2 swarm nodes and custom dual-battery redundancy.</p>
+            <h3 data-i18n="proj4_title" class="text-2xl font-bold text-foreground font-heading tracking-tight">Tri-Tilt-Rotor SAR VTOL Platform</h3>
+            <p data-i18n="proj4_desc" class="text-xs text-muted leading-relaxed">Heavy-lift Search and Rescue tilt-rotor vehicle concept featuring failsafe ROS2 swarm nodes and custom dual-battery redundancy.</p>
 
             <ul class="space-y-2 text-xs text-zinc-300 list-disc list-inside font-mono border-t border-border pt-4">
-              <li data-i18n="proj3_b1">Designed dual-redundant battery failover circuitry with zero voltage drop switching (&lt;5µs MOS-FET latching).</li>
-              <li data-i18n="proj3_b2">Developed C++ flight node calculating real-time vector transition matrices for 90° tilt-rotors.</li>
-              <li data-i18n="proj3_b3">Structured SORA SAIL II safety documentation for AustroControl compliance.</li>
+              <li data-i18n="proj4_b1">Designed dual-redundant battery failover circuitry with zero voltage drop switching (&lt;5µs MOS-FET latching).</li>
+              <li data-i18n="proj4_b2">Developed C++ flight node calculating real-time vector transition matrices for 90° tilt-rotors.</li>
+              <li data-i18n="proj4_b3">Structured SORA SAIL II safety documentation for AustroControl compliance.</li>
             </ul>
 
             <div class="flex items-center space-x-4 pt-2 text-xs font-mono">
@@ -558,7 +592,7 @@
           </div>
         </article>
 
-        <!-- Project 4: C++ Physics Engine -->
+        <!-- Project 5: C++ Physics Engine -->
         <article data-category="lowlevel" class="sub-card rounded-3xl p-6 lg:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           <div class="lg:col-span-8 space-y-4">
             <div class="flex flex-wrap gap-2">
@@ -567,13 +601,13 @@
               <span class="px-2.5 py-0.5 text-[11px] font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">RK4 Integrator</span>
             </div>
 
-            <h3 data-i18n="proj4_title" class="text-2xl font-bold text-foreground font-heading tracking-tight">Deterministic 6DoF C++ Physics Engine</h3>
-            <p data-i18n="proj4_desc" class="text-xs text-muted leading-relaxed">Zero-dependency rigid body flight simulator built from scratch in C++20 with RK4 integration and NACA 0012 aerofoil aerodynamics.</p>
+            <h3 data-i18n="proj5_title" class="text-2xl font-bold text-foreground font-heading tracking-tight">Deterministic 6DoF C++ Physics Engine</h3>
+            <p data-i18n="proj5_desc" class="text-xs text-muted leading-relaxed">Zero-dependency rigid body flight simulator built from scratch in C++20 with RK4 integration and NACA 0012 aerofoil aerodynamics.</p>
 
             <ul class="space-y-2 text-xs text-zinc-300 list-disc list-inside font-mono border-t border-border pt-4">
-              <li data-i18n="proj4_b1">Programmed 4th-Order Runge-Kutta (RK4) numerical integrator running at a deterministic 1,000 Hz simulation step.</li>
-              <li data-i18n="proj4_b2">Implemented quaternion attitude math preventing gimbal lock during high-angle tilt maneuvers.</li>
-              <li data-i18n="proj4_b3">Integrated UDP streaming telemetry pipe connecting physics states to Ground Control Station visualizers.</li>
+              <li data-i18n="proj5_b1">Programmed 4th-Order Runge-Kutta (RK4) numerical integrator running at a deterministic 1,000 Hz simulation step.</li>
+              <li data-i18n="proj5_b2">Implemented quaternion attitude math preventing gimbal lock during high-angle tilt maneuvers.</li>
+              <li data-i18n="proj5_b3">Integrated UDP streaming telemetry pipe connecting physics states to Ground Control Station visualizers.</li>
             </ul>
 
             <div class="flex items-center space-x-4 pt-2 text-xs font-mono">
@@ -591,7 +625,7 @@
           </div>
         </article>
 
-        <!-- Project 5: Ground Effect Vehicle -->
+        <!-- Project 6: Ground Effect Vehicle -->
         <article data-category="hardware lowlevel" class="sub-card rounded-3xl p-6 lg:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           <div class="lg:col-span-8 space-y-4">
             <div class="flex flex-wrap gap-2">
@@ -600,13 +634,13 @@
               <span class="px-2.5 py-0.5 text-[11px] font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">Bare-Metal C</span>
             </div>
 
-            <h3 data-i18n="proj5_title" class="text-2xl font-bold text-foreground font-heading tracking-tight">DIN A4 Ground Effect Autonomous Vehicle</h3>
-            <p data-i18n="proj5_desc" class="text-xs text-muted leading-relaxed">Ultra-compact high-speed vehicle utilizing aerodynamic ground effect cushions driven by STM32H7 dual-core controllers.</p>
+            <h3 data-i18n="proj6_title" class="text-2xl font-bold text-foreground font-heading tracking-tight">DIN A4 Ground Effect Autonomous Vehicle</h3>
+            <p data-i18n="proj6_desc" class="text-xs text-muted leading-relaxed">Ultra-compact high-speed vehicle utilizing aerodynamic ground effect cushions driven by STM32H7 dual-core controllers.</p>
 
             <ul class="space-y-2 text-xs text-zinc-300 list-disc list-inside font-mono border-t border-border pt-4">
-              <li data-i18n="proj5_b1">Achieved a 1:6.5 power-to-weight ratio with custom carbon fiber aero-chassis and ground-seal skirts.</li>
-              <li data-i18n="proj5_b2">Programmed Model Predictive Controller (MPC) maintaining 3.5mm ground clearance at speed.</li>
-              <li data-i18n="proj5_b3">Designed 4-layer custom PCB integrating optical distance sensors, dual BLDC drivers, and CAN telemetry.</li>
+              <li data-i18n="proj6_b1">Achieved a 1:6.5 power-to-weight ratio with custom carbon fiber aero-chassis and ground-seal skirts.</li>
+              <li data-i18n="proj6_b2">Programmed Model Predictive Controller (MPC) maintaining 3.5mm ground clearance at speed.</li>
+              <li data-i18n="proj6_b3">Designed 4-layer custom PCB integrating optical distance sensors, dual BLDC drivers, and CAN telemetry.</li>
             </ul>
 
             <div class="flex items-center space-x-4 pt-2 text-xs font-mono">
