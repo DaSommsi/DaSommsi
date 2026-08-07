@@ -6,11 +6,12 @@
 
 export const translations = {
   en: {
-    // Navigation
+    // Navigation & General
     nav_about: "About",
     nav_projects: "Projects",
     nav_skills: "Skills",
     nav_experience: "Education",
+    back_overview: "← Back to Overview",
 
     // Hero Section
     hero_greeting: "Hi, I'm",
@@ -22,7 +23,7 @@ export const translations = {
     hero_cta_book: "Erasmus+ 2027",
     hero_cta_sub: "Open for 4-week EU Mobility Internships in Aerospace & Systems Engineering.",
 
-    // Terminal Hero Widget
+    // Terminal Hero Widget (Left)
     term_title: "david@htl-salzburg:~/systems",
     term_cmd_whoami: "whoami",
     term_whoami_desc: "17-year-old Systems Engineer at HTL Elektrotechnik Salzburg specializing in embedded flight controllers, ROS2 robotics, and MPC algorithms.",
@@ -37,21 +38,21 @@ export const translations = {
     term_p3: "DIN A4 Ground Effect Vehicle - STM32H7 MPC vehicle with 1:6.5 power-to-weight.",
     term_p4: "EDI-to-JSONL Streaming Parser - High-throughput zero-copy C++20 engine.",
 
-    // System Architecture & Flight Specs Card (Replacing GitHub card)
-    arch_card_title: "system architecture & specs",
-    arch_card_sub: "hardware registers & real-time control parameters",
-    arch_tag: "nominal system state",
-    arch_mcu_lbl: "MCU Clock Speed",
-    arch_mcu_val: "480 MHz (Dual Cortex-M7)",
-    arch_loop_lbl: "Control Loop Latency",
-    arch_loop_val: "< 12 ms Execution",
-    arch_solver_lbl: "MPC QP Solver",
-    arch_solver_val: "1,000 Hz Deterministic",
-    arch_safety_lbl: "Aerospace Safety",
-    arch_safety_val: "AustroControl SORA SAIL II",
-    arch_bus_lbl: "Bus Bandwidth",
-    arch_bus_val: "1 Mbps CANopen / Eth IP",
-    arch_status_line: "flight control active · dual LiPo failover ready · 0 packet drops",
+    // Oscilloscope & Flight Signal Telemetry Card (Right)
+    sig_card_title: "oscilloscope & signal monitor",
+    sig_card_sub: "ch1: pwm_actuator_out",
+    sig_mode_hover: "HOVER",
+    sig_mode_transition: "TRANSITION",
+    sig_mode_cruise: "CRUISE",
+    sig_ch1_lbl: "CH1 Servo (Left Tilt)",
+    sig_ch1_val: "1500 µs (0.0°)",
+    sig_ch2_lbl: "CH2 Servo (Right Tilt)",
+    sig_ch2_val: "1500 µs (0.0°)",
+    sig_ch3_lbl: "CH3 Motor 1 (PWM)",
+    sig_ch3_val: "84.2% (14.2k RPM)",
+    sig_ch4_lbl: "CH4 Motor 2 (PWM)",
+    sig_ch4_val: "84.2% (14.2k RPM)",
+    sig_status: "pwm output synced · 10 kHz hardware timer · zero jitter",
 
     // 3 Quick Cards Below Hero
     card1_title: "Education & Milestones",
@@ -138,11 +139,12 @@ export const translations = {
     footer_erasmus: "Applicant for 4-week EU Erasmus+ Mobility Program in Aerospace Systems Engineering (Summer 2027)."
   },
   de: {
-    // Navigation
+    // Navigation & General
     nav_about: "Über Mich",
     nav_projects: "Projekte",
     nav_skills: "Skillset",
     nav_experience: "Ausbildung",
+    back_overview: "← Zurück zur Übersicht",
 
     // Hero Section
     hero_greeting: "Hallo, ich bin",
@@ -154,7 +156,7 @@ export const translations = {
     hero_cta_book: "Erasmus+ 2027",
     hero_cta_sub: "Verfügbar für 4-wöchige EU-Praktika im Bereich Aerospace & Systems Engineering.",
 
-    // Terminal Hero Widget
+    // Terminal Hero Widget (Left)
     term_title: "david@htl-salzburg:~/systeme",
     term_cmd_whoami: "whoami",
     term_whoami_desc: "17-jähriger Systems Engineer an der HTL Elektrotechnik Salzburg mit Fokus auf Bare-Metal Flight Controller, ROS2 und MPC-Regelungen.",
@@ -169,21 +171,21 @@ export const translations = {
     term_p3: "DIN A4 Bodeneffekt-Fahrzeug - STM32H7 MPC Fahrzeug mit 1:6,5 Leistungsgewicht.",
     term_p4: "EDI-zu-JSONL Streaming Parser - Hochdurchsatz C++20 Zero-Copy Engine.",
 
-    // System Architecture & Flight Specs Card
-    arch_card_title: "systemarchitektur & specs",
-    arch_card_sub: "hardware register & echtzeit-regelungskreise",
-    arch_tag: "nominaler systemstatus",
-    arch_mcu_lbl: "MCU Taktfrequenz",
-    arch_mcu_val: "480 MHz (Dual Cortex-M7)",
-    arch_loop_lbl: "Regelschleifen-Latenz",
-    arch_loop_val: "< 12 ms Ausführung",
-    arch_solver_lbl: "MPC QP Solver",
-    arch_solver_val: "1.000 Hz Deterministisch",
-    arch_safety_lbl: "Luftfahrtsicherheit",
-    arch_safety_val: "AustroControl SORA SAIL II",
-    arch_bus_lbl: "Bus Bandbreite",
-    arch_bus_val: "1 Mbps CANopen / Eth IP",
-    arch_status_line: "flugregelung aktiv · doppel-lipo redundanz bereit · 0 paketverluste",
+    // Oscilloscope & Flight Signal Telemetry Card (Right)
+    sig_card_title: "oszilloskop & signal monitor",
+    sig_card_sub: "ch1: pwm_aktuator_ausgang",
+    sig_mode_hover: "SCHWEBEN",
+    sig_mode_transition: "ÜBERGANG",
+    sig_mode_cruise: "REISEFLUG",
+    sig_ch1_lbl: "CH1 Servo (Links Tilt)",
+    sig_ch1_val: "1500 µs (0.0°)",
+    sig_ch2_lbl: "CH2 Servo (Rechts Tilt)",
+    sig_ch2_val: "1500 µs (0.0°)",
+    sig_ch3_lbl: "CH3 Motor 1 (PWM)",
+    sig_ch3_val: "84,2% (14.2k U/min)",
+    sig_ch4_lbl: "CH4 Motor 2 (PWM)",
+    sig_ch4_val: "84,2% (14.2k U/min)",
+    sig_status: "pwm ausgang synchronisiert · 10 kHz hardware timer · zero jitter",
 
     // 3 Quick Cards Below Hero
     card1_title: "Ausbildung & Meilensteine",

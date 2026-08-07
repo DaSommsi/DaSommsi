@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tri-Tilt-Rotor SAR VTOL Platform | David Sommerer</title>
+  <meta name="description" content="Technical deep-dive into the Tri-Tilt-Rotor Search and Rescue VTOL Drone by David Sommerer. Systems architecture, ROS2 swarm nodes, dual LiPo failover, and AustroControl SORA TDD.">
+
+  <!-- Tailwind CSS CDN & Config -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            background: '#05050a',
+            card: '#090912',
+            foreground: '#f4f4f5',
+            muted: '#71717a',
+            primary: '#38bdf8',
+            border: 'rgba(255, 255, 255, 0.08)'
+          },
+          fontFamily: {
+            sans: ['Space Grotesk', 'Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Styles stylesheet -->
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="bg-[#05050a] text-zinc-200 antialiased selection:bg-sky-500/30 selection:text-sky-300 min-h-screen">
+
+  <!-- STICKY HEADER -->
+  <header class="sticky top-0 z-40 w-full backdrop-blur-md bg-[#05050a]/80 border-b border-white/5 transition-all duration-300">
+    <div class="max-w-6xl mx-auto px-6 md:px-12 h-16 flex items-center justify-between">
+      
+      <!-- Back Link & Identity -->
+      <div class="flex items-center space-x-4">
+        <a href="../index.html" class="flex items-center space-x-2 text-xs font-mono text-primary hover:text-white transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+          <span data-i18n="back_overview">← Back to Overview</span>
+        </a>
+        <span class="text-zinc-700 text-xs">/</span>
+        <span class="text-xs font-mono text-muted">david sommerer</span>
+      </div>
+
+      <!-- Language Toggle -->
+      <div class="flex items-center space-x-1 p-1 rounded-full bg-zinc-900 border border-border">
+        <button data-lang-btn="en" class="px-2.5 py-0.5 rounded-full text-[11px] font-bold text-sky-400">EN</button>
+        <button data-lang-btn="de" class="px-2.5 py-0.5 rounded-full text-[11px] text-muted hover:text-foreground">DE</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-6 md:px-12 py-12 space-y-12">
+
+    <!-- PROJECT TITLE & SUMMARY -->
+    <div class="space-y-4 border-b border-border pb-8">
+      <div class="flex flex-wrap gap-2">
+        <span class="px-2.5 py-0.5 text-xs font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">C++17</span>
+        <span class="px-2.5 py-0.5 text-xs font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">ROS2 Humble</span>
+        <span class="px-2.5 py-0.5 text-xs font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">STM32H7 Dual-Core</span>
+        <span class="px-2.5 py-0.5 text-xs font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">AustroControl SORA SAIL II</span>
+      </div>
+
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold font-heading text-foreground tracking-tight">
+        Tri-Tilt-Rotor SAR VTOL Platform
+      </h1>
+
+      <p class="text-sm sm:text-base text-muted font-mono leading-relaxed">
+        Heavy-lift Search and Rescue tilt-rotor vehicle featuring failsafe ROS2 swarm communication, custom hardware dual-battery redundancy, and an 80-page AustroControl SORA SAIL II Technical Design Document.
+      </p>
+    </div>
+
+    <!-- METRICS GRID -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 font-mono text-xs">
+      <div class="p-4 rounded-2xl bg-zinc-900/60 border border-border">
+        <div class="text-muted text-[10px]">SORA Risk Class</div>
+        <div class="text-sky-400 font-bold text-sm mt-1">SAIL II / GRC 3</div>
+      </div>
+      <div class="p-4 rounded-2xl bg-zinc-900/60 border border-border">
+        <div class="text-muted text-[10px]">Control Loop Latency</div>
+        <div class="text-emerald-400 font-bold text-sm mt-1">&lt; 12 ms</div>
+      </div>
+      <div class="p-4 rounded-2xl bg-zinc-900/60 border border-border">
+        <div class="text-muted text-[10px]">Payload Mass</div>
+        <div class="text-foreground font-bold text-sm mt-1">3.5 kg SAR Pack</div>
+      </div>
+      <div class="p-4 rounded-2xl bg-zinc-900/60 border border-border">
+        <div class="text-muted text-[10px]">Cruise Speed</div>
+        <div class="text-foreground font-bold text-sm mt-1">115 km/h Transition</div>
+      </div>
+    </div>
+
+    <!-- ARCHITECTURE SCHEMATIC DIAGRAM -->
+    <div class="rounded-2xl bg-zinc-950 border border-border p-6 space-y-3">
+      <div class="flex items-center justify-between text-xs font-mono text-muted">
+        <span>// SYSTEM ARCHITECTURE & ROTOR VECTOR TRANSITION SCHEMATIC</span>
+        <span class="text-emerald-400">STATUS: VERIFIED NOMINAL</span>
+      </div>
+      <div class="h-64 rounded-xl bg-[#05050a] border border-border p-4 flex items-center justify-center">
+        <svg class="w-full h-full text-sky-400" viewBox="0 0 400 160" fill="none">
+          <path d="M 80 80 L 320 80 M 200 20 L 200 140" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 4" />
+          <circle cx="200" cy="80" r="25" stroke="#38bdf8" stroke-width="2" fill="rgba(56,189,248,0.05)"/>
+          <ellipse cx="80" cy="50" rx="40" ry="10" stroke="#10b981" stroke-width="1.5" fill="none"/>
+          <ellipse cx="320" cy="50" rx="40" ry="10" stroke="#10b981" stroke-width="1.5" fill="none"/>
+          <circle cx="80" cy="50" r="4" fill="#38bdf8"/>
+          <circle cx="320" cy="50" r="4" fill="#38bdf8"/>
+          <circle cx="200" cy="140" r="4" fill="#38bdf8"/>
+          <text x="25" y="25" font-family="monospace" font-size="10" fill="#38bdf8">LEFT TILT SERVO [0°-90°]</text>
+          <text x="245" y="25" font-family="monospace" font-size="10" fill="#38bdf8">RIGHT TILT SERVO [0°-90°]</text>
+          <text x="140" y="155" font-family="monospace" font-size="10" fill="#10b981">TAIL YAW MOTOR (FIXED)</text>
+        </svg>
+      </div>
+    </div>
+
+    <!-- TECHNICAL SECTIONS -->
+    <div class="space-y-8 font-sans text-sm leading-relaxed text-zinc-300">
+      
+      <!-- Section 1 -->
+      <div class="space-y-3">
+        <h2 class="text-xl font-bold font-heading text-foreground">1. 80-Page AustroControl SORA SAIL II Certification</h2>
+        <p>
+          Search and Rescue missions in Alpine Austrian terrain present severe operational ground risks. I authored an extensive 80-page Technical Design Document (TDD) adhering to EASA SORA (Specific Operations Risk Assessment) regulations.
+        </p>
+        <ul class="list-disc list-inside space-y-1 font-mono text-xs text-muted">
+          <li>Ground Risk Class (GRC) 3 mitigation with autonomous dual-line parachute deployment.</li>
+          <li>Hardware-isolated failure mode & effects analysis (FMEA) for all power distribution paths.</li>
+          <li>Fail-safe geofencing and automatic return-to-home (RTH) upon loss of telemetry &gt; 1.5 seconds.</li>
+        </ul>
+      </div>
+
+      <!-- Section 2 -->
+      <div class="space-y-3">
+        <h2 class="text-xl font-bold font-heading text-foreground">2. Hardware Dual-Battery Failover Latching Circuitry</h2>
+        <p>
+          To guarantee zero voltage dip during high-current battery cell degradation or thermal shutdown, I engineered a high-side P-channel MOS-FET fast switching circuit. Switching latency is bounded to strictly under 5 microseconds, preserving flight controller CPU state during live flight.
+        </p>
+      </div>
+
+      <!-- Section 3 -->
+      <div class="space-y-3">
+        <h2 class="text-xl font-bold font-heading text-foreground">3. C++ Tilt-Vector Kinematic Code Excerpt</h2>
+        <div class="rounded-xl bg-zinc-950 border border-border p-4 overflow-x-auto font-mono text-xs text-sky-300">
+          <pre><code>// Smooth Cosine Transition Interpolator for Tri-Tilt Rotor Servos
+void TriTiltRotorController::updateTransitionMatrix(float alpha) {
+    const float alphaRad = std::clamp(alpha, 0.0f, 1.0f) * M_PI_2;
+    const float liftRatio = std::cos(alphaRad);
+    const float thrustRatio = std::sin(alphaRad);
+
+    _leftTiltServo.setAngle(alpha * 90.0f);
+    _rightTiltServo.setAngle(alpha * 90.0f);
+
+    // Dynamically reweight PID mixer matrices between multicopter and fixed-wing mode
+    _multicopterAttitudeController.setMixerWeights(liftRatio);
+    _fixedWingElevonController.setMixerWeights(thrustRatio);
+}</code></pre>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- FOOTER ACTIONS -->
+    <div class="pt-8 border-t border-border flex items-center justify-between font-mono text-xs">
+      <a href="../index.html" class="text-primary hover:text-white transition-colors">← Back to Main Portfolio</a>
+      <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="text-muted hover:text-white transition-colors">View GitHub Repository →</a>
+    </div>
+
+  </main>
+
+  <script type="module" src="../js/main.js"></script>
+</body>
+</html>

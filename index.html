@@ -32,7 +32,14 @@
   <!-- Custom Styles stylesheet -->
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="bg-[#05050a] text-zinc-200 antialiased selection:bg-sky-500/30 selection:text-sky-300 min-h-screen">
+<body class="bg-[#05050a] text-zinc-200 antialiased selection:bg-sky-500/30 selection:text-sky-300 min-h-screen relative">
+
+  <!-- SUBTLE AMBIENT BACKGROUND GLOWS (PREVENTS EMPTY FEELING) -->
+  <div class="pointer-events-none fixed inset-0 z-0">
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[radial-gradient(ellipse_at_top,rgba(56,189,248,0.12),transparent_70%)]"></div>
+    <div class="absolute top-1/3 left-0 w-[500px] h-[500px] bg-[radial-gradient(circle_at_left,rgba(16,185,129,0.04),transparent_60%)]"></div>
+    <div class="absolute bottom-1/4 right-0 w-[600px] h-[600px] bg-[radial-gradient(circle_at_right,rgba(56,189,248,0.05),transparent_60%)]"></div>
+  </div>
 
   <!-- STICKY HEADER -->
   <header class="sticky top-0 z-40 w-full backdrop-blur-md bg-[#05050a]/80 border-b border-white/5 transition-all duration-300">
@@ -104,7 +111,7 @@
         </div>
       </div>
 
-      <!-- HERO CONTAINER: TERMINAL (LEFT) + SYSTEM ARCHITECTURE SPEC BOX (RIGHT - REPLACED GITHUB CARD) -->
+      <!-- HERO CONTAINER: TERMINAL (LEFT) + OSCILLOSCOPE & SIGNAL MONITOR CARD (RIGHT - BRAND NEW REPLACEMENT) -->
       <div class="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] overflow-hidden rounded-2xl border border-white/10 bg-[#05050a]/90 shadow-[0_24px_80px_rgba(0,0,0,0.45)] backdrop-blur-md">
         
         <!-- Left: System Terminal Card -->
@@ -162,41 +169,63 @@
           </div>
         </div>
 
-        <!-- Right: System Architecture & Flight Control Specs (REPLACED GITHUB CARD) -->
-        <div class="flex flex-col justify-between gap-5 p-5 relative font-mono text-xs">
-          <div class="flex items-start justify-between gap-4 border-b border-border pb-3">
+        <!-- Right: Oscilloscope & Flight Signal Telemetry Card (BRAND NEW INTERACTIVE REPLACEMENT) -->
+        <div class="flex flex-col justify-between gap-4 p-5 relative font-mono text-xs">
+          <div class="flex items-center justify-between border-b border-border pb-3">
             <div>
-              <div class="mb-0.5 text-sm font-semibold text-foreground font-heading uppercase" data-i18n="arch_card_title">
-                system architecture & specs
+              <div class="text-sm font-semibold text-foreground font-heading uppercase" data-i18n="sig_card_title">
+                oscilloscope & signal monitor
               </div>
-              <p data-i18n="arch_card_sub" class="text-xs text-muted">hardware registers & real-time control parameters</p>
+              <p data-i18n="sig_card_sub" class="text-[11px] text-muted">ch1: pwm_actuator_out</p>
             </div>
-            <span data-i18n="arch_tag" class="rounded-full border border-emerald-400/30 bg-emerald-400/10 px-2.5 py-1 text-[10px] font-semibold text-emerald-300">nominal system state</span>
-          </div>
-
-          <!-- Specs Parameter Matrix Grid -->
-          <div class="grid grid-cols-2 gap-3 text-xs">
-            <div class="p-3 rounded-xl bg-zinc-900/60 border border-border">
-              <div data-i18n="arch_mcu_lbl" class="text-muted text-[10px]">MCU Clock Speed</div>
-              <div data-i18n="arch_mcu_val" class="text-foreground font-bold mt-1">480 MHz (Dual M7)</div>
-            </div>
-            <div class="p-3 rounded-xl bg-zinc-900/60 border border-border">
-              <div data-i18n="arch_loop_lbl" class="text-muted text-[10px]">Control Loop Latency</div>
-              <div data-i18n="arch_loop_val" class="text-primary font-bold mt-1">&lt; 12 ms Execution</div>
-            </div>
-            <div class="p-3 rounded-xl bg-zinc-900/60 border border-border">
-              <div data-i18n="arch_solver_lbl" class="text-muted text-[10px]">MPC QP Solver</div>
-              <div data-i18n="arch_solver_val" class="text-emerald-400 font-bold mt-1">1,000 Hz Fixed</div>
-            </div>
-            <div class="p-3 rounded-xl bg-zinc-900/60 border border-border">
-              <div data-i18n="arch_safety_lbl" class="text-muted text-[10px]">Aerospace Safety</div>
-              <div data-i18n="arch_safety_val" class="text-sky-300 font-bold mt-1">SORA SAIL II</div>
+            <!-- Flight State Selector Pills -->
+            <div class="flex gap-1">
+              <span data-i18n="sig_mode_hover" class="px-2 py-0.5 rounded text-[10px] bg-sky-950/60 text-sky-400 border border-sky-800/50">HOVER</span>
+              <span data-i18n="sig_mode_transition" class="px-2 py-0.5 rounded text-[10px] bg-emerald-950/60 text-emerald-400 border border-emerald-800/50">TRANSITION</span>
             </div>
           </div>
 
-          <!-- Status Footer Line -->
-          <div class="border-t border-border pt-3 text-[11px] text-muted">
-            <span class="text-sky-300">$</span> sysctl -a | <span data-i18n="arch_status_line">flight control active · dual LiPo failover ready · 0 packet drops</span>
+          <!-- Oscilloscope Waveform Display -->
+          <div class="rounded-xl border border-border bg-zinc-950 p-3 h-28 flex flex-col justify-between relative overflow-hidden">
+            <div class="flex items-center justify-between text-[10px] text-muted">
+              <span>PWM: 10.0 kHz</span>
+              <span class="text-emerald-400 font-bold">1500 µs PULSE</span>
+            </div>
+            
+            <svg class="w-full h-16 text-primary" viewBox="0 0 300 40" fill="none">
+              <path d="M 0 30 L 30 30 L 30 10 L 80 10 L 80 30 L 130 30 L 130 10 L 180 10 L 180 30 L 230 30 L 230 10 L 280 10 L 280 30 L 300 30" stroke="#38bdf8" stroke-width="2"/>
+              <path d="M 0 20 L 300 20" stroke="rgba(255,255,255,0.05)" stroke-dasharray="2 2"/>
+            </svg>
+
+            <div class="flex justify-between text-[9px] text-muted">
+              <span>0 µs</span>
+              <span>1000 µs</span>
+              <span>2000 µs</span>
+            </div>
+          </div>
+
+          <!-- Live Channel Telemetry Table -->
+          <div class="grid grid-cols-2 gap-2 text-[11px]">
+            <div class="p-2 rounded bg-zinc-900/60 border border-border flex justify-between">
+              <span data-i18n="sig_ch1_lbl" class="text-muted">CH1 Servo</span>
+              <span data-i18n="sig_ch1_val" class="text-foreground font-bold">1500 µs</span>
+            </div>
+            <div class="p-2 rounded bg-zinc-900/60 border border-border flex justify-between">
+              <span data-i18n="sig_ch2_lbl" class="text-muted">CH2 Servo</span>
+              <span data-i18n="sig_ch2_val" class="text-foreground font-bold">1500 µs</span>
+            </div>
+            <div class="p-2 rounded bg-zinc-900/60 border border-border flex justify-between">
+              <span data-i18n="sig_ch3_lbl" class="text-muted">CH3 Motor 1</span>
+              <span data-i18n="sig_ch3_val" class="text-emerald-400 font-bold">84.2%</span>
+            </div>
+            <div class="p-2 rounded bg-zinc-900/60 border border-border flex justify-between">
+              <span data-i18n="sig_ch4_lbl" class="text-muted">CH4 Motor 2</span>
+              <span data-i18n="sig_ch4_val" class="text-emerald-400 font-bold">84.2%</span>
+            </div>
+          </div>
+
+          <div class="border-t border-border pt-2 text-[10px] text-muted">
+            <span class="text-sky-300">$</span> <span data-i18n="sig_status">pwm output synced · 10 kHz hardware timer · zero jitter</span>
           </div>
         </div>
 
@@ -384,8 +413,8 @@
 
             <div class="flex items-center space-x-4 pt-2 text-xs font-mono">
               <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="text-muted hover:text-sky-400 flex items-center gap-1" data-i18n="link_github">GitHub Repo</a>
-              <a href="#" class="text-muted hover:text-sky-400 flex items-center gap-1" data-i18n="link_spec">Design Spec (PDF)</a>
-              <a href="/projects/tri-tilt-vtol" class="text-sky-400 hover:text-sky-300 font-semibold" data-i18n="link_deepdive">Technical Deep-Dive →</a>
+              <a href="projects/tri-tilt-vtol.html" class="text-muted hover:text-sky-400 flex items-center gap-1" data-i18n="link_spec">Design Spec (PDF)</a>
+              <a href="projects/tri-tilt-vtol.html" class="text-sky-400 hover:text-sky-300 font-semibold" data-i18n="link_deepdive">Technical Deep-Dive →</a>
             </div>
           </div>
 
@@ -420,7 +449,7 @@
 
             <div class="flex items-center space-x-4 pt-2 text-xs font-mono">
               <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="text-muted hover:text-sky-400 flex items-center gap-1" data-i18n="link_github">GitHub Repo</a>
-              <a href="/projects/cpp-physics-engine" class="text-sky-400 hover:text-sky-300 font-semibold" data-i18n="link_deepdive">Technical Deep-Dive →</a>
+              <a href="projects/cpp-physics-engine.html" class="text-sky-400 hover:text-sky-300 font-semibold" data-i18n="link_deepdive">Technical Deep-Dive →</a>
             </div>
           </div>
 
@@ -453,7 +482,7 @@
 
             <div class="flex items-center space-x-4 pt-2 text-xs font-mono">
               <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="text-muted hover:text-sky-400 flex items-center gap-1" data-i18n="link_github">GitHub Repo</a>
-              <a href="/projects/ground-effect-vehicle" class="text-sky-400 hover:text-sky-300 font-semibold" data-i18n="link_deepdive">Technical Deep-Dive →</a>
+              <a href="projects/ground-effect-vehicle.html" class="text-sky-400 hover:text-sky-300 font-semibold" data-i18n="link_deepdive">Technical Deep-Dive →</a>
             </div>
           </div>
 
@@ -486,7 +515,7 @@
 
             <div class="flex items-center space-x-4 pt-2 text-xs font-mono">
               <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="text-muted hover:text-sky-400 flex items-center gap-1" data-i18n="link_github">GitHub Repo</a>
-              <a href="/projects/edi-jsonl-parser" class="text-sky-400 hover:text-sky-300 font-semibold" data-i18n="link_deepdive">Technical Deep-Dive →</a>
+              <a href="projects/edi-jsonl-parser.html" class="text-sky-400 hover:text-sky-300 font-semibold" data-i18n="link_deepdive">Technical Deep-Dive →</a>
             </div>
           </div>
 
@@ -520,7 +549,7 @@
 
             <div class="flex items-center space-x-4 pt-2 text-xs font-mono">
               <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="text-muted hover:text-sky-400 flex items-center gap-1" data-i18n="link_github">GitHub Repo</a>
-              <a href="/projects/robotic-arm-restoration" class="text-sky-400 hover:text-sky-300 font-semibold" data-i18n="link_deepdive">Technical Deep-Dive →</a>
+              <a href="projects/robotic-arm-restoration.html" class="text-sky-400 hover:text-sky-300 font-semibold" data-i18n="link_deepdive">Technical Deep-Dive →</a>
             </div>
           </div>
 
@@ -540,7 +569,7 @@
   </main>
 
   <!-- FOOTER -->
-  <footer class="border-t border-white/5 bg-[#030306] py-10 font-mono text-xs text-muted">
+  <footer class="border-t border-white/5 bg-[#030306] py-10 font-mono text-xs text-muted relative z-10">
     <div class="max-w-6xl mx-auto px-6 md:px-12 flex flex-col sm:flex-row items-center justify-between gap-4">
       <div data-i18n="footer_copy">
         © 2026 David Sommerer — HTL Elektrotechnik Salzburg.

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EDI-to-JSONL Streaming Parser | David Sommerer</title>
+  <meta name="description" content="Technical deep-dive into the high-performance C++20 zero-allocation streaming parser by David Sommerer. POSIX mmap memory mapping, 2.4 GB/s throughput, and AVX2 SIMD acceleration.">
+
+  <!-- Tailwind CSS CDN & Config -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            background: '#05050a',
+            card: '#090912',
+            foreground: '#f4f4f5',
+            muted: '#71717a',
+            primary: '#38bdf8',
+            border: 'rgba(255, 255, 255, 0.08)'
+          },
+          fontFamily: {
+            sans: ['Space Grotesk', 'Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Styles stylesheet -->
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="bg-[#05050a] text-zinc-200 antialiased selection:bg-sky-500/30 selection:text-sky-300 min-h-screen">
+
+  <!-- STICKY HEADER -->
+  <header class="sticky top-0 z-40 w-full backdrop-blur-md bg-[#05050a]/80 border-b border-white/5 transition-all duration-300">
+    <div class="max-w-6xl mx-auto px-6 md:px-12 h-16 flex items-center justify-between">
+      
+      <!-- Back Link & Identity -->
+      <div class="flex items-center space-x-4">
+        <a href="../index.html" class="flex items-center space-x-2 text-xs font-mono text-primary hover:text-white transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+          <span>← Back to Overview</span>
+        </a>
+        <span class="text-zinc-700 text-xs">/</span>
+        <span class="text-xs font-mono text-muted">david sommerer</span>
+      </div>
+
+      <!-- Language Toggle -->
+      <div class="flex items-center space-x-1 p-1 rounded-full bg-zinc-900 border border-border">
+        <button data-lang-btn="en" class="px-2.5 py-0.5 rounded-full text-[11px] font-bold text-sky-400">EN</button>
+        <button data-lang-btn="de" class="px-2.5 py-0.5 rounded-full text-[11px] text-muted hover:text-foreground">DE</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-6 md:px-12 py-12 space-y-12">
+
+    <!-- PROJECT TITLE & SUMMARY -->
+    <div class="space-y-4 border-b border-border pb-8">
+      <div class="flex flex-wrap gap-2">
+        <span class="px-2.5 py-0.5 text-xs font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">C++20</span>
+        <span class="px-2.5 py-0.5 text-xs font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">POSIX mmap</span>
+        <span class="px-2.5 py-0.5 text-xs font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">Zero-Copy Parsing</span>
+        <span class="px-2.5 py-0.5 text-xs font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">AVX2 Vectorization</span>
+      </div>
+
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold font-heading text-foreground tracking-tight">
+        EDI-to-JSONL Streaming Parser
+      </h1>
+
+      <p class="text-sm sm:text-base text-muted font-mono leading-relaxed">
+        Zero-allocation C++20 streaming engine parsing dense multi-gigabyte industrial EDI/FACT data streams directly into structured JSONL format at memory-mapped throughput.
+      </p>
+    </div>
+
+    <!-- METRICS GRID -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 font-mono text-xs">
+      <div class="p-4 rounded-2xl bg-zinc-900/60 border border-border">
+        <div class="text-muted text-[10px]">Streaming Speed</div>
+        <div class="text-sky-400 font-bold text-sm mt-1">2.4 GB / sec</div>
+      </div>
+      <div class="p-4 rounded-2xl bg-zinc-900/60 border border-border">
+        <div class="text-muted text-[10px]">Allocations (Hot Loop)</div>
+        <div class="text-emerald-400 font-bold text-sm mt-1">0 Bytes</div>
+      </div>
+      <div class="p-4 rounded-2xl bg-zinc-900/60 border border-border">
+        <div class="text-muted text-[10px]">Throughput Records</div>
+        <div class="text-foreground font-bold text-sm mt-1">14M / sec</div>
+      </div>
+      <div class="p-4 rounded-2xl bg-zinc-900/60 border border-border">
+        <div class="text-muted text-[10px]">Memory Complexity</div>
+        <div class="text-foreground font-bold text-sm mt-1">O(1) Bounded</div>
+      </div>
+    </div>
+
+    <!-- CODE EXCERPT -->
+    <div class="space-y-4 font-sans text-sm leading-relaxed text-zinc-300">
+      <h2 class="text-xl font-bold font-heading text-foreground">C++20 Zero-Allocation Token Evaluator</h2>
+      <div class="rounded-xl bg-zinc-950 border border-border p-4 overflow-x-auto font-mono text-xs text-sky-300">
+        <pre><code>std::string_view EdiParser::nextSegment(std::string_view& stream, char delimiter) noexcept {
+    const size_t pos = stream.find(delimiter);
+    if (pos == std::string_view::npos) {
+        std::string_view tok = stream;
+        stream = {};
+        return tok;
+    }
+    std::string_view tok = stream.substr(0, pos);
+    stream.remove_prefix(pos + 1);
+    return tok;
+}</code></pre>
+      </div>
+    </div>
+
+    <!-- FOOTER ACTIONS -->
+    <div class="pt-8 border-t border-border flex items-center justify-between font-mono text-xs">
+      <a href="../index.html" class="text-primary hover:text-white transition-colors">← Back to Main Portfolio</a>
+      <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="text-muted hover:text-white transition-colors">View GitHub Repository →</a>
+    </div>
+
+  </main>
+
+  <script type="module" src="../js/main.js"></script>
+</body>
+</html>
