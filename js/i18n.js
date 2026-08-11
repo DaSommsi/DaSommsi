@@ -1,7 +1,7 @@
 /**
  * @file i18n.js
- * @description Dual-language translation dictionary (EN Primary, DE Secondary)
- * Tailored for David Sommerer (Electrical & Systems Engineer).
+ * @description Comprehensive Dual-Language Translation Dictionary (EN Primary, DE Secondary)
+ * Tailored for David Sommerer — Systems & Electrical Engineer.
  */
 
 export const translations = {
@@ -11,7 +11,11 @@ export const translations = {
     nav_skills: "Skills",
     nav_projects: "Projects",
     nav_experience: "Experience & Education",
-    back_overview: "← Back to Overview",
+    back_overview: "← Back to Main Portfolio",
+    timeline_title: "Project Timeline & Milestones",
+    problems_title: "Engineering Challenges & Root Cause Failures",
+    learnings_title: "Key Lessons & What We Learned",
+    gallery_title: "Project Media, Code & CAD Assets",
 
     // Hero Section
     hero_greeting: "Hi, I'm",
@@ -20,11 +24,11 @@ export const translations = {
     hero_role: "Electrical & Systems Engineer",
     hero_specializing: "specializing in",
     hero_focus: "Embedded C++, Controls & Autonomous Systems.",
-    hero_subtitle: "Student at HTL Elektrotechnik Salzburg. Building embedded micro-architecture, AI-driven autonomous RC cars, 6DoF simulators, and control systems.",
+    hero_subtitle: "Student at HTL Elektrotechnik Salzburg. Building embedded micro-architecture, AI-driven autonomous RC cars, 6DoF motion simulators, and control systems.",
     hero_cta_projects: "Explore Projects",
     hero_cta_contact: "Direct Contact",
 
-    // Oscilloscope Hero Card (Right)
+    // Oscilloscope Hero Card
     sig_card_title: "oscilloscope & signal monitor",
     sig_card_sub: "ch1: pwm_actuator_out",
     sig_mode_hover: "ACTIVE",
@@ -44,17 +48,17 @@ export const translations = {
     card1_role1: "HTL Elektrotechnik Salzburg",
     card1_date1: "Higher Technical Institute • 2022 - 2027",
     card1_role2: "Diplomarbeit R&D Project",
-    card1_date2: "Electrical Engineering Systems • 2025 - 2026",
+    card1_date2: "SAR VTOL Drone & SORA • 2025 - 2026",
     card1_role3: "Specialization",
-    card1_date3: "Embedded Software, CAD & Automation",
+    card1_date3: "Embedded Software, CAD & Controls",
 
     card2_title: "Featured Projects",
     card2_topic1: "Crazy Car Autonomous RL",
-    card2_desc1: "RC car rebuilt with MCU & servos, AI trained in Unity ML-Agents.",
+    card2_desc1: "€30 RC car rebuilt with ESP32, AI trained in Unity ML-Agents.",
     card2_topic2: "6DoF Driving Simulator",
-    card2_desc2: "6 Degrees-of-Freedom motion platform with real-time inverse kinematics.",
+    card2_desc2: "Restored school motion rig, physical signal/power cable isolation.",
     card2_topic3: "Tri-Tilt-Rotor SAR VTOL",
-    card2_desc3: "Heavy-lift Search & Rescue tilt-rotor vehicle concept.",
+    card2_desc3: "BVLOS search & rescue drone with AustroControl SORA SAIL II.",
 
     card3_handle: "currently learning",
     card3_topic1: "ROS2 & Gazebo",
@@ -62,11 +66,9 @@ export const translations = {
     card3_topic3: "Simulink & DroneCAN",
     card3_topic4: "Nvidia Jetson",
 
-    // Experience & Education Section (SPLIT LAYOUT)
+    // Experience & Education Section
     exp_heading: "work experience & education",
     exp_sub: "Industrial engineering internships, municipal power grid calculations, custom switchgear manufacturing, and hands-on workshop fabrication.",
-
-    // Work Experience Split
     work_heading: "Practical Work Experience",
 
     intern_1_title: "Electrical Grid Planning & Calculation Intern",
@@ -83,9 +85,7 @@ export const translations = {
     intern_2_b2: "Constructed high-power electrical distribution assemblies tailored for major industrial companies across Austria.",
     intern_2_b3: "Performed busbar bending, DIN rail component assembly, thermal load planning, and rigorous continuity testing.",
 
-    // Education & Workshop Split
     edu_heading: "Education & Workshop Fabrication Skills",
-
     edu_1_title: "HTL Elektrotechnik Salzburg",
     edu_1_subtitle: "Higher Technical Institute for Electrical Engineering • 2022 - 2027",
     edu_1_desc: "5-year intensive engineering program covering power systems, control engineering, embedded C/C++, CAD design, and automation technology.",
@@ -103,9 +103,9 @@ export const translations = {
 
     // Technical Skills Section
     skills_title: "technical skills & stack",
-    skills_sub: "Software, embedded microcontrollers, CAD tools, and AI technologies I work with daily alongside active learning for upcoming projects.",
+    skills_sub: "Software, embedded microcontrollers, CAD tools, version control, and AI technologies I work with daily alongside active learning for upcoming projects.",
 
-    skills_cat1: "Languages & Microcontrollers",
+    skills_cat1: "Languages, Tools & Version Control",
     skills_cat2: "CAD, Simulation & Software",
     skills_cat3: "AI Tools & Workflow",
     skills_cat4: "Currently Learning for Projects",
@@ -119,52 +119,58 @@ export const translations = {
     filter_lowlevel: "Embedded C/C++",
     filter_hardware: "Hardware & Sim",
 
-    // Project 1
+    // Project 1: Crazy Car
     proj1_title: "Crazy Car: Autonomous AI/RL RC Car",
-    proj1_desc: "Rebuilt an RC car with microcontrollers and custom servo steering. Trained a Reinforcement Learning (RL) AI agent in Unity ML-Agents to navigate complex tracks autonomously.",
-    proj1_b1: "Overhauled stock RC vehicle chassis with custom microcontroller hardware and precision steering servo feedback.",
-    proj1_b2: "Constructed 3D track simulation environment in Unity using ML-Agents for neural network reward optimization.",
-    proj1_b3: "Deployed trained AI policy models onto onboard hardware for real-world autonomous obstacle avoidance.",
+    proj1_date: "Oct 2025 - Feb 2026 (Competition Graz)",
+    proj1_desc: "Rebuilt a €30 Amazon RC car with custom microcontroller hardware & servos. Trained a PPO AI agent in Unity ML-Agents to directly control motor PWM and steering.",
+    proj1_b1: "Trained neural network taking velocity, IMU, and 3 ToF distance sensors to directly output motor speed & servo steering angle (no intermediate PID).",
+    proj1_b2: "Quantized ONNX model weights to Int8 and coded a custom lightweight neural network inference engine directly on ESP32.",
+    proj1_b3: "Identified Graz competition failure (EMI / high-current voltage sag interrupting sensor traces); led to starting next project 8 months early!",
 
-    // Project 2
-    proj2_title: "6DoF Dynamic Driving Simulator",
-    proj2_desc: "Custom 6 Degrees-of-Freedom motion platform designed for immersive driving simulation with real-time kinematic calculations and multi-axis motor actuation.",
-    proj2_b1: "Calculated Denavit-Hartenberg inverse kinematics for 6 linear actuators running in real time.",
-    proj2_b2: "Designed CAD mechanical frame assembly in SolidEdge with Ansys stress analysis.",
-    proj2_b3: "Wrote high-speed motor control firmware over CAN bus interface with smooth motion profiling.",
+    // Project 2: 6DoF Sim
+    proj2_title: "6DoF Dynamic Motion Simulator Rig",
+    proj2_date: "May 2025 - Jan 2026 (Finished for HTL Open Door Day)",
+    proj2_desc: "Restored a broken, legacy 6DoF motion rig at HTL Salzburg by solving severe EMI noise via physical signal/power cable isolation and custom C++ control software.",
+    proj2_b1: "Diagnosed root cause EMI interference; physically separated signal & power wiring and built a custom electrical distribution fuse box.",
+    proj2_b2: "Wrote modular C++ control software and secured €2,000 monitors & €3.5k gaming PC sponsorships from department leadership.",
+    proj2_b3: "Featured as the main highlight at HTL Salzburg Open Door Day 2026; proved David's passion for avionics & embedded electronics.",
 
-    // Project 3
-    proj3_title: "EDI-to-JSONL High-Performance Parser",
-    proj3_desc: "Zero-allocation C++20 streaming engine parsing multi-gigabyte industrial EDI files into structured JSONL data.",
-    proj3_b1: "Achieved 2.4 GB/s streaming throughput via POSIX memory mapping (mmap) and string_view token evaluation.",
-    proj3_b2: "Eliminated dynamic heap allocation in hot processing loops, bounding memory overhead to O(1).",
-    proj3_b3: "Engineered lock-free ring buffer queue for SIMD-accelerated multi-threaded batch output.",
+    // Project 3: EDI Parser
+    proj3_title: "High-Performance Zero-Allocation EDI Engine",
+    proj3_date: "Started April 2026 (Active Stealth Project)",
+    proj3_desc: "High-throughput O(1) EDI streaming engine running in <35 MB RAM. Zero code configuration engine using JSON schema rules (Stealth Commercial Project).",
+    proj3_b1: "Binds memory footprint to strictly O(1) (~35 MB RAM) for multi-gigabyte industrial EDI/FACT data streams.",
+    proj3_b2: "Engineered zero-code parsing logic driven dynamically by external JSON mapping configurations (V3/V4 standards).",
+    proj3_b3: "Fully Dockerized, microservices-ready architecture currently under commercial evaluation for industrial partnerships.",
 
-    // Project 4
-    proj4_title: "Tri-Tilt-Rotor SAR VTOL Platform",
-    proj4_desc: "Heavy-lift Search and Rescue tilt-rotor vehicle concept featuring failsafe ROS2 swarm nodes and custom dual-battery redundancy.",
-    proj4_b1: "Designed dual-redundant battery failover circuitry with zero voltage drop switching (<5µs MOS-FET latching).",
-    proj4_b2: "Developed C++ flight node calculating real-time vector transition matrices for 90° tilt-rotors.",
-    proj4_b3: "Structured SORA SAIL II safety documentation for AustroControl compliance.",
+    // Project 4: Tri-Tilt SAR VTOL
+    proj4_title: "Tri-Tilt-Rotor SAR VTOL Drone (Diplomprojekt)",
+    proj4_date: "Started June 2026 (Diplomarbeit • Ongoing)",
+    proj4_desc: "BVLOS Search & Rescue 3-rotor VTOL drone built under AustroControl SORA SAIL II safety guidelines. Dual Pixhawk FMU + Nvidia Jetson ROS2 swarm architecture.",
+    proj4_b1: "Designed for Alpine Search & Rescue with thermal IR camera AI person detection, GPS-jamming optical flow mapping (±2m precision), and parachute deployment.",
+    proj4_b2: "Specs: 15-20 kg mass, 3m wingspan, 130 km/h top speed, 85 km/h cruise speed, 120-400m operational altitude (up to 4000m travel mode).",
+    proj4_b3: "In active sponsorship & testing site talks with the Austrian Armed Forces (Österreichisches Bundesheer).",
 
-    // Project 5
+    // Project 5: C++ Physics Engine
     proj5_title: "Deterministic 6DoF C++ Physics Engine",
-    proj5_desc: "Zero-dependency rigid body flight simulator built from scratch in C++20 with RK4 integration and NACA 0012 aerofoil aerodynamics.",
+    proj5_date: "March 2026 - May 2026",
+    proj5_desc: "Zero-dependency rigid body flight simulator built from scratch in C++20 with RK4 integration to master physics mechanics & C++ for the SAR VTOL project.",
     proj5_b1: "Programmed 4th-Order Runge-Kutta (RK4) numerical integrator running at a deterministic 1,000 Hz simulation step.",
     proj5_b2: "Implemented quaternion attitude math preventing gimbal lock during high-angle tilt maneuvers.",
     proj5_b3: "Integrated UDP streaming telemetry pipe connecting physics states to Ground Control Station visualizers.",
 
-    // Project 6
+    // Project 6: Ground Effect Car
     proj6_title: "DIN A4 Ground Effect Autonomous Vehicle",
-    proj6_desc: "Ultra-compact high-speed vehicle utilizing aerodynamic ground effect cushions driven by STM32H7 dual-core controllers.",
-    proj6_b1: "Achieved a 1:6.5 power-to-weight ratio with custom carbon fiber aero-chassis and ground-seal skirts.",
-    proj6_b2: "Programmed Model Predictive Controller (MPC) maintaining 3.5mm ground clearance at speed.",
-    proj6_b3: "Designed 4-layer custom PCB integrating optical distance sensors, dual BLDC drivers, and CAN telemetry.",
+    proj6_date: "Started April 2026 (Competition 2027 • Successor)",
+    proj6_desc: "Direct successor to Crazy Car started 8 months ahead! Features 13 kg ground-effect downforce cushion on 2 kg chassis, Bugatti-like acceleration, and STM32H7 MPC.",
+    proj6_b1: "Designed CAD chassis in SolidEdge achieving 1:6.5 power-to-weight ratio; secured €400 component sponsorship.",
+    proj6_b2: "Developing Model Predictive Control (MPC) in MATLAB/Simulink deployed to STM32H7 for track position estimation.",
+    proj6_b3: "Engineered optimal racing line solver with ToF sensor obstacle avoidance to secure victory at 2027 competition.",
 
     // Action Links
     link_github: "GitHub Repo",
     link_spec: "Design Spec (PDF)",
-    link_deepdive: "Technical Deep-Dive →",
+    link_deepdive: "Technical Case Study →",
 
     // Footer
     footer_copy: "© 2026 David Sommerer — HTL Elektrotechnik Salzburg."
@@ -175,7 +181,11 @@ export const translations = {
     nav_skills: "Skillset",
     nav_projects: "Projekte",
     nav_experience: "Erfahrung & Ausbildung",
-    back_overview: "← Zurück zur Übersicht",
+    back_overview: "← Zurück zur Hauptseite",
+    timeline_title: "Projekt-Timeline & Meilensteine",
+    problems_title: "Technische Herausforderungen & Fehleranalyse",
+    learnings_title: "Key Learnings & Erkenntnisse",
+    gallery_title: "Medien, Code & CAD-Assets",
 
     // Hero Section
     hero_greeting: "Hallo, ich bin",
@@ -188,7 +198,7 @@ export const translations = {
     hero_cta_projects: "Projekte Erkunden",
     hero_cta_contact: "Direktkontakt",
 
-    // Oscilloscope Hero Card (Right)
+    // Oscilloscope Hero Card
     sig_card_title: "oszilloskop & signal monitor",
     sig_card_sub: "ch1: pwm_aktuator_ausgang",
     sig_mode_hover: "AKTIV",
@@ -208,17 +218,17 @@ export const translations = {
     card1_role1: "HTL Elektrotechnik Salzburg",
     card1_date1: "Höhere Technische Lehranstalt • 2022 - 2027",
     card1_role2: "Diplomarbeit F&E Projekt",
-    card1_date2: "Elektrotechnik Systeme • 2025 - 2026",
+    card1_date2: "SAR VTOL Drohne & SORA • 2025 - 2026",
     card1_role3: "Schwerpunkte",
-    card1_date3: "Embedded Software, CAD & Automation",
+    card1_date3: "Embedded Software, CAD & Regelungstechnik",
 
     card2_title: "Ausgewählte Projekte",
     card2_topic1: "Crazy Car Autonomes RL",
-    card2_desc1: "RC Car Umbau mit MCU & Servos, KI-Training in Unity ML-Agents.",
+    card2_desc1: "30€ RC Car Umbau mit ESP32, KI-Training in Unity ML-Agents.",
     card2_topic2: "6DoF Fahr-Simulator",
-    card2_desc2: "6-Achsen Bewegungsplattform mit Inverskinematik in Echtzeit.",
+    card2_desc2: "Restaurierung des HTL-Simulators, physikalische EMV-Kabeltrennung.",
     card2_topic3: "Tri-Tilt-Rotor SAR VTOL",
-    card2_desc3: "Kipprotor-Drohnenkonzept für Such- und Rettungseinsätze.",
+    card2_desc3: "BVLOS Rettungsdrohne nach AustroControl SORA SAIL II.",
 
     card3_handle: "currently learning",
     card3_topic1: "ROS2 & Gazebo",
@@ -226,11 +236,9 @@ export const translations = {
     card3_topic3: "Simulink & DroneCAN",
     card3_topic4: "Nvidia Jetson",
 
-    // Experience & Education Section (SPLIT LAYOUT)
+    // Experience & Education Section
     exp_heading: "berufserfahrung & ausbildung",
     exp_sub: "Industrielle Ingenieur-Praktika, Stromnetzberechnungen, Verteilerbau und praktische Werkstattausbildung.",
-
-    // Work Experience Split
     work_heading: "Berufserfahrung & Praktika",
 
     intern_1_title: "Praktikant Netzplanung & Stromnetzberechnung",
@@ -247,9 +255,7 @@ export const translations = {
     intern_2_b2: "Fertigung hochstromfester Schaltanlagen für namhafte österreichische Industrieunternehmen.",
     intern_2_b3: "Durchführung von Kupferschienenbiegung, DIN-Schienen-Bestückung und thermischen Prüfungen.",
 
-    // Education & Workshop Split
     edu_heading: "Ausbildung & Werkstattkompetenzen",
-
     edu_1_title: "HTL Elektrotechnik Salzburg",
     edu_1_subtitle: "Höhere Technische Lehranstalt für Elektrotechnik • 2022 - 2027",
     edu_1_desc: "5-jährige fundierte Ingenieurausbildung in Energietechnik, Regelungstechnik, Embedded C/C++, CAD-Konstruktion und Automatisierung.",
@@ -267,9 +273,9 @@ export const translations = {
 
     // Technical Skills Section
     skills_title: "technische skills & stack",
-    skills_sub: "Software, Bare-Metal Mikrocontroller, CAD-Tools und KI-Technologien, mit denen ich arbeite.",
+    skills_sub: "Software, Bare-Metal Mikrocontroller, CAD-Tools, Versionskontrolle und KI-Technologien, mit denen ich arbeite.",
 
-    skills_cat1: "Sprachen & Mikrocontroller",
+    skills_cat1: "Sprachen, Tools & Versionskontrolle",
     skills_cat2: "CAD, Simulation & Software",
     skills_cat3: "KI-Tools & Workflow",
     skills_cat4: "Aktuell am Lernen für Projekte",
@@ -283,52 +289,58 @@ export const translations = {
     filter_lowlevel: "Embedded C/C++",
     filter_hardware: "Hardware & Sim",
 
-    // Project 1
+    // Project 1: Crazy Car
     proj1_title: "Crazy Car: Autonomes KI/RL RC-Car",
-    proj1_desc: "Umbau eines RC-Cars mit Mikrocontroller und Servo-Steuerung. Training eines Reinforcement Learning (RL) KI-Agenten in Unity ML-Agents zur autonomen Streckenfahrt.",
-    proj1_b1: "Überholung des RC-Chassis mit eigener Mikrocontroller-Hardware und Präzisions-Servorückmeldung.",
-    proj1_b2: "Aufbau einer 3D-Simulationsumgebung in Unity mit ML-Agents für neuronale Netzwerke.",
-    proj1_b3: "Deployen des trainierten KI-Modells auf das Fahrzeug zur autonomen Hindernisumfahrung.",
+    proj1_date: "Okt 2025 - Feb 2026 (Wettbewerb Graz)",
+    proj1_desc: "Umbau eines 30€ Amazon RC-Cars mit eigener MCU & Servos. Training eines PPO KI-Agenten in Unity ML-Agents zur direkten Motor- und Lenkungssteuerung.",
+    proj1_b1: "Trainiertes neuronales Netz verarbeitet Geschwindigkeit, IMU und 3 ToF-Sensoren zur direkten Ansteuerung von Motor-PWM & Lenkservo (ohne PID-Zwischenschritt).",
+    proj1_b2: "Quantisierung der ONNX-Gewichte auf Int8 und Coden eines eigenen Inferenz-Engine Rechners direkt auf dem ESP32.",
+    proj1_b3: "Fehleranalyse beim Bewerb in Graz (EMV / Spannungseinbruch bei Motorstrom störte Sensor-Leiterbahnen); führte dazu, das nächste Projekt 8 Monate früher zu starten!",
 
-    // Project 2
+    // Project 2: 6DoF Sim
     proj2_title: "6DoF Dynamischer Fahr-Simulator",
-    proj2_desc: "Eigene 6 Degrees-of-Freedom Bewegungsplattform für Fahrsimulationen mit Inverskinematik-Berechnung in Echtzeit.",
-    proj2_b1: "Berechnung von Denavit-Hartenberg Inverskinematik für 6 Linearaktuatoren in Echtzeit.",
-    proj2_b2: "Konstruktion des CAD-Mechanikrahmens in SolidEdge mit Ansys Festigkeitsanalyse.",
-    proj2_b3: "Programmierung der High-Speed Motoransteuerung über CAN-Bus Schnittstelle.",
+    proj2_date: "Mai 2025 - Jan 2026 (Fertiggestellt für Tag der offenen Tür)",
+    proj2_desc: "Restaurierung des defekten 6DoF-Simulators der HTL Salzburg durch Behebung von EMV-Störungen mittels physischer Kabeltrennung und eigener C++ Software.",
+    proj2_b1: "Ursachenanalyse der EMV-Störungen; physische Trennung von Signal- und Leistungskabeln sowie Bau eines Verteilerschranks.",
+    proj2_b2: "Entwicklung modularer C++ Steuerungsoftware und Sponsoring-Akquise für 2.000€ Monitore & 3,5k€ Gaming-PC beim Abteilungsvorstand.",
+    proj2_b3: "Hauptattraktion beim Tag der offenen Tür 2026; Bestätigung für Davids Leidenschaft für Avionik, Hardware-Coding und Elektronikplanung.",
 
-    // Project 3
-    proj3_title: "EDI-zu-JSONL High-Performance Parser",
-    proj3_desc: "Allokationsfreie C++20 Streaming-Engine zur Umwandlung riesiger EDI-Dateien in JSONL-Daten.",
-    proj3_b1: "Erreichte 2,4 GB/s Durchsatz durch POSIX Memory Mapping (mmap) und string_view Auswertung.",
-    proj3_b2: "Vermeidung dynamischer Heap-Allokation in der Hauptschleife mit O(1) Speicherbedarf.",
-    proj3_b3: "Entwicklung lock-freier Ringpuffer-Warteschlangen für SIMD-beschleunigte Batch-Ausgabe.",
+    // Project 3: EDI Parser
+    proj3_title: "High-Performance Zero-Allocation EDI Engine",
+    proj3_date: "Gestartet April 2026 (Aktives Stealth-Projekt)",
+    proj3_desc: "Hochdurchsatz O(1) EDI-Streaming-Engine in <35 MB RAM. Zero-Code Regelwerk über JSON-Konfigurationen (Vertrauliches Business-Projekt).",
+    proj3_b1: "Speicherbedarf strikt auf O(1) (~35 MB RAM) begrenzt für Multi-Gigabyte EDI/FACT Datenströme.",
+    proj3_b2: "Zero-Code Parsing-Logik gesteuert über externe JSON-Mapping-Regelwerke (V3/V4 Standards).",
+    proj3_b3: "Vollständig Dockerisiert, Microservices-ready und aktuell in kommerzieller Evaluierung für Industriepartner.",
 
-    // Project 4
-    proj4_title: "Tri-Tilt-Rotor SAR VTOL Plattform",
-    proj4_desc: "Schwerlast-Such- und Rettungs-Kipprotorfahrzeug mit ausfallsicheren ROS2-Knoten und Akku-Redundanz.",
-    proj4_b1: "Entwurf redundanter Akku-Umschaltlogik ohne Spannungsabfall (<5µs MOS-FET Latching).",
-    proj4_b2: "Entwicklung eines C++ Flugknotens zur Echtzeit-Vektorberechnung der 90°-Kipprotoren.",
-    proj4_b3: "Strukturierte SORA SAIL II Sicherheitsdokumentation für AustroControl.",
+    // Project 4: Tri-Tilt SAR VTOL
+    proj4_title: "Tri-Tilt-Rotor SAR VTOL Drohne (Diplomprojekt)",
+    proj4_date: "Gestartet Juni 2026 (Diplomarbeit • Laufend)",
+    proj4_desc: "BVLOS Rettungsdrohne nach AustroControl SORA SAIL II Richtlinien. Dual Pixhawk FMU + Nvidia Jetson ROS2 Schwarmarchitektur.",
+    proj4_b1: "Entwickelt für alpine Rettungseinsätze mit Wärmebild-KI Personenerkennung, GPS-Jamming-sicherem Optical-Flow (±2m Präzision) und Fallschirm-Auslösung.",
+    proj4_b2: "Specs: 15-20 kg Masse, 3m Spannweite, 130 km/h Höchstgeschwindigkeit, 85 km/h Reiseflug, 120-400m Einsatzhöhe (bis 4000m im Reisemodus).",
+    proj4_b3: "In aktiven Sponsoring- und Testgelände-Gesprächen mit dem Österreichischen Bundesheer.",
 
-    // Project 5
+    // Project 5: C++ Physics Engine
     proj5_title: "Deterministische 6DoF C++ Physik-Engine",
-    proj5_desc: "Abhängigkeitsfreier 6DoF Flugsimulator von Grund auf in C++20 entwickelt mit RK4-Integration und NACA 0012 Profilen.",
+    proj5_date: "März 2026 - Mai 2026",
+    proj5_desc: "Abhängigkeitsfreier 6DoF Flugsimulator von Grund auf in C++20 entwickelt mit RK4-Integration zur Vertiefung von Physik & C++ für das VTOL-Projekt.",
     proj5_b1: "Implementierung eines Runge-Kutta Integrators 4. Ordnung (RK4) bei festem 1.000 Hz Simulationsschritt.",
     proj5_b2: "Quaternionen-Lageregelung verhindert Gimbal-Lock bei steilen Manövern.",
     proj5_b3: "Integration einer UDP-Telemetrie-Pipe zur Übertragung an Ground Control Station Tools.",
 
-    // Project 6
+    // Project 6: Ground Effect Car
     proj6_title: "DIN A4 Autonomes Bodeneffekt-Fahrzeug",
-    proj6_desc: "Ultrakompaktes Fahrzeug zur Maximierung des Bodeneffekts gesteuert von STM32H7 Dual-Core Mikrocontrollern.",
-    proj6_b1: "Erreichte ein Leistungsgewicht von 1:6,5 mit Karbon-Aerodynamikchassis.",
-    proj6_b2: "Model Predictive Controller (MPC) hält 3,5mm Luftpolster bei hoher Geschwindigkeit.",
-    proj6_b3: "Entwicklung eines 4-Lagen-PCBs mit optischen Distanzsensoren, BLDC-Treibern und CAN-Telemetrie.",
+    proj6_date: "Gestartet April 2026 (Wettbewerb 2027 • Nachfolger)",
+    proj6_desc: "Direkter Nachfolger des Crazy Cars 8 Monate früher gestartet! 13 kg Bodeneffekt-Unterdruck auf 2 kg Fahrzeugmasse, Bugatti-artige Beschleunigung & STM32H7 MPC.",
+    proj6_b1: "SolidEdge CAD-Chassis mit 1:6,5 Leistungsgewicht; 400€ Bauteil-Sponsoring akquiriert.",
+    proj6_b2: "Entwicklung eines Model Predictive Controllers (MPC) in MATLAB/Simulink auf STM32H7 zur Positionsschätzung.",
+    proj6_b3: "Berechnung der optimalen Rennlinie mit ToF-Sensoren zur Hindernisumfahrung für den Gesamtsieg 2027.",
 
     // Action Links
     link_github: "GitHub Repo",
     link_spec: "Design Spec (PDF)",
-    link_deepdive: "Technische Details →",
+    link_deepdive: "Technische Case Study →",
 
     // Footer
     footer_copy: "© 2026 David Sommerer — HTL Elektrotechnik Salzburg."

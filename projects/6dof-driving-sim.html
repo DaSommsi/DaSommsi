@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>6DoF Dynamic Driving Simulator | David Sommerer</title>
-  <meta name="description" content="Technical deep-dive into the 6DoF Dynamic Driving Simulator by David Sommerer. Inverse kinematics solver, SolidEdge CAD, Ansys FEA, and CAN bus actuator control.">
+  <title>6DoF Dynamic Motion Simulator Rig | David Sommerer</title>
+  <meta name="description" content="Technical case study of the 6DoF Motion Simulator Rig by David Sommerer. Restoration of legacy school motion platform, physical signal cable EMI isolation, C++ control software, and HTL Open Door Day feature.">
 
   <!-- Tailwind CSS CDN & Config -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -42,13 +42,13 @@
       <div class="flex items-center space-x-4">
         <a href="../index.html" class="flex items-center space-x-2 text-xs font-mono text-primary hover:text-white transition-colors">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
-          <span data-i18n="back_overview">← Back to Overview</span>
+          <span data-i18n="back_overview">← Back to Main Portfolio</span>
         </a>
         <span class="text-zinc-700 text-xs">/</span>
         <span class="text-xs font-mono text-muted">david sommerer</span>
       </div>
 
-      <!-- Language Toggle -->
+      <!-- Language Toggle EN | DE -->
       <div class="flex items-center space-x-1 p-1 rounded-full bg-zinc-900 border border-border">
         <button data-lang-btn="en" class="px-2.5 py-0.5 rounded-full text-[11px] font-bold text-sky-400">EN</button>
         <button data-lang-btn="de" class="px-2.5 py-0.5 rounded-full text-[11px] text-muted hover:text-foreground">DE</button>
@@ -58,63 +58,123 @@
 
   <main class="max-w-4xl mx-auto px-6 md:px-12 py-12 space-y-12">
 
-    <!-- PROJECT TITLE & SUMMARY -->
+    <!-- PROJECT TITLE & HEADER -->
     <div class="space-y-4 border-b border-border pb-8">
       <div class="flex flex-wrap gap-2">
-        <span class="px-2.5 py-0.5 text-xs font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">6DoF Motion Platform</span>
-        <span class="px-2.5 py-0.5 text-xs font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">SolidEdge CAD</span>
-        <span class="px-2.5 py-0.5 text-xs font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">Ansys FEA</span>
-        <span class="px-2.5 py-0.5 text-xs font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">CAN Actuation</span>
+        <span class="px-2.5 py-0.5 text-xs font-mono rounded-full bg-emerald-950/60 text-emerald-400 border border-emerald-800/50">May 2025 - Jan 2026 (Completed)</span>
+        <span class="px-2.5 py-0.5 text-xs font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">6DoF Stewart Platform</span>
+        <span class="px-2.5 py-0.5 text-xs font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">C++ Control Software</span>
+        <span class="px-2.5 py-0.5 text-xs font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">HTL Salzburg Open Door Day Feature</span>
       </div>
 
-      <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold font-heading text-foreground tracking-tight">
-        6DoF Dynamic Driving Simulator
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold font-heading text-foreground tracking-tight" data-i18n="proj2_title">
+        6DoF Dynamic Motion Simulator Rig
       </h1>
 
-      <p class="text-sm sm:text-base text-muted font-mono leading-relaxed">
-        Custom 6 Degrees-of-Freedom (6DoF) Stewart platform motion simulator designed for high-fidelity driving simulation. Features real-time Stewart platform inverse kinematics calculations, SolidEdge mechanical assembly, and high-speed motor actuation over CAN bus.
+      <p class="text-sm sm:text-base text-muted font-mono leading-relaxed" data-i18n="proj2_desc">
+        Restored a broken, legacy 6DoF motion rig at HTL Salzburg by solving severe EMI noise via physical signal/power cable isolation and custom C++ control software.
       </p>
     </div>
 
-    <!-- METRICS GRID -->
+    <!-- PROJECT METRICS GRID -->
     <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 font-mono text-xs">
       <div class="p-4 rounded-2xl bg-zinc-900/60 border border-border">
-        <div class="text-muted text-[10px]">Motion Degrees</div>
-        <div class="text-sky-400 font-bold text-sm mt-1">6 Axes (Stewart Platform)</div>
+        <div class="text-muted text-[10px]">Actuation Axes</div>
+        <div class="text-sky-400 font-bold text-sm mt-1">6 Linear Actuators</div>
       </div>
       <div class="p-4 rounded-2xl bg-zinc-900/60 border border-border">
-        <div class="text-muted text-[10px]">CAD Assembly</div>
-        <div class="text-emerald-400 font-bold text-sm mt-1">SolidEdge 3D Parametric</div>
+        <div class="text-muted text-[10px]">Sponsorship Acquired</div>
+        <div class="text-emerald-400 font-bold text-sm mt-1">€2,000 Display + €3.5k PC</div>
       </div>
       <div class="p-4 rounded-2xl bg-zinc-900/60 border border-border">
-        <div class="text-muted text-[10px]">Kinematics Solver</div>
-        <div class="text-foreground font-bold text-sm mt-1">Real-Time Analytical C++</div>
+        <div class="text-muted text-[10px]">Noise Elimination</div>
+        <div class="text-foreground font-bold text-sm mt-1">Physical EMI Cable Separation</div>
       </div>
       <div class="p-4 rounded-2xl bg-zinc-900/60 border border-border">
-        <div class="text-muted text-[10px]">Bus Control</div>
-        <div class="text-foreground font-bold text-sm mt-1">CAN / CANopen</div>
+        <div class="text-muted text-[10px]">Public Feature</div>
+        <div class="text-foreground font-bold text-sm mt-1">HTL Open Door Day Highlight</div>
       </div>
     </div>
 
-    <!-- CODE EXCERPT -->
-    <div class="space-y-4 font-sans text-sm leading-relaxed text-zinc-300">
-      <h2 class="text-xl font-bold font-heading text-foreground">Stewart Platform Inverse Kinematics Excerpt</h2>
-      <div class="rounded-xl bg-zinc-950 border border-border p-4 overflow-x-auto font-mono text-xs text-sky-300">
-        <pre><code>// Calculates required length for 6 linear actuators given vehicle pose (surge, sway, heave, roll, pitch, yaw)
-void StewartPlatformSolver::computeActuatorLengths(const Pose6DoF& pose, float actuatorLengths[6]) {
-    const Matrix3f R = pose.computeRotationMatrix();
-    for (size_t i = 0; i < 6; ++i) {
-        Vector3f platformPointWorld = pose.position + R * _basePlatformAnchors[i];
-        Vector3f legVector = platformPointWorld - _baseFrameAnchors[i];
-        actuatorLengths[i] = legVector.norm();
-    }
-}</code></pre>
+    <!-- TIMELINE SECTION -->
+    <div class="rounded-2xl bg-zinc-950 border border-border p-6 space-y-4">
+      <h2 class="text-lg font-bold font-heading text-foreground flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-sky-400"></span>
+        <span data-i18n="timeline_title">Project Timeline & Milestones</span>
+      </h2>
+
+      <div class="space-y-4 font-mono text-xs border-l-2 border-slate-800 pl-4">
+        <div class="space-y-1">
+          <span class="text-sky-400 font-bold">May 2025: Inspection & Diagnosis</span>
+          <p class="text-muted font-sans">Inspected non-functional legacy 6DoF rig at HTL Salzburg (2nd grade). Identified unshielded, bundled power & signal cables causing massive electromagnetic interference (EMI).</p>
+        </div>
+        <div class="space-y-1">
+          <span class="text-sky-400 font-bold">Summer - Autumn 2025: Hardware Re-Wiring & Fuse Box</span>
+          <p class="text-muted font-sans">Teammate designed custom power distribution fuse box. Ripped out unnecessary wiring and physically isolated high-power motor lines from delicate telemetry data cables.</p>
+        </div>
+        <div class="space-y-1">
+          <span class="text-emerald-400 font-bold">Nov - Dec 2025: C++ Software Engine & Sponsorship</span>
+          <p class="text-muted font-sans">David programmed modular C++ control software. Successfully pitched Department Head to secure €2,000 display monitors and a €3,500 gaming rig.</p>
+        </div>
+        <div class="space-y-1">
+          <span class="text-emerald-400 font-bold">Jan 2026: HTL Open Door Day Launch</span>
+          <p class="text-muted font-sans">Launched system at Open Door Day 2026 as the department's flagship exhibit. Proved a huge public success and solidified David's career focus in avionics & embedded electronics.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- TECHNICAL CASE STUDY & FAILURE ANALYSIS -->
+    <div class="space-y-8 font-sans text-sm leading-relaxed text-zinc-300">
+      
+      <!-- Section 1 -->
+      <div class="space-y-3">
+        <h2 class="text-xl font-bold font-heading text-foreground">1. Physical Cable Isolation & Distribution Fuse Box</h2>
+        <p>
+          The original motion rig suffered from severe motor jitter and random emergency cut-outs. Our root cause investigation revealed that high-frequency PWM motor power cables were bundled directly alongside low-voltage serial encoder signal wires. We solved this by physically routing power lines along structural aluminum channels away from data lines, installing shielded differential signaling, and designing a custom fuse box.
+        </p>
+      </div>
+
+      <!-- Section 2: Inverse Kinematics Notes -->
+      <div class="space-y-3 p-6 rounded-2xl bg-zinc-900 border border-border">
+        <h2 class="text-xl font-bold font-heading text-foreground">2. Modular C++ Control Software & Inverse Kinematics</h2>
+        <p class="text-xs font-mono text-zinc-300 leading-relaxed">
+          David authored the modular C++ control codebase connecting simulator telemetry (telemetry reader software interface) to motor controllers over CAN bus. Minor mathematical edge-case anomalies in extreme pitch/roll angles were documented, providing invaluable practical experience in writing scalable, high-performance C++ code.
+        </p>
+      </div>
+
+      <!-- Section 3: Impact -->
+      <div class="space-y-3 p-6 rounded-2xl bg-sky-950/20 border border-sky-500/30">
+        <h2 class="text-xl font-bold font-heading text-sky-300 flex items-center gap-2">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          <span data-i18n="learnings_title">Key Lessons & What We Learned</span>
+        </h2>
+        <ul class="list-disc list-inside space-y-2 font-mono text-xs text-zinc-300">
+          <li><strong>EMC Best Practices:</strong> Physical separation of high-power cables and low-voltage signal wires is non-negotiable in aerospace and motion platforms.</li>
+          <li><strong>Clean Modular Architecture:</strong> Writing clean, scalable code with clear interface contracts saves hundreds of debugging hours.</li>
+          <li><strong>Career Turning Point:</strong> Completing this project solidified David's determination to work in embedded hardware, flight control, and avionics.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- MEDIA & CODE GALLERY PLACEHOLDERS -->
+    <div class="space-y-4">
+      <h2 class="text-lg font-bold font-heading text-foreground" data-i18n="gallery_title">Project Media, Code & CAD Assets</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 font-mono text-xs">
+        <div class="h-44 rounded-2xl bg-zinc-950 border border-border p-4 flex flex-col justify-between items-center text-center">
+          <svg class="w-8 h-8 text-sky-400/60 mt-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+          <span class="text-muted text-[11px] mb-2">[Video Upload Placeholder: 6DoF Motion Rig Live Demo at HTL Open Door Day]</span>
+        </div>
+        <div class="h-44 rounded-2xl bg-zinc-950 border border-border p-4 flex flex-col justify-between items-center text-center">
+          <svg class="w-8 h-8 text-emerald-400/60 mt-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+          <span class="text-muted text-[11px] mb-2">[Code Link Placeholder: Modular C++ Inverse Kinematics GitHub Repository]</span>
+        </div>
       </div>
     </div>
 
     <!-- FOOTER ACTIONS -->
     <div class="pt-8 border-t border-border flex items-center justify-between font-mono text-xs">
-      <a href="../index.html" class="text-primary hover:text-white transition-colors">← Back to Main Portfolio</a>
+      <a href="../index.html" class="text-primary hover:text-white transition-colors" data-i18n="back_overview">← Back to Main Portfolio</a>
       <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="text-muted hover:text-white transition-colors">View GitHub Repository →</a>
     </div>
 
