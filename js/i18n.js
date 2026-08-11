@@ -17,9 +17,9 @@ export const translations = {
     learnings_title: "Key Lessons & What We Learned",
     gallery_title: "Project Media, Code & CAD Assets",
 
-    // Hero Section
+    // Hero Section (Name ends with a dot instead of exclamation mark)
     hero_greeting: "Hi, I'm",
-    hero_name: "David Sommerer!",
+    hero_name: "David Sommerer.",
     hero_role_prefix: "I'm an",
     hero_role: "Electrical & Systems Engineer",
     hero_specializing: "specializing in",
@@ -61,10 +61,10 @@ export const translations = {
     card2_desc3: "BVLOS search & rescue drone with AustroControl SORA SAIL II.",
 
     card3_handle: "currently learning",
-    card3_topic1: "ROS2 & Gazebo",
-    card3_topic2: "STM32H7 & PX4",
-    card3_topic3: "Simulink & DroneCAN",
-    card3_topic4: "Nvidia Jetson",
+    card3_topic1: "Linux / Ubuntu",
+    card3_topic2: "ROS2 & Gazebo",
+    card3_topic3: "STM32H7 & PX4",
+    card3_topic4: "Simulink & DroneCAN",
 
     // Experience & Education Section
     exp_heading: "work experience & education",
@@ -103,12 +103,12 @@ export const translations = {
 
     // Technical Skills Section
     skills_title: "technical skills & stack",
-    skills_sub: "Software, embedded microcontrollers, CAD tools, version control, and AI technologies I work with daily alongside active learning for upcoming projects.",
+    skills_sub: "Software, embedded microcontrollers, CAD & automation tools, media editing, version control, and AI technologies I work with daily.",
 
-    skills_cat1: "Languages, Tools & Version Control",
-    skills_cat2: "CAD, Simulation & Software",
-    skills_cat3: "AI Tools & Workflow",
-    skills_cat4: "Currently Learning for Projects",
+    skills_cat1: "Languages, Web & Version Control",
+    skills_cat2: "CAD, Automation & PLC Engineering",
+    skills_cat3: "Media, 3D & Office Tools",
+    skills_cat4: "AI & Currently Learning",
 
     // Projects Section
     projects_title: "featured engineering projects",
@@ -187,9 +187,9 @@ export const translations = {
     learnings_title: "Key Learnings & Erkenntnisse",
     gallery_title: "Medien, Code & CAD-Assets",
 
-    // Hero Section
+    // Hero Section (Name ends with a dot instead of exclamation mark)
     hero_greeting: "Hallo, ich bin",
-    hero_name: "David Sommerer!",
+    hero_name: "David Sommerer.",
     hero_role_prefix: "Ich bin ein",
     hero_role: "Elektrotechnik & Systems Engineer",
     hero_specializing: "spezialisiert auf",
@@ -231,10 +231,10 @@ export const translations = {
     card2_desc3: "BVLOS Rettungsdrohne nach AustroControl SORA SAIL II.",
 
     card3_handle: "currently learning",
-    card3_topic1: "ROS2 & Gazebo",
-    card3_topic2: "STM32H7 & PX4",
-    card3_topic3: "Simulink & DroneCAN",
-    card3_topic4: "Nvidia Jetson",
+    card3_topic1: "Linux / Ubuntu",
+    card3_topic2: "ROS2 & Gazebo",
+    card3_topic3: "STM32H7 & PX4",
+    card3_topic4: "Simulink & DroneCAN",
 
     // Experience & Education Section
     exp_heading: "berufserfahrung & ausbildung",
@@ -273,12 +273,12 @@ export const translations = {
 
     // Technical Skills Section
     skills_title: "technische skills & stack",
-    skills_sub: "Software, Bare-Metal Mikrocontroller, CAD-Tools, Versionskontrolle und KI-Technologien, mit denen ich arbeite.",
+    skills_sub: "Software, Bare-Metal Mikrocontroller, CAD- & Automatisierungs-Tools, Medienbearbeitung, Versionskontrolle und KI-Technologien.",
 
-    skills_cat1: "Sprachen, Tools & Versionskontrolle",
-    skills_cat2: "CAD, Simulation & Software",
-    skills_cat3: "KI-Tools & Workflow",
-    skills_cat4: "Aktuell am Lernen für Projekte",
+    skills_cat1: "Sprachen, Web & Versionskontrolle",
+    skills_cat2: "CAD, Automatisierung & PLC",
+    skills_cat3: "Medien, 3D & Office Tools",
+    skills_cat4: "KI & Aktuell am Lernen",
 
     // Projects Section
     projects_title: "ausgewählte ingenieurprojekte",
