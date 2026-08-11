@@ -17,7 +17,7 @@ export const translations = {
     learnings_title: "Key Lessons & What We Learned",
     gallery_title: "Project Media, Code & CAD Assets",
 
-    // Hero Section (Name ends with a dot instead of exclamation mark)
+    // Hero Section
     hero_greeting: "Hi, I'm",
     hero_name: "David Sommerer.",
     hero_role_prefix: "I'm an",
@@ -101,14 +101,15 @@ export const translations = {
     ws_8: "Custom PCB Design (KiCad)",
     ws_9: "Systemic Troubleshooting",
 
-    // Technical Skills Section
+    // Technical Skills Section (5 SEPARATE CATEGORIES)
     skills_title: "technical skills & stack",
-    skills_sub: "Software, embedded microcontrollers, CAD & automation tools, media editing, version control, and AI technologies I work with daily.",
+    skills_sub: "Structured engineering competencies across software, microcontrollers, CAD automation, media production, AI technologies, and active learning.",
 
     skills_cat1: "Languages, Web & Version Control",
     skills_cat2: "CAD, Automation & PLC Engineering",
-    skills_cat3: "Media, 3D & Office Tools",
-    skills_cat4: "AI & Currently Learning",
+    skills_cat3: "Media, 3D & Office Production",
+    skills_cat4: "AI Tools & Machine Learning",
+    skills_cat5: "Currently Learning for Projects",
 
     // Projects Section
     projects_title: "featured engineering projects",
@@ -187,7 +188,7 @@ export const translations = {
     learnings_title: "Key Learnings & Erkenntnisse",
     gallery_title: "Medien, Code & CAD-Assets",
 
-    // Hero Section (Name ends with a dot instead of exclamation mark)
+    // Hero Section
     hero_greeting: "Hallo, ich bin",
     hero_name: "David Sommerer.",
     hero_role_prefix: "Ich bin ein",
@@ -271,14 +272,15 @@ export const translations = {
     ws_8: "Eigenes PCB Layout (KiCad)",
     ws_9: "Systemische Fehlersuche",
 
-    // Technical Skills Section
+    // Technical Skills Section (5 SEPARATE CATEGORIES)
     skills_title: "technische skills & stack",
-    skills_sub: "Software, Bare-Metal Mikrocontroller, CAD- & Automatisierungs-Tools, Medienbearbeitung, Versionskontrolle und KI-Technologien.",
+    skills_sub: "Strukturierte Ingenieurkompetenzen in Software, Mikrocontrollern, CAD, Medienproduktion, KI-Technologien und aktiver Weiterbildung.",
 
     skills_cat1: "Sprachen, Web & Versionskontrolle",
     skills_cat2: "CAD, Automatisierung & PLC",
-    skills_cat3: "Medien, 3D & Office Tools",
-    skills_cat4: "KI & Aktuell am Lernen",
+    skills_cat3: "Medien, 3D & Office-Produktion",
+    skills_cat4: "KI-Tools & Machine Learning",
+    skills_cat5: "Aktuell am Lernen für Projekte",
 
     // Projects Section
     projects_title: "ausgewählte ingenieurprojekte",
@@ -323,7 +325,7 @@ export const translations = {
 
     // Project 5: C++ Physics Engine
     proj5_title: "Deterministische 6DoF C++ Physik-Engine",
-    proj5_date: "März 2026 - Mai 2026",
+    proj5_date: "März 2026 - May 2026",
     proj5_desc: "Abhängigkeitsfreier 6DoF Flugsimulator von Grund auf in C++20 entwickelt mit RK4-Integration zur Vertiefung von Physik & C++ für das VTOL-Projekt.",
     proj5_b1: "Implementierung eines Runge-Kutta Integrators 4. Ordnung (RK4) bei festem 1.000 Hz Simulationsschritt.",
     proj5_b2: "Quaternionen-Lageregelung verhindert Gimbal-Lock bei steilen Manövern.",
