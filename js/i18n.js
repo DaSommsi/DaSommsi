@@ -1,7 +1,7 @@
 /**
  * @file i18n.js
  * @description Comprehensive Dual-Language Translation Dictionary (EN Primary, DE Secondary)
- * Tailored for David Sommerer — Systems & Electrical Engineer.
+ * Tailored for David Sommerer — Avionics, Embedded Systems, Electronics & Software Engineer.
  */
 
 export const translations = {
@@ -17,14 +17,14 @@ export const translations = {
     learnings_title: "Key Lessons & What We Learned",
     gallery_title: "Project Media, Code & CAD Assets",
 
-    // Hero Section
+    // Hero Section (Generalized Specialization)
     hero_greeting: "Hi, I'm",
     hero_name: "David Sommerer.",
     hero_role_prefix: "I'm an",
     hero_role: "Electrical & Systems Engineer",
     hero_specializing: "specializing in",
-    hero_focus: "Embedded C++, Controls & Autonomous Systems.",
-    hero_subtitle: "Student at HTL Elektrotechnik Salzburg. Building embedded micro-architecture, AI-driven autonomous RC cars, 6DoF motion simulators, and control systems.",
+    hero_focus: "Avionics, Embedded Systems, Electronics & Software Engineering.",
+    hero_subtitle: "Student at HTL Elektrotechnik Salzburg. Engineering avionics systems, embedded firmware, electronics, autonomous vehicles, and software architecture.",
     hero_cta_projects: "Explore Projects",
     hero_cta_contact: "Direct Contact",
 
@@ -43,14 +43,28 @@ export const translations = {
     sig_ch4_val: "CAN / DroneCAN",
     sig_status: "pwm output synced · 10 kHz hardware timer · zero jitter",
 
-    // 3 Quick Cards Below Hero
+    // Terminal Text (Generalized)
+    term_title: "david@htl-salzburg:~/systems",
+    term_cmd_whoami: "whoami",
+    term_whoami_desc: "17-year-old Systems Engineer at HTL Elektrotechnik Salzburg specializing in avionics, embedded firmware, electronics planning, and software engineering.",
+    term_cmd_grep: 'grep -r "expertise" /var/log/systems.log',
+    term_expertise: "Avionics · Embedded C/C++ · Electronics · ROS2 · Software Engineering · AustroControl SORA",
+    term_cmd_conf: "cat /etc/tech-ecosystem.conf",
+    term_conf_val: "avionics=true  embedded_cpp=true  electronics=true  software_eng=true",
+    term_cmd_products: "./projects --list",
+    term_p1: "> Crazy Car Autonomous RL - €30 RC car with ESP32 & Unity ML-Agents.",
+    term_p2: "> 6DoF Driving Simulator - Restored HTL motion rig with cable isolation.",
+    term_p3: "> EDI-to-JSONL Parser - Zero-allocation 2.4 GB/s C++20 streaming engine.",
+    term_p4: "> Tri-Tilt-Rotor SAR VTOL - Heavy-lift BVLOS drone with SORA SAIL II.",
+
+    // 3 Quick Cards Below Hero (Diploma Thesis in English, 2026 - 2028)
     card1_title: "Education & Schooling",
     card1_role1: "HTL Elektrotechnik Salzburg",
     card1_date1: "Higher Technical Institute • 2022 - 2027",
-    card1_role2: "Diplomarbeit R&D Project",
-    card1_date2: "SAR VTOL Drone & SORA • 2025 - 2026",
+    card1_role2: "Diploma Thesis R&D Project",
+    card1_date2: "SAR VTOL Drone & SORA • 2026 - 2028",
     card1_role3: "Specialization",
-    card1_date3: "Embedded Software, CAD & Controls",
+    card1_date3: "Avionics, Embedded Systems, Electronics & Software",
 
     card2_title: "Featured Projects",
     card2_topic1: "Crazy Car Autonomous RL",
@@ -88,7 +102,7 @@ export const translations = {
     edu_heading: "Education & Workshop Fabrication Skills",
     edu_1_title: "HTL Elektrotechnik Salzburg",
     edu_1_subtitle: "Higher Technical Institute for Electrical Engineering • 2022 - 2027",
-    edu_1_desc: "5-year intensive engineering program covering power systems, control engineering, embedded C/C++, CAD design, and automation technology.",
+    edu_1_desc: "5-year intensive engineering program covering power systems, control engineering, embedded C/C++, CAD design, electronics, and software development.",
 
     workshop_title: "Hands-on Workshop & Manufacturing Competencies",
     ws_1: "Welding (MIG/MAG/TIG)",
@@ -101,7 +115,7 @@ export const translations = {
     ws_8: "Custom PCB Design (KiCad)",
     ws_9: "Systemic Troubleshooting",
 
-    // Technical Skills Section (5 SEPARATE CATEGORIES)
+    // Technical Skills Section (Uniform 5-Panel Layout)
     skills_title: "technical skills & stack",
     skills_sub: "Structured engineering competencies across software, microcontrollers, CAD automation, media production, AI technologies, and active learning.",
 
@@ -111,9 +125,9 @@ export const translations = {
     skills_cat4: "AI Tools & Machine Learning",
     skills_cat5: "Currently Learning for Projects",
 
-    // Projects Section
+    // Projects Section (Updated subtitle)
     projects_title: "featured engineering projects",
-    projects_sub: "Fully documented engineering projects featuring AI reinforcement learning, 6DoF motion simulation, high-performance parsers, and custom embedded hardware.",
+    projects_sub: "Documented engineering projects featuring AI reinforcement learning, 6DoF motion simulation, high-performance parsers, and custom hardware.",
 
     filter_all: "All Systems",
     filter_ai: "AI & Autonomy",
@@ -144,9 +158,9 @@ export const translations = {
     proj3_b2: "Engineered zero-code parsing logic driven dynamically by external JSON mapping configurations (V3/V4 standards).",
     proj3_b3: "Fully Dockerized, microservices-ready architecture currently under commercial evaluation for industrial partnerships.",
 
-    // Project 4: Tri-Tilt SAR VTOL
-    proj4_title: "Tri-Tilt-Rotor SAR VTOL Drone (Diplomprojekt)",
-    proj4_date: "Started June 2026 (Diplomarbeit • Ongoing)",
+    // Project 4: Tri-Tilt SAR VTOL (Diploma Thesis / 2026 - 2028)
+    proj4_title: "Tri-Tilt-Rotor SAR VTOL Drone (Diploma Thesis)",
+    proj4_date: "Started June 2026 • Target 2028 (Diploma Thesis)",
     proj4_desc: "BVLOS Search & Rescue 3-rotor VTOL drone built under AustroControl SORA SAIL II safety guidelines. Dual Pixhawk FMU + Nvidia Jetson ROS2 swarm architecture.",
     proj4_b1: "Designed for Alpine Search & Rescue with thermal IR camera AI person detection, GPS-jamming optical flow mapping (±2m precision), and parachute deployment.",
     proj4_b2: "Specs: 15-20 kg mass, 3m wingspan, 130 km/h top speed, 85 km/h cruise speed, 120-400m operational altitude (up to 4000m travel mode).",
@@ -188,14 +202,14 @@ export const translations = {
     learnings_title: "Key Learnings & Erkenntnisse",
     gallery_title: "Medien, Code & CAD-Assets",
 
-    // Hero Section
+    // Hero Section (Generalized Specialization)
     hero_greeting: "Hallo, ich bin",
     hero_name: "David Sommerer.",
     hero_role_prefix: "Ich bin ein",
     hero_role: "Elektrotechnik & Systems Engineer",
     hero_specializing: "spezialisiert auf",
-    hero_focus: "Embedded C++, Regelungen & Autonome Systeme.",
-    hero_subtitle: "Schüler an der HTL Elektrotechnik Salzburg. Entwicklung von Bare-Metal Mikrocontrollern, KI-gesteuerten autonomen RC-Cars, 6DoF Simulatoren und Regelungstechnik.",
+    hero_focus: "Avionik, Embedded Systeme, Elektronik & Software Engineering.",
+    hero_subtitle: "Schüler an der HTL Elektrotechnik Salzburg. Entwicklung von Avioniksystemen, Embedded Firmware, Elektronik, autonomen Fahrzeugen und Software-Architektur.",
     hero_cta_projects: "Projekte Erkunden",
     hero_cta_contact: "Direktkontakt",
 
@@ -214,14 +228,28 @@ export const translations = {
     sig_ch4_val: "CAN / DroneCAN",
     sig_status: "pwm ausgang synchronisiert · 10 kHz hardware timer · zero jitter",
 
-    // 3 Quick Cards Below Hero
+    // Terminal Text (Generalized)
+    term_title: "david@htl-salzburg:~/systems",
+    term_cmd_whoami: "whoami",
+    term_whoami_desc: "17-jähriger Systems Engineer an der HTL Elektrotechnik Salzburg spezialisiert auf Avionik, Embedded Firmware, Elektronikplanung und Software Engineering.",
+    term_cmd_grep: 'grep -r "expertise" /var/log/systems.log',
+    term_expertise: "Avionik · Embedded C/C++ · Elektronik · ROS2 · Software Engineering · AustroControl SORA",
+    term_cmd_conf: "cat /etc/tech-ecosystem.conf",
+    term_conf_val: "avionik=true  embedded_cpp=true  elektronik=true  software_eng=true",
+    term_cmd_products: "./projects --list",
+    term_p1: "> Crazy Car Autonomes RL - 30€ RC Car mit ESP32 & Unity ML-Agents.",
+    term_p2: "> 6DoF Fahr-Simulator - Restaurierung des HTL-Simulators mit Kabeltrennung.",
+    term_p3: "> EDI-to-JSONL Parser - Zero-Allocation 2.4 GB/s C++20 Streaming Engine.",
+    term_p4: "> Tri-Tilt-Rotor SAR VTOL - Schwere BVLOS Drohne nach SORA SAIL II.",
+
+    // 3 Quick Cards Below Hero (Diplomarbeit in German, 2026 - 2028)
     card1_title: "Ausbildung & Schule",
     card1_role1: "HTL Elektrotechnik Salzburg",
     card1_date1: "Höhere Technische Lehranstalt • 2022 - 2027",
     card1_role2: "Diplomarbeit F&E Projekt",
-    card1_date2: "SAR VTOL Drohne & SORA • 2025 - 2026",
+    card1_date2: "SAR VTOL Drohne & SORA • 2026 - 2028",
     card1_role3: "Schwerpunkte",
-    card1_date3: "Embedded Software, CAD & Regelungstechnik",
+    card1_date3: "Avionik, Embedded Systeme, Elektronik & Software",
 
     card2_title: "Ausgewählte Projekte",
     card2_topic1: "Crazy Car Autonomes RL",
@@ -259,7 +287,7 @@ export const translations = {
     edu_heading: "Ausbildung & Werkstattkompetenzen",
     edu_1_title: "HTL Elektrotechnik Salzburg",
     edu_1_subtitle: "Höhere Technische Lehranstalt für Elektrotechnik • 2022 - 2027",
-    edu_1_desc: "5-jährige fundierte Ingenieurausbildung in Energietechnik, Regelungstechnik, Embedded C/C++, CAD-Konstruktion und Automatisierung.",
+    edu_1_desc: "5-jährige fundierte Ingenieurausbildung in Energietechnik, Regelungstechnik, Embedded C/C++, CAD-Konstruktion, Elektronik und Softwareentwicklung.",
 
     workshop_title: "Praktische Werkstatt- & Fertigungsskills",
     ws_1: "Schweißen (MIG/MAG/WIG)",
@@ -272,7 +300,7 @@ export const translations = {
     ws_8: "Eigenes PCB Layout (KiCad)",
     ws_9: "Systemische Fehlersuche",
 
-    // Technical Skills Section (5 SEPARATE CATEGORIES)
+    // Technical Skills Section (Uniform 5-Panel Layout)
     skills_title: "technische skills & stack",
     skills_sub: "Strukturierte Ingenieurkompetenzen in Software, Mikrocontrollern, CAD, Medienproduktion, KI-Technologien und aktiver Weiterbildung.",
 
@@ -282,9 +310,9 @@ export const translations = {
     skills_cat4: "KI-Tools & Machine Learning",
     skills_cat5: "Aktuell am Lernen für Projekte",
 
-    // Projects Section
+    // Projects Section (Updated subtitle)
     projects_title: "ausgewählte ingenieurprojekte",
-    projects_sub: "Dokumentierte Projekte mit KI Reinforcement Learning, 6DoF Bewegungssimulation, High-Performance Parsern und eigener Hardware.",
+    projects_sub: "Dokumentierte Ingenieurprojekte mit KI Reinforcement Learning, 6DoF Bewegungssimulation, High-Performance Parsern und eigener Hardware.",
 
     filter_all: "Alle Systeme",
     filter_ai: "KI & Autonomie",
@@ -315,9 +343,9 @@ export const translations = {
     proj3_b2: "Zero-Code Parsing-Logik gesteuert über externe JSON-Mapping-Regelwerke (V3/V4 Standards).",
     proj3_b3: "Vollständig Dockerisiert, Microservices-ready und aktuell in kommerzieller Evaluierung für Industriepartner.",
 
-    // Project 4: Tri-Tilt SAR VTOL
-    proj4_title: "Tri-Tilt-Rotor SAR VTOL Drohne (Diplomprojekt)",
-    proj4_date: "Gestartet Juni 2026 (Diplomarbeit • Laufend)",
+    // Project 4: Tri-Tilt SAR VTOL (Diplomarbeit / 2026 - 2028)
+    proj4_title: "Tri-Tilt-Rotor SAR VTOL Drohne (Diplomarbeit)",
+    proj4_date: "Gestartet Juni 2026 • Ziel 2028 (Diplomarbeit)",
     proj4_desc: "BVLOS Rettungsdrohne nach AustroControl SORA SAIL II Richtlinien. Dual Pixhawk FMU + Nvidia Jetson ROS2 Schwarmarchitektur.",
     proj4_b1: "Entwickelt für alpine Rettungseinsätze mit Wärmebild-KI Personenerkennung, GPS-Jamming-sicherem Optical-Flow (±2m Präzision) und Fallschirm-Auslösung.",
     proj4_b2: "Specs: 15-20 kg Masse, 3m Spannweite, 130 km/h Höchstgeschwindigkeit, 85 km/h Reiseflug, 120-400m Einsatzhöhe (bis 4000m im Reisemodus).",
