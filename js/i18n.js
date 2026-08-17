@@ -17,7 +17,7 @@ export const translations = {
     learnings_title: "Key Lessons & What We Learned",
     gallery_title: "Project Media, Code & CAD Assets",
 
-    // Hero Section (Generalized Specialization)
+    // Hero Section
     hero_greeting: "Hi, I'm",
     hero_name: "David Sommerer.",
     hero_role_prefix: "I'm an",
@@ -43,7 +43,7 @@ export const translations = {
     sig_ch4_val: "CAN / DroneCAN",
     sig_status: "pwm output synced · 10 kHz hardware timer · zero jitter",
 
-    // Terminal Text (Generalized)
+    // Terminal Text
     term_title: "david@htl-salzburg:~/systems",
     term_cmd_whoami: "whoami",
     term_whoami_desc: "17-year-old Systems Engineer at HTL Elektrotechnik Salzburg specializing in avionics, embedded firmware, electronics planning, and software engineering.",
@@ -57,10 +57,10 @@ export const translations = {
     term_p3: "> EDI-to-JSONL Parser - Zero-allocation 2.4 GB/s C++20 streaming engine.",
     term_p4: "> Tri-Tilt-Rotor SAR VTOL - Heavy-lift BVLOS drone with SORA SAIL II.",
 
-    // 3 Quick Cards Below Hero (Diploma Thesis in English, 2026 - 2028)
+    // 3 Quick Cards Below Hero (HTL 2023 - 2028)
     card1_title: "Education & Schooling",
     card1_role1: "HTL Elektrotechnik Salzburg",
-    card1_date1: "Higher Technical Institute • 2022 - 2027",
+    card1_date1: "Higher Technical Institute • 2023 - 2028",
     card1_role2: "Diploma Thesis R&D Project",
     card1_date2: "SAR VTOL Drone & SORA • 2026 - 2028",
     card1_role3: "Specialization",
@@ -97,11 +97,10 @@ export const translations = {
     intern_2_date: "Summer 2025 • 4 Weeks",
     intern_2_b1: "Independently built and wired large-scale industrial fuse boxes, main distribution switchgear, and control cabinets.",
     intern_2_b2: "Constructed high-power electrical distribution assemblies tailored for major industrial companies across Austria.",
-    intern_2_b3: "Performed busbar bending, DIN rail component assembly, thermal load planning, and rigorous continuity testing.",
 
     edu_heading: "Education & Workshop Fabrication Skills",
     edu_1_title: "HTL Elektrotechnik Salzburg",
-    edu_1_subtitle: "Higher Technical Institute for Electrical Engineering • 2022 - 2027",
+    edu_1_subtitle: "Higher Technical Institute for Electrical Engineering • 2023 - 2028",
     edu_1_desc: "5-year intensive engineering program covering power systems, control engineering, embedded C/C++, CAD design, electronics, and software development.",
 
     workshop_title: "Hands-on Workshop & Manufacturing Competencies",
@@ -115,7 +114,7 @@ export const translations = {
     ws_8: "Custom PCB Design (KiCad)",
     ws_9: "Systemic Troubleshooting",
 
-    // Technical Skills Section (Uniform 5-Panel Layout)
+    // Technical Skills Section
     skills_title: "technical skills & stack",
     skills_sub: "Structured engineering competencies across software, microcontrollers, CAD automation, media production, AI technologies, and active learning.",
 
@@ -125,7 +124,7 @@ export const translations = {
     skills_cat4: "AI Tools & Machine Learning",
     skills_cat5: "Currently Learning for Projects",
 
-    // Projects Section (Updated subtitle)
+    // Projects Section
     projects_title: "featured engineering projects",
     projects_sub: "Documented engineering projects featuring AI reinforcement learning, 6DoF motion simulation, high-performance parsers, and custom hardware.",
 
@@ -158,7 +157,7 @@ export const translations = {
     proj3_b2: "Engineered zero-code parsing logic driven dynamically by external JSON mapping configurations (V3/V4 standards).",
     proj3_b3: "Fully Dockerized, microservices-ready architecture currently under commercial evaluation for industrial partnerships.",
 
-    // Project 4: Tri-Tilt SAR VTOL (Diploma Thesis / 2026 - 2028)
+    // Project 4: Tri-Tilt SAR VTOL
     proj4_title: "Tri-Tilt-Rotor SAR VTOL Drone (Diploma Thesis)",
     proj4_date: "Started June 2026 • Target 2028 (Diploma Thesis)",
     proj4_desc: "BVLOS Search & Rescue 3-rotor VTOL drone built under AustroControl SORA SAIL II safety guidelines. Dual Pixhawk FMU + Nvidia Jetson ROS2 swarm architecture.",
@@ -202,7 +201,7 @@ export const translations = {
     learnings_title: "Key Learnings & Erkenntnisse",
     gallery_title: "Medien, Code & CAD-Assets",
 
-    // Hero Section (Generalized Specialization)
+    // Hero Section
     hero_greeting: "Hallo, ich bin",
     hero_name: "David Sommerer.",
     hero_role_prefix: "Ich bin ein",
@@ -228,7 +227,7 @@ export const translations = {
     sig_ch4_val: "CAN / DroneCAN",
     sig_status: "pwm ausgang synchronisiert · 10 kHz hardware timer · zero jitter",
 
-    // Terminal Text (Generalized)
+    // Terminal Text
     term_title: "david@htl-salzburg:~/systems",
     term_cmd_whoami: "whoami",
     term_whoami_desc: "17-jähriger Systems Engineer an der HTL Elektrotechnik Salzburg spezialisiert auf Avionik, Embedded Firmware, Elektronikplanung und Software Engineering.",
@@ -242,10 +241,10 @@ export const translations = {
     term_p3: "> EDI-to-JSONL Parser - Zero-Allocation 2.4 GB/s C++20 Streaming Engine.",
     term_p4: "> Tri-Tilt-Rotor SAR VTOL - Schwere BVLOS Drohne nach SORA SAIL II.",
 
-    // 3 Quick Cards Below Hero (Diplomarbeit in German, 2026 - 2028)
+    // 3 Quick Cards Below Hero (HTL 2023 - 2028)
     card1_title: "Ausbildung & Schule",
     card1_role1: "HTL Elektrotechnik Salzburg",
-    card1_date1: "Höhere Technische Lehranstalt • 2022 - 2027",
+    card1_date1: "Höhere Technische Lehranstalt • 2023 - 2028",
     card1_role2: "Diplomarbeit F&E Projekt",
     card1_date2: "SAR VTOL Drohne & SORA • 2026 - 2028",
     card1_role3: "Schwerpunkte",
@@ -282,11 +281,10 @@ export const translations = {
     intern_2_date: "Sommer 2025 • 4 Wochen",
     intern_2_b1: "Eigenständiger Aufbau und Verdrahtung großer industrieller Sicherungs- und Verteilerschränke.",
     intern_2_b2: "Fertigung hochstromfester Schaltanlagen für namhafte österreichische Industrieunternehmen.",
-    intern_2_b3: "Durchführung von Kupferschienenbiegung, DIN-Schienen-Bestückung und thermischen Prüfungen.",
 
     edu_heading: "Ausbildung & Werkstattkompetenzen",
     edu_1_title: "HTL Elektrotechnik Salzburg",
-    edu_1_subtitle: "Höhere Technische Lehranstalt für Elektrotechnik • 2022 - 2027",
+    edu_1_subtitle: "Höhere Technische Lehranstalt für Elektrotechnik • 2023 - 2028",
     edu_1_desc: "5-jährige fundierte Ingenieurausbildung in Energietechnik, Regelungstechnik, Embedded C/C++, CAD-Konstruktion, Elektronik und Softwareentwicklung.",
 
     workshop_title: "Praktische Werkstatt- & Fertigungsskills",
@@ -300,7 +298,7 @@ export const translations = {
     ws_8: "Eigenes PCB Layout (KiCad)",
     ws_9: "Systemische Fehlersuche",
 
-    // Technical Skills Section (Uniform 5-Panel Layout)
+    // Technical Skills Section
     skills_title: "technische skills & stack",
     skills_sub: "Strukturierte Ingenieurkompetenzen in Software, Mikrocontrollern, CAD, Medienproduktion, KI-Technologien und aktiver Weiterbildung.",
 
@@ -310,7 +308,7 @@ export const translations = {
     skills_cat4: "KI-Tools & Machine Learning",
     skills_cat5: "Aktuell am Lernen für Projekte",
 
-    // Projects Section (Updated subtitle)
+    // Projects Section
     projects_title: "ausgewählte ingenieurprojekte",
     projects_sub: "Dokumentierte Ingenieurprojekte mit KI Reinforcement Learning, 6DoF Bewegungssimulation, High-Performance Parsern und eigener Hardware.",
 
@@ -339,11 +337,11 @@ export const translations = {
     proj3_title: "High-Performance Zero-Allocation EDI Engine",
     proj3_date: "Gestartet April 2026 (Aktives Stealth-Projekt)",
     proj3_desc: "Hochdurchsatz O(1) EDI-Streaming-Engine in <35 MB RAM. Zero-Code Regelwerk über JSON-Konfigurationen (Vertrauliches Business-Projekt).",
-    proj3_b1: "Speicherbedarf strikt auf O(1) (~35 MB RAM) begrenzt für Multi-Gigabyte EDI/FACT Datenströme.",
+    proj3_b1: "Speicherbedarf strikt auf O(1) (~35 MB RAM) für Multi-Gigabyte EDI/FACT Datenströme.",
     proj3_b2: "Zero-Code Parsing-Logik gesteuert über externe JSON-Mapping-Regelwerke (V3/V4 Standards).",
     proj3_b3: "Vollständig Dockerisiert, Microservices-ready und aktuell in kommerzieller Evaluierung für Industriepartner.",
 
-    // Project 4: Tri-Tilt SAR VTOL (Diplomarbeit / 2026 - 2028)
+    // Project 4: Tri-Tilt SAR VTOL
     proj4_title: "Tri-Tilt-Rotor SAR VTOL Drohne (Diplomarbeit)",
     proj4_date: "Gestartet Juni 2026 • Ziel 2028 (Diplomarbeit)",
     proj4_desc: "BVLOS Rettungsdrohne nach AustroControl SORA SAIL II Richtlinien. Dual Pixhawk FMU + Nvidia Jetson ROS2 Schwarmarchitektur.",
