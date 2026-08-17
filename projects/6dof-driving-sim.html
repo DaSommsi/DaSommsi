@@ -222,30 +222,37 @@
         <p class="text-sm font-mono text-zinc-300 mt-1" data-i18n="sim_media_sub">Real video of the 6DoF motion rig operating live during racing simulation, CAD 3D assembly models, and MATLAB kinematic simulation plots.</p>
       </div>
       
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 font-mono text-xs sm:text-sm">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-6 font-mono text-xs sm:text-sm items-start">
         
-        <!-- Live Operating Video -->
-        <div class="rounded-3xl bg-zinc-950 border border-white/15 overflow-hidden space-y-3 p-3 group shadow-xl sm:col-span-2">
-          <video controls class="w-full h-80 sm:h-96 object-cover rounded-2xl bg-zinc-900 border border-white/10" poster="../data/6dof-sim-rig/Picture_Concept-CAD.png">
-            <source src="../data/6dof-sim-rig/Video_while_Racing.mp4" type="video/mp4">
-            Your browser does not support HTML5 video streaming.
-          </video>
+        <!-- Live Operating Video (PORTRAIT FORMAT 9:16 ASPECT RATIO) -->
+        <div class="md:col-span-5 rounded-3xl bg-zinc-950 border border-white/15 overflow-hidden p-3 space-y-3 shadow-xl">
+          <div class="w-full aspect-[9/16] rounded-2xl bg-zinc-900 overflow-hidden relative border border-white/10">
+            <video controls class="w-full h-full object-contain bg-zinc-950 rounded-2xl" poster="../data/6dof-sim-rig/Picture_Concept-CAD.png">
+              <source src="../data/6dof-sim-rig/Video_while_Racing.mp4" type="video/mp4">
+              Your browser does not support HTML5 video streaming.
+            </video>
+          </div>
           <div class="px-2 pb-1 text-xs sm:text-sm text-zinc-300 font-semibold flex items-center justify-between">
-            <span data-i18n="sim_fig3">Video 1: Demonstration video of the restored 6DoF simulator operating during a high-speed racing run.</span>
-            <span class="text-emerald-400 font-bold hidden sm:inline">LIVE VIDEO</span>
+            <span data-i18n="sim_fig3">Video 1: Live demonstration video of the restored 6DoF simulator operating during a high-speed racing run.</span>
+            <span class="text-emerald-400 font-bold ml-2 shrink-0">9:16 REEL</span>
           </div>
         </div>
 
-        <!-- Photo 1: 3D CAD Concept -->
-        <div class="rounded-3xl bg-zinc-950 border border-white/15 overflow-hidden space-y-3 p-3 group shadow-xl">
-          <img src="../data/6dof-sim-rig/Picture_Concept-CAD.png" alt="Figure 1: CAD 3D concept model of the 6DoF Stewart platform motion chassis." class="w-full h-60 object-cover rounded-2xl transition-transform hover:scale-[1.03] duration-300 cursor-zoom-in">
-          <div class="px-2 pb-1 text-xs sm:text-sm text-zinc-300 font-semibold" data-i18n="sim_fig1">Figure 1: CAD 3D concept model of the 6DoF Stewart platform motion chassis.</div>
-        </div>
+        <!-- Right Side Column: Photo 1 CAD & Photo 2 MATLAB -->
+        <div class="md:col-span-7 space-y-6">
+          
+          <!-- Photo 1: 3D CAD Concept -->
+          <div class="rounded-3xl bg-zinc-950 border border-white/15 overflow-hidden space-y-3 p-3 group shadow-xl">
+            <img src="../data/6dof-sim-rig/Picture_Concept-CAD.png" alt="Figure 1: CAD 3D concept model of the 6DoF Stewart platform motion chassis." class="w-full h-64 object-cover rounded-2xl transition-transform hover:scale-[1.03] duration-300 cursor-zoom-in">
+            <div class="px-2 pb-1 text-xs sm:text-sm text-zinc-300 font-semibold" data-i18n="sim_fig1">Figure 1: CAD 3D concept model of the 6DoF Stewart platform motion chassis.</div>
+          </div>
 
-        <!-- Photo 2: MATLAB Kinematics Simulation -->
-        <div class="rounded-3xl bg-zinc-950 border border-white/15 overflow-hidden space-y-3 p-3 group shadow-xl">
-          <img src="../data/6dof-sim-rig/Picture_MATLAB_Sim.png" alt="Figure 2: MATLAB kinematic simulation trajectory plot for actuator displacement." class="w-full h-60 object-cover rounded-2xl bg-zinc-900 transition-transform hover:scale-[1.03] duration-300 cursor-zoom-in">
-          <div class="px-2 pb-1 text-xs sm:text-sm text-zinc-300 font-semibold" data-i18n="sim_fig2">Figure 2: MATLAB kinematic simulation trajectory plot for actuator displacement.</div>
+          <!-- Photo 2: MATLAB Kinematics Simulation -->
+          <div class="rounded-3xl bg-zinc-950 border border-white/15 overflow-hidden space-y-3 p-3 group shadow-xl">
+            <img src="../data/6dof-sim-rig/Picture_MATLAB_Sim.png" alt="Figure 2: MATLAB kinematic simulation trajectory plot for actuator displacement." class="w-full h-64 object-cover rounded-2xl bg-zinc-900 transition-transform hover:scale-[1.03] duration-300 cursor-zoom-in">
+            <div class="px-2 pb-1 text-xs sm:text-sm text-zinc-300 font-semibold" data-i18n="sim_fig2">Figure 2: MATLAB kinematic simulation trajectory plot for actuator displacement.</div>
+          </div>
+
         </div>
 
       </div>
