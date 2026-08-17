@@ -79,20 +79,20 @@
     <!-- PROJECT METRICS GRID -->
     <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 font-mono text-xs">
       <div class="p-4 rounded-2xl bg-zinc-900/60 border border-border">
-        <div class="text-muted text-[10px]">Base Platform</div>
+        <div class="text-muted text-[10px]" data-i18n="cc_base_platform">Base Platform</div>
         <div class="text-amber-400 font-bold text-sm mt-1">€30 Amazon RC Car</div>
       </div>
       <div class="p-4 rounded-2xl bg-zinc-900/60 border border-border">
-        <div class="text-muted text-[10px]">Microcontroller</div>
+        <div class="text-muted text-[10px]" data-i18n="cc_mcu">Microcontroller</div>
         <div class="text-sky-400 font-bold text-sm mt-1">ESP32 & Custom PCB</div>
       </div>
       <div class="p-4 rounded-2xl bg-zinc-900/60 border border-border">
-        <div class="text-muted text-[10px]">Control Approach</div>
+        <div class="text-muted text-[10px]" data-i18n="cc_control_approach">Control Approach</div>
         <div class="text-foreground font-bold text-sm mt-1">Direct AI Motor Control</div>
       </div>
       <div class="p-4 rounded-2xl bg-zinc-900/60 border border-border">
-        <div class="text-muted text-[10px]">Version Control</div>
-        <div class="text-rose-400 font-bold text-sm mt-1">None (A Big Lesson Learned)</div>
+        <div class="text-muted text-[10px]" data-i18n="cc_version_control">Version Control</div>
+        <div class="text-rose-400 font-bold text-sm mt-1" data-i18n="cc_no_vc_note">None (A Big Lesson Learned)</div>
       </div>
     </div>
 
@@ -105,20 +105,20 @@
 
       <div class="space-y-4 font-mono text-xs border-l-2 border-slate-800 pl-4">
         <div class="space-y-1">
-          <span class="text-sky-400 font-bold">Aug 2025 – Dec 2025: AI Model Training & Hardware Design</span>
-          <p class="text-muted font-sans">
+          <span class="text-sky-400 font-bold" data-i18n="cc_time1_title">Aug 2025 – Dec 2025: AI Model Training & Hardware Design</span>
+          <p class="text-muted font-sans" data-i18n="cc_time1_desc">
             As project lead, I spent countless hours in Unity ML-Agents coding and training the reinforcement learning agents. I used progressive learning—giving the AI an easy track first before transitioning to the full racetrack layout. Simultaneously, we rebuilt the 30€ RC car with a micro-servo and designed our custom PCB in CAD.
           </p>
         </div>
         <div class="space-y-1">
-          <span class="text-amber-400 font-bold">Jan 2026 – Feb 2026: Delayed Hardware Assembly & Uncovered Problems</span>
-          <p class="text-muted font-sans">
+          <span class="text-amber-400 font-bold" data-i18n="cc_time2_title">Jan 2026 – Feb 2026: Delayed Hardware Assembly & Uncovered Problems</span>
+          <p class="text-muted font-sans" data-i18n="cc_time2_desc">
             The main mistake was waiting too long to finish the physical build. The car was assembled only a few days before the Graz competition. Last-minute bench testing revealed critical issues: PCB trace routing errors omitted the IMU sensor connection, and high motor current draw generated EMI noise that corrupted sensor signals.
           </p>
         </div>
         <div class="space-y-1">
-          <span class="text-rose-400 font-bold">Feb 2026: Competition in Graz & On-Site Debugging</span>
-          <p class="text-muted font-sans">
+          <span class="text-rose-400 font-bold" data-i18n="cc_time3_title">Feb 2026: Competition in Graz & On-Site Debugging</span>
+          <p class="text-muted font-sans" data-i18n="cc_time3_desc">
             Even though the car wasn't running properly at home, we still went to Graz determined to compete. At the venue, nothing worked—the vehicle failed to respond to control commands. We spent 2 intense days troubleshooting power lines and noise on-site, but couldn't resolve the hardware flaws before our run. Though we didn't score points, this failure motivated us to start our 2027 Ground Effect vehicle 8 months early!
           </p>
         </div>
@@ -130,24 +130,24 @@
       
       <!-- Section 1 -->
       <div class="space-y-3">
-        <h2 class="text-xl font-bold font-heading text-foreground">1. Direct AI End-to-End Motor Control (No PID Buffer)</h2>
-        <p>
+        <h2 class="text-xl font-bold font-heading text-foreground" data-i18n="cc_prob1_title">1. Direct AI End-to-End Motor Control (No PID Buffer)</h2>
+        <p data-i18n="cc_prob1_desc">
           In our initial design, the trained neural network directly controlled the motor speed percentage and steering servo angle based on velocity, IMU values, and 3 Time-of-Flight (ToF) distance sensors. There was no PID controller or safety filter in between. While this end-to-end approach worked seamlessly in the Unity simulation, real-world motor latency and unbuffered sensor spikes caused erratic responses on the physical track.
         </p>
       </div>
 
       <!-- Section 2 -->
       <div class="space-y-3">
-        <h2 class="text-xl font-bold font-heading text-foreground">2. PCB Routing Flaws & Motor Current Noise</h2>
-        <p>
+        <h2 class="text-xl font-bold font-heading text-foreground" data-i18n="cc_prob2_title">2. PCB Routing Flaws & Motor Current Noise</h2>
+        <p data-i18n="cc_prob2_desc">
           Designing the custom PCB during the Aug–Dec window was a huge learning curve. During board routing, traces for the IMU sensor were accidentally omitted from the layout. Furthermore, powering the drive motor from the same rail as the sensors caused severe voltage sags and electromagnetic interference (EMI) whenever the motor accelerated, causing sensor readings to drop.
         </p>
       </div>
 
       <!-- Section 3 -->
       <div class="space-y-3 border-l-2 border-rose-500/50 pl-4 py-1 bg-rose-950/10 font-mono text-xs">
-        <h3 class="text-sm font-bold text-rose-400">Why Version Control (Git) Matters & Key Takeaways</h3>
-        <p class="text-zinc-300">
+        <h3 class="text-sm font-bold text-rose-400" data-i18n="cc_prob3_title">Why Version Control (Git) Matters & Key Takeaways</h3>
+        <p class="text-zinc-300" data-i18n="cc_prob3_desc">
           Stupidly, we didn't use Git for source control on this project. When code edits were made late at night before Graz, tracking working states became impossible. We learned these lessons the hard way: all future projects now enforce strict Git commits, decoupled power isolation, PID control buffers, and early hardware integration!
         </p>
       </div>
@@ -156,8 +156,8 @@
 
     <!-- HARDWARE DOCUMENTATION & PDF DOWNLOADS -->
     <div class="space-y-4 border-t border-border pt-8 font-mono text-xs">
-      <h2 class="text-lg font-bold font-heading text-foreground">PCB Engineering Schematics & Gerber Files</h2>
-      <p class="text-muted text-xs font-sans">Official CAD schematic diagrams, PCB layout board drawings, and manufacturing Gerber files designed between Aug–Dec 2025.</p>
+      <h2 class="text-lg font-bold font-heading text-foreground" data-i18n="cc_pdf_heading">PCB Engineering Schematics & Gerber Files</h2>
+      <p class="text-muted text-xs font-sans" data-i18n="cc_pdf_sub">Official CAD schematic diagrams, PCB layout board drawings, and manufacturing Gerber files designed between Aug–Dec 2025.</p>
       
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <!-- PDF 1: PCB Schematic -->
@@ -167,8 +167,8 @@
             <span class="text-[10px] text-muted group-hover:text-sky-400">PDF</span>
           </div>
           <div>
-            <div class="text-foreground font-bold text-xs">PCB Circuit Schematic</div>
-            <div class="text-muted text-[10px] mt-0.5">ESP32 & ToF Circuitry</div>
+            <div class="text-foreground font-bold text-xs" data-i18n="cc_pdf1_title">PCB Circuit Schematic</div>
+            <div class="text-muted text-[10px] mt-0.5" data-i18n="cc_pdf1_sub">ESP32 & ToF Circuitry</div>
           </div>
         </a>
 
@@ -179,8 +179,8 @@
             <span class="text-[10px] text-muted group-hover:text-emerald-400">PDF</span>
           </div>
           <div>
-            <div class="text-foreground font-bold text-xs">PCB Layout Drawing</div>
-            <div class="text-muted text-[10px] mt-0.5">Board Layer Routing</div>
+            <div class="text-foreground font-bold text-xs" data-i18n="cc_pdf2_title">PCB Layout Drawing</div>
+            <div class="text-muted text-[10px] mt-0.5" data-i18n="cc_pdf2_sub">Board Layer Routing</div>
           </div>
         </a>
 
@@ -191,55 +191,55 @@
             <span class="text-[10px] text-muted group-hover:text-amber-400">ZIP</span>
           </div>
           <div>
-            <div class="text-foreground font-bold text-xs">Gerber Production Files</div>
-            <div class="text-muted text-[10px] mt-0.5">Manufacturing Archive</div>
+            <div class="text-foreground font-bold text-xs" data-i18n="cc_gerber_title">Gerber Production Files</div>
+            <div class="text-muted text-[10px] mt-0.5" data-i18n="cc_gerber_sub">Manufacturing Archive</div>
           </div>
         </a>
       </div>
     </div>
 
-    <!-- ALL PROJECT PICTURES GALLERY (WITH CLICK-TO-ZOOM LIGHTBOX) -->
+    <!-- ALL PROJECT PICTURES GALLERY (WITH FULL-SCREEN CLICK-TO-ZOOM LIGHTBOX) -->
     <div class="space-y-6 border-t border-border pt-8">
       <div>
         <h2 class="text-lg font-bold font-heading text-foreground" data-i18n="gallery_title">Project Media, Code & CAD Assets</h2>
-        <p class="text-xs font-mono text-muted mt-1">Click any image to view in high-resolution zoom mode. Captions document the build evolution and Graz competition venue.</p>
+        <p class="text-xs font-mono text-muted mt-1" data-i18n="cc_gallery_sub">Click any image to view in full-screen zoom mode. Captions document the build evolution and Graz competition venue.</p>
       </div>
       
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 font-mono text-xs">
         <!-- Photo 1: Closed Lambo -->
         <div class="rounded-2xl bg-zinc-950 border border-border overflow-hidden space-y-2 p-2">
-          <img src="../data/crazy-car/Picture_Lambo_Closed.jpg" alt="Figure 1: Modified 30€ Amazon Lamborghini RC car body and chassis." class="w-full h-52 object-cover rounded-xl transition-transform hover:scale-[1.02] duration-300">
-          <div class="px-2 pb-1 text-[11px] text-muted">Figure 1: Modified 30€ Amazon Lamborghini RC car body and chassis.</div>
+          <img src="../data/crazy-car/Picture_Lambo_Closed.jpg" alt="Figure 1: Modified 30€ Amazon Lamborghini RC car body and chassis." class="w-full h-52 object-cover rounded-xl transition-transform hover:scale-[1.02] duration-300 cursor-zoom-in">
+          <div class="px-2 pb-1 text-[11px] text-muted" data-i18n="cc_fig1">Figure 1: Modified 30€ Amazon Lamborghini RC car body and chassis.</div>
         </div>
 
         <!-- Photo 2: Open Lambo & PCB -->
         <div class="rounded-2xl bg-zinc-950 border border-border overflow-hidden space-y-2 p-2">
-          <img src="../data/crazy-car/Picture_Lambo_Open.jpg" alt="Figure 2: Interior electronics layout with ESP32, steering micro-servo, and custom PCB." class="w-full h-52 object-cover rounded-xl transition-transform hover:scale-[1.02] duration-300">
-          <div class="px-2 pb-1 text-[11px] text-muted">Figure 2: Interior electronics layout with ESP32, steering micro-servo, and custom PCB.</div>
+          <img src="../data/crazy-car/Picture_Lambo_Open.jpg" alt="Figure 2: Interior electronics layout with ESP32, steering micro-servo, and custom PCB." class="w-full h-52 object-cover rounded-xl transition-transform hover:scale-[1.02] duration-300 cursor-zoom-in">
+          <div class="px-2 pb-1 text-[11px] text-muted" data-i18n="cc_fig2">Figure 2: Interior electronics layout with ESP32, steering micro-servo, and custom PCB.</div>
         </div>
 
         <!-- Photo 3: Lambo While Working (Graz Competition Venue) -->
         <div class="rounded-2xl bg-zinc-950 border border-border overflow-hidden space-y-2 p-2">
-          <img src="../data/crazy-car/Picture_Lambo_while_working.jpg" alt="Figure 3: On-site hardware assembly and diagnostic session at the Graz competition venue." class="w-full h-52 object-cover rounded-xl transition-transform hover:scale-[1.02] duration-300">
-          <div class="px-2 pb-1 text-[11px] text-muted">Figure 3: On-site hardware assembly and diagnostic session at the Graz competition venue.</div>
+          <img src="../data/crazy-car/Picture_Lambo_while_working.jpg" alt="Figure 3: On-site hardware assembly and diagnostic session at the Graz competition venue." class="w-full h-52 object-cover rounded-xl transition-transform hover:scale-[1.02] duration-300 cursor-zoom-in">
+          <div class="px-2 pb-1 text-[11px] text-muted" data-i18n="cc_fig3">Figure 3: On-site hardware assembly and diagnostic session at the Graz competition venue.</div>
         </div>
 
         <!-- Photo 4: Open Lambo Wiring (Graz Competition Venue) -->
         <div class="rounded-2xl bg-zinc-950 border border-border overflow-hidden space-y-2 p-2">
-          <img src="../data/crazy-car/Picutre_Lambo_Open_while_working.jpg" alt="Figure 4: Open chassis power & sensor wiring troubleshooting taken at the Graz competition." class="w-full h-52 object-cover rounded-xl transition-transform hover:scale-[1.02] duration-300">
-          <div class="px-2 pb-1 text-[11px] text-muted">Figure 4: Open chassis power & sensor wiring troubleshooting taken at the Graz competition.</div>
+          <img src="../data/crazy-car/Picutre_Lambo_Open_while_working.jpg" alt="Figure 4: Open chassis power & sensor wiring troubleshooting taken at the Graz competition." class="w-full h-52 object-cover rounded-xl transition-transform hover:scale-[1.02] duration-300 cursor-zoom-in">
+          <div class="px-2 pb-1 text-[11px] text-muted" data-i18n="cc_fig4">Figure 4: Open chassis power & sensor wiring troubleshooting taken at the Graz competition.</div>
         </div>
 
         <!-- Photo 5: 3D PCB Render -->
         <div class="rounded-2xl bg-zinc-950 border border-border overflow-hidden space-y-2 p-2">
-          <img src="../data/crazy-car/Lambo_RC_Car_PCB_3D.png" alt="Figure 5: 3D CAD layout of the custom microcontroller PCB designed in late 2025." class="w-full h-52 object-cover rounded-xl bg-zinc-900 transition-transform hover:scale-[1.02] duration-300">
-          <div class="px-2 pb-1 text-[11px] text-muted">Figure 5: 3D CAD layout of the custom microcontroller PCB designed in late 2025.</div>
+          <img src="../data/crazy-car/Lambo_RC_Car_PCB_3D.png" alt="Figure 5: 3D CAD layout of the custom microcontroller PCB designed in late 2025." class="w-full h-52 object-cover rounded-xl bg-zinc-900 transition-transform hover:scale-[1.02] duration-300 cursor-zoom-in">
+          <div class="px-2 pb-1 text-[11px] text-muted" data-i18n="cc_fig5">Figure 5: 3D CAD layout of the custom microcontroller PCB designed in late 2025.</div>
         </div>
 
         <!-- Photo 6: Racing Track (Graz Competition Racetrack) -->
         <div class="rounded-2xl bg-zinc-950 border border-border overflow-hidden space-y-2 p-2">
-          <img src="../data/crazy-car/Picture_Racing_Track.jpg" alt="Figure 6: The official competition racetrack in Graz." class="w-full h-52 object-cover rounded-xl transition-transform hover:scale-[1.02] duration-300">
-          <div class="px-2 pb-1 text-[11px] text-muted">Figure 6: The official competition racetrack in Graz.</div>
+          <img src="../data/crazy-car/Picture_Racing_Track.jpg" alt="Figure 6: The official competition racetrack in Graz." class="w-full h-52 object-cover rounded-xl transition-transform hover:scale-[1.02] duration-300 cursor-zoom-in">
+          <div class="px-2 pb-1 text-[11px] text-muted" data-i18n="cc_fig6">Figure 6: The official competition racetrack in Graz.</div>
         </div>
       </div>
     </div>
@@ -247,7 +247,7 @@
     <!-- FOOTER ACTIONS -->
     <div class="pt-8 border-t border-border flex items-center justify-between font-mono text-xs">
       <a href="../index.html" class="text-primary hover:text-white transition-colors" data-i18n="back_overview">← Back to Main Portfolio</a>
-      <span class="text-rose-400 italic">Version control (Git) was omitted on this first build — a mistake fixed on all subsequent projects.</span>
+      <span class="text-rose-400 italic" data-i18n="cc_no_vc_note">Version control (Git) was omitted on this first build — a mistake fixed on all subsequent projects.</span>
     </div>
 
   </main>

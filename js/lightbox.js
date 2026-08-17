@@ -1,6 +1,6 @@
 /**
  * @file lightbox.js
- * @description Lightbox Modal image viewer allowing click-to-zoom on project media.
+ * @description Lightbox Modal image viewer allowing click-to-zoom full-screen image inspection.
  */
 
 export class LightboxViewer {
@@ -12,18 +12,22 @@ export class LightboxViewer {
   }
 
   init() {
-    if (document.getElementById("lightbox-modal")) return;
+    if (document.getElementById("lightbox-modal")) {
+      this.attachImageListeners();
+      return;
+    }
 
-    // Create modal container element
+    // Create full-screen modal overlay container element
     this.modal = document.createElement("div");
     this.modal.id = "lightbox-modal";
-    this.modal.className = "fixed inset-0 z-50 hidden bg-black/90 backdrop-blur-md flex flex-col items-center justify-center p-4 cursor-zoom-out transition-all duration-300";
+    this.modal.className = "fixed inset-0 z-[9999] hidden bg-black/95 backdrop-blur-md flex flex-col items-center justify-center p-4 cursor-zoom-out select-none transition-all duration-300";
     
     this.modal.innerHTML = `
-      <button id="lightbox-close" class="absolute top-6 right-6 text-white/80 hover:text-white p-2 text-2xl font-mono focus:outline-none z-50">✕</button>
-      <div class="max-w-5xl max-h-[85vh] flex flex-col items-center justify-center relative pointer-events-auto">
-        <img id="lightbox-img" class="max-w-full max-h-[80vh] object-contain rounded-xl shadow-2xl border border-white/10 transition-transform duration-300">
-        <p id="lightbox-caption" class="text-xs font-mono text-zinc-300 mt-4 text-center max-w-xl"></p>
+      <button id="lightbox-close" class="absolute top-6 right-8 text-white/80 hover:text-white p-3 text-3xl font-mono focus:outline-none z-[10000] bg-zinc-900/80 rounded-full border border-white/20 hover:scale-110 transition-transform">✕</button>
+      
+      <div class="w-[94vw] h-[86vh] flex flex-col items-center justify-center relative pointer-events-auto">
+        <img id="lightbox-img" class="max-w-[94vw] max-h-[80vh] w-auto h-auto object-contain rounded-2xl shadow-[0_0_50px_rgba(0,0,0,0.9)] border border-white/20 transition-all duration-300 scale-100">
+        <p id="lightbox-caption" class="text-sm font-mono text-zinc-200 mt-4 text-center max-w-3xl bg-zinc-900/90 px-4 py-2 rounded-xl border border-white/10 shadow-lg"></p>
       </div>
     `;
 
@@ -50,13 +54,14 @@ export class LightboxViewer {
   }
 
   attachImageListeners() {
-    const images = document.querySelectorAll("img");
+    const images = document.querySelectorAll("img:not(#lightbox-img)");
     images.forEach((img) => {
-      img.classList.add("cursor-zoom-in");
+      img.classList.add("cursor-zoom-in", "transition-transform", "hover:scale-[1.02]");
       img.addEventListener("click", (e) => {
         e.preventDefault();
         e.stopPropagation();
-        this.open(img.src, img.alt || img.getAttribute("data-caption") || "");
+        const caption = img.alt || img.getAttribute("data-caption") || img.nextElementSibling?.textContent || "";
+        this.open(img.src, caption);
       });
     });
   }

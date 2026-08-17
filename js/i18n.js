@@ -133,13 +133,55 @@ export const translations = {
     filter_lowlevel: "Embedded C/C++",
     filter_hardware: "Hardware & Sim",
 
-    // Project 1: Crazy Car (Updated Aug 2025 - Feb 2026, honest post-mortem tone)
+    // Project 1: Crazy Car
     proj1_title: "Crazy Car: Autonomous AI/RL RC Car",
     proj1_date: "Aug 2025 - Feb 2026 (Graz Competition)",
-    proj1_desc: "Our first major robotics experiment built from a €30 Amazon RC car. Trained a neural policy in Unity ML-Agents to directly control motor PWM and steering, serving as an invaluable hands-on learning testbed.",
+    proj1_desc: "Our very first real engineering project besides the 6DoF simulator. We bought a cheap 30€ Amazon RC car, rebuilt it with a microcontroller and servo, and trained an AI model in Unity to drive autonomously. A vital experiment built to test boundaries, learn from failures, and succeed in future competitions.",
     proj1_b1: "Trained RL agent in Unity ML-Agents (Aug-Dec 2025) taking velocity, IMU, and 3 ToF sensors to directly output motor speed & servo steering angle (no intermediate PID).",
     proj1_b2: "Faced PCB hardware flaws: IMU trace routing was accidentally omitted during CAD layout, and high motor current noise interrupted sensor signals under load.",
     proj1_b3: "Completed assembly only days before the Graz competition (Feb 2026); despite 2 intense days of on-site debugging, signal noise prevented driving, teaching us crucial engineering discipline for future projects.",
+
+    // Crazy Car Subpage Specific EN Translations
+    cc_base_platform: "Base Platform",
+    cc_mcu: "Microcontroller",
+    cc_control_approach: "Control Approach",
+    cc_version_control: "Version Control",
+    cc_no_vc_note: "None (A Big Lesson Learned)",
+
+    cc_time1_title: "Aug 2025 – Dec 2025: AI Model Training & Hardware Design",
+    cc_time1_desc: "As project lead, I spent countless hours in Unity ML-Agents coding and training the reinforcement learning agents. I used progressive learning—giving the AI an easy track first before transitioning to the full racetrack layout. Simultaneously, we rebuilt the 30€ RC car with a micro-servo and designed our custom PCB in CAD.",
+    
+    cc_time2_title: "Jan 2026 – Feb 2026: Delayed Hardware Assembly & Uncovered Problems",
+    cc_time2_desc: "The main mistake was waiting too long to finish the physical build. The car was assembled only a few days before the Graz competition. Last-minute bench testing revealed critical issues: PCB trace routing errors omitted the IMU sensor connection, and high motor current draw generated EMI noise that corrupted sensor signals.",
+
+    cc_time3_title: "Feb 2026: Competition in Graz & On-Site Debugging",
+    cc_time3_desc: "Even though the car wasn't running properly at home, we still went to Graz determined to compete. At the venue, nothing worked—the vehicle failed to respond to control commands. We spent 2 intense days troubleshooting power lines and noise on-site, but couldn't resolve the hardware flaws before our run. Though we didn't score points, this failure motivated us to start our 2027 Ground Effect vehicle 8 months early!",
+
+    cc_prob1_title: "1. Direct AI End-to-End Motor Control (No PID Buffer)",
+    cc_prob1_desc: "In our initial design, the trained neural network directly controlled the motor speed percentage and steering servo angle based on velocity, IMU values, and 3 Time-of-Flight (ToF) distance sensors. There was no PID controller or safety filter in between. While this end-to-end approach worked seamlessly in the Unity simulation, real-world motor latency and unbuffered sensor spikes caused erratic responses on the physical track.",
+
+    cc_prob2_title: "2. PCB Routing Flaws & Motor Current Noise",
+    cc_prob2_desc: "Designing the custom PCB during the Aug–Dec window was a huge learning curve. During board routing, traces for the IMU sensor were accidentally omitted from the layout. Furthermore, powering the drive motor from the same rail as the sensors caused severe voltage sags and electromagnetic interference (EMI) whenever the motor accelerated, causing sensor readings to drop.",
+
+    cc_prob3_title: "Why Version Control (Git) Matters & Key Takeaways",
+    cc_prob3_desc: "Stupidly, we didn't use Git for source control on this project. When code edits were made late at night before Graz, tracking working states became impossible. We learned these lessons the hard way: all future projects now enforce strict Git commits, decoupled power isolation, PID control buffers, and early hardware integration!",
+
+    cc_pdf_heading: "PCB Engineering Schematics & Gerber Files",
+    cc_pdf_sub: "Official CAD schematic diagrams, PCB layout board drawings, and manufacturing Gerber files designed between Aug–Dec 2025.",
+    cc_pdf1_title: "PCB Circuit Schematic",
+    cc_pdf1_sub: "ESP32 & ToF Circuitry",
+    cc_pdf2_title: "PCB Layout Drawing",
+    cc_pdf2_sub: "Board Layer Routing",
+    cc_gerber_title: "Gerber Production Files",
+    cc_gerber_sub: "Manufacturing Archive",
+
+    cc_gallery_sub: "Click any image to view in full-screen zoom mode. Captions document the build evolution and Graz competition venue.",
+    cc_fig1: "Figure 1: Modified 30€ Amazon Lamborghini RC car body and chassis.",
+    cc_fig2: "Figure 2: Interior electronics layout with ESP32, steering micro-servo, and custom PCB.",
+    cc_fig3: "Figure 3: On-site hardware assembly and diagnostic session at the Graz competition venue.",
+    cc_fig4: "Figure 4: Open chassis power & sensor wiring troubleshooting taken at the Graz competition.",
+    cc_fig5: "Figure 5: 3D CAD layout of the custom microcontroller PCB designed in late 2025.",
+    cc_fig6: "Figure 6: The official competition racetrack in Graz.",
 
     // Project 2: 6DoF Sim
     proj2_title: "6DoF Dynamic Motion Simulator Rig",
@@ -317,13 +359,55 @@ export const translations = {
     filter_lowlevel: "Embedded C/C++",
     filter_hardware: "Hardware & Sim",
 
-    // Project 1: Crazy Car (Updated Aug 2025 - Feb 2026)
+    // Project 1: Crazy Car
     proj1_title: "Crazy Car: Autonomes KI/RL RC-Car",
     proj1_date: "Aug 2025 - Feb 2026 (Wettbewerb Graz)",
-    proj1_desc: "Unser erstes großes Robotik-Experiment auf Basis eines 30€ Amazon RC-Cars. Training eines neuronalen Netzes in Unity ML-Agents zur direkten Steuerung von Motor-PWM & Lenkung als lehrreiches Prototyping-Projekt.",
+    proj1_desc: "Unser allererstes echtes Ingenieurprojekt neben dem 6DoF Simulator. Wir kauften ein günstiges 30€ Amazon RC-Car, bauten es mit Mikrocontroller und Servo um und trainierten ein KI-Modell in Unity für autonomes Fahren. Ein wichtiges Experiment, um Grenzen zu testen, aus Fehlern zu lernen und bei zukünftigen Bewerben erfolgreich zu sein.",
     proj1_b1: "Training der KI in Unity ML-Agents (Aug-Dez 2025) mit Eingabe von Geschwindigkeit, IMU & 3 ToF-Sensoren zur direkten Motor- & Servosteuerung (ohne PID-Filter).",
     proj1_b2: "Hardware-Probleme auf der Platine: Leiterbahnen zum IMU-Sensor wurden beim CAD-Routing vergessen, und hohe Motorströme störten die Sensorsignale.",
     proj1_b3: "Fertigstellung erst wenige Tage vor dem Bewerb in Graz (Feb 2026); trotz 2 Tagen intensiver Fehlersuche vor Ort reagierte das Auto nicht, was uns wertvolle Lektionen für Foljeprojekte lehrte.",
+
+    // Crazy Car Subpage Specific DE Translations
+    cc_base_platform: "Basis Platform",
+    cc_mcu: "Mikrocontroller",
+    cc_control_approach: "Regelungsansatz",
+    cc_version_control: "Versionskontrolle",
+    cc_no_vc_note: "Keine (Wertvolle Lektion)",
+
+    cc_time1_title: "Aug 2025 – Dez 2025: KI-Training & Hardware-Design",
+    cc_time1_desc: "Als Projektleiter habe ich unzählige Stunden in Unity ML-Agents verbracht, um die Reinforcement Learning Agenten zu programmieren und zu trainieren. Ich nutzte Curriculum Learning—zuerst auf einer einfachen Teststrecke, bevor es auf die echte Rennstrecke ging. Parallel dazu bauten wir das 30€ RC-Car um und entwarfen unsere Platine im CAD.",
+
+    cc_time2_title: "Jan 2026 – Feb 2026: Verzögerter Aufbau & Entdeckte Hardwarefehler",
+    cc_time2_desc: "Unser größter Fehler war, zu lange mit der Fertigstellung des physischen Autos zu warten. Der Zusammenbau wurde erst wenige Tage vor dem Wettbewerb in Graz fertig. Letzte Prüfstandstests zeigten kritische Mängel: Beim PCB-Routing wurden die IMU-Leiterbahnen vergessen, und hohe Motorströme erzeugten EMV-Störungen.",
+
+    cc_time3_title: "Feb 2026: Wettbewerb in Graz & Fehlersuche vor Ort",
+    cc_time3_desc: "Obwohl das Auto zu Hause nicht richtig funktionierte, fuhren wir entschlossen nach Graz. Vor Ort funktionierte nichts—das Fahrzeug reagierte nicht auf Steuerbefehle. Wir verbrachten 2 intensive Tage vor Ort mit der Fehlersuche an Stromleitungen und Signalen, konnten die Hardwarefehler aber nicht mehr rechtzeitig beheben. Dieser Misserfolg motivierte uns jedoch, unser Bodeneffekt-Fahrzeug 2027 ganze 8 Monate früher zu starten!",
+
+    cc_prob1_title: "1. Direkte KI-End-to-End Motorsteuerung (Ohne PID-Filter)",
+    cc_prob1_desc: "In unserem ursprünglichen Entwurf steuerte das trainierte neuronale Netz die Motordrehzahl und den Lenkservo direkt auf Basis von Geschwindigkeit, IMU-Werten und 3 ToF-Abstandssensoren—ohne PID-Regler oder Sicherheitsfilter dazwischen. Während dieser Ansatz in der Unity-Simulation perfekt funktionierte, führten Latenzen und ungefilterte Sensorspitzen in der Realität zu instabilem Verhalten.",
+
+    cc_prob2_title: "2. Platinen-Routingfehler & Motorstrom-Störungen",
+    cc_prob2_desc: "Das Design der eigenen Platine im Zeitraum Aug–Dez war eine große Lernkurve. Beim Layout wurden versehentlich die Leiterbahnen zum IMU-Sensor vergessen. Zudem führte die Stromversorgung des Motors über dieselbe Schiene wie die Sensoren bei Beschleunigung zu Spannungseinbrüchen und EMV-Störungen.",
+
+    cc_prob3_title: "Warum Versionskontrolle (Git) wichtig ist & Fazit",
+    cc_prob3_desc: "Leider haben wir für dieses Projekt kein Git verwendet. Bei späten Code-Änderungen kurz vor Graz war es unmöglich, funktionierende Stände nachzuvollziehen. Wir haben diese Lektion gelernt: Alle zukünftigen Projekte nutzen strikte Git-Commits, getrennte Stromversorgungen, PID-Filter und frühzeitige Hardware-Tests!",
+
+    cc_pdf_heading: "Platinen-Schaltpläne & Gerber-Dateien",
+    cc_pdf_sub: "Offizielle CAD-Schaltpläne, Layout-Zeichnungen und Fertigungs-Gerberdateien aus der Entwicklungsphase Aug–Dez 2025.",
+    cc_pdf1_title: "PCB Schaltplan",
+    cc_pdf1_sub: "ESP32 & ToF Schaltung",
+    cc_pdf2_title: "PCB Layout Zeichnung",
+    cc_pdf2_sub: "Platinen-Routing",
+    cc_gerber_title: "Gerber Fertigungsdateien",
+    cc_gerber_sub: "Produktions-Archiv",
+
+    cc_gallery_sub: "Klicke auf ein Bild, um es in der Vollbild-Zoomansicht zu öffnen. Die Bildunterschriften dokumentieren die Bauphasen und den Wettbewerb in Graz.",
+    cc_fig1: "Abbildung 1: Umgebautes 30€ Amazon Lamborghini RC-Car Karosserie & Chassis.",
+    cc_fig2: "Abbildung 2: Innenansicht der Elektronik mit ESP32, Lenkservo und eigener Platine.",
+    cc_fig3: "Abbildung 3: Hardware-Montage und Diagnose vor Ort beim Wettbewerb in Graz.",
+    cc_fig4: "Abbildung 4: Fehlersuche an Strom- und Sensorverkabelung beim Bewerb in Graz.",
+    cc_fig5: "Abbildung 5: 3D-CAD-Layout der eigenen Mikrocontroller-Platine aus Ende 2025.",
+    cc_fig6: "Abbildung 6: Die offizielle Wettbewerbs-Rennstrecke in Graz.",
 
     // Project 2: 6DoF Sim
     proj2_title: "6DoF Dynamischer Fahr-Simulator",
