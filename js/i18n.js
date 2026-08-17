@@ -43,12 +43,12 @@ export const translations = {
     sig_ch4_val: "CAN / DroneCAN",
     sig_status: "pwm output synced · 10 kHz hardware timer · zero jitter",
 
-    // Terminal Text
+    // Terminal Text (ROS2 and SORA removed from grep expertise)
     term_title: "david@htl-salzburg:~/systems",
     term_cmd_whoami: "whoami",
     term_whoami_desc: "17-year-old Systems Engineer at HTL Elektrotechnik Salzburg specializing in avionics, embedded firmware, electronics planning, and software engineering.",
     term_cmd_grep: 'grep -r "expertise" /var/log/systems.log',
-    term_expertise: "Avionics · Embedded C/C++ · Electronics · ROS2 · Software Engineering · AustroControl SORA",
+    term_expertise: "Avionics · Embedded C/C++ · Electronics · Software Engineering",
     term_cmd_conf: "cat /etc/tech-ecosystem.conf",
     term_conf_val: "avionics=true  embedded_cpp=true  electronics=true  software_eng=true",
     term_cmd_products: "./projects --list",
@@ -57,7 +57,7 @@ export const translations = {
     term_p3: "> EDI-to-JSONL Parser - Zero-allocation 2.4 GB/s C++20 streaming engine.",
     term_p4: "> Tri-Tilt-Rotor SAR VTOL - Heavy-lift BVLOS drone with SORA SAIL II.",
 
-    // 3 Quick Cards Below Hero (HTL 2023 - 2028)
+    // 3 Quick Cards Below Hero
     card1_title: "Education & Schooling",
     card1_role1: "HTL Elektrotechnik Salzburg",
     card1_date1: "Higher Technical Institute • 2023 - 2028",
@@ -227,12 +227,12 @@ export const translations = {
     sig_ch4_val: "CAN / DroneCAN",
     sig_status: "pwm ausgang synchronisiert · 10 kHz hardware timer · zero jitter",
 
-    // Terminal Text
+    // Terminal Text (ROS2 and SORA removed from grep expertise)
     term_title: "david@htl-salzburg:~/systems",
     term_cmd_whoami: "whoami",
     term_whoami_desc: "17-jähriger Systems Engineer an der HTL Elektrotechnik Salzburg spezialisiert auf Avionik, Embedded Firmware, Elektronikplanung und Software Engineering.",
     term_cmd_grep: 'grep -r "expertise" /var/log/systems.log',
-    term_expertise: "Avionik · Embedded C/C++ · Elektronik · ROS2 · Software Engineering · AustroControl SORA",
+    term_expertise: "Avionik · Embedded C/C++ · Elektronik · Software Engineering",
     term_cmd_conf: "cat /etc/tech-ecosystem.conf",
     term_conf_val: "avionik=true  embedded_cpp=true  elektronik=true  software_eng=true",
     term_cmd_products: "./projects --list",
@@ -241,7 +241,7 @@ export const translations = {
     term_p3: "> EDI-to-JSONL Parser - Zero-Allocation 2.4 GB/s C++20 Streaming Engine.",
     term_p4: "> Tri-Tilt-Rotor SAR VTOL - Schwere BVLOS Drohne nach SORA SAIL II.",
 
-    // 3 Quick Cards Below Hero (HTL 2023 - 2028)
+    // 3 Quick Cards Below Hero
     card1_title: "Ausbildung & Schule",
     card1_role1: "HTL Elektrotechnik Salzburg",
     card1_date1: "Höhere Technische Lehranstalt • 2023 - 2028",
