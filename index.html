@@ -37,41 +37,41 @@
   <!-- ENHANCED AMBIENT BACKGROUND DEPTH & SUBTLE TACTILE MESH -->
   <div class="pointer-events-none fixed inset-0 z-0 overflow-hidden">
     <!-- Top Primary Glow -->
-    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-[radial-gradient(ellipse_at_top,rgba(56,189,248,0.15),transparent_70%)]"></div>
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1100px] h-[550px] bg-[radial-gradient(ellipse_at_top,rgba(56,189,248,0.18),transparent_70%)]"></div>
     <!-- Mid Emerald Glow -->
-    <div class="absolute top-1/3 -left-32 w-[600px] h-[600px] bg-[radial-gradient(circle_at_center,rgba(16,185,129,0.06),transparent_60%)]"></div>
+    <div class="absolute top-1/3 -left-32 w-[650px] h-[650px] bg-[radial-gradient(circle_at_center,rgba(16,185,129,0.08),transparent_60%)]"></div>
     <!-- Mid Sky Glow -->
-    <div class="absolute top-2/3 -right-32 w-[700px] h-[700px] bg-[radial-gradient(circle_at_center,rgba(56,189,248,0.07),transparent_60%)]"></div>
+    <div class="absolute top-2/3 -right-32 w-[750px] h-[750px] bg-[radial-gradient(circle_at_center,rgba(56,189,248,0.09),transparent_60%)]"></div>
     <!-- Bottom Glow -->
-    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[900px] h-[450px] bg-[radial-gradient(ellipse_at_bottom,rgba(14,165,233,0.1),transparent_75%)]"></div>
+    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[950px] h-[500px] bg-[radial-gradient(ellipse_at_bottom,rgba(14,165,233,0.12),transparent_75%)]"></div>
     
     <!-- Ultra-subtle 4rem Grid Lines for Architectural Depth -->
-    <div class="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
+    <div class="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
   </div>
 
   <!-- STICKY HEADER -->
-  <header class="sticky top-0 z-40 w-full backdrop-blur-md bg-[#05050a]/80 border-b border-white/5 transition-all duration-300">
+  <header class="sticky top-0 z-40 w-full backdrop-blur-md bg-[#05050a]/85 border-b border-white/10 transition-all duration-300">
     <div class="max-w-6xl mx-auto px-6 md:px-12 h-16 flex items-center justify-between">
       
       <!-- Brand Logo -->
-      <a href="#" class="flex items-center space-x-2 text-foreground font-bold font-heading text-lg tracking-tight hover:text-primary transition-colors">
-        <span class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
+      <a href="#" class="flex items-center space-x-2.5 text-foreground font-bold font-heading text-lg tracking-tight hover:text-primary transition-colors">
+        <span class="w-3 h-3 rounded-full bg-primary glow-dot-sky animate-pulse"></span>
         <span>david sommerer</span>
       </a>
 
       <!-- Navigation & Controls -->
-      <div class="flex items-center space-x-6 text-xs font-mono text-muted">
+      <div class="flex items-center space-x-6 text-xs sm:text-sm font-mono text-muted">
         <nav class="hidden md:flex items-center space-x-6">
-          <a href="#about" class="hover:text-foreground transition-colors" data-i18n="nav_about">About</a>
-          <a href="#skills" class="hover:text-foreground transition-colors" data-i18n="nav_skills">Skills</a>
-          <a href="#projects" class="hover:text-foreground transition-colors" data-i18n="nav_projects">Projects</a>
-          <a href="#experience" class="hover:text-foreground transition-colors" data-i18n="nav_experience">Experience & Education</a>
+          <a href="#about" class="hover:text-foreground transition-colors font-medium" data-i18n="nav_about">About</a>
+          <a href="#skills" class="hover:text-foreground transition-colors font-medium" data-i18n="nav_skills">Skills</a>
+          <a href="#projects" class="hover:text-foreground transition-colors font-medium" data-i18n="nav_projects">Projects</a>
+          <a href="#experience" class="hover:text-foreground transition-colors font-medium" data-i18n="nav_experience">Experience & Education</a>
         </nav>
 
         <!-- Language Switcher EN | DE -->
         <div class="flex items-center space-x-1 p-1 rounded-full bg-zinc-900 border border-border">
-          <button data-lang-btn="en" class="px-2.5 py-0.5 rounded-full text-[11px] font-bold text-sky-400">EN</button>
-          <button data-lang-btn="de" class="px-2.5 py-0.5 rounded-full text-[11px] text-muted hover:text-foreground">DE</button>
+          <button data-lang-btn="en" class="px-3 py-0.5 rounded-full text-xs font-bold text-sky-400">EN</button>
+          <button data-lang-btn="de" class="px-3 py-0.5 rounded-full text-xs text-muted hover:text-foreground">DE</button>
         </div>
 
         <!-- Social Links -->
@@ -98,80 +98,80 @@
       <!-- Big Hero Greeting Typography -->
       <div class="flex flex-col gap-6">
         <div class="flex flex-col gap-3">
-          <div class="flex items-center flex-wrap gap-x-4 gap-y-2 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-tight tracking-tight">
-            <span><span data-i18n="hero_greeting">Hi, I'm</span> <span class="text-muted" data-i18n="hero_name">David Sommerer.</span></span>
+          <div class="flex items-center flex-wrap gap-x-4 gap-y-2 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-tight tracking-tight font-heading">
+            <span><span data-i18n="hero_greeting">Hi, I'm</span> <span class="text-zinc-400" data-i18n="hero_name">David Sommerer.</span></span>
           </div>
 
-          <div class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium text-muted leading-tight tracking-tight font-heading">
+          <div class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium text-zinc-300 leading-tight tracking-tight font-heading">
             <span data-i18n="hero_role_prefix">I'm an</span> <span class="text-foreground font-semibold" data-i18n="hero_role">Electrical & Systems Engineer</span> <br class="hidden sm:block"/>
             <span data-i18n="hero_specializing">specializing in</span> <span class="text-primary font-bold" data-i18n="hero_focus">Avionics, Embedded Systems, Electronics & Software Engineering.</span>
           </div>
         </div>
 
-        <p data-i18n="hero_subtitle" class="text-sm sm:text-base text-muted font-mono leading-relaxed max-w-2xl">
+        <p data-i18n="hero_subtitle" class="text-base sm:text-lg text-zinc-300 font-mono leading-relaxed max-w-3xl">
           Student at HTL Elektrotechnik Salzburg. Engineering avionics systems, embedded firmware, electronics, autonomous vehicles, and software architecture.
         </p>
 
-        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 mt-2 font-mono text-xs">
-          <a href="#projects" class="px-6 py-3 rounded-full bg-foreground text-background font-bold transition-all hover:scale-105 hover:shadow-[0_8px_30px_rgba(56,189,248,0.25)] flex items-center gap-2">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 mt-2 font-mono text-xs sm:text-sm">
+          <a href="#projects" class="px-7 py-3.5 rounded-full bg-foreground text-background font-bold transition-all hover:scale-105 hover:shadow-[0_8px_30px_rgba(56,189,248,0.3)] flex items-center gap-2">
             <span data-i18n="hero_cta_projects">Explore Projects</span>
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
           </a>
-          <a href="mailto:contact@davidsommerer.engineering" class="px-6 py-3 rounded-full bg-zinc-900 border border-border text-foreground hover:border-primary/50 transition-all">
+          <a href="mailto:contact@davidsommerer.engineering" class="px-7 py-3.5 rounded-full bg-zinc-900 border border-white/15 text-foreground hover:border-primary/60 transition-all font-semibold">
             <span data-i18n="hero_cta_contact">Direct Contact</span>
           </a>
         </div>
       </div>
 
       <!-- HERO CONTAINER: TERMINAL (LEFT) + OSCILLOSCOPE MONITOR CARD (RIGHT) -->
-      <div class="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] overflow-hidden rounded-2xl border border-white/10 bg-[#05050a]/90 shadow-[0_24px_80px_rgba(0,0,0,0.45)] backdrop-blur-md">
+      <div class="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] overflow-hidden rounded-3xl border border-white/15 bg-[#070710]/95 shadow-[0_24px_80px_rgba(0,0,0,0.6)] backdrop-blur-md">
         
         <!-- Left: System Terminal Card -->
-        <div class="border-b border-white/10 p-5 lg:border-b-0 lg:border-r">
+        <div class="border-b border-white/10 p-6 lg:border-b-0 lg:border-r">
           <div class="mb-4 flex items-center justify-between gap-4 border-b border-white/10 pb-3">
             <div class="flex items-center gap-2">
               <span class="h-3 w-3 rounded-full bg-red-500/80"></span>
               <span class="h-3 w-3 rounded-full bg-yellow-500/80"></span>
-              <span class="h-3 w-3 rounded-full bg-emerald-500/80"></span>
+              <span class="h-3 w-3 rounded-full bg-emerald-500/80 glow-dot-emerald"></span>
             </div>
-            <div class="flex items-center gap-2 text-xs font-mono text-muted">
-              <svg class="w-3.5 h-3.5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            <div class="flex items-center gap-2 text-xs sm:text-sm font-mono text-muted">
+              <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
               <span data-i18n="term_title">david@htl-salzburg:~/systems</span>
             </div>
           </div>
 
-          <div class="space-y-4 font-mono text-xs leading-relaxed text-zinc-300">
+          <div class="space-y-4 font-mono text-xs sm:text-sm leading-relaxed text-zinc-200">
             <!-- Command 1: Whoami -->
             <div class="space-y-1">
               <p class="text-primary"><span class="text-sky-300">david@root:~$</span> <span data-i18n="term_cmd_whoami">whoami</span></p>
               <div class="pl-3 text-muted">
-                <pre class="text-[8px] leading-[1.05] text-primary/80 whitespace-pre overflow-x-auto pb-1">
+                <pre class="text-[9px] sm:text-[10px] leading-[1.05] text-primary/80 whitespace-pre overflow-x-auto pb-1">
   ██████╗  █████╗ ██╗   ██╗██╗██████╗ 
   ██╔══██╗██╔══██╗██║   ██║██║██╔══██╗
   ██║  ██║███████║██║   ██║██║██║  ██║
   ██║  ██║██╔══██║╚██╗ ██╔╝██║██║  ██║
   ██████╔╝██║  ██║ ╚████╔╝ ██║██████╔╝
   ╚═════╝ ╚═╝  ╚═╝  ╚═══╝  ╚═╝╚═════╝ </pre>
-                <p data-i18n="term_whoami_desc" class="text-zinc-300 mt-1">17-year-old Systems Engineer at HTL Elektrotechnik Salzburg specializing in avionics, embedded firmware, electronics planning, and software engineering.</p>
+                <p data-i18n="term_whoami_desc" class="text-zinc-200 text-xs sm:text-sm mt-1">17-year-old Systems Engineer at HTL Elektrotechnik Salzburg specializing in avionics, embedded firmware, electronics planning, and software engineering.</p>
               </div>
             </div>
 
-            <!-- Command 2: Grep Expertise (ROS2 and SORA removed) -->
+            <!-- Command 2: Grep Expertise -->
             <div class="space-y-1">
               <p class="text-primary"><span class="text-sky-300">$</span> <span data-i18n="term_cmd_grep">grep -r "expertise" /var/log/systems.log</span></p>
-              <p data-i18n="term_expertise" class="pl-3 text-emerald-400 font-semibold">Avionics · Embedded C/C++ · Electronics · Software Engineering</p>
+              <p data-i18n="term_expertise" class="pl-3 text-emerald-400 font-semibold text-xs sm:text-sm">Avionics · Embedded C/C++ · Electronics · Software Engineering</p>
             </div>
 
             <!-- Command 3: Tech Ecosystem -->
             <div class="space-y-1">
               <p class="text-primary"><span class="text-sky-300">&gt;</span> <span data-i18n="term_cmd_conf">cat /etc/tech-ecosystem.conf</span></p>
-              <p data-i18n="term_conf_val" class="pl-3 text-sky-300 font-mono">avionics=true  embedded_cpp=true  electronics=true  software_eng=true</p>
+              <p data-i18n="term_conf_val" class="pl-3 text-sky-300 font-mono text-xs sm:text-sm">avionics=true  embedded_cpp=true  electronics=true  software_eng=true</p>
             </div>
 
             <!-- Command 4: Projects -->
             <div class="space-y-1">
               <p class="text-primary"><span class="text-sky-300">$</span> <span data-i18n="term_cmd_products">./projects --list</span></p>
-              <div class="pl-3 text-muted space-y-1">
+              <div class="pl-3 text-zinc-300 space-y-1 text-xs sm:text-sm">
                 <p data-i18n="term_p1">&gt; Crazy Car Autonomous RL - €30 RC car with ESP32 & Unity ML-Agents.</p>
                 <p data-i18n="term_p2">&gt; 6DoF Driving Simulator - Restored HTL motion rig with cable isolation.</p>
                 <p data-i18n="term_p3">&gt; EDI-to-JSONL Parser - Zero-allocation 2.4 GB/s C++20 streaming engine.</p>
@@ -182,33 +182,33 @@
         </div>
 
         <!-- Right: Oscilloscope & Flight Signal Telemetry Card -->
-        <div class="flex flex-col justify-between gap-4 p-5 relative font-mono text-xs">
+        <div class="flex flex-col justify-between gap-4 p-6 relative font-mono text-xs sm:text-sm">
           <div class="flex items-center justify-between border-b border-border pb-3">
             <div>
-              <div class="text-sm font-semibold text-foreground font-heading uppercase" data-i18n="sig_card_title">
+              <div class="text-sm sm:text-base font-bold text-foreground font-heading uppercase tracking-wider" data-i18n="sig_card_title">
                 oscilloscope & signal monitor
               </div>
-              <p data-i18n="sig_card_sub" class="text-[11px] text-muted">ch1: pwm_actuator_out</p>
+              <p data-i18n="sig_card_sub" class="text-xs text-muted">ch1: pwm_actuator_out</p>
             </div>
-            <div class="flex gap-1">
-              <span data-i18n="sig_mode_hover" class="px-2 py-0.5 rounded text-[10px] bg-sky-950/60 text-sky-400 border border-sky-800/50">ACTIVE</span>
-              <span data-i18n="sig_mode_transition" class="px-2 py-0.5 rounded text-[10px] bg-emerald-950/60 text-emerald-400 border border-emerald-800/50">PWM SYNC</span>
+            <div class="flex gap-1.5">
+              <span data-i18n="sig_mode_hover" class="px-2.5 py-1 rounded text-[11px] font-bold bg-sky-950/80 text-sky-400 border border-sky-500/40 glow-dot-sky">ACTIVE</span>
+              <span data-i18n="sig_mode_transition" class="px-2.5 py-1 rounded text-[11px] font-bold bg-emerald-950/80 text-emerald-400 border border-emerald-500/40 glow-dot-emerald">PWM SYNC</span>
             </div>
           </div>
 
           <!-- Oscilloscope Waveform Display -->
-          <div class="rounded-xl border border-border bg-zinc-950 p-3 h-28 flex flex-col justify-between relative overflow-hidden">
-            <div class="flex items-center justify-between text-[10px] text-muted">
+          <div class="rounded-2xl border border-white/15 bg-zinc-950 p-4 h-32 flex flex-col justify-between relative overflow-hidden shadow-inner">
+            <div class="flex items-center justify-between text-xs text-muted">
               <span>PWM: 10.0 kHz</span>
               <span class="text-emerald-400 font-bold">1500 µs PULSE</span>
             </div>
             
             <svg class="w-full h-16 text-primary" viewBox="0 0 300 40" fill="none">
-              <path d="M 0 30 L 30 30 L 30 10 L 80 10 L 80 30 L 130 30 L 130 10 L 180 10 L 180 30 L 230 30 L 230 10 L 280 10 L 280 30 L 300 30" stroke="#38bdf8" stroke-width="2"/>
-              <path d="M 0 20 L 300 20" stroke="rgba(255,255,255,0.05)" stroke-dasharray="2 2"/>
+              <path d="M 0 30 L 30 30 L 30 10 L 80 10 L 80 30 L 130 30 L 130 10 L 180 10 L 180 30 L 230 30 L 230 10 L 280 10 L 280 30 L 300 30" stroke="#38bdf8" stroke-width="2.5"/>
+              <path d="M 0 20 L 300 20" stroke="rgba(255,255,255,0.08)" stroke-dasharray="3 3"/>
             </svg>
 
-            <div class="flex justify-between text-[9px] text-muted">
+            <div class="flex justify-between text-[10px] sm:text-xs text-muted">
               <span>0 µs</span>
               <span>1000 µs</span>
               <span>2000 µs</span>
@@ -216,26 +216,26 @@
           </div>
 
           <!-- Live Channel Telemetry Table -->
-          <div class="grid grid-cols-2 gap-2 text-[11px]">
-            <div class="p-2 rounded bg-zinc-900/60 border border-border flex justify-between">
+          <div class="grid grid-cols-2 gap-2 text-xs sm:text-sm">
+            <div class="p-2.5 rounded-xl bg-zinc-900/80 border border-white/10 flex justify-between">
               <span data-i18n="sig_ch1_lbl" class="text-muted">CH1 Servo</span>
               <span data-i18n="sig_ch1_val" class="text-foreground font-bold">1500 µs</span>
             </div>
-            <div class="p-2 rounded bg-zinc-900/60 border border-border flex justify-between">
+            <div class="p-2.5 rounded-xl bg-zinc-900/80 border border-white/10 flex justify-between">
               <span data-i18n="sig_ch2_lbl" class="text-muted">CH2 Motor</span>
               <span data-i18n="sig_ch2_val" class="text-emerald-400 font-bold">1620 µs</span>
             </div>
-            <div class="p-2 rounded bg-zinc-900/60 border border-border flex justify-between">
+            <div class="p-2.5 rounded-xl bg-zinc-900/80 border border-white/10 flex justify-between">
               <span data-i18n="sig_ch3_lbl" class="text-muted">MCU Clock</span>
               <span data-i18n="sig_ch3_val" class="text-foreground font-bold">480 MHz</span>
             </div>
-            <div class="p-2 rounded bg-zinc-900/60 border border-border flex justify-between">
+            <div class="p-2.5 rounded-xl bg-zinc-900/80 border border-white/10 flex justify-between">
               <span data-i18n="sig_ch4_lbl" class="text-muted">Bus Type</span>
               <span data-i18n="sig_ch4_val" class="text-sky-300 font-bold">CAN / DroneCAN</span>
             </div>
           </div>
 
-          <div class="border-t border-border pt-2 text-[10px] text-muted">
+          <div class="border-t border-border pt-2 text-xs text-muted">
             <span class="text-sky-300">$</span> <span data-i18n="sig_status">pwm output synced · 10 kHz hardware timer · zero jitter</span>
           </div>
         </div>
@@ -246,74 +246,74 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
         
         <!-- Card 1: Education -->
-        <div class="sub-card rounded-2xl p-6 flex flex-col justify-between">
+        <div class="sub-card rounded-3xl p-6 flex flex-col justify-between space-y-4">
           <div class="space-y-4">
-            <div class="flex items-center gap-2 text-xs font-mono text-muted uppercase tracking-wider">
+            <div class="flex items-center gap-2 text-xs sm:text-sm font-mono text-muted uppercase tracking-wider">
               <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0112 20.055a11.952 11.952 0 01-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
-              <span data-i18n="card1_title">Education & Schooling</span>
+              <span data-i18n="card1_title" class="font-bold">Education & Schooling</span>
             </div>
             
-            <div class="space-y-3 font-mono text-xs">
-              <div class="border-l-2 border-primary pl-3 space-y-0.5">
-                <h4 class="font-bold text-foreground text-sm" data-i18n="card1_role1">HTL Elektrotechnik Salzburg</h4>
-                <p data-i18n="card1_date1" class="text-[11px] text-muted">Higher Technical Institute • 2023 - 2028</p>
+            <div class="space-y-3 font-mono text-xs sm:text-sm">
+              <div class="border-l-2 border-primary pl-3.5 space-y-1">
+                <h4 class="font-bold text-foreground text-sm sm:text-base" data-i18n="card1_role1">HTL Elektrotechnik Salzburg</h4>
+                <p data-i18n="card1_date1" class="text-xs text-muted">Higher Technical Institute • 2023 - 2028</p>
               </div>
-              <div class="border-l-2 border-slate-700 pl-3 space-y-0.5">
-                <h4 class="font-bold text-foreground text-sm" data-i18n="card1_role2">Diploma Thesis R&D Project</h4>
-                <p data-i18n="card1_date2" class="text-[11px] text-muted">SAR VTOL Drone & SORA • 2026 - 2028</p>
+              <div class="border-l-2 border-slate-700 pl-3.5 space-y-1">
+                <h4 class="font-bold text-foreground text-sm sm:text-base" data-i18n="card1_role2">Diploma Thesis R&D Project</h4>
+                <p data-i18n="card1_date2" class="text-xs text-muted">SAR VTOL Drone & SORA • 2026 - 2028</p>
               </div>
-              <div class="border-l-2 border-slate-700 pl-3 space-y-0.5">
-                <h4 class="font-bold text-foreground text-sm" data-i18n="card1_role3">Specialization</h4>
-                <p data-i18n="card1_date3" class="text-[11px] text-muted">Avionics, Embedded Systems, Electronics & Software</p>
+              <div class="border-l-2 border-slate-700 pl-3.5 space-y-1">
+                <h4 class="font-bold text-foreground text-sm sm:text-base" data-i18n="card1_role3">Specialization</h4>
+                <p data-i18n="card1_date3" class="text-xs text-muted">Avionics, Embedded Systems, Electronics & Software</p>
               </div>
             </div>
           </div>
         </div>
 
         <!-- Card 2: Featured Projects -->
-        <div class="sub-card rounded-2xl p-6 flex flex-col justify-between">
+        <div class="sub-card rounded-3xl p-6 flex flex-col justify-between space-y-4">
           <div class="space-y-4">
-            <div class="flex items-center gap-2 text-xs font-mono text-muted uppercase tracking-wider">
+            <div class="flex items-center gap-2 text-xs sm:text-sm font-mono text-muted uppercase tracking-wider">
               <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
-              <span data-i18n="card2_title">Featured Projects</span>
+              <span data-i18n="card2_title" class="font-bold">Featured Projects</span>
             </div>
 
-            <div class="space-y-3 font-mono text-xs">
+            <div class="space-y-3 font-mono text-xs sm:text-sm">
               <div>
-                <h4 class="font-bold text-foreground" data-i18n="card2_topic1">Crazy Car Autonomous RL</h4>
-                <p data-i18n="card2_desc1" class="text-[11px] text-muted">€30 RC car rebuilt with ESP32, AI trained in Unity ML-Agents.</p>
+                <h4 class="font-bold text-foreground text-sm sm:text-base" data-i18n="card2_topic1">Crazy Car Autonomous RL</h4>
+                <p data-i18n="card2_desc1" class="text-xs text-muted">€30 RC car rebuilt with ESP32, AI trained in Unity ML-Agents.</p>
               </div>
               <div>
-                <h4 class="font-bold text-foreground" data-i18n="card2_topic2">6DoF Driving Simulator</h4>
-                <p data-i18n="card2_desc2" class="text-[11px] text-muted">Restored school motion rig, physical signal/power cable isolation.</p>
+                <h4 class="font-bold text-foreground text-sm sm:text-base" data-i18n="card2_topic2">6DoF Driving Simulator</h4>
+                <p data-i18n="card2_desc2" class="text-xs text-muted">Restored school motion rig, physical signal/power cable isolation.</p>
               </div>
               <div>
-                <h4 class="font-bold text-foreground" data-i18n="card2_topic3">Tri-Tilt-Rotor SAR VTOL</h4>
-                <p data-i18n="card2_desc3" class="text-[11px] text-muted">BVLOS search & rescue drone with AustroControl SORA SAIL II.</p>
+                <h4 class="font-bold text-foreground text-sm sm:text-base" data-i18n="card2_topic3">Tri-Tilt-Rotor SAR VTOL</h4>
+                <p data-i18n="card2_desc3" class="text-xs text-muted">BVLOS search & rescue drone with AustroControl SORA SAIL II.</p>
               </div>
             </div>
           </div>
         </div>
 
         <!-- Card 3: Currently Learning -->
-        <div class="sub-card rounded-2xl p-6 flex flex-col justify-between">
+        <div class="sub-card rounded-3xl p-6 flex flex-col justify-between space-y-4">
           <div class="space-y-4">
-            <div class="flex items-center gap-2 text-xs font-mono text-muted uppercase tracking-wider">
-              <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-              <span data-i18n="card3_handle" class="text-emerald-400">currently learning</span>
+            <div class="flex items-center gap-2 text-xs sm:text-sm font-mono text-muted uppercase tracking-wider">
+              <svg class="w-4 h-4 text-emerald-400 glow-dot-emerald" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+              <span data-i18n="card3_handle" class="text-emerald-400 font-bold">currently learning</span>
             </div>
 
-            <div class="grid grid-cols-2 gap-2 font-mono text-xs">
-              <div class="p-2.5 rounded bg-zinc-900/60 border border-border">
+            <div class="grid grid-cols-2 gap-2 font-mono text-xs sm:text-sm">
+              <div class="p-3 rounded-xl bg-zinc-900/80 border border-white/10">
                 <span data-i18n="card3_topic1" class="text-foreground font-semibold">Linux / Ubuntu</span>
               </div>
-              <div class="p-2.5 rounded bg-zinc-900/60 border border-border">
+              <div class="p-3 rounded-xl bg-zinc-900/80 border border-white/10">
                 <span data-i18n="card3_topic2" class="text-foreground font-semibold">ROS2 & Gazebo</span>
               </div>
-              <div class="p-2.5 rounded bg-zinc-900/60 border border-border">
+              <div class="p-3 rounded-xl bg-zinc-900/80 border border-white/10">
                 <span data-i18n="card3_topic3" class="text-foreground font-semibold">STM32H7 & PX4</span>
               </div>
-              <div class="p-2.5 rounded bg-zinc-900/60 border border-border">
+              <div class="p-3 rounded-xl bg-zinc-900/80 border border-white/10">
                 <span data-i18n="card3_topic4" class="text-foreground font-semibold">Simulink & DroneCAN</span>
               </div>
             </div>
@@ -324,98 +324,98 @@
     </section>
 
     <!-- 2. TECHNICAL SKILLS & STACK SECTION -->
-    <section id="skills" class="py-16 md:py-24 bg-[#030306] border-y border-white/5 scroll-mt-24">
+    <section id="skills" class="py-16 md:py-24 bg-[#030306] border-y border-white/10 scroll-mt-24">
       <div class="max-w-6xl mx-auto px-6 md:px-12 space-y-12">
         <div>
           <h2 data-i18n="skills_title" class="text-4xl md:text-5xl font-bold text-foreground font-heading tracking-tight">technical skills & stack</h2>
-          <p data-i18n="skills_sub" class="text-base text-muted max-w-2xl mt-2 font-mono">Structured engineering competencies across software, microcontrollers, CAD automation, media production, AI technologies, and active learning.</p>
+          <p data-i18n="skills_sub" class="text-base sm:text-lg text-zinc-300 max-w-3xl mt-3 font-mono">Structured engineering competencies across software, microcontrollers, CAD automation, media production, AI technologies, and active learning.</p>
         </div>
 
         <!-- 5-PANEL GRID WITH UNIFORM HIGH-CONTRAST ELEVATION -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 font-mono text-xs">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 font-mono text-xs sm:text-sm">
           
           <!-- Panel 1: Languages, Web & Version Control -->
-          <div class="sub-card rounded-2xl p-6 border border-white/10 hover:border-sky-500/40 transition-all space-y-4 shadow-[0_8px_30px_rgba(0,0,0,0.3)] bg-zinc-950/90">
-            <div class="flex items-center justify-between border-b border-white/10 pb-2">
-              <h3 data-i18n="skills_cat1" class="font-bold text-sky-400 text-xs uppercase tracking-wider">Languages, Web & Version Control</h3>
-              <span class="w-2 h-2 rounded-full bg-sky-400"></span>
+          <div class="sub-card rounded-3xl p-6 border border-white/10 hover:border-sky-500/50 transition-all space-y-4 shadow-[0_12px_40px_rgba(0,0,0,0.5)] bg-zinc-950/90">
+            <div class="flex items-center justify-between border-b border-white/10 pb-3">
+              <h3 data-i18n="skills_cat1" class="font-bold text-sky-400 text-xs sm:text-sm uppercase tracking-wider">Languages, Web & Version Control</h3>
+              <span class="w-2.5 h-2.5 rounded-full bg-sky-400 glow-dot-sky"></span>
             </div>
             <div class="flex flex-wrap gap-2">
-              <span class="px-2.5 py-1 rounded bg-zinc-900 border border-white/10 text-foreground hover:border-sky-400/40 transition-colors">C</span>
-              <span class="px-2.5 py-1 rounded bg-zinc-900 border border-white/10 text-foreground hover:border-sky-400/40 transition-colors">C++</span>
-              <span class="px-2.5 py-1 rounded bg-zinc-900 border border-white/10 text-foreground hover:border-sky-400/40 transition-colors">Python (basics)</span>
-              <span class="px-2.5 py-1 rounded bg-zinc-900 border border-white/10 text-foreground hover:border-sky-400/40 transition-colors">HTML & CSS & JS (basics)</span>
-              <span class="px-2.5 py-1 rounded bg-zinc-900 border border-white/10 text-foreground hover:border-sky-400/40 transition-colors">Git / GitHub</span>
-              <span class="px-2.5 py-1 rounded bg-zinc-900 border border-white/10 text-foreground hover:border-sky-400/40 transition-colors">Arduino Framework</span>
-              <span class="px-2.5 py-1 rounded bg-zinc-900 border border-white/10 text-foreground hover:border-sky-400/40 transition-colors">MSP430</span>
-              <span class="px-2.5 py-1 rounded bg-zinc-900 border border-white/10 text-foreground hover:border-sky-400/40 transition-colors">VSCode</span>
+              <span class="px-3 py-1.5 rounded-lg bg-zinc-900 border border-white/10 text-foreground hover:border-sky-400/50 transition-colors">C</span>
+              <span class="px-3 py-1.5 rounded-lg bg-zinc-900 border border-white/10 text-foreground hover:border-sky-400/50 transition-colors">C++</span>
+              <span class="px-3 py-1.5 rounded-lg bg-zinc-900 border border-white/10 text-foreground hover:border-sky-400/50 transition-colors">Python (basics)</span>
+              <span class="px-3 py-1.5 rounded-lg bg-zinc-900 border border-white/10 text-foreground hover:border-sky-400/50 transition-colors">HTML & CSS & JS (basics)</span>
+              <span class="px-3 py-1.5 rounded-lg bg-zinc-900 border border-white/10 text-foreground hover:border-sky-400/50 transition-colors">Git / GitHub</span>
+              <span class="px-3 py-1.5 rounded-lg bg-zinc-900 border border-white/10 text-foreground hover:border-sky-400/50 transition-colors">Arduino Framework</span>
+              <span class="px-3 py-1.5 rounded-lg bg-zinc-900 border border-white/10 text-foreground hover:border-sky-400/50 transition-colors">MSP430</span>
+              <span class="px-3 py-1.5 rounded-lg bg-zinc-900 border border-white/10 text-foreground hover:border-sky-400/50 transition-colors">VSCode</span>
             </div>
           </div>
 
           <!-- Panel 2: CAD, Automation & PLC Engineering -->
-          <div class="sub-card rounded-2xl p-6 border border-white/10 hover:border-emerald-500/40 transition-all space-y-4 shadow-[0_8px_30px_rgba(0,0,0,0.3)] bg-zinc-950/90">
-            <div class="flex items-center justify-between border-b border-white/10 pb-2">
-              <h3 data-i18n="skills_cat2" class="font-bold text-emerald-400 text-xs uppercase tracking-wider">CAD, Automation & PLC Engineering</h3>
-              <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+          <div class="sub-card rounded-3xl p-6 border border-white/10 hover:border-emerald-500/50 transition-all space-y-4 shadow-[0_12px_40px_rgba(0,0,0,0.5)] bg-zinc-950/90">
+            <div class="flex items-center justify-between border-b border-white/10 pb-3">
+              <h3 data-i18n="skills_cat2" class="font-bold text-emerald-400 text-xs sm:text-sm uppercase tracking-wider">CAD, Automation & PLC Engineering</h3>
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 glow-dot-emerald"></span>
             </div>
             <div class="flex flex-wrap gap-2">
-              <span class="px-2.5 py-1 rounded bg-zinc-900 border border-white/10 text-foreground hover:border-emerald-400/40 transition-colors">NEPlan</span>
-              <span class="px-2.5 py-1 rounded bg-zinc-900 border border-white/10 text-foreground hover:border-emerald-400/40 transition-colors">EPlan</span>
-              <span class="px-2.5 py-1 rounded bg-zinc-900 border border-white/10 text-foreground hover:border-emerald-400/40 transition-colors">SolidEdge 3D CAD</span>
-              <span class="px-2.5 py-1 rounded bg-zinc-900 border border-white/10 text-foreground hover:border-emerald-400/40 transition-colors">MATLAB</span>
-              <span class="px-2.5 py-1 rounded bg-zinc-900 border border-white/10 text-foreground hover:border-emerald-400/40 transition-colors">KiCad PCB</span>
-              <span class="px-2.5 py-1 rounded bg-zinc-900 border border-white/10 text-foreground hover:border-emerald-400/40 transition-colors">TNC 640 (CNC)</span>
-              <span class="px-2.5 py-1 rounded bg-zinc-900 border border-white/10 text-foreground hover:border-emerald-400/40 transition-colors">TIA Portal V18</span>
-              <span class="px-2.5 py-1 rounded bg-zinc-900 border border-white/10 text-foreground hover:border-emerald-400/40 transition-colors">PLC Coding (ST/LAD)</span>
+              <span class="px-3 py-1.5 rounded-lg bg-zinc-900 border border-white/10 text-foreground hover:border-emerald-400/50 transition-colors">NEPlan</span>
+              <span class="px-3 py-1.5 rounded-lg bg-zinc-900 border border-white/10 text-foreground hover:border-emerald-400/50 transition-colors">EPlan</span>
+              <span class="px-3 py-1.5 rounded-lg bg-zinc-900 border border-white/10 text-foreground hover:border-emerald-400/50 transition-colors">SolidEdge 3D CAD</span>
+              <span class="px-3 py-1.5 rounded-lg bg-zinc-900 border border-white/10 text-foreground hover:border-emerald-400/50 transition-colors">MATLAB</span>
+              <span class="px-3 py-1.5 rounded-lg bg-zinc-900 border border-white/10 text-foreground hover:border-emerald-400/50 transition-colors">KiCad PCB</span>
+              <span class="px-3 py-1.5 rounded-lg bg-zinc-900 border border-white/10 text-foreground hover:border-emerald-400/50 transition-colors">TNC 640 (CNC)</span>
+              <span class="px-3 py-1.5 rounded-lg bg-zinc-900 border border-white/10 text-foreground hover:border-emerald-400/50 transition-colors">TIA Portal V18</span>
+              <span class="px-3 py-1.5 rounded-lg bg-zinc-900 border border-white/10 text-foreground hover:border-emerald-400/50 transition-colors">PLC Coding (ST/LAD)</span>
             </div>
           </div>
 
           <!-- Panel 3: Media, 3D & Office Production -->
-          <div class="sub-card rounded-2xl p-6 border border-white/10 hover:border-cyan-500/40 transition-all space-y-4 shadow-[0_8px_30px_rgba(0,0,0,0.3)] bg-zinc-950/90">
-            <div class="flex items-center justify-between border-b border-white/10 pb-2">
-              <h3 data-i18n="skills_cat3" class="font-bold text-cyan-400 text-xs uppercase tracking-wider">Media, 3D & Office Production</h3>
-              <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+          <div class="sub-card rounded-3xl p-6 border border-white/10 hover:border-cyan-500/50 transition-all space-y-4 shadow-[0_12px_40px_rgba(0,0,0,0.5)] bg-zinc-950/90">
+            <div class="flex items-center justify-between border-b border-white/10 pb-3">
+              <h3 data-i18n="skills_cat3" class="font-bold text-cyan-400 text-xs sm:text-sm uppercase tracking-wider">Media, 3D & Office Production</h3>
+              <span class="w-2.5 h-2.5 rounded-full bg-cyan-400"></span>
             </div>
             <div class="flex flex-wrap gap-2">
-              <span class="px-2.5 py-1 rounded bg-zinc-900 border border-white/10 text-foreground hover:border-cyan-400/40 transition-colors">Blender (3D)</span>
-              <span class="px-2.5 py-1 rounded bg-zinc-900 border border-white/10 text-foreground hover:border-cyan-400/40 transition-colors">DaVinci Resolve</span>
-              <span class="px-2.5 py-1 rounded bg-zinc-900 border border-white/10 text-foreground hover:border-cyan-400/40 transition-colors">CapCut</span>
-              <span class="px-2.5 py-1 rounded bg-zinc-900 border border-white/10 text-foreground hover:border-cyan-400/40 transition-colors">Unity 3D</span>
-              <span class="px-2.5 py-1 rounded bg-zinc-900 border border-white/10 text-foreground hover:border-cyan-400/40 transition-colors">LaTeX</span>
-              <span class="px-2.5 py-1 rounded bg-zinc-900 border border-white/10 text-foreground hover:border-cyan-400/40 transition-colors">MS Office (Word, Excel, PPT)</span>
+              <span class="px-3 py-1.5 rounded-lg bg-zinc-900 border border-white/10 text-foreground hover:border-cyan-400/50 transition-colors">Blender (3D)</span>
+              <span class="px-3 py-1.5 rounded-lg bg-zinc-900 border border-white/10 text-foreground hover:border-cyan-400/50 transition-colors">DaVinci Resolve</span>
+              <span class="px-3 py-1.5 rounded-lg bg-zinc-900 border border-white/10 text-foreground hover:border-cyan-400/50 transition-colors">CapCut</span>
+              <span class="px-3 py-1.5 rounded-lg bg-zinc-900 border border-white/10 text-foreground hover:border-cyan-400/50 transition-colors">Unity 3D</span>
+              <span class="px-3 py-1.5 rounded-lg bg-zinc-900 border border-white/10 text-foreground hover:border-cyan-400/50 transition-colors">LaTeX</span>
+              <span class="px-3 py-1.5 rounded-lg bg-zinc-900 border border-white/10 text-foreground hover:border-cyan-400/50 transition-colors">MS Office (Word, Excel, PPT)</span>
             </div>
           </div>
 
           <!-- Panel 4: AI Tools & Machine Learning -->
-          <div class="sub-card rounded-2xl p-6 border border-white/10 hover:border-sky-400/50 transition-all space-y-4 shadow-[0_8px_30px_rgba(0,0,0,0.3)] bg-zinc-950/90">
-            <div class="flex items-center justify-between border-b border-white/10 pb-2">
-              <h3 data-i18n="skills_cat4" class="font-bold text-sky-300 text-xs uppercase tracking-wider">AI Tools & Machine Learning</h3>
-              <span class="w-2 h-2 rounded-full bg-sky-300 animate-pulse"></span>
+          <div class="sub-card rounded-3xl p-6 border border-white/10 hover:border-sky-400/60 transition-all space-y-4 shadow-[0_12px_40px_rgba(0,0,0,0.5)] bg-zinc-950/90">
+            <div class="flex items-center justify-between border-b border-white/10 pb-3">
+              <h3 data-i18n="skills_cat4" class="font-bold text-sky-300 text-xs sm:text-sm uppercase tracking-wider">AI Tools & Machine Learning</h3>
+              <span class="w-2.5 h-2.5 rounded-full bg-sky-300 glow-dot-sky animate-pulse"></span>
             </div>
             <div class="flex flex-wrap gap-2">
-              <span class="px-2.5 py-1 rounded bg-sky-950/60 border border-sky-400/40 text-sky-200 font-semibold">Gemini</span>
-              <span class="px-2.5 py-1 rounded bg-sky-950/60 border border-sky-400/40 text-sky-200 font-semibold">NotebookLM</span>
-              <span class="px-2.5 py-1 rounded bg-sky-950/60 border border-sky-400/40 text-sky-200 font-semibold">Antigravity CLI</span>
-              <span class="px-2.5 py-1 rounded bg-sky-950/60 border border-sky-400/40 text-sky-200 font-semibold">Unity ML-Agents (RL)</span>
-              <span class="px-2.5 py-1 rounded bg-sky-950/60 border border-sky-400/40 text-sky-200 font-semibold">PPO Policy Optimization</span>
+              <span class="px-3 py-1.5 rounded-lg bg-sky-950/80 border border-sky-400/50 text-sky-200 font-semibold">Gemini</span>
+              <span class="px-3 py-1.5 rounded-lg bg-sky-950/80 border border-sky-400/50 text-sky-200 font-semibold">NotebookLM</span>
+              <span class="px-3 py-1.5 rounded-lg bg-sky-950/80 border border-sky-400/50 text-sky-200 font-semibold">Antigravity CLI</span>
+              <span class="px-3 py-1.5 rounded-lg bg-sky-950/80 border border-sky-400/50 text-sky-200 font-semibold">Unity ML-Agents (RL)</span>
+              <span class="px-3 py-1.5 rounded-lg bg-sky-950/80 border border-sky-400/50 text-sky-200 font-semibold">PPO Policy Optimization</span>
             </div>
           </div>
 
           <!-- Panel 5: Currently Learning for Projects -->
-          <div class="sub-card rounded-2xl p-6 border border-white/10 hover:border-emerald-400 transition-all space-y-4 shadow-[0_8px_30px_rgba(16,185,129,0.1)] bg-zinc-950/90 lg:col-span-2">
-            <div class="flex items-center justify-between border-b border-white/10 pb-2">
-              <h3 data-i18n="skills_cat5" class="font-bold text-emerald-400 text-xs uppercase tracking-wider">Currently Learning for Projects</h3>
-              <span class="px-2 py-0.5 rounded text-[9px] bg-emerald-950/80 text-emerald-400 border border-emerald-500/40">ACTIVE R&D</span>
+          <div class="sub-card rounded-3xl p-6 border border-white/10 hover:border-emerald-400 transition-all space-y-4 shadow-[0_12px_40px_rgba(16,185,129,0.15)] bg-zinc-950/90 lg:col-span-2">
+            <div class="flex items-center justify-between border-b border-white/10 pb-3">
+              <h3 data-i18n="skills_cat5" class="font-bold text-emerald-400 text-xs sm:text-sm uppercase tracking-wider">Currently Learning for Projects</h3>
+              <span class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-950/80 text-emerald-300 border border-emerald-500/50 glow-dot-emerald">ACTIVE R&D</span>
             </div>
-            <div class="flex flex-wrap gap-2">
-              <span class="px-3 py-1 rounded-md bg-emerald-950/80 border border-emerald-500/50 text-emerald-300 font-bold">Linux / Ubuntu</span>
-              <span class="px-3 py-1 rounded-md bg-emerald-950/80 border border-emerald-500/50 text-emerald-300 font-bold">ROS2</span>
-              <span class="px-3 py-1 rounded-md bg-emerald-950/80 border border-emerald-500/50 text-emerald-300 font-bold">Gazebo</span>
-              <span class="px-3 py-1 rounded-md bg-emerald-950/80 border border-emerald-500/50 text-emerald-300 font-bold">Simulink</span>
-              <span class="px-3 py-1 rounded-md bg-emerald-950/80 border border-emerald-500/50 text-emerald-300 font-bold">PX4 Flight Controller</span>
-              <span class="px-3 py-1 rounded-md bg-emerald-950/80 border border-emerald-500/50 text-emerald-300 font-bold">STM32H7 Dual-Core</span>
-              <span class="px-3 py-1 rounded-md bg-emerald-950/80 border border-emerald-500/50 text-emerald-300 font-bold">Nvidia Jetson</span>
-              <span class="px-3 py-1 rounded-md bg-emerald-950/80 border border-emerald-500/50 text-emerald-300 font-bold">DroneCAN</span>
+            <div class="flex flex-wrap gap-2.5">
+              <span class="px-3.5 py-1.5 rounded-lg bg-emerald-950/80 border border-emerald-500/60 text-emerald-300 font-bold">Linux / Ubuntu</span>
+              <span class="px-3.5 py-1.5 rounded-lg bg-emerald-950/80 border border-emerald-500/60 text-emerald-300 font-bold">ROS2</span>
+              <span class="px-3.5 py-1.5 rounded-lg bg-emerald-950/80 border border-emerald-500/60 text-emerald-300 font-bold">Gazebo</span>
+              <span class="px-3.5 py-1.5 rounded-lg bg-emerald-950/80 border border-emerald-500/60 text-emerald-300 font-bold">Simulink</span>
+              <span class="px-3.5 py-1.5 rounded-lg bg-emerald-950/80 border border-emerald-500/60 text-emerald-300 font-bold">PX4 Flight Controller</span>
+              <span class="px-3.5 py-1.5 rounded-lg bg-emerald-950/80 border border-emerald-500/60 text-emerald-300 font-bold">STM32H7 Dual-Core</span>
+              <span class="px-3.5 py-1.5 rounded-lg bg-emerald-950/80 border border-emerald-500/60 text-emerald-300 font-bold">Nvidia Jetson</span>
+              <span class="px-3.5 py-1.5 rounded-lg bg-emerald-950/80 border border-emerald-500/60 text-emerald-300 font-bold">DroneCAN</span>
             </div>
           </div>
 
@@ -427,222 +427,222 @@
     <section id="projects" class="py-16 md:py-24 max-w-6xl mx-auto px-6 md:px-12 space-y-10 scroll-mt-24">
       <div>
         <h2 data-i18n="projects_title" class="text-4xl md:text-5xl font-bold text-foreground font-heading tracking-tight">featured engineering projects</h2>
-        <p data-i18n="projects_sub" class="text-base text-muted max-w-2xl mt-2 font-mono">Documented engineering projects featuring AI reinforcement learning, 6DoF motion simulation, high-performance parsers, and custom hardware.</p>
+        <p data-i18n="projects_sub" class="text-base sm:text-lg text-zinc-300 max-w-3xl mt-3 font-mono">Documented engineering projects featuring AI reinforcement learning, 6DoF motion simulation, high-performance parsers, and custom hardware.</p>
       </div>
 
       <!-- Filter Tabs -->
-      <div class="flex flex-wrap gap-2 border-b border-border pb-4">
-        <button data-filter-btn="all" class="px-4 py-1.5 rounded-full text-xs font-mono font-semibold transition-all bg-sky-500/20 text-sky-400 border border-sky-500/40" data-i18n="filter_all">
+      <div class="flex flex-wrap gap-3 border-b border-border pb-4">
+        <button data-filter-btn="all" class="px-4 py-2 rounded-full text-xs sm:text-sm font-mono font-semibold transition-all bg-sky-500/20 text-sky-400 border border-sky-500/50 glow-dot-sky" data-i18n="filter_all">
           All Systems
         </button>
-        <button data-filter-btn="ai" class="px-4 py-1.5 rounded-full text-xs font-mono transition-all text-muted border border-border hover:text-foreground hover:border-zinc-700 bg-zinc-900/60" data-i18n="filter_ai">
+        <button data-filter-btn="ai" class="px-4 py-2 rounded-full text-xs sm:text-sm font-mono transition-all text-zinc-300 border border-border hover:text-foreground hover:border-zinc-500 bg-zinc-900/80" data-i18n="filter_ai">
           AI & Autonomy
         </button>
-        <button data-filter-btn="lowlevel" class="px-4 py-1.5 rounded-full text-xs font-mono transition-all text-muted border border-border hover:text-foreground hover:border-zinc-700 bg-zinc-900/60" data-i18n="filter_lowlevel">
+        <button data-filter-btn="lowlevel" class="px-4 py-2 rounded-full text-xs sm:text-sm font-mono transition-all text-zinc-300 border border-border hover:text-foreground hover:border-zinc-500 bg-zinc-900/80" data-i18n="filter_lowlevel">
           Embedded C/C++
         </button>
-        <button data-filter-btn="hardware" class="px-4 py-1.5 rounded-full text-xs font-mono transition-all text-muted border border-border hover:text-foreground hover:border-zinc-700 bg-zinc-900/60" data-i18n="filter_hardware">
+        <button data-filter-btn="hardware" class="px-4 py-2 rounded-full text-xs sm:text-sm font-mono transition-all text-zinc-300 border border-border hover:text-foreground hover:border-zinc-500 bg-zinc-900/80" data-i18n="filter_hardware">
           Hardware & Sim
         </button>
       </div>
 
       <!-- Project Cards Grid -->
-      <div class="space-y-6">
+      <div class="space-y-8">
 
         <!-- Project 1: Crazy Car RL -->
-        <article data-category="ai lowlevel hardware" class="sub-card rounded-3xl p-6 lg:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <article data-category="ai lowlevel hardware" class="sub-card rounded-3xl p-6 lg:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center border border-white/10 hover:border-amber-400/50">
           <div class="lg:col-span-8 space-y-4">
             <div class="flex flex-wrap items-center gap-2">
-              <span data-i18n="proj1_date" class="px-2.5 py-0.5 text-[11px] font-mono rounded-full bg-amber-950/60 text-amber-400 border border-amber-800/50">Aug 2025 - Feb 2026 (Graz Competition)</span>
-              <span class="px-2.5 py-0.5 text-[11px] font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">ESP32 & Servos</span>
-              <span class="px-2.5 py-0.5 text-[11px] font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">Unity ML-Agents (PPO)</span>
+              <span data-i18n="proj1_date" class="px-3 py-1 text-xs font-mono rounded-full bg-amber-950/80 text-amber-300 font-bold border border-amber-500/50 glow-dot-amber">Aug 2025 - Feb 2026 (Graz Competition)</span>
+              <span class="px-3 py-1 text-xs font-mono rounded-full bg-sky-950/80 text-sky-300 border border-sky-500/40">ESP32 & Servos</span>
+              <span class="px-3 py-1 text-xs font-mono rounded-full bg-sky-950/80 text-sky-300 border border-sky-500/40">Unity ML-Agents (PPO)</span>
             </div>
 
-            <h3 data-i18n="proj1_title" class="text-2xl font-bold text-foreground font-heading tracking-tight">Crazy Car: Autonomous AI/RL RC Car</h3>
-            <p data-i18n="proj1_desc" class="text-xs text-muted leading-relaxed">Our first major robotics experiment built from a €30 Amazon RC car. Trained a neural policy in Unity ML-Agents to directly control motor PWM and steering, serving as an invaluable hands-on learning testbed.</p>
+            <h3 data-i18n="proj1_title" class="text-2xl sm:text-3xl font-bold text-foreground font-heading tracking-tight">Crazy Car: Autonomous AI/RL RC Car</h3>
+            <p data-i18n="proj1_desc" class="text-sm sm:text-base text-zinc-300 leading-relaxed">Our first major robotics experiment built from a €30 Amazon RC car. Trained a neural policy in Unity ML-Agents to directly control motor PWM and steering, serving as an invaluable hands-on learning testbed.</p>
 
-            <ul class="space-y-2 text-xs text-zinc-300 list-disc list-inside font-mono border-t border-border pt-4">
+            <ul class="space-y-2.5 text-sm sm:text-base text-zinc-200 list-disc list-inside font-sans leading-relaxed border-t border-border pt-4">
               <li data-i18n="proj1_b1">Trained RL agent in Unity ML-Agents (Aug-Dec 2025) taking velocity, IMU, and 3 ToF sensors to directly output motor speed & servo steering angle (no intermediate PID).</li>
               <li data-i18n="proj1_b2">Faced PCB hardware flaws: IMU trace routing was accidentally omitted during CAD layout, and high motor current noise interrupted sensor signals under load.</li>
               <li data-i18n="proj1_b3">Completed assembly only days before the Graz competition (Feb 2026); despite 2 intense days of on-site debugging, signal noise prevented driving, teaching us crucial engineering discipline for future projects.</li>
             </ul>
 
-            <div class="flex items-center space-x-4 pt-2 text-xs font-mono">
-              <span class="text-amber-400/90 text-[11px] italic">Note: Git was not used for this early project (a mistake corrected on all subsequent work).</span>
-              <a href="projects/crazy-car.html" class="text-sky-400 hover:text-sky-300 font-semibold" data-i18n="link_deepdive">Explore Project Story →</a>
+            <div class="flex items-center space-x-4 pt-3 text-xs sm:text-sm font-mono">
+              <span class="text-amber-400/90 italic">Note: Git was omitted on this early project (corrected on all future work).</span>
+              <a href="projects/crazy-car.html" class="text-sky-400 hover:text-sky-300 font-bold underline underline-offset-4" data-i18n="link_deepdive">Explore Project Story →</a>
             </div>
           </div>
 
-          <div class="lg:col-span-4 h-52 rounded-2xl bg-zinc-950 border border-border overflow-hidden relative group">
-            <img src="data/crazy-car/Picture_Lambo_Closed.jpg" alt="Crazy Car Amazon RC Car Project" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-            <div class="absolute inset-0 bg-gradient-to-t from-zinc-950/80 via-transparent to-transparent"></div>
-            <span class="absolute bottom-2 left-3 text-[10px] font-mono text-zinc-300 bg-zinc-900/80 px-2 py-0.5 rounded border border-white/10">30€ Amazon RC Car Hardware</span>
+          <div class="lg:col-span-4 h-56 rounded-2xl bg-zinc-950 border border-white/15 overflow-hidden relative group shadow-xl">
+            <img src="data/crazy-car/Picture_Lambo_Closed.jpg" alt="Crazy Car Amazon RC Car Project" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 cursor-zoom-in">
+            <div class="absolute inset-0 bg-gradient-to-t from-zinc-950/90 via-transparent to-transparent"></div>
+            <span class="absolute bottom-3 left-3 text-xs font-mono text-zinc-200 bg-zinc-900/90 px-2.5 py-1 rounded-lg border border-white/15 shadow">30€ Amazon RC Car Hardware</span>
           </div>
         </article>
 
         <!-- Project 2: 6DoF Driving Simulator -->
-        <article data-category="hardware lowlevel" class="sub-card rounded-3xl p-6 lg:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <article data-category="hardware lowlevel" class="sub-card rounded-3xl p-6 lg:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center border border-white/10 hover:border-emerald-400/50">
           <div class="lg:col-span-8 space-y-4">
             <div class="flex flex-wrap items-center gap-2">
-              <span data-i18n="proj2_date" class="px-2.5 py-0.5 text-[11px] font-mono rounded-full bg-emerald-950/60 text-emerald-400 border border-emerald-800/50">May 2025 - Jan 2026</span>
-              <span class="px-2.5 py-0.5 text-[11px] font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">6DoF Motion Rig</span>
-              <span class="px-2.5 py-0.5 text-[11px] font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">Modular C++ Control</span>
+              <span data-i18n="proj2_date" class="px-3 py-1 text-xs font-mono rounded-full bg-emerald-950/80 text-emerald-300 font-bold border border-emerald-500/50 glow-dot-emerald">May 2025 - Jan 2026</span>
+              <span class="px-3 py-1 text-xs font-mono rounded-full bg-sky-950/80 text-sky-300 border border-sky-500/40">6DoF Motion Rig</span>
+              <span class="px-3 py-1 text-xs font-mono rounded-full bg-sky-950/80 text-sky-300 border border-sky-500/40">Modular C++ Control</span>
             </div>
 
-            <h3 data-i18n="proj2_title" class="text-2xl font-bold text-foreground font-heading tracking-tight">6DoF Dynamic Motion Simulator Rig</h3>
-            <p data-i18n="proj2_desc" class="text-xs text-muted leading-relaxed">Restored a broken, legacy 6DoF motion rig at HTL Salzburg by solving severe EMI noise via physical signal/power cable isolation and custom C++ control software.</p>
+            <h3 data-i18n="proj2_title" class="text-2xl sm:text-3xl font-bold text-foreground font-heading tracking-tight">6DoF Dynamic Motion Simulator Rig</h3>
+            <p data-i18n="proj2_desc" class="text-sm sm:text-base text-zinc-300 leading-relaxed">Restored a broken, legacy 6DoF motion rig at HTL Salzburg by solving severe EMI noise via physical signal/power cable isolation and custom C++ control software.</p>
 
-            <ul class="space-y-2 text-xs text-zinc-300 list-disc list-inside font-mono border-t border-border pt-4">
+            <ul class="space-y-2.5 text-sm sm:text-base text-zinc-200 list-disc list-inside font-sans leading-relaxed border-t border-border pt-4">
               <li data-i18n="proj2_b1">Diagnosed root cause EMI interference; physically separated signal & power wiring and built a custom electrical distribution fuse box.</li>
               <li data-i18n="proj2_b2">Wrote modular C++ control software and secured €2,000 monitors & €3.5k gaming PC sponsorships from department leadership.</li>
               <li data-i18n="proj2_b3">Featured as the main highlight at HTL Salzburg Open Door Day 2026; proved David's passion for avionics & embedded electronics.</li>
             </ul>
 
-            <div class="flex items-center space-x-4 pt-2 text-xs font-mono">
+            <div class="flex items-center space-x-4 pt-3 text-xs sm:text-sm font-mono">
               <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="text-muted hover:text-sky-400 flex items-center gap-1" data-i18n="link_github">GitHub Repo</a>
-              <a href="projects/6dof-driving-sim.html" class="text-sky-400 hover:text-sky-300 font-semibold" data-i18n="link_deepdive">Technical Case Study →</a>
+              <a href="projects/6dof-driving-sim.html" class="text-sky-400 hover:text-sky-300 font-bold underline underline-offset-4" data-i18n="link_deepdive">Explore Project Story →</a>
             </div>
           </div>
 
-          <div class="lg:col-span-4 h-48 rounded-2xl bg-zinc-950 border border-border p-4 relative overflow-hidden flex items-center justify-center">
+          <div class="lg:col-span-4 h-56 rounded-2xl bg-zinc-950 border border-white/15 p-4 relative overflow-hidden flex items-center justify-center shadow-xl">
             <svg class="w-full h-full text-sky-400/80" viewBox="0 0 300 120" fill="none">
               <path d="M 60 100 L 100 60 L 170 60 L 220 30" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round"/>
               <circle cx="60" cy="100" r="5" fill="#10b981"/>
               <circle cx="100" cy="60" r="5" fill="#10b981"/>
-              <text x="15" y="112" font-family="monospace" font-size="8" fill="#71717a">STEWART PLATFORM 6DoF KINEMATICS</text>
+              <text x="15" y="112" font-family="monospace" font-size="9" fill="#a1a1aa">STEWART PLATFORM 6DoF KINEMATICS</text>
             </svg>
           </div>
         </article>
 
         <!-- Project 3: EDI-to-JSONL Streaming Parser -->
-        <article data-category="lowlevel" class="sub-card rounded-3xl p-6 lg:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <article data-category="lowlevel" class="sub-card rounded-3xl p-6 lg:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center border border-white/10 hover:border-sky-400/50">
           <div class="lg:col-span-8 space-y-4">
             <div class="flex flex-wrap items-center gap-2">
-              <span data-i18n="proj3_date" class="px-2.5 py-0.5 text-[11px] font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">Started April 2026 (Stealth)</span>
-              <span class="px-2.5 py-0.5 text-[11px] font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">C++20 & POSIX mmap</span>
-              <span class="px-2.5 py-0.5 text-[11px] font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">O(1) Memory Engine</span>
+              <span data-i18n="proj3_date" class="px-3 py-1 text-xs font-mono rounded-full bg-sky-950/80 text-sky-300 font-bold border border-sky-500/40">Started April 2026 (Stealth)</span>
+              <span class="px-3 py-1 text-xs font-mono rounded-full bg-sky-950/80 text-sky-300 border border-sky-500/40">C++20 & POSIX mmap</span>
+              <span class="px-3 py-1 text-xs font-mono rounded-full bg-sky-950/80 text-sky-300 border border-sky-500/40">O(1) Memory Engine</span>
             </div>
 
-            <h3 data-i18n="proj3_title" class="text-2xl font-bold text-foreground font-heading tracking-tight">High-Performance Zero-Allocation EDI Engine</h3>
-            <p data-i18n="proj3_desc" class="text-xs text-muted leading-relaxed">High-throughput O(1) EDI streaming engine running in &lt;35 MB RAM. Zero code configuration engine using JSON schema rules (Stealth Commercial Project).</p>
+            <h3 data-i18n="proj3_title" class="text-2xl sm:text-3xl font-bold text-foreground font-heading tracking-tight">High-Performance Zero-Allocation EDI Engine</h3>
+            <p data-i18n="proj3_desc" class="text-sm sm:text-base text-zinc-300 leading-relaxed">High-throughput O(1) EDI streaming engine running in &lt;35 MB RAM. Zero code configuration engine using JSON schema rules (Stealth Commercial Project).</p>
 
-            <ul class="space-y-2 text-xs text-zinc-300 list-disc list-inside font-mono border-t border-border pt-4">
+            <ul class="space-y-2.5 text-sm sm:text-base text-zinc-200 list-disc list-inside font-sans leading-relaxed border-t border-border pt-4">
               <li data-i18n="proj3_b1">Binds memory footprint to strictly O(1) (~35 MB RAM) for multi-gigabyte industrial EDI/FACT data streams.</li>
               <li data-i18n="proj3_b2">Engineered zero-code parsing logic driven dynamically by external JSON mapping configurations (V3/V4 standards).</li>
               <li data-i18n="proj3_b3">Fully Dockerized, microservices-ready architecture currently under commercial evaluation for industrial partnerships.</li>
             </ul>
 
-            <div class="flex items-center space-x-4 pt-2 text-xs font-mono">
-              <a href="projects/edi-jsonl-parser.html" class="text-sky-400 hover:text-sky-300 font-semibold" data-i18n="link_deepdive">Technical Case Study →</a>
+            <div class="flex items-center space-x-4 pt-3 text-xs sm:text-sm font-mono">
+              <a href="projects/edi-jsonl-parser.html" class="text-sky-400 hover:text-sky-300 font-bold underline underline-offset-4" data-i18n="link_deepdive">Explore Project Story →</a>
             </div>
           </div>
 
-          <div class="lg:col-span-4 h-48 rounded-2xl bg-zinc-950 border border-border p-4 relative overflow-hidden flex items-center justify-center">
+          <div class="lg:col-span-4 h-56 rounded-2xl bg-zinc-950 border border-white/15 p-4 relative overflow-hidden flex items-center justify-center shadow-xl">
             <svg class="w-full h-full text-sky-400/80" viewBox="0 0 300 120" fill="none">
               <rect x="20" y="30" width="80" height="60" rx="6" stroke="#38bdf8" stroke-width="1.5" fill="rgba(56,189,248,0.05)"/>
               <path d="M 105 60 L 185 60" stroke="#10b981" stroke-width="2" stroke-dasharray="4 4"/>
               <rect x="190" y="30" width="90" height="60" rx="6" stroke="#38bdf8" stroke-width="1.5" fill="rgba(56,189,248,0.05)"/>
-              <text x="15" y="112" font-family="monospace" font-size="8" fill="#71717a">ZERO-ALLOCATION STREAMING (2.4 GB/s)</text>
+              <text x="15" y="112" font-family="monospace" font-size="9" fill="#a1a1aa">ZERO-ALLOCATION STREAMING (2.4 GB/s)</text>
             </svg>
           </div>
         </article>
 
         <!-- Project 4: Tri-Tilt VTOL SAR -->
-        <article data-category="ai hardware" class="sub-card rounded-3xl p-6 lg:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <article data-category="ai hardware" class="sub-card rounded-3xl p-6 lg:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center border border-white/10 hover:border-emerald-400/50">
           <div class="lg:col-span-8 space-y-4">
             <div class="flex flex-wrap items-center gap-2">
-              <span data-i18n="proj4_date" class="px-2.5 py-0.5 text-[11px] font-mono rounded-full bg-emerald-950/60 text-emerald-400 border border-emerald-800/50">Started June 2026 • Target 2028 (Diploma Thesis)</span>
-              <span class="px-2.5 py-0.5 text-[11px] font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">Pixhawk & Nvidia Jetson</span>
-              <span class="px-2.5 py-0.5 text-[11px] font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">ROS2 & SORA SAIL II</span>
+              <span data-i18n="proj4_date" class="px-3 py-1 text-xs font-mono rounded-full bg-emerald-950/80 text-emerald-300 font-bold border border-emerald-500/50 glow-dot-emerald">Started June 2026 • Target 2028 (Diploma Thesis)</span>
+              <span class="px-3 py-1 text-xs font-mono rounded-full bg-sky-950/80 text-sky-300 border border-sky-500/40">Pixhawk & Nvidia Jetson</span>
+              <span class="px-3 py-1 text-xs font-mono rounded-full bg-sky-950/80 text-sky-300 border border-sky-500/40">ROS2 & SORA SAIL II</span>
             </div>
 
-            <h3 data-i18n="proj4_title" class="text-2xl font-bold text-foreground font-heading tracking-tight">Tri-Tilt-Rotor SAR VTOL Drone (Diploma Thesis)</h3>
-            <p data-i18n="proj4_desc" class="text-xs text-muted leading-relaxed">BVLOS Search & Rescue 3-rotor VTOL drone built under AustroControl SORA SAIL II safety guidelines. Dual Pixhawk FMU + Nvidia Jetson ROS2 swarm architecture.</p>
+            <h3 data-i18n="proj4_title" class="text-2xl sm:text-3xl font-bold text-foreground font-heading tracking-tight">Tri-Tilt-Rotor SAR VTOL Drone (Diploma Thesis)</h3>
+            <p data-i18n="proj4_desc" class="text-sm sm:text-base text-zinc-300 leading-relaxed">BVLOS Search & Rescue 3-rotor VTOL drone built under AustroControl SORA SAIL II safety guidelines. Dual Pixhawk FMU + Nvidia Jetson ROS2 swarm architecture.</p>
 
-            <ul class="space-y-2 text-xs text-zinc-300 list-disc list-inside font-mono border-t border-border pt-4">
+            <ul class="space-y-2.5 text-sm sm:text-base text-zinc-200 list-disc list-inside font-sans leading-relaxed border-t border-border pt-4">
               <li data-i18n="proj4_b1">Designed for Alpine Search & Rescue with thermal IR camera AI person detection, GPS-jamming optical flow mapping (±2m precision), and parachute deployment.</li>
               <li data-i18n="proj4_b2">Specs: 15-20 kg mass, 3m wingspan, 130 km/h top speed, 85 km/h cruise speed, 120-400m operational altitude (up to 4000m travel mode).</li>
               <li data-i18n="proj4_b3">In active sponsorship & testing site talks with the Austrian Armed Forces (Österreichisches Bundesheer).</li>
             </ul>
 
-            <div class="flex items-center space-x-4 pt-2 text-xs font-mono">
+            <div class="flex items-center space-x-4 pt-3 text-xs sm:text-sm font-mono">
               <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="text-muted hover:text-sky-400 flex items-center gap-1" data-i18n="link_github">GitHub Repo</a>
-              <a href="projects/tri-tilt-vtol.html" class="text-sky-400 hover:text-sky-300 font-semibold" data-i18n="link_deepdive">Technical Case Study →</a>
+              <a href="projects/tri-tilt-vtol.html" class="text-sky-400 hover:text-sky-300 font-bold underline underline-offset-4" data-i18n="link_deepdive">Explore Project Story →</a>
             </div>
           </div>
 
-          <div class="lg:col-span-4 h-48 rounded-2xl bg-zinc-950 border border-border p-4 relative overflow-hidden flex items-center justify-center">
+          <div class="lg:col-span-4 h-56 rounded-2xl bg-zinc-950 border border-white/15 p-4 relative overflow-hidden flex items-center justify-center shadow-xl">
             <svg class="w-full h-full text-sky-400/80" viewBox="0 0 300 120" fill="none">
               <path d="M 50 60 L 250 60 M 150 20 L 150 100" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 4" />
               <circle cx="150" cy="60" r="18" stroke="#38bdf8" stroke-width="2" fill="rgba(56,189,248,0.05)"/>
               <ellipse cx="60" cy="40" rx="30" ry="7" stroke="#10b981" stroke-width="1.5" fill="none"/>
               <ellipse cx="240" cy="40" rx="30" ry="7" stroke="#10b981" stroke-width="1.5" fill="none"/>
-              <text x="15" y="112" font-family="monospace" font-size="8" fill="#71717a">TRI-TILT ROTOR TRANSITION VECTOR</text>
+              <text x="15" y="112" font-family="monospace" font-size="9" fill="#a1a1aa">TRI-TILT ROTOR TRANSITION VECTOR</text>
             </svg>
           </div>
         </article>
 
         <!-- Project 5: C++ Physics Engine -->
-        <article data-category="lowlevel" class="sub-card rounded-3xl p-6 lg:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <article data-category="lowlevel" class="sub-card rounded-3xl p-6 lg:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center border border-white/10 hover:border-sky-400/50">
           <div class="lg:col-span-8 space-y-4">
             <div class="flex flex-wrap items-center gap-2">
-              <span data-i18n="proj5_date" class="px-2.5 py-0.5 text-[11px] font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">March 2026 - May 2026</span>
-              <span class="px-2.5 py-0.5 text-[11px] font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">C++20 & Eigen</span>
-              <span class="px-2.5 py-0.5 text-[11px] font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">RK4 Integrator</span>
+              <span data-i18n="proj5_date" class="px-3 py-1 text-xs font-mono rounded-full bg-sky-950/80 text-sky-300 font-bold border border-sky-500/40">March 2026 - May 2026</span>
+              <span class="px-3 py-1 text-xs font-mono rounded-full bg-sky-950/80 text-sky-300 border border-sky-500/40">C++20 & Eigen</span>
+              <span class="px-3 py-1 text-xs font-mono rounded-full bg-sky-950/80 text-sky-300 border border-sky-500/40">RK4 Integrator</span>
             </div>
 
-            <h3 data-i18n="proj5_title" class="text-2xl font-bold text-foreground font-heading tracking-tight">Deterministic 6DoF C++ Physics Engine</h3>
-            <p data-i18n="proj5_desc" class="text-xs text-muted leading-relaxed">Zero-dependency rigid body flight simulator built from scratch in C++20 with RK4 integration to master physics mechanics & C++ for the SAR VTOL project.</p>
+            <h3 data-i18n="proj5_title" class="text-2xl sm:text-3xl font-bold text-foreground font-heading tracking-tight">Deterministic 6DoF C++ Physics Engine</h3>
+            <p data-i18n="proj5_desc" class="text-sm sm:text-base text-zinc-300 leading-relaxed">Zero-dependency rigid body flight simulator built from scratch in C++20 with RK4 integration to master physics mechanics & C++ for the SAR VTOL project.</p>
 
-            <ul class="space-y-2 text-xs text-zinc-300 list-disc list-inside font-mono border-t border-border pt-4">
+            <ul class="space-y-2.5 text-sm sm:text-base text-zinc-200 list-disc list-inside font-sans leading-relaxed border-t border-border pt-4">
               <li data-i18n="proj5_b1">Programmed 4th-Order Runge-Kutta (RK4) numerical integrator running at a deterministic 1,000 Hz simulation step.</li>
               <li data-i18n="proj5_b2">Implemented quaternion attitude math preventing gimbal lock during high-angle tilt maneuvers.</li>
               <li data-i18n="proj5_b3">Integrated UDP streaming telemetry pipe connecting physics states to Ground Control Station visualizers.</li>
             </ul>
 
-            <div class="flex items-center space-x-4 pt-2 text-xs font-mono">
+            <div class="flex items-center space-x-4 pt-3 text-xs sm:text-sm font-mono">
               <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="text-muted hover:text-sky-400 flex items-center gap-1" data-i18n="link_github">GitHub Repo</a>
-              <a href="projects/cpp-physics-engine.html" class="text-sky-400 hover:text-sky-300 font-semibold" data-i18n="link_deepdive">Technical Case Study →</a>
+              <a href="projects/cpp-physics-engine.html" class="text-sky-400 hover:text-sky-300 font-bold underline underline-offset-4" data-i18n="link_deepdive">Explore Project Story →</a>
             </div>
           </div>
 
-          <div class="lg:col-span-4 h-48 rounded-2xl bg-zinc-950 border border-border p-4 relative overflow-hidden flex items-center justify-center">
+          <div class="lg:col-span-4 h-56 rounded-2xl bg-zinc-950 border border-white/15 p-4 relative overflow-hidden flex items-center justify-center shadow-xl">
             <svg class="w-full h-full text-sky-400/80" viewBox="0 0 300 120" fill="none">
               <path d="M 150 60 L 220 60 M 150 60 L 150 15 M 150 60 L 100 100" stroke="#38bdf8" stroke-width="2"/>
               <ellipse cx="150" cy="60" rx="55" ry="22" stroke="#10b981" stroke-width="1.5" stroke-dasharray="3 3"/>
-              <text x="15" y="112" font-family="monospace" font-size="8" fill="#71717a">6DoF EULER & QUATERNION VECTOR</text>
+              <text x="15" y="112" font-family="monospace" font-size="9" fill="#a1a1aa">6DoF EULER & QUATERNION VECTOR</text>
             </svg>
           </div>
         </article>
 
         <!-- Project 6: Ground Effect Vehicle -->
-        <article data-category="hardware lowlevel" class="sub-card rounded-3xl p-6 lg:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <article data-category="hardware lowlevel" class="sub-card rounded-3xl p-6 lg:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center border border-white/10 hover:border-emerald-400/50">
           <div class="lg:col-span-8 space-y-4">
             <div class="flex flex-wrap items-center gap-2">
-              <span data-i18n="proj6_date" class="px-2.5 py-0.5 text-[11px] font-mono rounded-full bg-emerald-950/60 text-emerald-400 border border-emerald-800/50">Started April 2026 (Comp 2027)</span>
-              <span class="px-2.5 py-0.5 text-[11px] font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">STM32H7 & Simulink MPC</span>
-              <span class="px-2.5 py-0.5 text-[11px] font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">13 kg Downforce Cushion</span>
+              <span data-i18n="proj6_date" class="px-3 py-1 text-xs font-mono rounded-full bg-emerald-950/80 text-emerald-300 font-bold border border-emerald-500/50 glow-dot-emerald">Started April 2026 (Comp 2027)</span>
+              <span class="px-3 py-1 text-xs font-mono rounded-full bg-sky-950/80 text-sky-300 border border-sky-500/40">STM32H7 & Simulink MPC</span>
+              <span class="px-3 py-1 text-xs font-mono rounded-full bg-sky-950/80 text-sky-300 border border-sky-500/40">13 kg Downforce Cushion</span>
             </div>
 
-            <h3 data-i18n="proj6_title" class="text-2xl font-bold text-foreground font-heading tracking-tight">DIN A4 Ground Effect Autonomous Vehicle</h3>
-            <p data-i18n="proj6_desc" class="text-xs text-muted leading-relaxed">Direct successor to Crazy Car started 8 months ahead! Features 13 kg ground-effect downforce cushion on 2 kg chassis, Bugatti-like acceleration, and STM32H7 MPC.</p>
+            <h3 data-i18n="proj6_title" class="text-2xl sm:text-3xl font-bold text-foreground font-heading tracking-tight">DIN A4 Ground Effect Autonomous Vehicle</h3>
+            <p data-i18n="proj6_desc" class="text-sm sm:text-base text-zinc-300 leading-relaxed">Direct successor to Crazy Car started 8 months ahead! Features 13 kg ground-effect downforce cushion on 2 kg chassis, Bugatti-like acceleration, and STM32H7 MPC.</p>
 
-            <ul class="space-y-2 text-xs text-zinc-300 list-disc list-inside font-mono border-t border-border pt-4">
+            <ul class="space-y-2.5 text-sm sm:text-base text-zinc-200 list-disc list-inside font-sans leading-relaxed border-t border-border pt-4">
               <li data-i18n="proj6_b1">Designed CAD chassis in SolidEdge achieving 1:6.5 power-to-weight ratio; secured €400 component sponsorship.</li>
               <li data-i18n="proj6_b2">Developing Model Predictive Control (MPC) in MATLAB/Simulink deployed to STM32H7 for track position estimation.</li>
               <li data-i18n="proj6_b3">Engineered optimal racing line solver with ToF sensor obstacle avoidance to secure victory at 2027 competition.</li>
             </ul>
 
-            <div class="flex items-center space-x-4 pt-2 text-xs font-mono">
-              <a href="projects/ground-effect-vehicle.html" class="text-sky-400 hover:text-sky-300 font-semibold" data-i18n="link_deepdive">Technical Case Study →</a>
+            <div class="flex items-center space-x-4 pt-3 text-xs sm:text-sm font-mono">
+              <a href="projects/ground-effect-vehicle.html" class="text-sky-400 hover:text-sky-300 font-bold underline underline-offset-4" data-i18n="link_deepdive">Explore Project Story →</a>
             </div>
           </div>
 
-          <div class="lg:col-span-4 h-48 rounded-2xl bg-zinc-950 border border-border p-4 relative overflow-hidden flex items-center justify-center">
+          <div class="lg:col-span-4 h-56 rounded-2xl bg-zinc-950 border border-white/15 p-4 relative overflow-hidden flex items-center justify-center shadow-xl">
             <svg class="w-full h-full text-sky-400/80" viewBox="0 0 300 120" fill="none">
               <path d="M 20 80 Q 80 30 180 50 Q 240 60 280 80" stroke="#38bdf8" stroke-width="2"/>
               <path d="M 20 100 L 280 100" stroke="#71717a" stroke-width="2" stroke-dasharray="6 6"/>
-              <text x="15" y="112" font-family="monospace" font-size="8" fill="#71717a">GROUND EFFECT CUSHION SEAL (3.5mm)</text>
+              <text x="15" y="112" font-family="monospace" font-size="9" fill="#a1a1aa">GROUND EFFECT CUSHION SEAL (3.5mm)</text>
             </svg>
           </div>
         </article>
@@ -651,10 +651,10 @@
     </section>
 
     <!-- 4. WORK EXPERIENCE & EDUCATION -->
-    <section id="experience" class="py-16 md:py-24 max-w-6xl mx-auto px-6 md:px-12 space-y-12 scroll-mt-24 border-t border-white/5">
+    <section id="experience" class="py-16 md:py-24 max-w-6xl mx-auto px-6 md:px-12 space-y-12 scroll-mt-24 border-t border-white/10">
       <div>
         <h2 data-i18n="exp_heading" class="text-4xl md:text-5xl font-bold text-foreground font-heading tracking-tight">work experience & education</h2>
-        <p data-i18n="exp_sub" class="text-base text-muted max-w-2xl mt-2 font-mono">Industrial engineering internships, municipal power grid calculations, custom switchgear manufacturing, and hands-on workshop fabrication.</p>
+        <p data-i18n="exp_sub" class="text-base sm:text-lg text-zinc-300 max-w-3xl mt-3 font-mono">Industrial engineering internships, municipal power grid calculations, custom switchgear manufacturing, and hands-on workshop fabrication.</p>
       </div>
 
       <!-- SPLIT LAYOUT GRID -->
@@ -662,20 +662,20 @@
         
         <!-- LEFT COLUMN: PRACTICAL WORK EXPERIENCE (INTERNSHIPS) -->
         <div class="space-y-6">
-          <div class="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-primary border-b border-border pb-3">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          <div class="flex items-center gap-2.5 text-xs sm:text-sm font-mono uppercase tracking-wider text-primary border-b border-white/10 pb-3">
+            <svg class="w-5 h-5 text-primary glow-dot-sky" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
             <span data-i18n="work_heading" class="font-bold">Practical Work Experience</span>
           </div>
 
           <!-- Internship 1: Salzburg AG -->
-          <div class="sub-card rounded-3xl p-6 space-y-4 font-mono">
-            <div class="space-y-1 border-b border-border pb-3">
-              <span data-i18n="intern_1_date" class="text-[10px] text-emerald-400 uppercase font-semibold">Summer 2026 • 4 Weeks</span>
-              <h3 data-i18n="intern_1_title" class="text-base font-bold text-foreground">Electrical Grid Planning & Calculation Intern</h3>
-              <p data-i18n="intern_1_company" class="text-xs text-sky-400 font-semibold">Salzburg AG (Municipal Power Grid Operator)</p>
+          <div class="sub-card rounded-3xl p-6 lg:p-8 space-y-4 font-mono">
+            <div class="space-y-1.5 border-b border-white/10 pb-3">
+              <span data-i18n="intern_1_date" class="text-xs text-emerald-400 uppercase font-bold glow-dot-emerald">Summer 2026 • 4 Weeks</span>
+              <h3 data-i18n="intern_1_title" class="text-lg sm:text-xl font-bold text-foreground">Electrical Grid Planning & Calculation Intern</h3>
+              <p data-i18n="intern_1_company" class="text-sm text-sky-400 font-semibold">Salzburg AG (Municipal Power Grid Operator)</p>
             </div>
             
-            <ul class="space-y-2 text-xs text-zinc-300 list-disc list-inside font-sans leading-relaxed">
+            <ul class="space-y-2.5 text-sm sm:text-base text-zinc-200 list-disc list-inside font-sans leading-relaxed">
               <li data-i18n="intern_1_b1">Utilized NEPlan power analytics software to perform complex power flow & grid capacity calculations across the city distribution network.</li>
               <li data-i18n="intern_1_b2">Planned new electrical switching states and executed short-circuit (Ik'') and earth-fault current calculations for network safety.</li>
               <li data-i18n="intern_1_b3">Assisted senior grid engineers in optimizing municipal transformer substation configurations.</li>
@@ -683,14 +683,14 @@
           </div>
 
           <!-- Internship 2: ERA Ramsauer -->
-          <div class="sub-card rounded-3xl p-6 space-y-4 font-mono">
-            <div class="space-y-1 border-b border-border pb-3">
-              <span data-i18n="intern_2_date" class="text-[10px] text-amber-400 uppercase font-semibold">Summer 2025 • 4 Weeks</span>
-              <h3 data-i18n="intern_2_title" class="text-base font-bold text-foreground">Industrial Switchgear & Fuse Box Engineering Intern</h3>
-              <p data-i18n="intern_2_company" class="text-xs text-sky-400 font-semibold">ERA - Elektrotechnik Ramsauer GmbH</p>
+          <div class="sub-card rounded-3xl p-6 lg:p-8 space-y-4 font-mono">
+            <div class="space-y-1.5 border-b border-white/10 pb-3">
+              <span data-i18n="intern_2_date" class="text-xs text-amber-400 uppercase font-bold glow-dot-amber">Summer 2025 • 4 Weeks</span>
+              <h3 data-i18n="intern_2_title" class="text-lg sm:text-xl font-bold text-foreground">Industrial Switchgear & Fuse Box Engineering Intern</h3>
+              <p data-i18n="intern_2_company" class="text-sm text-sky-400 font-semibold">ERA - Elektrotechnik Ramsauer GmbH</p>
             </div>
 
-            <ul class="space-y-2 text-xs text-zinc-300 list-disc list-inside font-sans leading-relaxed">
+            <ul class="space-y-2.5 text-sm sm:text-base text-zinc-200 list-disc list-inside font-sans leading-relaxed">
               <li data-i18n="intern_2_b1">Independently built and wired large-scale industrial fuse boxes, main distribution switchgear, and control cabinets.</li>
               <li data-i18n="intern_2_b2">Constructed high-power electrical distribution assemblies tailored for major industrial companies across Austria.</li>
             </ul>
@@ -700,64 +700,64 @@
 
         <!-- RIGHT COLUMN: EDUCATION & WORKSHOP SKILLS -->
         <div class="space-y-6">
-          <div class="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-emerald-400 border-b border-border pb-3">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0112 20.055a11.952 11.952 0 01-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
+          <div class="flex items-center gap-2.5 text-xs sm:text-sm font-mono uppercase tracking-wider text-emerald-400 border-b border-white/10 pb-3">
+            <svg class="w-5 h-5 text-emerald-400 glow-dot-emerald" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0112 20.055a11.952 11.952 0 01-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
             <span data-i18n="edu_heading" class="font-bold">Education & Workshop Fabrication Skills</span>
           </div>
 
           <!-- Education -->
-          <div class="sub-card rounded-3xl p-6 space-y-3 font-mono">
-            <h3 data-i18n="edu_1_title" class="text-base font-bold text-foreground">HTL Elektrotechnik Salzburg</h3>
-            <p data-i18n="edu_1_subtitle" class="text-xs text-sky-400 font-semibold">Higher Technical Institute for Electrical Engineering • 2023 - 2028</p>
-            <p data-i18n="edu_1_desc" class="text-xs text-zinc-300 font-sans leading-relaxed">
+          <div class="sub-card rounded-3xl p-6 lg:p-8 space-y-3 font-mono">
+            <h3 data-i18n="edu_1_title" class="text-lg sm:text-xl font-bold text-foreground">HTL Elektrotechnik Salzburg</h3>
+            <p data-i18n="edu_1_subtitle" class="text-sm text-sky-400 font-semibold">Higher Technical Institute for Electrical Engineering • 2023 - 2028</p>
+            <p data-i18n="edu_1_desc" class="text-sm sm:text-base text-zinc-200 font-sans leading-relaxed">
               5-year intensive engineering program covering power systems, control engineering, embedded C/C++, CAD design, electronics, and software development.
             </p>
           </div>
 
           <!-- Workshop Skills Pill Matrix -->
-          <div class="sub-card rounded-3xl p-6 space-y-4 font-mono">
-            <h4 data-i18n="workshop_title" class="text-xs font-bold text-foreground uppercase tracking-wider border-b border-border pb-2">
+          <div class="sub-card rounded-3xl p-6 lg:p-8 space-y-4 font-mono">
+            <h4 data-i18n="workshop_title" class="text-xs sm:text-sm font-bold text-foreground uppercase tracking-wider border-b border-white/10 pb-3">
               Hands-on Workshop & Manufacturing Competencies
             </h4>
 
-            <div class="grid grid-cols-2 gap-2 text-xs">
-              <div class="p-2.5 rounded bg-zinc-900/60 border border-border text-foreground font-semibold flex items-center gap-1.5">
-                <span class="w-1.5 h-1.5 rounded-full bg-sky-400"></span>
+            <div class="grid grid-cols-2 gap-2.5 text-xs sm:text-sm">
+              <div class="p-3 rounded-xl bg-zinc-900/80 border border-white/10 text-foreground font-semibold flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-sky-400 glow-dot-sky"></span>
                 <span data-i18n="ws_1">Welding (MIG/MAG/TIG)</span>
               </div>
-              <div class="p-2.5 rounded bg-zinc-900/60 border border-border text-foreground font-semibold flex items-center gap-1.5">
-                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+              <div class="p-3 rounded-xl bg-zinc-900/80 border border-white/10 text-foreground font-semibold flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 glow-dot-emerald"></span>
                 <span data-i18n="ws_2">TNC 640 CNC Machining</span>
               </div>
-              <div class="p-2.5 rounded bg-zinc-900/60 border border-border text-foreground font-semibold flex items-center gap-1.5">
-                <span class="w-1.5 h-1.5 rounded-full bg-sky-400"></span>
+              <div class="p-3 rounded-xl bg-zinc-900/80 border border-white/10 text-foreground font-semibold flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-sky-400 glow-dot-sky"></span>
                 <span data-i18n="ws_3">Precision Drilling & Milling</span>
               </div>
-              <div class="p-2.5 rounded bg-zinc-900/60 border border-border text-foreground font-semibold flex items-center gap-1.5">
-                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+              <div class="p-3 rounded-xl bg-zinc-900/80 border border-white/10 text-foreground font-semibold flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 glow-dot-emerald"></span>
                 <span data-i18n="ws_4">Polishing & Metalworking</span>
               </div>
-              <div class="p-2.5 rounded bg-zinc-900/60 border border-border text-foreground font-semibold flex items-center gap-1.5">
-                <span class="w-1.5 h-1.5 rounded-full bg-sky-400"></span>
+              <div class="p-3 rounded-xl bg-zinc-900/80 border border-white/10 text-foreground font-semibold flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-sky-400 glow-dot-sky"></span>
                 <span data-i18n="ws_5">3D Printing & FDM Prototyping</span>
               </div>
-              <div class="p-2.5 rounded bg-zinc-900/60 border border-border text-foreground font-semibold flex items-center gap-1.5">
-                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+              <div class="p-3 rounded-xl bg-zinc-900/80 border border-white/10 text-foreground font-semibold flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 glow-dot-emerald"></span>
                 <span data-i18n="ws_6">High-Voltage Wiring</span>
               </div>
-              <div class="p-2.5 rounded bg-zinc-900/60 border border-border text-foreground font-semibold flex items-center gap-1.5">
-                <span class="w-1.5 h-1.5 rounded-full bg-sky-400"></span>
+              <div class="p-3 rounded-xl bg-zinc-900/80 border border-white/10 text-foreground font-semibold flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-sky-400 glow-dot-sky"></span>
                 <span data-i18n="ws_7">SMD & THT Soldering</span>
               </div>
-              <div class="p-2.5 rounded bg-zinc-900/60 border border-border text-foreground font-semibold flex items-center gap-1.5">
-                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+              <div class="p-3 rounded-xl bg-zinc-900/80 border border-white/10 text-foreground font-semibold flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 glow-dot-emerald"></span>
                 <span data-i18n="ws_8">Custom PCB Design (KiCad)</span>
               </div>
             </div>
 
-            <div class="pt-2 text-[11px] text-muted border-t border-border flex items-center justify-between">
+            <div class="pt-3 text-xs sm:text-sm text-muted border-t border-white/10 flex items-center justify-between">
               <span data-i18n="ws_9" class="text-sky-300 font-semibold">Systemic Troubleshooting & Problem Solving</span>
-              <span class="text-emerald-400">100% Practical</span>
+              <span class="text-emerald-400 font-bold">100% Practical</span>
             </div>
           </div>
 
@@ -769,7 +769,7 @@
   </main>
 
   <!-- FOOTER -->
-  <footer class="border-t border-white/5 bg-[#030306] py-10 font-mono text-xs text-muted relative z-10">
+  <footer class="border-t border-white/10 bg-[#030306] py-12 font-mono text-xs sm:text-sm text-muted relative z-10">
     <div class="max-w-6xl mx-auto px-6 md:px-12 flex flex-col sm:flex-row items-center justify-between gap-4">
       <div data-i18n="footer_copy">
         © 2026 David Sommerer — HTL Elektrotechnik Salzburg.
@@ -782,12 +782,68 @@
 
   <!-- INSTANT FULL-SCREEN CLICK-TO-ZOOM LIGHTBOX MODAL -->
   <div id="lightbox-modal" onclick="window.closeLightbox(event)" class="fixed inset-0 z-[99999] hidden bg-black/95 backdrop-blur-lg flex flex-col items-center justify-center p-4 cursor-zoom-out select-none transition-all duration-300">
-    <button onclick="window.closeLightbox(event)" aria-label="Close Lightbox" class="absolute top-6 right-8 text-white/80 hover:text-white p-3 text-3xl font-mono focus:outline-none z-[100000] bg-zinc-900/90 rounded-full border border-white/20 hover:scale-110 transition-transform">✕</button>
-    <div class="w-[96vw] h-[88vh] flex flex-col items-center justify-center relative pointer-events-auto overflow-auto">
+    <button id="lightbox-close" onclick="window.closeLightbox(event)" aria-label="Close Lightbox" class="absolute top-6 right-8 text-white/80 hover:text-white p-3 text-3xl font-mono focus:outline-none z-[100000] bg-zinc-900/90 rounded-full border border-white/20 hover:scale-110 transition-transform">✕</button>
+    <div onclick="window.closeLightbox(event)" class="w-[96vw] h-[88vh] flex flex-col items-center justify-center relative pointer-events-auto overflow-auto">
       <img id="lightbox-img" onclick="window.toggleLightboxZoom(event)" class="max-w-[95vw] max-h-[82vh] w-auto h-auto object-contain rounded-2xl shadow-[0_0_60px_rgba(0,0,0,0.95)] border border-white/20 transition-transform duration-300 cursor-zoom-in">
-      <p id="lightbox-caption" class="text-sm font-mono text-zinc-200 mt-4 text-center max-w-3xl bg-zinc-900/90 px-5 py-2.5 rounded-xl border border-white/10 shadow-xl"></p>
+      <p id="lightbox-caption" onclick="window.closeLightbox(event)" class="text-sm sm:text-base font-mono text-zinc-200 mt-4 text-center max-w-3xl bg-zinc-900/90 px-5 py-2.5 rounded-xl border border-white/10 shadow-xl"></p>
     </div>
   </div>
+
+  <script>
+    window.openLightbox = function (src, caption) {
+      var modal = document.getElementById("lightbox-modal");
+      var modalImg = document.getElementById("lightbox-img");
+      var captionEl = document.getElementById("lightbox-caption");
+      if (!modal || !modalImg) return;
+      modalImg.classList.remove("scale-150", "cursor-zoom-out");
+      modalImg.classList.add("cursor-zoom-in");
+      modalImg.src = src;
+      if (captionEl) captionEl.textContent = caption || "";
+      modal.classList.remove("hidden");
+      document.body.style.overflow = "hidden";
+    };
+
+    window.closeLightbox = function (e) {
+      if (e) {
+        if (typeof e.stopPropagation === 'function') e.stopPropagation();
+      }
+      var modal = document.getElementById("lightbox-modal");
+      if (!modal) return;
+      modal.classList.add("hidden");
+      document.body.style.overflow = "";
+    };
+
+    window.toggleLightboxZoom = function (e) {
+      if (e) {
+        if (typeof e.stopPropagation === 'function') e.stopPropagation();
+      }
+      var modalImg = document.getElementById("lightbox-img");
+      if (!modalImg) return;
+      if (modalImg.classList.contains("scale-150")) {
+        modalImg.classList.remove("scale-150", "cursor-zoom-out");
+        modalImg.classList.add("cursor-zoom-in");
+      } else {
+        modalImg.classList.add("scale-150", "cursor-zoom-out");
+        modalImg.classList.remove("cursor-zoom-in");
+      }
+    };
+
+    document.addEventListener("click", function (e) {
+      var img = e.target.closest("img");
+      if (img && img.id !== "lightbox-img") {
+        e.preventDefault();
+        e.stopPropagation();
+        var caption = img.alt || img.getAttribute("data-caption") || (img.nextElementSibling ? img.nextElementSibling.textContent : "");
+        window.openLightbox(img.src, caption);
+      }
+    }, true);
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") {
+        window.closeLightbox();
+      }
+    });
+  </script>
 
   <script type="module" src="js/main.js"></script>
 </body>
