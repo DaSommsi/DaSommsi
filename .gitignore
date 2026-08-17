@@ -1,8 +1,6 @@
-# Ignore preview screenshots
-*.png
-*.jpg
-*.jpeg
-
 # Ignore OS metadata
 .DS_Store
 Thumbs.db
+
+# Allow project media in data/
+!data/**

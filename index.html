@@ -453,33 +453,30 @@
         <article data-category="ai lowlevel hardware" class="sub-card rounded-3xl p-6 lg:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           <div class="lg:col-span-8 space-y-4">
             <div class="flex flex-wrap items-center gap-2">
-              <span data-i18n="proj1_date" class="px-2.5 py-0.5 text-[11px] font-mono rounded-full bg-amber-950/60 text-amber-400 border border-amber-800/50">Oct 2025 - Feb 2026</span>
+              <span data-i18n="proj1_date" class="px-2.5 py-0.5 text-[11px] font-mono rounded-full bg-amber-950/60 text-amber-400 border border-amber-800/50">Aug 2025 - Feb 2026 (Graz Competition)</span>
               <span class="px-2.5 py-0.5 text-[11px] font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">ESP32 & Servos</span>
               <span class="px-2.5 py-0.5 text-[11px] font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">Unity ML-Agents (PPO)</span>
             </div>
 
             <h3 data-i18n="proj1_title" class="text-2xl font-bold text-foreground font-heading tracking-tight">Crazy Car: Autonomous AI/RL RC Car</h3>
-            <p data-i18n="proj1_desc" class="text-xs text-muted leading-relaxed">Rebuilt a €30 Amazon RC car with custom microcontroller hardware & servos. Trained a PPO AI agent in Unity ML-Agents to directly control motor PWM and steering.</p>
+            <p data-i18n="proj1_desc" class="text-xs text-muted leading-relaxed">Our first major robotics experiment built from a €30 Amazon RC car. Trained a neural policy in Unity ML-Agents to directly control motor PWM and steering, serving as an invaluable hands-on learning testbed.</p>
 
             <ul class="space-y-2 text-xs text-zinc-300 list-disc list-inside font-mono border-t border-border pt-4">
-              <li data-i18n="proj1_b1">Trained neural network taking velocity, IMU, and 3 ToF distance sensors to directly output motor speed & servo steering angle (no intermediate PID).</li>
-              <li data-i18n="proj1_b2">Quantized ONNX model weights to Int8 and coded a custom lightweight neural network inference engine directly on ESP32.</li>
-              <li data-i18n="proj1_b3">Identified Graz competition failure (EMI / high-current voltage sag interrupting sensor traces); led to starting next project 8 months early!</li>
+              <li data-i18n="proj1_b1">Trained RL agent in Unity ML-Agents (Aug-Dec 2025) taking velocity, IMU, and 3 ToF sensors to directly output motor speed & servo steering angle (no intermediate PID).</li>
+              <li data-i18n="proj1_b2">Faced PCB hardware flaws: IMU trace routing was accidentally omitted during CAD layout, and high motor current noise interrupted sensor signals under load.</li>
+              <li data-i18n="proj1_b3">Completed assembly only days before the Graz competition (Feb 2026); despite 2 intense days of on-site debugging, signal noise prevented driving, teaching us crucial engineering discipline for future projects.</li>
             </ul>
 
             <div class="flex items-center space-x-4 pt-2 text-xs font-mono">
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="text-muted hover:text-sky-400 flex items-center gap-1" data-i18n="link_github">GitHub Repo</a>
-              <a href="projects/crazy-car.html" class="text-sky-400 hover:text-sky-300 font-semibold" data-i18n="link_deepdive">Technical Case Study →</a>
+              <span class="text-amber-400/90 text-[11px] italic">Note: Git was not used for this early project (a mistake corrected on all subsequent work).</span>
+              <a href="projects/crazy-car.html" class="text-sky-400 hover:text-sky-300 font-semibold" data-i18n="link_deepdive">Explore Project Story →</a>
             </div>
           </div>
 
-          <div class="lg:col-span-4 h-48 rounded-2xl bg-zinc-950 border border-border p-4 relative overflow-hidden flex items-center justify-center">
-            <svg class="w-full h-full text-sky-400/80" viewBox="0 0 300 120" fill="none">
-              <rect x="30" y="30" width="100" height="60" rx="8" stroke="#38bdf8" stroke-width="1.5" fill="rgba(56,189,248,0.05)"/>
-              <path d="M 135 60 L 165 60" stroke="#10b981" stroke-width="2" stroke-dasharray="4 4"/>
-              <rect x="170" y="30" width="100" height="60" rx="8" stroke="#10b981" stroke-width="1.5" fill="rgba(16,185,129,0.05)"/>
-              <text x="15" y="112" font-family="monospace" font-size="8" fill="#71717a">UNITY ML-AGENTS RL POLICY → EMBEDDED RC MCU</text>
-            </svg>
+          <div class="lg:col-span-4 h-52 rounded-2xl bg-zinc-950 border border-border overflow-hidden relative group">
+            <img src="data/crazy-car/Picture_Lambo_Closed.jpg" alt="Crazy Car Amazon RC Car Project" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-zinc-950/80 via-transparent to-transparent"></div>
+            <span class="absolute bottom-2 left-3 text-[10px] font-mono text-zinc-300 bg-zinc-900/80 px-2 py-0.5 rounded border border-white/10">30€ Amazon RC Car Hardware</span>
           </div>
         </article>
 

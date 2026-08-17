@@ -43,7 +43,7 @@ export const translations = {
     sig_ch4_val: "CAN / DroneCAN",
     sig_status: "pwm output synced · 10 kHz hardware timer · zero jitter",
 
-    // Terminal Text (ROS2 and SORA removed from grep expertise)
+    // Terminal Text
     term_title: "david@htl-salzburg:~/systems",
     term_cmd_whoami: "whoami",
     term_whoami_desc: "17-year-old Systems Engineer at HTL Elektrotechnik Salzburg specializing in avionics, embedded firmware, electronics planning, and software engineering.",
@@ -133,13 +133,13 @@ export const translations = {
     filter_lowlevel: "Embedded C/C++",
     filter_hardware: "Hardware & Sim",
 
-    // Project 1: Crazy Car
+    // Project 1: Crazy Car (Updated Aug 2025 - Feb 2026, honest post-mortem tone)
     proj1_title: "Crazy Car: Autonomous AI/RL RC Car",
-    proj1_date: "Oct 2025 - Feb 2026 (Competition Graz)",
-    proj1_desc: "Rebuilt a €30 Amazon RC car with custom microcontroller hardware & servos. Trained a PPO AI agent in Unity ML-Agents to directly control motor PWM and steering.",
-    proj1_b1: "Trained neural network taking velocity, IMU, and 3 ToF distance sensors to directly output motor speed & servo steering angle (no intermediate PID).",
-    proj1_b2: "Quantized ONNX model weights to Int8 and coded a custom lightweight neural network inference engine directly on ESP32.",
-    proj1_b3: "Identified Graz competition failure (EMI / high-current voltage sag interrupting sensor traces); led to starting next project 8 months early!",
+    proj1_date: "Aug 2025 - Feb 2026 (Graz Competition)",
+    proj1_desc: "Our first major robotics experiment built from a €30 Amazon RC car. Trained a neural policy in Unity ML-Agents to directly control motor PWM and steering, serving as an invaluable hands-on learning testbed.",
+    proj1_b1: "Trained RL agent in Unity ML-Agents (Aug-Dec 2025) taking velocity, IMU, and 3 ToF sensors to directly output motor speed & servo steering angle (no intermediate PID).",
+    proj1_b2: "Faced PCB hardware flaws: IMU trace routing was accidentally omitted during CAD layout, and high motor current noise interrupted sensor signals under load.",
+    proj1_b3: "Completed assembly only days before the Graz competition (Feb 2026); despite 2 intense days of on-site debugging, signal noise prevented driving, teaching us crucial engineering discipline for future projects.",
 
     // Project 2: 6DoF Sim
     proj2_title: "6DoF Dynamic Motion Simulator Rig",
@@ -184,7 +184,7 @@ export const translations = {
     // Action Links
     link_github: "GitHub Repo",
     link_spec: "Design Spec (PDF)",
-    link_deepdive: "Technical Case Study →",
+    link_deepdive: "Explore Project Story →",
 
     // Footer
     footer_copy: "© 2026 David Sommerer — HTL Elektrotechnik Salzburg."
@@ -227,7 +227,7 @@ export const translations = {
     sig_ch4_val: "CAN / DroneCAN",
     sig_status: "pwm ausgang synchronisiert · 10 kHz hardware timer · zero jitter",
 
-    // Terminal Text (ROS2 and SORA removed from grep expertise)
+    // Terminal Text
     term_title: "david@htl-salzburg:~/systems",
     term_cmd_whoami: "whoami",
     term_whoami_desc: "17-jähriger Systems Engineer an der HTL Elektrotechnik Salzburg spezialisiert auf Avionik, Embedded Firmware, Elektronikplanung und Software Engineering.",
@@ -317,13 +317,13 @@ export const translations = {
     filter_lowlevel: "Embedded C/C++",
     filter_hardware: "Hardware & Sim",
 
-    // Project 1: Crazy Car
+    // Project 1: Crazy Car (Updated Aug 2025 - Feb 2026)
     proj1_title: "Crazy Car: Autonomes KI/RL RC-Car",
-    proj1_date: "Okt 2025 - Feb 2026 (Wettbewerb Graz)",
-    proj1_desc: "Umbau eines 30€ Amazon RC-Cars mit eigener MCU & Servos. Training eines PPO KI-Agenten in Unity ML-Agents zur direkten Motor- und Lenkungssteuerung.",
-    proj1_b1: "Trainiertes neuronales Netz verarbeitet Geschwindigkeit, IMU und 3 ToF-Sensoren zur direkten Ansteuerung von Motor-PWM & Lenkservo (ohne PID-Zwischenschritt).",
-    proj1_b2: "Quantisierung der ONNX-Gewichte auf Int8 und Coden eines eigenen Inferenz-Engine Rechners direkt auf dem ESP32.",
-    proj1_b3: "Fehleranalyse beim Bewerb in Graz (EMV / Spannungseinbruch bei Motorstrom störte Sensor-Leiterbahnen); führte dazu, das nächste Projekt 8 Monate früher zu starten!",
+    proj1_date: "Aug 2025 - Feb 2026 (Wettbewerb Graz)",
+    proj1_desc: "Unser erstes großes Robotik-Experiment auf Basis eines 30€ Amazon RC-Cars. Training eines neuronalen Netzes in Unity ML-Agents zur direkten Steuerung von Motor-PWM & Lenkung als lehrreiches Prototyping-Projekt.",
+    proj1_b1: "Training der KI in Unity ML-Agents (Aug-Dez 2025) mit Eingabe von Geschwindigkeit, IMU & 3 ToF-Sensoren zur direkten Motor- & Servosteuerung (ohne PID-Filter).",
+    proj1_b2: "Hardware-Probleme auf der Platine: Leiterbahnen zum IMU-Sensor wurden beim CAD-Routing vergessen, und hohe Motorströme störten die Sensorsignale.",
+    proj1_b3: "Fertigstellung erst wenige Tage vor dem Bewerb in Graz (Feb 2026); trotz 2 Tagen intensiver Fehlersuche vor Ort reagierte das Auto nicht, was uns wertvolle Lektionen für Foljeprojekte lehrte.",
 
     // Project 2: 6DoF Sim
     proj2_title: "6DoF Dynamischer Fahr-Simulator",
@@ -337,7 +337,7 @@ export const translations = {
     proj3_title: "High-Performance Zero-Allocation EDI Engine",
     proj3_date: "Gestartet April 2026 (Aktives Stealth-Projekt)",
     proj3_desc: "Hochdurchsatz O(1) EDI-Streaming-Engine in <35 MB RAM. Zero-Code Regelwerk über JSON-Konfigurationen (Vertrauliches Business-Projekt).",
-    proj3_b1: "Speicherbedarf strikt auf O(1) (~35 MB RAM) für Multi-Gigabyte EDI/FACT Datenströme.",
+    proj3_b1: "Speicherbedarf strikt auf O(1) (~35 MB RAM) begrenzt für Multi-Gigabyte EDI/FACT Datenströme.",
     proj3_b2: "Zero-Code Parsing-Logik gesteuert über externe JSON-Mapping-Regelwerke (V3/V4 Standards).",
     proj3_b3: "Vollständig Dockerisiert, Microservices-ready und aktuell in kommerzieller Evaluierung für Industriepartner.",
 
@@ -368,7 +368,7 @@ export const translations = {
     // Action Links
     link_github: "GitHub Repo",
     link_spec: "Design Spec (PDF)",
-    link_deepdive: "Technische Case Study →",
+    link_deepdive: "Projektstory & Post-Mortem →",
 
     // Footer
     footer_copy: "© 2026 David Sommerer — HTL Elektrotechnik Salzburg."

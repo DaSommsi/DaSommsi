@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Crazy Car: Autonomous AI/RL RC Car | David Sommerer</title>
-  <meta name="description" content="Technical case study of the Crazy Car autonomous RL project by David Sommerer. €30 Amazon RC car hardware overhaul with ESP32, servo steering, and Unity ML-Agents reinforcement learning.">
+  <meta name="description" content="Project story and post-mortem analysis of the Crazy Car autonomous RC car project by David Sommerer. Unity ML-Agents PPO reinforcement learning, custom ESP32 hardware, and key engineering lessons.">
 
   <!-- Tailwind CSS CDN & Config -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -61,10 +61,10 @@
     <!-- PROJECT TITLE & HEADER -->
     <div class="space-y-4 border-b border-border pb-8">
       <div class="flex flex-wrap gap-2">
-        <span class="px-2.5 py-0.5 text-xs font-mono rounded-full bg-amber-950/60 text-amber-400 border border-amber-800/50">Oct 2025 - Feb 2026 (Graz Competition)</span>
-        <span class="px-2.5 py-0.5 text-xs font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">ESP32 MCU & Servos</span>
-        <span class="px-2.5 py-0.5 text-xs font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">Unity ML-Agents (PPO)</span>
-        <span class="px-2.5 py-0.5 text-xs font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">End-to-End Neural Network</span>
+        <span data-i18n="proj1_date" class="px-2.5 py-0.5 text-xs font-mono rounded-full bg-amber-950/60 text-amber-400 border border-amber-800/50">Aug 2025 - Feb 2026 (Graz Competition)</span>
+        <span class="px-2.5 py-0.5 text-xs font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">30€ Amazon RC Car Hardware</span>
+        <span class="px-2.5 py-0.5 text-xs font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">Unity ML-Agents PPO Policy</span>
+        <span class="px-2.5 py-0.5 text-xs font-mono rounded-full bg-rose-950/60 text-rose-400 border border-rose-800/50">R&D Learning Prototype</span>
       </div>
 
       <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold font-heading text-foreground tracking-tight" data-i18n="proj1_title">
@@ -72,27 +72,27 @@
       </h1>
 
       <p class="text-sm sm:text-base text-muted font-mono leading-relaxed" data-i18n="proj1_desc">
-        Rebuilt a €30 Amazon RC car with custom microcontroller hardware & servos. Trained a PPO AI agent in Unity ML-Agents to directly control motor PWM and steering.
+        Our first major robotics experiment built from a €30 Amazon RC car. Trained a neural policy in Unity ML-Agents to directly control motor PWM and steering, serving as an invaluable hands-on learning testbed.
       </p>
     </div>
 
     <!-- PROJECT METRICS GRID -->
     <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 font-mono text-xs">
       <div class="p-4 rounded-2xl bg-zinc-900/60 border border-border">
-        <div class="text-muted text-[10px]">Base Vehicle</div>
-        <div class="text-sky-400 font-bold text-sm mt-1">€30 Amazon RC Chassis</div>
+        <div class="text-muted text-[10px]">Base Platform</div>
+        <div class="text-amber-400 font-bold text-sm mt-1">€30 Amazon RC Car</div>
       </div>
       <div class="p-4 rounded-2xl bg-zinc-900/60 border border-border">
-        <div class="text-muted text-[10px]">AI Architecture</div>
-        <div class="text-emerald-400 font-bold text-sm mt-1">PPO End-to-End (Int8)</div>
+        <div class="text-muted text-[10px]">Microcontroller</div>
+        <div class="text-sky-400 font-bold text-sm mt-1">ESP32 Dev Module</div>
       </div>
       <div class="p-4 rounded-2xl bg-zinc-900/60 border border-border">
-        <div class="text-muted text-[10px]">Onboard Control</div>
-        <div class="text-foreground font-bold text-sm mt-1">ESP32 Custom Neural Calc</div>
+        <div class="text-muted text-[10px]">Control Architecture</div>
+        <div class="text-foreground font-bold text-sm mt-1">End-to-End Direct AI</div>
       </div>
       <div class="p-4 rounded-2xl bg-zinc-900/60 border border-border">
-        <div class="text-muted text-[10px]">Sensors</div>
-        <div class="text-foreground font-bold text-sm mt-1">3x ToF, IMU, Velocity</div>
+        <div class="text-muted text-[10px]">Version Control</div>
+        <div class="text-rose-400 font-bold text-sm mt-1">None (Lessons Learned)</div>
       </div>
     </div>
 
@@ -105,72 +105,82 @@
 
       <div class="space-y-4 font-mono text-xs border-l-2 border-slate-800 pl-4">
         <div class="space-y-1">
-          <span class="text-sky-400 font-bold">Oct 2025: Project Kickoff</span>
-          <p class="text-muted font-sans">Bought a €30 Lamborghini RC car from Amazon. Overhauled stock receiver with custom microcontroller wiring & servo steering mounts.</p>
+          <span class="text-sky-400 font-bold">Aug 2025 – Dec 2025: Parallel Development (AI Training & Hardware Build)</span>
+          <p class="text-muted font-sans">
+            As project lead, I spent hundreds of hours coding and training neural networks in Unity ML-Agents. Used progressive learning curriculum—starting on simple ovals before advancing to complex track layouts. Simultaneously modified the €30 Amazon RC car chassis and designed our custom PCB.
+          </p>
         </div>
         <div class="space-y-1">
-          <span class="text-sky-400 font-bold">Nov - Dec 2025: Unity ML-Agents Training</span>
-          <p class="text-muted font-sans">Coded progressive learning track environments in Unity. Trained PPO AI agent taking velocity, IMU, and 3 ToF distance inputs to directly drive motor % and servo %.</p>
+          <span class="text-amber-400 font-bold">Jan 2026 – Feb 2026: Late Hardware Assembly & Discovery of Flaws</span>
+          <p class="text-muted font-sans">
+            Final vehicle assembly was delayed, completing only days before the Graz competition. Bench testing revealed critical hardware oversights: IMU PCB traces were accidentally missing from the printed circuit board, and high motor current induced voltage sags that reset sensor readings.
+          </p>
         </div>
         <div class="space-y-1">
-          <span class="text-emerald-400 font-bold">Jan 2026: ESP32 Quantized Inference</span>
-          <p class="text-muted font-sans">Exported ONNX neural model to Int8 weights and wrote a custom C++ matrix calculator engine running directly on the ESP32 chip.</p>
-        </div>
-        <div class="space-y-1">
-          <span class="text-amber-400 font-bold">Feb 2026: Graz Competition & Debugging</span>
-          <p class="text-muted font-sans">Competed in Graz. Encountered signal loss due to missing IMU PCB traces & motor EMI interference. Spent 2 days troubleshooting root cause.</p>
+          <span class="text-rose-400 font-bold">Feb 2026: Graz Competition Attempt & Valuable Engineering Post-Mortem</span>
+          <p class="text-muted font-sans">
+            We traveled to the Graz competition determined to troubleshoot on-site. We spent 2 intense days debugging power lines and sensor noise, but couldn't get the vehicle to drive reliably. This failure became our strongest catalyst—prompting us to start our 2027 Ground Effect successor 8 months early with strict git version control, MPC control algorithms, and proper power isolation.
+          </p>
         </div>
       </div>
     </div>
 
-    <!-- TECHNICAL CASE STUDY & FAILURE ANALYSIS -->
+    <!-- TECHNICAL POST-MORTEM & CHALLENGES -->
     <div class="space-y-8 font-sans text-sm leading-relaxed text-zinc-300">
       
       <!-- Section 1 -->
       <div class="space-y-3">
-        <h2 class="text-xl font-bold font-heading text-foreground">1. End-to-End Neural Network Control Architecture</h2>
+        <h2 class="text-xl font-bold font-heading text-foreground">1. Direct End-to-End AI Control Experiment</h2>
         <p>
-          Unlike classical robotics pipelines that use separate state estimators, path planners, and PID loops, we designed a direct end-to-end neural network policy. The model takes a 7-element state vector (vehicle velocity, 3-axis IMU pitch/roll/yaw rates, and 3 Time-of-Flight distance sensor readings) and directly predicts continuous control values for motor PWM percentage and steering servo angle.
+          Unlike conventional autonomous vehicles that use a cascaded controller (such as a PID loop for motor speed and steering angle), our model directly output motor duty cycle percentage and servo angle from raw sensor inputs (velocity, IMU acceleration, and 3 Time-of-Flight distance sensors). While this worked brilliantly in the Unity physics simulator, real-world motor latency and sensor noise created unbuffered instability.
         </p>
       </div>
 
-      <!-- Section 2: Failure Analysis -->
-      <div class="space-y-3 p-6 rounded-2xl bg-amber-950/20 border border-amber-500/30">
-        <h2 class="text-xl font-bold font-heading text-amber-300 flex items-center gap-2">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
-          <span data-i18n="problems_title">Engineering Challenges & Root Cause Failures</span>
-        </h2>
-        <p class="text-xs font-mono text-zinc-300 leading-relaxed">
-          <strong>The Graz Competition Failure:</strong> During custom PCB routing in SolidEdge, trace connections to the IMU sensor were accidentally omitted. When driving the car under high load at the Graz competition in Feb 2026, high motor current spikes generated severe Electromagnetic Interference (EMI) and voltage sags, crashing the ESP32 I2C sensor bus.
+      <!-- Section 2 -->
+      <div class="space-y-3">
+        <h2 class="text-xl font-bold font-heading text-foreground">2. PCB Hardware Flaws & Electrical Noise</h2>
+        <p>
+          During custom PCB layout, the trace routing connecting the IMU sensor was inadvertently omitted. In addition, powering the high-draw drive motor from the shared power rail caused severe electromagnetic interference (EMI) and voltage sags under acceleration, corrupting ToF sensor readings.
         </p>
       </div>
 
-      <!-- Section 3: Key Learnings -->
-      <div class="space-y-3 p-6 rounded-2xl bg-emerald-950/20 border border-emerald-500/30">
-        <h2 class="text-xl font-bold font-heading text-emerald-300 flex items-center gap-2">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 18 0 0118 0z"/></svg>
-          <span data-i18n="learnings_title">Key Lessons & What We Learned</span>
-        </h2>
-        <ul class="list-disc list-inside space-y-2 font-mono text-xs text-zinc-300">
-          <li><strong>Actuator Buffering:</strong> Always insert a PID or low-pass filter between raw AI neural network outputs and physical motor/servo drivers.</li>
-          <li><strong>Timeline Discipline:</strong> Never finish hardware assembly 1 week before a competition. Start at least 6-8 months ahead!</li>
-          <li><strong>Successor Action:</strong> Led directly to starting our 2027 Ground Effect Vehicle project 8 months early in April 2026.</li>
-        </ul>
+      <!-- Section 3 -->
+      <div class="space-y-3 border-l-2 border-amber-500/50 pl-4 py-1 bg-amber-950/10">
+        <h3 class="text-base font-bold text-amber-400 font-mono">Honest Reflection on Version Control & Timing</h3>
+        <p class="text-xs text-zinc-300">
+          Looking back, not utilizing Git version control was a significant mistake that hindered code tracking during late-night debugging. Furthermore, finishing hardware assembly just days before competition left zero buffer for real-world calibration. We embraced these lessons immediately: all subsequent projects enforce Git source control, modular testing, and decoupled power distribution.
+        </p>
       </div>
 
     </div>
 
-    <!-- MEDIA & CODE GALLERY PLACEHOLDERS -->
-    <div class="space-y-4">
+    <!-- REAL PROJECT MEDIA GALLERY -->
+    <div class="space-y-6 border-t border-border pt-8">
       <h2 class="text-lg font-bold font-heading text-foreground" data-i18n="gallery_title">Project Media, Code & CAD Assets</h2>
+      
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 font-mono text-xs">
-        <div class="h-44 rounded-2xl bg-zinc-950 border border-border p-4 flex flex-col justify-between items-center text-center">
-          <svg class="w-8 h-8 text-sky-400/60 mt-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-          <span class="text-muted text-[11px] mb-2">[Photo Upload Placeholder: RC Car Custom PCB & Servo Steering Assembly]</span>
+        <!-- Photo 1: Closed Lambo -->
+        <div class="rounded-2xl bg-zinc-950 border border-border overflow-hidden space-y-2 p-2">
+          <img src="../data/crazy-car/Picture_Lambo_Closed.jpg" alt="Crazy Car Closed Chassis" class="w-full h-48 object-cover rounded-xl">
+          <div class="px-2 pb-1 text-[11px] text-muted">Figure 1: Completed €30 Amazon Lambo RC Car modification chassis.</div>
         </div>
-        <div class="h-44 rounded-2xl bg-zinc-950 border border-border p-4 flex flex-col justify-between items-center text-center">
-          <svg class="w-8 h-8 text-emerald-400/60 mt-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
-          <span class="text-muted text-[11px] mb-2">[Video/GIF Upload Placeholder: Unity ML-Agents 3D Track Progressive Training]</span>
+
+        <!-- Photo 2: Open Lambo & PCB -->
+        <div class="rounded-2xl bg-zinc-950 border border-border overflow-hidden space-y-2 p-2">
+          <img src="../data/crazy-car/Picture_Lambo_Open.jpg" alt="Crazy Car Internal Electronics" class="w-full h-48 object-cover rounded-xl">
+          <div class="px-2 pb-1 text-[11px] text-muted">Figure 2: Internal hardware layout showing ESP32, ToF sensors, and custom PCB.</div>
+        </div>
+
+        <!-- Photo 3: 3D PCB Render -->
+        <div class="rounded-2xl bg-zinc-950 border border-border overflow-hidden space-y-2 p-2">
+          <img src="../data/crazy-car/Lambo_RC_Car_PCB_3D.png" alt="Custom PCB 3D Render" class="w-full h-48 object-cover rounded-xl bg-zinc-900">
+          <div class="px-2 pb-1 text-[11px] text-muted">Figure 3: 3D CAD rendering of the custom microcontroller PCB.</div>
+        </div>
+
+        <!-- Photo 4: Racing Track -->
+        <div class="rounded-2xl bg-zinc-950 border border-border overflow-hidden space-y-2 p-2">
+          <img src="../data/crazy-car/Picture_Racing_Track.jpg" alt="Physical Racing Track" class="w-full h-48 object-cover rounded-xl">
+          <div class="px-2 pb-1 text-[11px] text-muted">Figure 4: Physical racetrack layout mapped identically to the Unity ML-Agents environment.</div>
         </div>
       </div>
     </div>
@@ -178,7 +188,7 @@
     <!-- FOOTER ACTIONS -->
     <div class="pt-8 border-t border-border flex items-center justify-between font-mono text-xs">
       <a href="../index.html" class="text-primary hover:text-white transition-colors" data-i18n="back_overview">← Back to Main Portfolio</a>
-      <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="text-muted hover:text-white transition-colors">View GitHub Repository →</a>
+      <span class="text-muted italic">Note: Code repository was unversioned for this early experiment.</span>
     </div>
 
   </main>
