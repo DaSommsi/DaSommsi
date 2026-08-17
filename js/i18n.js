@@ -53,9 +53,9 @@ export const translations = {
     term_conf_val: "avionics=true  embedded_cpp=true  electronics=true  software_eng=true",
     term_cmd_products: "./projects --list",
     term_p1: "> Crazy Car Autonomous RL - €30 RC car with ESP32 & Unity ML-Agents.",
-    term_p2: "> 6DoF Driving Simulator - Restored HTL motion rig with cable isolation.",
-    term_p3: "> EDI-to-JSONL Parser - Zero-allocation 2.4 GB/s C++20 streaming engine.",
-    term_p4: "> Tri-Tilt-Rotor SAR VTOL - Heavy-lift BVLOS drone with SORA SAIL II.",
+    term_p2: "> 6DoF Driving Simulator - Fully restored & repaired HTL 6DoF motion simulator.",
+    term_p3: "> EDI-to-JSONL Parser - Zero-allocation +40 MB/s end-to-end C++20 streaming engine.",
+    term_p4: "> Tri-Tilt-Rotor SAR VTOL - Search & rescue VTOL drone for person location & GPS telemetry broadcasting.",
 
     // 3 Quick Cards Below Hero
     card1_title: "Education & Schooling",
@@ -70,9 +70,9 @@ export const translations = {
     card2_topic1: "Crazy Car Autonomous RL",
     card2_desc1: "€30 RC car rebuilt with ESP32, AI trained in Unity ML-Agents.",
     card2_topic2: "6DoF Driving Simulator",
-    card2_desc2: "Restored school motion rig, physical signal/power cable isolation.",
+    card2_desc2: "Fully restored school motion rig, physical signal/power wiring & control.",
     card2_topic3: "Tri-Tilt-Rotor SAR VTOL",
-    card2_desc3: "BVLOS search & rescue drone with AustroControl SORA SAIL II.",
+    card2_desc3: "Search & rescue VTOL drone transmitting live GPS position data.",
 
     card3_handle: "currently learning",
     card3_topic1: "Linux / Ubuntu",
@@ -186,24 +186,24 @@ export const translations = {
     // Project 2: 6DoF Sim
     proj2_title: "6DoF Dynamic Motion Simulator Rig",
     proj2_date: "May 2025 - Jan 2026 (Finished for HTL Open Door Day)",
-    proj2_desc: "Restored a broken, legacy 6DoF motion rig at HTL Salzburg by solving severe EMI noise via physical signal/power cable isolation and custom C++ control software.",
-    proj2_b1: "Diagnosed root cause EMI interference; physically separated signal & power wiring and built a custom electrical distribution fuse box.",
+    proj2_desc: "Fully restored and repaired a broken, legacy 6DoF motion rig at HTL Salzburg by diagnosing electrical/mechanical faults and building custom C++ control software.",
+    proj2_b1: "Diagnosed root cause EMI interference and mechanical faults; separated signal & power wiring and built a custom electrical distribution fuse box.",
     proj2_b2: "Wrote modular C++ control software and secured €2,000 monitors & €3.5k gaming PC sponsorships from department leadership.",
     proj2_b3: "Featured as the main highlight at HTL Salzburg Open Door Day 2026; proved David's passion for avionics & embedded electronics.",
 
     // Project 3: EDI Parser
     proj3_title: "High-Performance Zero-Allocation EDI Engine",
     proj3_date: "Started April 2026 (Active Stealth Project)",
-    proj3_desc: "High-throughput O(1) EDI streaming engine running in <35 MB RAM. Zero code configuration engine using JSON schema rules (Stealth Commercial Project).",
-    proj3_b1: "Binds memory footprint to strictly O(1) (~35 MB RAM) for multi-gigabyte industrial EDI/FACT data streams.",
+    proj3_desc: "High-throughput O(1) EDI streaming engine processing +40 MB/s end-to-end (from file transmission to final reception) in <35 MB RAM.",
+    proj3_b1: "Binds memory footprint to strictly O(1) (~35 MB RAM) while maintaining +40 MB/s end-to-end processing speeds.",
     proj3_b2: "Engineered zero-code parsing logic driven dynamically by external JSON mapping configurations (V3/V4 standards).",
     proj3_b3: "Fully Dockerized, microservices-ready architecture currently under commercial evaluation for industrial partnerships.",
 
     // Project 4: Tri-Tilt SAR VTOL
     proj4_title: "Tri-Tilt-Rotor SAR VTOL Drone (Diploma Thesis)",
     proj4_date: "Started June 2026 • Target 2028 (Diploma Thesis)",
-    proj4_desc: "BVLOS Search & Rescue 3-rotor VTOL drone built under AustroControl SORA SAIL II safety guidelines. Dual Pixhawk FMU + Nvidia Jetson ROS2 swarm architecture.",
-    proj4_b1: "Designed for Alpine Search & Rescue with thermal IR camera AI person detection, GPS-jamming optical flow mapping (±2m precision), and parachute deployment.",
+    proj4_desc: "Search & rescue 3-rotor VTOL drone engineered to locate missing persons and broadcast live GPS coordinates to emergency ground teams.",
+    proj4_b1: "Engineered for Alpine Search & Rescue with thermal IR AI person detection and live GPS coordinate broadcasting to rescue teams.",
     proj4_b2: "Specs: 15-20 kg mass, 3m wingspan, 130 km/h top speed, 85 km/h cruise speed, 120-400m operational altitude (up to 4000m travel mode).",
     proj4_b3: "In active sponsorship & testing site talks with the Austrian Armed Forces (Österreichisches Bundesheer).",
 
@@ -279,9 +279,9 @@ export const translations = {
     term_conf_val: "avionik=true  embedded_cpp=true  elektronik=true  software_eng=true",
     term_cmd_products: "./projects --list",
     term_p1: "> Crazy Car Autonomes RL - 30€ RC Car mit ESP32 & Unity ML-Agents.",
-    term_p2: "> 6DoF Fahr-Simulator - Restaurierung des HTL-Simulators mit Kabeltrennung.",
-    term_p3: "> EDI-to-JSONL Parser - Zero-Allocation 2.4 GB/s C++20 Streaming Engine.",
-    term_p4: "> Tri-Tilt-Rotor SAR VTOL - Schwere BVLOS Drohne nach SORA SAIL II.",
+    term_p2: "> 6DoF Fahr-Simulator - Vollständig restaurierter & reparierter HTL 6DoF Bewegungssimulator.",
+    term_p3: "> EDI-to-JSONL Parser - Zero-Allocation +40 MB/s End-to-End C++20 Streaming Engine.",
+    term_p4: "> Tri-Tilt-Rotor SAR VTOL - Such- & Rettungs-VTOL-Drohne zur Personensuche & GPS-Telemetrieübertragung.",
 
     // 3 Quick Cards Below Hero
     card1_title: "Ausbildung & Schule",
@@ -296,9 +296,9 @@ export const translations = {
     card2_topic1: "Crazy Car Autonomes RL",
     card2_desc1: "30€ RC Car Umbau mit ESP32, KI-Training in Unity ML-Agents.",
     card2_topic2: "6DoF Fahr-Simulator",
-    card2_desc2: "Restaurierung des HTL-Simulators, physikalische EMV-Kabeltrennung.",
+    card2_desc2: "Vollständig restaurierter HTL Simulator, verkabelt & neu gesteuert.",
     card2_topic3: "Tri-Tilt-Rotor SAR VTOL",
-    card2_desc3: "BVLOS Rettungsdrohne nach AustroControl SORA SAIL II.",
+    card2_desc3: "Such- & Rettungs-VTOL-Drohne mit Live-GPS-Telemetrieübertragung.",
 
     card3_handle: "currently learning",
     card3_topic1: "Linux / Ubuntu",
@@ -365,7 +365,7 @@ export const translations = {
     proj1_desc: "Unser allererstes echtes Ingenieurprojekt neben dem 6DoF Simulator. Wir kauften ein günstiges 30€ Amazon RC-Car, bauten es mit Mikrocontroller und Servo um und trainierten ein KI-Modell in Unity für autonomes Fahren. Ein wichtiges Experiment, um Grenzen zu testen, aus Fehlern zu lernen und bei zukünftigen Bewerben erfolgreich zu sein.",
     proj1_b1: "Training der KI in Unity ML-Agents (Aug-Dez 2025) mit Eingabe von Geschwindigkeit, IMU & 3 ToF-Sensoren zur direkten Motor- & Servosteuerung (ohne PID-Filter).",
     proj1_b2: "Hardware-Probleme auf der Platine: Leiterbahnen zum IMU-Sensor wurden beim CAD-Routing vergessen, und hohe Motorströme störten die Sensorsignale.",
-    proj1_b3: "Fertigstellung erst wenige Tage vor dem Bewerb in Graz (Feb 2026); trotz 2 Tagen intensiver Fehlersuche vor Ort reagierte das Auto nicht, was uns wertvolle Lektionen für Foljeprojekte lehrte.",
+    proj1_b3: "Fertigstellung erst wenige Tage vor dem Bewerb in Graz (Feb 2026); trotz 2 Tagen intensiver Fehlersuche vor Ort reagierte das Auto nicht, was uns wertvolle Lektionen für Folgeprojekte lehrte.",
 
     // Crazy Car Subpage Specific DE Translations
     cc_base_platform: "Basis Platform",
@@ -412,24 +412,24 @@ export const translations = {
     // Project 2: 6DoF Sim
     proj2_title: "6DoF Dynamischer Fahr-Simulator",
     proj2_date: "Mai 2025 - Jan 2026 (Fertiggestellt für Tag der offenen Tür)",
-    proj2_desc: "Restaurierung des defekten 6DoF-Simulators der HTL Salzburg durch Behebung von EMV-Störungen mittels physischer Kabeltrennung und eigener C++ Software.",
-    proj2_b1: "Ursachenanalyse der EMV-Störungen; physische Trennung von Signal- und Leistungskabeln sowie Bau eines Verteilerschranks.",
+    proj2_desc: "Vollständige Restaurierung und Reparatur des defekten 6DoF-Simulators der HTL Salzburg durch Behebung elektrischer/mechanischer Fehler und eigener C++ Software.",
+    proj2_b1: "Diagnose der Ursachen von EMV-Störungen & Mechanikfehlern; Trennung von Signal- und Leistungskabeln sowie Bau eines Verteilerschranks.",
     proj2_b2: "Entwicklung modularer C++ Steuerungsoftware und Sponsoring-Akquise für 2.000€ Monitore & 3,5k€ Gaming-PC beim Abteilungsvorstand.",
     proj2_b3: "Hauptattraktion beim Tag der offenen Tür 2026; Bestätigung für Davids Leidenschaft für Avionik, Hardware-Coding und Elektronikplanung.",
 
     // Project 3: EDI Parser
     proj3_title: "High-Performance Zero-Allocation EDI Engine",
     proj3_date: "Gestartet April 2026 (Aktives Stealth-Projekt)",
-    proj3_desc: "Hochdurchsatz O(1) EDI-Streaming-Engine in <35 MB RAM. Zero-Code Regelwerk über JSON-Konfigurationen (Vertrauliches Business-Projekt).",
-    proj3_b1: "Speicherbedarf strikt auf O(1) (~35 MB RAM) begrenzt für Multi-Gigabyte EDI/FACT Datenströme.",
+    proj3_desc: "High-Throughput O(1) EDI-Streaming-Engine mit +40 MB/s End-to-End Verarbeitungsgeschwindigkeit (vom Senden bis zum Empfang) in <35 MB RAM.",
+    proj3_b1: "Speicherbedarf strikt auf O(1) (~35 MB RAM) begrenzt bei +40 MB/s End-to-End Durchsatz.",
     proj3_b2: "Zero-Code Parsing-Logik gesteuert über externe JSON-Mapping-Regelwerke (V3/V4 Standards).",
     proj3_b3: "Vollständig Dockerisiert, Microservices-ready und aktuell in kommerzieller Evaluierung für Industriepartner.",
 
     // Project 4: Tri-Tilt SAR VTOL
     proj4_title: "Tri-Tilt-Rotor SAR VTOL Drohne (Diplomarbeit)",
     proj4_date: "Gestartet Juni 2026 • Ziel 2028 (Diplomarbeit)",
-    proj4_desc: "BVLOS Rettungsdrohne nach AustroControl SORA SAIL II Richtlinien. Dual Pixhawk FMU + Nvidia Jetson ROS2 Schwarmarchitektur.",
-    proj4_b1: "Entwickelt für alpine Rettungseinsätze mit Wärmebild-KI Personenerkennung, GPS-Jamming-sicherem Optical-Flow (±2m Präzision) und Fallschirm-Auslösung.",
+    proj4_desc: "Such- & Rettungs-VTOL-Drohne mit 3 Schwenk-Rotoren zur Lokalisierung vermisster Personen und Live-Übertragung von GPS-Koordinaten an Rettungsteams.",
+    proj4_b1: "Entwickelt für alpine Rettungseinsätze mit Wärmebild-KI Personenerkennung und Live-GPS-Koordinatenübertragung an Einsatzkräfte.",
     proj4_b2: "Specs: 15-20 kg Masse, 3m Spannweite, 130 km/h Höchstgeschwindigkeit, 85 km/h Reiseflug, 120-400m Einsatzhöhe (bis 4000m im Reisemodus).",
     proj4_b3: "In aktiven Sponsoring- und Testgelände-Gesprächen mit dem Österreichischen Bundesheer.",
 
