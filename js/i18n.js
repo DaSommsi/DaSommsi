@@ -191,6 +191,53 @@ export const translations = {
     proj2_b2: "Wrote modular C++ control software and secured €2,000 monitors & €3.5k gaming PC sponsorships from department leadership.",
     proj2_b3: "Featured as the main highlight at HTL Salzburg Open Door Day 2026; proved David's passion for avionics & embedded electronics.",
 
+    // 6DoF Subpage Specific EN Translations
+    sim_title: "6DoF Dynamic Motion Simulator Rig",
+    sim_date: "May 2025 - Jan 2026 (HTL Open Door Day Highlight)",
+    sim_desc: "In 2nd grade at HTL Salzburg, we took on a non-functional legacy 6DoF Stewart platform motion rig. Through comprehensive electrical troubleshooting, physical cable rewiring, custom fuse box construction, and C++ software development, we fully restored the rig to live operation.",
+    sim_stat1_title: "Actuation Platform",
+    sim_stat1_val: "6-Axis Stewart Platform",
+    sim_stat2_title: "Sponsorship Acquired",
+    sim_stat2_val: "€5,500 (Monitors & PC)",
+    sim_stat3_title: "Software Engine",
+    sim_stat3_val: "Custom C++ Kinematics",
+    sim_stat4_title: "Press Coverage",
+    sim_stat4_val: "Kronen Zeitung & HTL IG",
+
+    sim_time1_title: "May 2025: Discovery & Comprehensive Diagnosis",
+    sim_time1_desc: "During our 2nd grade at HTL Salzburg, we discovered a non-functional legacy 6DoF motion rig sitting forgotten in the workshop. We initiated a systemic tear-down, tracing every electrical connection, motor controller, and power line to diagnose root cause failures.",
+    
+    sim_time2_title: "Summer – Autumn 2025: Rewiring & Custom Fuse Box Construction",
+    sim_time2_desc: "We solved severe signal jitter and random cut-outs by completely rewiring the platform. Teammate designed a custom power distribution fuse box while we physically isolated high-current AC/DC motor power cables away from delicate sensor & control telemetry lines.",
+
+    sim_time3_title: "Nov – Dec 2025: C++ Software Engine & Department Sponsorship",
+    sim_time3_desc: "I engineered the C++ control software connecting telemetry stream data to the motor actuator controllers over serial/CAN bus. To complete the simulator, I presented a professional proposal to department heads, successfully securing €2,000 in triple monitors and a €3,500 high-performance gaming PC.",
+
+    sim_time4_title: "Jan 2026: Public Feature at HTL Open Door Day & Media Coverage",
+    sim_time4_desc: "The restored simulator debuted as the absolute flagship exhibit at HTL Salzburg Open Door Day 2026. Hundreds of visitors drove realistic laps, earning the project coverage in Austria's Kronen Zeitung newspaper and an official HTL Instagram Reel spotlight!",
+
+    sim_sec1_title: "1. Systemic Electrical Repair & Physical Cable Isolation",
+    sim_sec1_desc: "The primary challenge was resolving severe electromagnetic interference (EMI) and power sags that caused the linear actuators to stall randomly. By completely separating high-voltage power feeds from micro-level signal cables and building a custom fuse box, we restored 100% electrical stability.",
+
+    sim_sec2_title: "2. Custom C++ Control Engine & Kinematics",
+    sim_sec2_desc: "I developed the modular C++ telemetry reader and control engine. The software receives live telemetry physics data from racing simulators (Assetto Corsa / F1), calculates inverse kinematics for the 6 linear actuators, and outputs synchronized PWM/CAN position targets in real time.",
+
+    sim_sec3_title: "Key Lessons & Impact on Career Focus",
+    sim_sec3_b1: "Hands-on mastery of EMC isolation, high-voltage wiring, and power distribution fuse boxes.",
+    sim_sec3_b2: "Practical C++ software engineering experience interfacing real-time telemetry to physical actuators.",
+    sim_sec3_b3: "This successful restoration solidified my determination to pursue Avionics, Flight Control Systems, and Embedded Hardware.",
+
+    sim_media_sub: "Real video of the 6DoF motion rig operating live during racing simulation, CAD 3D assembly models, and MATLAB kinematic simulation plots.",
+    sim_fig1: "Figure 1: CAD 3D concept model of the 6DoF Stewart platform motion chassis.",
+    sim_fig2: "Figure 2: MATLAB kinematic simulation trajectory plot for actuator displacement.",
+    sim_fig3: "Video 1: Live demonstration video of the restored 6DoF simulator operating during a high-speed racing run.",
+
+    sim_press_heading: "Press Articles, Instagram Reel & GitHub Source Code",
+    sim_press_sub: "Featured in Kronen Zeitung, official HTL Salzburg Instagram media, and complete C++ source code on GitHub.",
+    sim_link_krone: "Kronen Zeitung Article",
+    sim_link_insta: "HTL Instagram Reel Video",
+    sim_link_repo: "GitHub Repository (C++ Code)",
+
     // Project 3: EDI Parser
     proj3_title: "High-Performance Zero-Allocation EDI Engine",
     proj3_date: "Started April 2026 (Active Stealth Project)",
@@ -416,6 +463,53 @@ export const translations = {
     proj2_b1: "Diagnose der Ursachen von EMV-Störungen & Mechanikfehlern; Trennung von Signal- und Leistungskabeln sowie Bau eines Verteilerschranks.",
     proj2_b2: "Entwicklung modularer C++ Steuerungsoftware und Sponsoring-Akquise für 2.000€ Monitore & 3,5k€ Gaming-PC beim Abteilungsvorstand.",
     proj2_b3: "Hauptattraktion beim Tag der offenen Tür 2026; Bestätigung für Davids Leidenschaft für Avionik, Hardware-Coding und Elektronikplanung.",
+
+    // 6DoF Subpage Specific DE Translations
+    sim_title: "6DoF Dynamischer Fahr-Simulator",
+    sim_date: "Mai 2025 - Jan 2026 (Highlights beim Tag der offenen Tür)",
+    sim_desc: "In der 2. Klasse an der HTL Salzburg übernahmen wir einen defekten 6DoF Bewegungssimulator. Durch systemische Fehlersuche, physikalische Neuverdrahtung, Bau eines Verteilerschranks und C++ Softwareentwicklung bauten wir den Simulator komplett neu auf.",
+    sim_stat1_title: "Bewegungs-Plattform",
+    sim_stat1_val: "6-Achsen Stewart-Plattform",
+    sim_stat2_title: "Sponsoring Akquiriert",
+    sim_stat2_val: "5.500€ (Monitore & Gaming-PC)",
+    sim_stat3_title: "Software Engine",
+    sim_stat3_val: "Eigene C++ Kinematik",
+    sim_stat4_title: "Presse & Medien",
+    sim_stat4_val: "Kronen Zeitung & HTL IG",
+
+    sim_time1_title: "Mai 2025: Entdeckung & Systemische Fehlerdiagnose",
+    sim_time1_desc: "In der 2. Klasse an der HTL Salzburg entdeckten wir einen defekten, ungenutzten 6DoF Simulator in der Werkstatt. Wir starteten eine vollständige Zerlegung und verfolgten alle Kabel, Motorsteuerung und Stromleitungen zurück.",
+
+    sim_time2_title: "Sommer – Herbst 2025: Neuverkabelung & eigener Verteilerschrank",
+    sim_time2_desc: "Wir behoben Motorstörungen und Not-Aus-Fehler durch komplette Neuverkabelung. Mein Teamkollege entwarf einen Verteilerschrank, während wir Starkstromkabel physisch getrennt von empfindlichen Datenleitungen verlegten.",
+
+    sim_time3_title: "Nov – Dez 2025: C++ Software & Abteilungssponsoring",
+    sim_time3_desc: "Ich entwickelte die C++ Steuerungssoftware zur Übertragung von Telemetriedaten an die Aktuatoren. Mit einer professionellen Präsentation beim Abteilungsvorstand akquirierten wir 2.000€ für 3 Monitore und 3.500€ für einen High-End Gaming-PC.",
+
+    sim_time4_title: "Jan 2026: Premiere beim Tag der offenen Tür & Zeitungsbericht",
+    sim_time4_desc: "Der restaurierte Simulator war das absolute Highlight beim Tag der offenen Tür 2026 der HTL Salzburg. Hunderte Besucher fuhren Testrunden, was dem Projekt Berichte in der Kronen Zeitung und auf dem HTL Instagram-Kanal einbrachte!",
+
+    sim_sec1_title: "1. Systemische Reparatur & Physische Kabeltrennung",
+    sim_sec1_desc: "Die Hauptaufgabe war die Behebung von EMV-Störungen und Spannungseinbrüchen, die zum zufälligen Blockieren der Aktuatoren führten. Durch die Trennung von Leistungskabeln und Steuerleitungen sowie den Bau eines Verteilerschranks erreichten wir 100% elektrische Stabilität.",
+
+    sim_sec2_title: "2. Eigene C++ Steuerungs-Engine & Inverse Kinematik",
+    sim_sec2_desc: "Ich entwickelte das modulare C++ Programm. Die Software liest Telemetriedaten aus Rennsimulationen (Assetto Corsa / F1), berechnet die inverse Kinematik für die 6 Zylinder und sendet synchrone Positionssignale an die Motorsteuerung.",
+
+    sim_sec3_title: "Key Learnings & Einfluss auf Berufswunsch",
+    sim_sec3_b1: "Praktische Erfahrung in EMV-Kabeltrennung, Starkstromverdrahtung und Verteilerschrankbau.",
+    sim_sec3_b2: "Software-Engineering in C++ zur Ansteuerung physischer Aktuatoren in Echtzeit.",
+    sim_sec3_b3: "Diese erfolgreiche Restaurierung festigte meinen Wunsch, in der Avionik, Flugregelung und Embedded Hardware zu arbeiten.",
+
+    sim_media_sub: "Echtes Demonstration-Video des 6DoF Simulators im Live-Rennbetrieb, CAD 3D-Modell der Stewart-Plattform und MATLAB-Kinematik-Plot.",
+    sim_fig1: "Abbildung 1: CAD 3D-Konstruktionsmodell des 6DoF Stewart-Plattform Fahrsimulators.",
+    sim_fig2: "Abbildung 2: MATLAB-Kinematik-Simulationsplot der Zylinder-Auslenkungen.",
+    sim_fig3: "Video 1: Demonstration des restaurierten 6DoF Simulators im Live-Rennbetrieb.",
+
+    sim_press_heading: "Zeitungsbericht, Instagram Reel & GitHub Code",
+    sim_press_sub: "Berichtet in der Kronen Zeitung, im offiziellen HTL Salzburg Instagram-Kanal und auf GitHub.",
+    sim_link_krone: "Kronen Zeitung Bericht",
+    sim_link_insta: "HTL Instagram Reel Video",
+    sim_link_repo: "GitHub Repository (C++ Code)",
 
     // Project 3: EDI Parser
     proj3_title: "High-Performance Zero-Allocation EDI Engine",

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>6DoF Dynamic Motion Simulator Rig | David Sommerer</title>
-  <meta name="description" content="Technical case study of the 6DoF Motion Simulator Rig by David Sommerer. Restoration of legacy school motion platform, physical signal cable EMI isolation, C++ control software, and HTL Open Door Day feature.">
+  <meta name="description" content="Project story and restoration engineering analysis of the 6DoF Motion Simulator Rig by David Sommerer. Systemic electrical repair, custom C++ control engine, Kronen Zeitung feature, and HTL Instagram Reel.">
 
   <!-- Tailwind CSS CDN & Config -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -32,153 +32,297 @@
   <!-- Custom Styles stylesheet -->
   <link rel="stylesheet" href="../css/style.css">
 </head>
-<body class="bg-[#05050a] text-zinc-200 antialiased selection:bg-sky-500/30 selection:text-sky-300 min-h-screen">
+<body class="bg-[#05050a] text-zinc-200 antialiased selection:bg-sky-500/30 selection:text-sky-300 min-h-screen relative overflow-x-hidden">
+
+  <!-- ENHANCED AMBIENT BACKGROUND DEPTH -->
+  <div class="pointer-events-none fixed inset-0 z-0 overflow-hidden">
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-[radial-gradient(ellipse_at_top,rgba(56,189,248,0.15),transparent_70%)]"></div>
+    <div class="absolute top-1/2 -left-32 w-[600px] h-[600px] bg-[radial-gradient(circle_at_center,rgba(16,185,129,0.08),transparent_60%)]"></div>
+    <div class="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
+  </div>
 
   <!-- STICKY HEADER -->
-  <header class="sticky top-0 z-40 w-full backdrop-blur-md bg-[#05050a]/80 border-b border-white/5 transition-all duration-300">
+  <header class="sticky top-0 z-40 w-full backdrop-blur-md bg-[#05050a]/85 border-b border-white/10 transition-all duration-300">
     <div class="max-w-6xl mx-auto px-6 md:px-12 h-16 flex items-center justify-between">
       
       <!-- Back Link & Identity -->
       <div class="flex items-center space-x-4">
-        <a href="../index.html" class="flex items-center space-x-2 text-xs font-mono text-primary hover:text-white transition-colors">
+        <a href="../index.html" class="flex items-center space-x-2 text-sm font-mono text-primary hover:text-white transition-colors">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
           <span data-i18n="back_overview">← Back to Main Portfolio</span>
         </a>
         <span class="text-zinc-700 text-xs">/</span>
-        <span class="text-xs font-mono text-muted">david sommerer</span>
+        <span class="text-xs sm:text-sm font-mono text-muted">david sommerer</span>
       </div>
 
       <!-- Language Toggle EN | DE -->
       <div class="flex items-center space-x-1 p-1 rounded-full bg-zinc-900 border border-border">
-        <button data-lang-btn="en" class="px-2.5 py-0.5 rounded-full text-[11px] font-bold text-sky-400">EN</button>
-        <button data-lang-btn="de" class="px-2.5 py-0.5 rounded-full text-[11px] text-muted hover:text-foreground">DE</button>
+        <button data-lang-btn="en" class="px-3 py-0.5 rounded-full text-xs font-bold text-sky-400">EN</button>
+        <button data-lang-btn="de" class="px-3 py-0.5 rounded-full text-xs text-muted hover:text-foreground">DE</button>
       </div>
     </div>
   </header>
 
-  <main class="max-w-4xl mx-auto px-6 md:px-12 py-12 space-y-12">
+  <main class="max-w-4xl mx-auto px-6 md:px-12 py-12 space-y-12 relative z-10">
 
     <!-- PROJECT TITLE & HEADER -->
-    <div class="space-y-4 border-b border-border pb-8">
-      <div class="flex flex-wrap gap-2">
-        <span class="px-2.5 py-0.5 text-xs font-mono rounded-full bg-emerald-950/60 text-emerald-400 border border-emerald-800/50">May 2025 - Jan 2026 (Completed)</span>
-        <span class="px-2.5 py-0.5 text-xs font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">6DoF Stewart Platform</span>
-        <span class="px-2.5 py-0.5 text-xs font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">C++ Control Software</span>
-        <span class="px-2.5 py-0.5 text-xs font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">HTL Salzburg Open Door Day Feature</span>
+    <div class="space-y-6 border-b border-white/10 pb-10">
+      <div class="flex flex-wrap gap-2.5">
+        <span data-i18n="sim_date" class="px-3 py-1 text-xs font-mono rounded-full bg-emerald-950/80 text-emerald-300 font-bold border border-emerald-500/50 glow-dot-emerald">May 2025 - Jan 2026 (HTL Open Door Day Highlight)</span>
+        <span class="px-3 py-1 text-xs font-mono rounded-full bg-sky-950/80 text-sky-300 border border-sky-500/40">6-Axis Stewart Platform</span>
+        <span class="px-3 py-1 text-xs font-mono rounded-full bg-sky-950/80 text-sky-300 border border-sky-500/40">Custom C++ Kinematics Engine</span>
+        <span class="px-3 py-1 text-xs font-mono rounded-full bg-amber-950/80 text-amber-300 border border-amber-500/40 glow-dot-amber">Kronen Zeitung & Instagram Spotlight</span>
       </div>
 
-      <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold font-heading text-foreground tracking-tight" data-i18n="proj2_title">
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold font-heading text-foreground tracking-tight leading-tight" data-i18n="sim_title">
         6DoF Dynamic Motion Simulator Rig
       </h1>
 
-      <p class="text-sm sm:text-base text-muted font-mono leading-relaxed" data-i18n="proj2_desc">
-        Restored a broken, legacy 6DoF motion rig at HTL Salzburg by solving severe EMI noise via physical signal/power cable isolation and custom C++ control software.
+      <p class="text-base sm:text-lg text-zinc-300 font-mono leading-relaxed max-w-3xl" data-i18n="sim_desc">
+        In 2nd grade at HTL Salzburg, we took on a non-functional legacy 6DoF Stewart platform motion rig. Through comprehensive electrical troubleshooting, physical cable rewiring, custom fuse box construction, and C++ software development, we fully restored the rig to live operation.
       </p>
     </div>
 
     <!-- PROJECT METRICS GRID -->
-    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 font-mono text-xs">
-      <div class="p-4 rounded-2xl bg-zinc-900/60 border border-border">
-        <div class="text-muted text-[10px]">Actuation Axes</div>
-        <div class="text-sky-400 font-bold text-sm mt-1">6 Linear Actuators</div>
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 font-mono text-xs sm:text-sm">
+      <div class="p-5 rounded-2xl bg-zinc-950/90 border border-white/10 shadow-[0_8px_30px_rgba(0,0,0,0.5)]">
+        <div class="text-muted text-xs uppercase" data-i18n="sim_stat1_title">Actuation Platform</div>
+        <div class="text-sky-300 font-bold text-sm sm:text-base mt-1" data-i18n="sim_stat1_val">6-Axis Stewart Platform</div>
       </div>
-      <div class="p-4 rounded-2xl bg-zinc-900/60 border border-border">
-        <div class="text-muted text-[10px]">Sponsorship Acquired</div>
-        <div class="text-emerald-400 font-bold text-sm mt-1">€2,000 Display + €3.5k PC</div>
+      <div class="p-5 rounded-2xl bg-zinc-950/90 border border-white/10 shadow-[0_8px_30px_rgba(0,0,0,0.5)]">
+        <div class="text-muted text-xs uppercase" data-i18n="sim_stat2_title">Sponsorship Acquired</div>
+        <div class="text-emerald-400 font-bold text-sm sm:text-base mt-1" data-i18n="sim_stat2_val">€5,500 (Monitors & PC)</div>
       </div>
-      <div class="p-4 rounded-2xl bg-zinc-900/60 border border-border">
-        <div class="text-muted text-[10px]">Noise Elimination</div>
-        <div class="text-foreground font-bold text-sm mt-1">Physical EMI Cable Separation</div>
+      <div class="p-5 rounded-2xl bg-zinc-950/90 border border-white/10 shadow-[0_8px_30px_rgba(0,0,0,0.5)]">
+        <div class="text-muted text-xs uppercase" data-i18n="sim_stat3_title">Software Engine</div>
+        <div class="text-foreground font-bold text-sm sm:text-base mt-1" data-i18n="sim_stat3_val">Custom C++ Kinematics</div>
       </div>
-      <div class="p-4 rounded-2xl bg-zinc-900/60 border border-border">
-        <div class="text-muted text-[10px]">Public Feature</div>
-        <div class="text-foreground font-bold text-sm mt-1">HTL Open Door Day Highlight</div>
+      <div class="p-5 rounded-2xl bg-zinc-950/90 border border-white/10 shadow-[0_8px_30px_rgba(0,0,0,0.5)]">
+        <div class="text-muted text-xs uppercase" data-i18n="sim_stat4_title">Press Coverage</div>
+        <div class="text-amber-300 font-bold text-sm sm:text-base mt-1" data-i18n="sim_stat4_val">Kronen Zeitung & HTL IG</div>
       </div>
     </div>
 
     <!-- TIMELINE SECTION -->
-    <div class="rounded-2xl bg-zinc-950 border border-border p-6 space-y-4">
-      <h2 class="text-lg font-bold font-heading text-foreground flex items-center gap-2">
-        <span class="w-2 h-2 rounded-full bg-sky-400"></span>
+    <div class="rounded-3xl bg-zinc-950/90 border border-white/15 p-6 sm:p-8 space-y-6 shadow-[0_16px_50px_rgba(0,0,0,0.6)]">
+      <h2 class="text-xl sm:text-2xl font-bold font-heading text-foreground flex items-center gap-3 border-b border-white/10 pb-4">
+        <span class="w-3 h-3 rounded-full bg-emerald-400 glow-dot-emerald animate-pulse"></span>
         <span data-i18n="timeline_title">Project Timeline & Milestones</span>
       </h2>
 
-      <div class="space-y-4 font-mono text-xs border-l-2 border-slate-800 pl-4">
-        <div class="space-y-1">
-          <span class="text-sky-400 font-bold">May 2025: Inspection & Diagnosis</span>
-          <p class="text-muted font-sans">Inspected non-functional legacy 6DoF rig at HTL Salzburg (2nd grade). Identified unshielded, bundled power & signal cables causing massive electromagnetic interference (EMI).</p>
+      <div class="space-y-6 font-mono text-sm sm:text-base border-l-2 border-slate-700 pl-5">
+        <div class="space-y-1.5">
+          <span class="text-sky-300 font-bold text-base sm:text-lg block" data-i18n="sim_time1_title">May 2025: Discovery & Comprehensive Diagnosis</span>
+          <p class="text-zinc-300 font-sans leading-relaxed" data-i18n="sim_time1_desc">
+            During our 2nd grade at HTL Salzburg, we discovered a non-functional legacy 6DoF motion rig sitting forgotten in the workshop. We initiated a systemic tear-down, tracing every electrical connection, motor controller, and power line to diagnose root cause failures.
+          </p>
         </div>
-        <div class="space-y-1">
-          <span class="text-sky-400 font-bold">Summer - Autumn 2025: Hardware Re-Wiring & Fuse Box</span>
-          <p class="text-muted font-sans">Teammate designed custom power distribution fuse box. Ripped out unnecessary wiring and physically isolated high-power motor lines from delicate telemetry data cables.</p>
+        <div class="space-y-1.5">
+          <span class="text-sky-300 font-bold text-base sm:text-lg block" data-i18n="sim_time2_title">Summer – Autumn 2025: Rewiring & Custom Fuse Box Construction</span>
+          <p class="text-zinc-300 font-sans leading-relaxed" data-i18n="sim_time2_desc">
+            We solved severe signal jitter and random cut-outs by completely rewiring the platform. Teammate designed a custom power distribution fuse box while we physically isolated high-current AC/DC motor power cables away from delicate sensor & control telemetry lines.
+          </p>
         </div>
-        <div class="space-y-1">
-          <span class="text-emerald-400 font-bold">Nov - Dec 2025: C++ Software Engine & Sponsorship</span>
-          <p class="text-muted font-sans">David programmed modular C++ control software. Successfully pitched Department Head to secure €2,000 display monitors and a €3,500 gaming rig.</p>
+        <div class="space-y-1.5">
+          <span class="text-emerald-400 font-bold text-base sm:text-lg block" data-i18n="sim_time3_title">Nov – Dec 2025: C++ Software Engine & Department Sponsorship</span>
+          <p class="text-zinc-300 font-sans leading-relaxed" data-i18n="sim_time3_desc">
+            I engineered the C++ control software connecting telemetry stream data to the motor actuator controllers over serial/CAN bus. To complete the simulator, I presented a professional proposal to department heads, successfully securing €2,000 in triple monitors and a €3,500 high-performance gaming PC.
+          </p>
         </div>
-        <div class="space-y-1">
-          <span class="text-emerald-400 font-bold">Jan 2026: HTL Open Door Day Launch</span>
-          <p class="text-muted font-sans">Launched system at Open Door Day 2026 as the department's flagship exhibit. Proved a huge public success and solidified David's career focus in avionics & embedded electronics.</p>
+        <div class="space-y-1.5">
+          <span class="text-amber-300 font-bold text-base sm:text-lg block" data-i18n="sim_time4_title">Jan 2026: Public Feature at HTL Open Door Day & Media Coverage</span>
+          <p class="text-zinc-300 font-sans leading-relaxed" data-i18n="sim_time4_desc">
+            The restored simulator debuted as the absolute flagship exhibit at HTL Salzburg Open Door Day 2026. Hundreds of visitors drove realistic laps, earning the project coverage in Austria's Kronen Zeitung newspaper and an official HTL Instagram Reel spotlight!
+          </p>
         </div>
       </div>
     </div>
 
-    <!-- TECHNICAL CASE STUDY & FAILURE ANALYSIS -->
-    <div class="space-y-8 font-sans text-sm leading-relaxed text-zinc-300">
+    <!-- DETAILED ENGINEERING STORY & POST-MORTEM -->
+    <div class="space-y-10 font-sans text-base sm:text-lg leading-relaxed text-zinc-200">
       
       <!-- Section 1 -->
-      <div class="space-y-3">
-        <h2 class="text-xl font-bold font-heading text-foreground">1. Physical Cable Isolation & Distribution Fuse Box</h2>
-        <p>
-          The original motion rig suffered from severe motor jitter and random emergency cut-outs. Our root cause investigation revealed that high-frequency PWM motor power cables were bundled directly alongside low-voltage serial encoder signal wires. We solved this by physically routing power lines along structural aluminum channels away from data lines, installing shielded differential signaling, and designing a custom fuse box.
+      <div class="space-y-3 bg-zinc-950/80 p-6 sm:p-8 rounded-3xl border border-white/10">
+        <h2 class="text-2xl sm:text-3xl font-bold font-heading text-foreground" data-i18n="sim_sec1_title">1. Systemic Electrical Repair & Physical Cable Isolation</h2>
+        <p data-i18n="sim_sec1_desc" class="text-zinc-300">
+          The primary challenge was resolving severe electromagnetic interference (EMI) and power sags that caused the linear actuators to stall randomly. By completely separating high-voltage power feeds from micro-level signal cables and building a custom fuse box, we restored 100% electrical stability.
         </p>
       </div>
 
-      <!-- Section 2: Inverse Kinematics Notes -->
-      <div class="space-y-3 p-6 rounded-2xl bg-zinc-900 border border-border">
-        <h2 class="text-xl font-bold font-heading text-foreground">2. Modular C++ Control Software & Inverse Kinematics</h2>
-        <p class="text-xs font-mono text-zinc-300 leading-relaxed">
-          David authored the modular C++ control codebase connecting simulator telemetry (telemetry reader software interface) to motor controllers over CAN bus. Minor mathematical edge-case anomalies in extreme pitch/roll angles were documented, providing invaluable practical experience in writing scalable, high-performance C++ code.
+      <!-- Section 2 -->
+      <div class="space-y-3 bg-zinc-950/80 p-6 sm:p-8 rounded-3xl border border-white/10">
+        <h2 class="text-2xl sm:text-3xl font-bold font-heading text-foreground" data-i18n="sim_sec2_title">2. Custom C++ Control Engine & Kinematics</h2>
+        <p data-i18n="sim_sec2_desc" class="text-zinc-300">
+          I developed the modular C++ telemetry reader and control engine. The software receives live telemetry physics data from racing simulators (Assetto Corsa / F1), calculates inverse kinematics for the 6 linear actuators, and outputs synchronized PWM/CAN position targets in real time.
         </p>
       </div>
 
-      <!-- Section 3: Impact -->
-      <div class="space-y-3 p-6 rounded-2xl bg-sky-950/20 border border-sky-500/30">
-        <h2 class="text-xl font-bold font-heading text-sky-300 flex items-center gap-2">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-          <span data-i18n="learnings_title">Key Lessons & What We Learned</span>
-        </h2>
-        <ul class="list-disc list-inside space-y-2 font-mono text-xs text-zinc-300">
-          <li><strong>EMC Best Practices:</strong> Physical separation of high-power cables and low-voltage signal wires is non-negotiable in aerospace and motion platforms.</li>
-          <li><strong>Clean Modular Architecture:</strong> Writing clean, scalable code with clear interface contracts saves hundreds of debugging hours.</li>
-          <li><strong>Career Turning Point:</strong> Completing this project solidified David's determination to work in embedded hardware, flight control, and avionics.</li>
+      <!-- Section 3 -->
+      <div class="space-y-4 border-l-4 border-emerald-500/80 pl-6 py-4 bg-emerald-950/20 rounded-r-3xl border-y border-r border-emerald-500/20 font-mono text-sm sm:text-base">
+        <h3 class="text-base sm:text-lg font-bold text-emerald-300" data-i18n="sim_sec3_title">Key Lessons & Impact on Career Focus</h3>
+        <ul class="list-disc list-inside space-y-2 text-zinc-200 font-sans leading-relaxed">
+          <li data-i18n="sim_sec3_b1">Hands-on mastery of EMC isolation, high-voltage wiring, and power distribution fuse boxes.</li>
+          <li data-i18n="sim_sec3_b2">Practical C++ software engineering experience interfacing real-time telemetry to physical actuators.</li>
+          <li data-i18n="sim_sec3_b3">This successful restoration solidified my determination to pursue Avionics, Flight Control Systems, and Embedded Hardware.</li>
         </ul>
       </div>
 
     </div>
 
-    <!-- MEDIA & CODE GALLERY PLACEHOLDERS -->
-    <div class="space-y-4">
-      <h2 class="text-lg font-bold font-heading text-foreground" data-i18n="gallery_title">Project Media, Code & CAD Assets</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 font-mono text-xs">
-        <div class="h-44 rounded-2xl bg-zinc-950 border border-border p-4 flex flex-col justify-between items-center text-center">
-          <svg class="w-8 h-8 text-sky-400/60 mt-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
-          <span class="text-muted text-[11px] mb-2">[Video Upload Placeholder: 6DoF Motion Rig Live Demo at HTL Open Door Day]</span>
+    <!-- PRESS COVERAGE & LINKS SECTION -->
+    <div class="space-y-6 border-t border-white/10 pt-10 font-mono text-xs sm:text-sm">
+      <div>
+        <h2 class="text-xl sm:text-2xl font-bold font-heading text-foreground" data-i18n="sim_press_heading">Press Articles, Instagram Reel & GitHub Source Code</h2>
+        <p class="text-zinc-300 text-sm sm:text-base font-sans mt-1" data-i18n="sim_press_sub">Featured in Kronen Zeitung, official HTL Salzburg Instagram media, and complete C++ source code on GitHub.</p>
+      </div>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <!-- Link 1: Kronen Zeitung Newspaper -->
+        <a href="https://www.krone.at/4084686" target="_blank" rel="noopener noreferrer" class="p-6 rounded-3xl bg-zinc-950 border border-white/15 hover:border-amber-400/60 transition-all flex flex-col justify-between group shadow-lg hover:-translate-y-1">
+          <div class="flex items-center justify-between mb-3">
+            <svg class="w-8 h-8 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"/></svg>
+            <span class="text-xs font-bold text-amber-400 bg-amber-950 px-2.5 py-1 rounded-md border border-amber-500/40">PRESS</span>
+          </div>
+          <div>
+            <div class="text-foreground font-bold text-base" data-i18n="sim_link_krone">Kronen Zeitung Article</div>
+            <div class="text-muted text-xs mt-1">Official Newspaper Coverage</div>
+          </div>
+        </a>
+
+        <!-- Link 2: HTL Instagram Reel -->
+        <a href="https://www.instagram.com/reel/DT2gY8QjcLz/?igsh=MTFvdGprbWgzMHZrZQ==" target="_blank" rel="noopener noreferrer" class="p-6 rounded-3xl bg-zinc-950 border border-white/15 hover:border-sky-400/60 transition-all flex flex-col justify-between group shadow-lg hover:-translate-y-1">
+          <div class="flex items-center justify-between mb-3">
+            <svg class="w-8 h-8 text-sky-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            <span class="text-xs font-bold text-sky-400 bg-sky-950 px-2.5 py-1 rounded-md border border-sky-500/40">VIDEO</span>
+          </div>
+          <div>
+            <div class="text-foreground font-bold text-base" data-i18n="sim_link_insta">HTL Instagram Reel Video</div>
+            <div class="text-muted text-xs mt-1">Official HTL Salzburg Spotlight</div>
+          </div>
+        </a>
+
+        <!-- Link 3: GitHub Repository -->
+        <a href="https://github.com/DaSommsi/6DoF_Fahrsimulator_HTBLuVA" target="_blank" rel="noopener noreferrer" class="p-6 rounded-3xl bg-zinc-950 border border-white/15 hover:border-emerald-400/60 transition-all flex flex-col justify-between group shadow-lg hover:-translate-y-1">
+          <div class="flex items-center justify-between mb-3">
+            <svg class="w-8 h-8 text-emerald-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            <span class="text-xs font-bold text-emerald-400 bg-emerald-950 px-2.5 py-1 rounded-md border border-emerald-500/40">CODE</span>
+          </div>
+          <div>
+            <div class="text-foreground font-bold text-base" data-i18n="sim_link_repo">GitHub Repository (C++ Code)</div>
+            <div class="text-muted text-xs mt-1">6DoF_Fahrsimulator_HTBLuVA</div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- PROJECT MEDIA & VIDEO GALLERY -->
+    <div class="space-y-6 border-t border-white/10 pt-10">
+      <div>
+        <h2 class="text-xl sm:text-2xl font-bold font-heading text-foreground" data-i18n="gallery_title">Project Media, Code & CAD Assets</h2>
+        <p class="text-sm font-mono text-zinc-300 mt-1" data-i18n="sim_media_sub">Real video of the 6DoF motion rig operating live during racing simulation, CAD 3D assembly models, and MATLAB kinematic simulation plots.</p>
+      </div>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 font-mono text-xs sm:text-sm">
+        
+        <!-- Live Operating Video -->
+        <div class="rounded-3xl bg-zinc-950 border border-white/15 overflow-hidden space-y-3 p-3 group shadow-xl sm:col-span-2">
+          <video controls class="w-full h-80 sm:h-96 object-cover rounded-2xl bg-zinc-900 border border-white/10" poster="../data/6dof-sim-rig/Picture_Concept-CAD.png">
+            <source src="../data/6dof-sim-rig/Video_while_Racing.mp4" type="video/mp4">
+            Your browser does not support HTML5 video streaming.
+          </video>
+          <div class="px-2 pb-1 text-xs sm:text-sm text-zinc-300 font-semibold flex items-center justify-between">
+            <span data-i18n="sim_fig3">Video 1: Demonstration video of the restored 6DoF simulator operating during a high-speed racing run.</span>
+            <span class="text-emerald-400 font-bold hidden sm:inline">LIVE VIDEO</span>
+          </div>
         </div>
-        <div class="h-44 rounded-2xl bg-zinc-950 border border-border p-4 flex flex-col justify-between items-center text-center">
-          <svg class="w-8 h-8 text-emerald-400/60 mt-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
-          <span class="text-muted text-[11px] mb-2">[Code Link Placeholder: Modular C++ Inverse Kinematics GitHub Repository]</span>
+
+        <!-- Photo 1: 3D CAD Concept -->
+        <div class="rounded-3xl bg-zinc-950 border border-white/15 overflow-hidden space-y-3 p-3 group shadow-xl">
+          <img src="../data/6dof-sim-rig/Picture_Concept-CAD.png" alt="Figure 1: CAD 3D concept model of the 6DoF Stewart platform motion chassis." class="w-full h-60 object-cover rounded-2xl transition-transform hover:scale-[1.03] duration-300 cursor-zoom-in">
+          <div class="px-2 pb-1 text-xs sm:text-sm text-zinc-300 font-semibold" data-i18n="sim_fig1">Figure 1: CAD 3D concept model of the 6DoF Stewart platform motion chassis.</div>
         </div>
+
+        <!-- Photo 2: MATLAB Kinematics Simulation -->
+        <div class="rounded-3xl bg-zinc-950 border border-white/15 overflow-hidden space-y-3 p-3 group shadow-xl">
+          <img src="../data/6dof-sim-rig/Picture_MATLAB_Sim.png" alt="Figure 2: MATLAB kinematic simulation trajectory plot for actuator displacement." class="w-full h-60 object-cover rounded-2xl bg-zinc-900 transition-transform hover:scale-[1.03] duration-300 cursor-zoom-in">
+          <div class="px-2 pb-1 text-xs sm:text-sm text-zinc-300 font-semibold" data-i18n="sim_fig2">Figure 2: MATLAB kinematic simulation trajectory plot for actuator displacement.</div>
+        </div>
+
       </div>
     </div>
 
     <!-- FOOTER ACTIONS -->
-    <div class="pt-8 border-t border-border flex items-center justify-between font-mono text-xs">
-      <a href="../index.html" class="text-primary hover:text-white transition-colors" data-i18n="back_overview">← Back to Main Portfolio</a>
-      <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="text-muted hover:text-white transition-colors">View GitHub Repository →</a>
+    <div class="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-xs sm:text-sm">
+      <a href="../index.html" class="text-primary hover:text-white font-bold transition-colors" data-i18n="back_overview">← Back to Main Portfolio</a>
+      <a href="https://github.com/DaSommsi/6DoF_Fahrsimulator_HTBLuVA" target="_blank" rel="noopener noreferrer" class="text-emerald-400 hover:text-emerald-300 font-bold transition-colors" data-i18n="sim_link_repo">GitHub Repository (C++ Code) →</a>
     </div>
 
   </main>
+
+  <!-- INSTANT FULL-SCREEN CLICK-TO-ZOOM LIGHTBOX MODAL -->
+  <div id="lightbox-modal" onclick="window.closeLightbox(event)" class="fixed inset-0 z-[99999] hidden bg-black/95 backdrop-blur-lg flex flex-col items-center justify-center p-4 cursor-zoom-out select-none transition-all duration-300">
+    <button id="lightbox-close" onclick="window.closeLightbox(event)" aria-label="Close Lightbox" class="absolute top-6 right-8 text-white/80 hover:text-white p-3 text-3xl font-mono focus:outline-none z-[100000] bg-zinc-900/90 rounded-full border border-white/20 hover:scale-110 transition-transform">✕</button>
+    <div onclick="window.closeLightbox(event)" class="w-[96vw] h-[88vh] flex flex-col items-center justify-center relative pointer-events-auto overflow-auto">
+      <img id="lightbox-img" onclick="window.toggleLightboxZoom(event)" class="max-w-[95vw] max-h-[82vh] w-auto h-auto object-contain rounded-2xl shadow-[0_0_60px_rgba(0,0,0,0.95)] border border-white/20 transition-transform duration-300 cursor-zoom-in">
+      <p id="lightbox-caption" onclick="window.closeLightbox(event)" class="text-sm sm:text-base font-mono text-zinc-200 mt-4 text-center max-w-3xl bg-zinc-900/90 px-5 py-2.5 rounded-xl border border-white/10 shadow-xl"></p>
+    </div>
+  </div>
+
+  <script>
+    window.openLightbox = function (src, caption) {
+      var modal = document.getElementById("lightbox-modal");
+      var modalImg = document.getElementById("lightbox-img");
+      var captionEl = document.getElementById("lightbox-caption");
+      if (!modal || !modalImg) return;
+      modalImg.classList.remove("scale-150", "cursor-zoom-out");
+      modalImg.classList.add("cursor-zoom-in");
+      modalImg.src = src;
+      if (captionEl) captionEl.textContent = caption || "";
+      modal.classList.remove("hidden");
+      document.body.style.overflow = "hidden";
+    };
+
+    window.closeLightbox = function (e) {
+      if (e) {
+        if (typeof e.stopPropagation === 'function') e.stopPropagation();
+      }
+      var modal = document.getElementById("lightbox-modal");
+      if (!modal) return;
+      modal.classList.add("hidden");
+      document.body.style.overflow = "";
+    };
+
+    window.toggleLightboxZoom = function (e) {
+      if (e) {
+        if (typeof e.stopPropagation === 'function') e.stopPropagation();
+      }
+      var modalImg = document.getElementById("lightbox-img");
+      if (!modalImg) return;
+      if (modalImg.classList.contains("scale-150")) {
+        modalImg.classList.remove("scale-150", "cursor-zoom-out");
+        modalImg.classList.add("cursor-zoom-in");
+      } else {
+        modalImg.classList.add("scale-150", "cursor-zoom-out");
+        modalImg.classList.remove("cursor-zoom-in");
+      }
+    };
+
+    document.addEventListener("click", function (e) {
+      var img = e.target.closest("img");
+      if (img && img.id !== "lightbox-img") {
+        e.preventDefault();
+        e.stopPropagation();
+        var caption = img.alt || img.getAttribute("data-caption") || (img.nextElementSibling ? img.nextElementSibling.textContent : "");
+        window.openLightbox(img.src, caption);
+      }
+    }, true);
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") {
+        window.closeLightbox();
+      }
+    });
+  </script>
 
   <script type="module" src="../js/main.js"></script>
 </body>
