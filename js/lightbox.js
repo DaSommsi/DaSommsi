@@ -1,13 +1,12 @@
 /**
  * @file lightbox.js
- * @description Lightbox Modal image viewer with instant global click-to-zoom capabilities.
+ * @description Lightbox Modal image viewer with robust close & 1.5x zoom magnification behavior.
  */
 
-// Global Lightbox Functions attached to window for 100% fail-safe click handling
 window.openLightbox = function (src, caption) {
-  const modal = document.getElementById("lightbox-modal");
-  const modalImg = document.getElementById("lightbox-img");
-  const captionEl = document.getElementById("lightbox-caption");
+  var modal = document.getElementById("lightbox-modal");
+  var modalImg = document.getElementById("lightbox-img");
+  var captionEl = document.getElementById("lightbox-caption");
   
   if (!modal || !modalImg) return;
   modalImg.classList.remove("scale-150", "cursor-zoom-out");
@@ -19,8 +18,8 @@ window.openLightbox = function (src, caption) {
 };
 
 window.closeLightbox = function (e) {
-  if (e && e.target && e.target.id !== "lightbox-modal" && e.target.id !== "lightbox-close") return;
-  const modal = document.getElementById("lightbox-modal");
+  if (e) e.stopPropagation();
+  var modal = document.getElementById("lightbox-modal");
   if (!modal) return;
   modal.classList.add("hidden");
   document.body.style.overflow = "";
@@ -28,7 +27,7 @@ window.closeLightbox = function (e) {
 
 window.toggleLightboxZoom = function (e) {
   if (e) e.stopPropagation();
-  const modalImg = document.getElementById("lightbox-img");
+  var modalImg = document.getElementById("lightbox-img");
   if (!modalImg) return;
   if (modalImg.classList.contains("scale-150")) {
     modalImg.classList.remove("scale-150", "cursor-zoom-out");
@@ -39,15 +38,15 @@ window.toggleLightboxZoom = function (e) {
   }
 };
 
-// Global Event Delegation in Capture Phase
+// Intercept all image clicks across the page
 document.addEventListener(
   "click",
-  (e) => {
-    const img = e.target.closest("img");
+  function (e) {
+    var img = e.target.closest("img");
     if (img && img.id !== "lightbox-img") {
       e.preventDefault();
       e.stopPropagation();
-      const caption = img.alt || img.getAttribute("data-caption") || img.nextElementSibling?.textContent || "";
+      var caption = img.alt || img.getAttribute("data-caption") || (img.nextElementSibling ? img.nextElementSibling.textContent : "");
       window.openLightbox(img.src, caption);
     }
   },
@@ -55,7 +54,7 @@ document.addEventListener(
 );
 
 // Close on Escape key
-document.addEventListener("keydown", (e) => {
+document.addEventListener("keydown", function (e) {
   if (e.key === "Escape") {
     window.closeLightbox();
   }
@@ -63,10 +62,6 @@ document.addEventListener("keydown", (e) => {
 
 export class LightboxViewer {
   constructor() {
-    this.init();
-  }
-
-  init() {
-    // Lightbox is globally ready via window functions
+    // Initialized globally
   }
 }
