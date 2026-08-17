@@ -154,48 +154,92 @@
 
     </div>
 
-    <!-- ALL PROJECT PICTURES GALLERY -->
+    <!-- HARDWARE DOCUMENTATION & PDF DOWNLOADS -->
+    <div class="space-y-4 border-t border-border pt-8 font-mono text-xs">
+      <h2 class="text-lg font-bold font-heading text-foreground">PCB Engineering Schematics & Gerber Files</h2>
+      <p class="text-muted text-xs font-sans">Official CAD schematic diagrams, PCB layout board drawings, and manufacturing Gerber files designed between Aug–Dec 2025.</p>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <!-- PDF 1: PCB Schematic -->
+        <a href="../data/crazy-car/PDF_PCB_Schematic.pdf" target="_blank" class="p-4 rounded-2xl bg-zinc-950 border border-border hover:border-sky-400/50 transition-all flex flex-col justify-between group">
+          <div class="flex items-center justify-between mb-2">
+            <svg class="w-6 h-6 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+            <span class="text-[10px] text-muted group-hover:text-sky-400">PDF</span>
+          </div>
+          <div>
+            <div class="text-foreground font-bold text-xs">PCB Circuit Schematic</div>
+            <div class="text-muted text-[10px] mt-0.5">ESP32 & ToF Circuitry</div>
+          </div>
+        </a>
+
+        <!-- PDF 2: PCB Board Layout -->
+        <a href="../data/crazy-car/PDF_PCB.pdf" target="_blank" class="p-4 rounded-2xl bg-zinc-950 border border-border hover:border-emerald-400/50 transition-all flex flex-col justify-between group">
+          <div class="flex items-center justify-between mb-2">
+            <svg class="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+            <span class="text-[10px] text-muted group-hover:text-emerald-400">PDF</span>
+          </div>
+          <div>
+            <div class="text-foreground font-bold text-xs">PCB Layout Drawing</div>
+            <div class="text-muted text-[10px] mt-0.5">Board Layer Routing</div>
+          </div>
+        </a>
+
+        <!-- Gerber ZIP -->
+        <a href="../data/crazy-car/PCB_Gerber.zip" download class="p-4 rounded-2xl bg-zinc-950 border border-border hover:border-amber-400/50 transition-all flex flex-col justify-between group">
+          <div class="flex items-center justify-between mb-2">
+            <svg class="w-6 h-6 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+            <span class="text-[10px] text-muted group-hover:text-amber-400">ZIP</span>
+          </div>
+          <div>
+            <div class="text-foreground font-bold text-xs">Gerber Production Files</div>
+            <div class="text-muted text-[10px] mt-0.5">Manufacturing Archive</div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- ALL PROJECT PICTURES GALLERY (WITH CLICK-TO-ZOOM LIGHTBOX) -->
     <div class="space-y-6 border-t border-border pt-8">
       <div>
         <h2 class="text-lg font-bold font-heading text-foreground" data-i18n="gallery_title">Project Media, Code & CAD Assets</h2>
-        <p class="text-xs font-mono text-muted mt-1">Complete photo documentation of the Amazon RC car transformation, custom PCB, bench testing, and physical racetrack.</p>
+        <p class="text-xs font-mono text-muted mt-1">Click any image to view in high-resolution zoom mode. Captions document the build evolution and Graz competition venue.</p>
       </div>
       
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 font-mono text-xs">
         <!-- Photo 1: Closed Lambo -->
         <div class="rounded-2xl bg-zinc-950 border border-border overflow-hidden space-y-2 p-2">
-          <img src="../data/crazy-car/Picture_Lambo_Closed.jpg" alt="Crazy Car Closed Chassis" class="w-full h-52 object-cover rounded-xl">
+          <img src="../data/crazy-car/Picture_Lambo_Closed.jpg" alt="Figure 1: Modified 30€ Amazon Lamborghini RC car body and chassis." class="w-full h-52 object-cover rounded-xl transition-transform hover:scale-[1.02] duration-300">
           <div class="px-2 pb-1 text-[11px] text-muted">Figure 1: Modified 30€ Amazon Lamborghini RC car body and chassis.</div>
         </div>
 
         <!-- Photo 2: Open Lambo & PCB -->
         <div class="rounded-2xl bg-zinc-950 border border-border overflow-hidden space-y-2 p-2">
-          <img src="../data/crazy-car/Picture_Lambo_Open.jpg" alt="Crazy Car Internal Electronics" class="w-full h-52 object-cover rounded-xl">
+          <img src="../data/crazy-car/Picture_Lambo_Open.jpg" alt="Figure 2: Interior electronics layout with ESP32, steering micro-servo, and custom PCB." class="w-full h-52 object-cover rounded-xl transition-transform hover:scale-[1.02] duration-300">
           <div class="px-2 pb-1 text-[11px] text-muted">Figure 2: Interior electronics layout with ESP32, steering micro-servo, and custom PCB.</div>
         </div>
 
-        <!-- Photo 3: Lambo While Working -->
+        <!-- Photo 3: Lambo While Working (Graz Competition Venue) -->
         <div class="rounded-2xl bg-zinc-950 border border-border overflow-hidden space-y-2 p-2">
-          <img src="../data/crazy-car/Picture_Lambo_while_working.jpg" alt="Bench Testing Session" class="w-full h-52 object-cover rounded-xl">
-          <div class="px-2 pb-1 text-[11px] text-muted">Figure 3: Bench testing and wiring assembly session prior to competition.</div>
+          <img src="../data/crazy-car/Picture_Lambo_while_working.jpg" alt="Figure 3: On-site hardware assembly and diagnostic session at the Graz competition venue." class="w-full h-52 object-cover rounded-xl transition-transform hover:scale-[1.02] duration-300">
+          <div class="px-2 pb-1 text-[11px] text-muted">Figure 3: On-site hardware assembly and diagnostic session at the Graz competition venue.</div>
         </div>
 
-        <!-- Photo 4: Open Lambo Wiring -->
+        <!-- Photo 4: Open Lambo Wiring (Graz Competition Venue) -->
         <div class="rounded-2xl bg-zinc-950 border border-border overflow-hidden space-y-2 p-2">
-          <img src="../data/crazy-car/Picutre_Lambo_Open_while_working.jpg" alt="Open Chassis Debugging" class="w-full h-52 object-cover rounded-xl">
-          <div class="px-2 pb-1 text-[11px] text-muted">Figure 4: Electronics diagnostic and power wiring inspection.</div>
+          <img src="../data/crazy-car/Picutre_Lambo_Open_while_working.jpg" alt="Figure 4: Open chassis power & sensor wiring troubleshooting taken at the Graz competition." class="w-full h-52 object-cover rounded-xl transition-transform hover:scale-[1.02] duration-300">
+          <div class="px-2 pb-1 text-[11px] text-muted">Figure 4: Open chassis power & sensor wiring troubleshooting taken at the Graz competition.</div>
         </div>
 
         <!-- Photo 5: 3D PCB Render -->
         <div class="rounded-2xl bg-zinc-950 border border-border overflow-hidden space-y-2 p-2">
-          <img src="../data/crazy-car/Lambo_RC_Car_PCB_3D.png" alt="Custom PCB 3D Render" class="w-full h-52 object-cover rounded-xl bg-zinc-900">
+          <img src="../data/crazy-car/Lambo_RC_Car_PCB_3D.png" alt="Figure 5: 3D CAD layout of the custom microcontroller PCB designed in late 2025." class="w-full h-52 object-cover rounded-xl bg-zinc-900 transition-transform hover:scale-[1.02] duration-300">
           <div class="px-2 pb-1 text-[11px] text-muted">Figure 5: 3D CAD layout of the custom microcontroller PCB designed in late 2025.</div>
         </div>
 
-        <!-- Photo 6: Racing Track -->
+        <!-- Photo 6: Racing Track (Graz Competition Racetrack) -->
         <div class="rounded-2xl bg-zinc-950 border border-border overflow-hidden space-y-2 p-2">
-          <img src="../data/crazy-car/Picture_Racing_Track.jpg" alt="Physical Racing Track" class="w-full h-52 object-cover rounded-xl">
-          <div class="px-2 pb-1 text-[11px] text-muted">Figure 6: Physical racetrack built to match the Unity ML-Agents training environment.</div>
+          <img src="../data/crazy-car/Picture_Racing_Track.jpg" alt="Figure 6: The official competition racetrack in Graz." class="w-full h-52 object-cover rounded-xl transition-transform hover:scale-[1.02] duration-300">
+          <div class="px-2 pb-1 text-[11px] text-muted">Figure 6: The official competition racetrack in Graz.</div>
         </div>
       </div>
     </div>
