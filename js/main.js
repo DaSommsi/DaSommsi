@@ -8,14 +8,14 @@ import { ProjectsFilter } from "./projects-filter.js";
 import { LightboxViewer } from "./lightbox.js";
 
 function setupApp() {
+  // Initialize click-to-zoom image lightbox viewer first
+  const lightbox = new LightboxViewer();
+
   // Initialize internationalization dictionary & switcher
   const i18n = new I18nManager("en");
 
   // Initialize interactive project category filtering
   const filter = new ProjectsFilter();
-
-  // Initialize click-to-zoom image lightbox viewer
-  const lightbox = new LightboxViewer();
 
   // Smooth scroll links
   const links = document.querySelectorAll('a[href^="#"]');

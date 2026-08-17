@@ -780,6 +780,15 @@
     </div>
   </footer>
 
+  <!-- INSTANT FULL-SCREEN CLICK-TO-ZOOM LIGHTBOX MODAL -->
+  <div id="lightbox-modal" onclick="window.closeLightbox(event)" class="fixed inset-0 z-[99999] hidden bg-black/95 backdrop-blur-lg flex flex-col items-center justify-center p-4 cursor-zoom-out select-none transition-all duration-300">
+    <button onclick="window.closeLightbox(event)" aria-label="Close Lightbox" class="absolute top-6 right-8 text-white/80 hover:text-white p-3 text-3xl font-mono focus:outline-none z-[100000] bg-zinc-900/90 rounded-full border border-white/20 hover:scale-110 transition-transform">✕</button>
+    <div class="w-[96vw] h-[88vh] flex flex-col items-center justify-center relative pointer-events-auto overflow-auto">
+      <img id="lightbox-img" onclick="window.toggleLightboxZoom(event)" class="max-w-[95vw] max-h-[82vh] w-auto h-auto object-contain rounded-2xl shadow-[0_0_60px_rgba(0,0,0,0.95)] border border-white/20 transition-transform duration-300 cursor-zoom-in">
+      <p id="lightbox-caption" class="text-sm font-mono text-zinc-200 mt-4 text-center max-w-3xl bg-zinc-900/90 px-5 py-2.5 rounded-xl border border-white/10 shadow-xl"></p>
+    </div>
+  </div>
+
   <script type="module" src="js/main.js"></script>
 </body>
 </html>
