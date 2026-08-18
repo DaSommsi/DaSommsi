@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EDI-to-JSONL Streaming Parser | David Sommerer</title>
-  <meta name="description" content="Technical deep-dive into the high-performance C++20 zero-allocation streaming parser by David Sommerer. POSIX mmap memory mapping, 2.4 GB/s throughput, and AVX2 SIMD acceleration.">
+  <title>OBXID Engine: High-Performance Data Gateway | David Sommerer</title>
+  <meta name="description" content="System architecture and performance analysis of the OBXID Engine — high-performance C++20 inbound data gateway parsing industrial EDIFACT data into AI-ready JSON Lines (JSONL) at +40 MB/s per core in under 35 MB RAM.">
 
   <!-- Tailwind CSS CDN & Config -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -32,95 +32,238 @@
   <!-- Custom Styles stylesheet -->
   <link rel="stylesheet" href="../css/style.css">
 </head>
-<body class="bg-[#05050a] text-zinc-200 antialiased selection:bg-sky-500/30 selection:text-sky-300 min-h-screen">
+<body class="bg-[#05050a] text-zinc-200 antialiased selection:bg-sky-500/30 selection:text-sky-300 min-h-screen relative overflow-x-hidden">
+
+  <!-- ENHANCED AMBIENT BACKGROUND DEPTH -->
+  <div class="pointer-events-none fixed inset-0 z-0 overflow-hidden">
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-[radial-gradient(ellipse_at_top,rgba(56,189,248,0.15),transparent_70%)]"></div>
+    <div class="absolute top-1/2 -left-32 w-[600px] h-[600px] bg-[radial-gradient(circle_at_center,rgba(16,185,129,0.08),transparent_60%)]"></div>
+    <div class="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
+  </div>
 
   <!-- STICKY HEADER -->
-  <header class="sticky top-0 z-40 w-full backdrop-blur-md bg-[#05050a]/80 border-b border-white/5 transition-all duration-300">
+  <header class="sticky top-0 z-40 w-full backdrop-blur-md bg-[#05050a]/85 border-b border-white/10 transition-all duration-300">
     <div class="max-w-6xl mx-auto px-6 md:px-12 h-16 flex items-center justify-between">
       
       <!-- Back Link & Identity -->
       <div class="flex items-center space-x-4">
-        <a href="../index.html" class="flex items-center space-x-2 text-xs font-mono text-primary hover:text-white transition-colors">
+        <a href="../index.html" class="flex items-center space-x-2 text-sm font-mono text-primary hover:text-white transition-colors">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
-          <span data-i18n="back_overview">← Back to Overview</span>
+          <span data-i18n="back_overview">← Back to Main Portfolio</span>
         </a>
         <span class="text-zinc-700 text-xs">/</span>
-        <span class="text-xs font-mono text-muted">david sommerer</span>
+        <span class="text-xs sm:text-sm font-mono text-muted">david sommerer</span>
       </div>
 
-      <!-- Language Toggle -->
+      <!-- Language Toggle EN | DE -->
       <div class="flex items-center space-x-1 p-1 rounded-full bg-zinc-900 border border-border">
-        <button data-lang-btn="en" class="px-2.5 py-0.5 rounded-full text-[11px] font-bold text-sky-400">EN</button>
-        <button data-lang-btn="de" class="px-2.5 py-0.5 rounded-full text-[11px] text-muted hover:text-foreground">DE</button>
+        <button data-lang-btn="en" class="px-3 py-0.5 rounded-full text-xs font-bold text-sky-400">EN</button>
+        <button data-lang-btn="de" class="px-3 py-0.5 rounded-full text-xs text-muted hover:text-foreground">DE</button>
       </div>
     </div>
   </header>
 
-  <main class="max-w-4xl mx-auto px-6 md:px-12 py-12 space-y-12">
+  <main class="max-w-4xl mx-auto px-6 md:px-12 py-12 space-y-12 relative z-10">
 
-    <!-- PROJECT TITLE & SUMMARY -->
-    <div class="space-y-4 border-b border-border pb-8">
-      <div class="flex flex-wrap gap-2">
-        <span class="px-2.5 py-0.5 text-xs font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">C++20</span>
-        <span class="px-2.5 py-0.5 text-xs font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">POSIX mmap</span>
-        <span class="px-2.5 py-0.5 text-xs font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">Zero-Copy Parsing</span>
-        <span class="px-2.5 py-0.5 text-xs font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">AVX2 Vectorization</span>
+    <!-- PROJECT TITLE & HEADER -->
+    <div class="space-y-6 border-b border-white/10 pb-10">
+      <div class="flex flex-wrap gap-2.5">
+        <span data-i18n="edi_date" class="px-3 py-1 text-xs font-mono rounded-full bg-sky-950/80 text-sky-300 font-bold border border-sky-500/50 glow-dot-sky">Started April 2026 (Active Stealth Project)</span>
+        <span class="px-3 py-1 text-xs font-mono rounded-full bg-emerald-950/80 text-emerald-300 border border-emerald-500/40">C++20 High-Throughput Engine</span>
+        <span class="px-3 py-1 text-xs font-mono rounded-full bg-amber-950/80 text-amber-300 border border-amber-500/40">O(1) Bounded Memory</span>
+        <span class="px-3 py-1 text-xs font-mono rounded-full bg-sky-950/80 text-sky-300 border border-sky-500/40">Air-Gapped Kubernetes / Helm</span>
       </div>
 
-      <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold font-heading text-foreground tracking-tight">
-        EDI-to-JSONL Streaming Parser
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold font-heading text-foreground tracking-tight leading-tight" data-i18n="edi_title">
+        OBXID Engine: High-Performance Data Gateway
       </h1>
 
-      <p class="text-sm sm:text-base text-muted font-mono leading-relaxed">
-        Zero-allocation C++20 streaming engine parsing dense multi-gigabyte industrial EDI/FACT data streams directly into structured JSONL format at memory-mapped throughput.
+      <p class="text-base sm:text-lg text-zinc-300 font-mono leading-relaxed max-w-3xl" data-i18n="edi_desc">
+        Autonomous inbound gateway engineered in C++20 for enterprise IT perimeters. Filters, validates, and streams industrial EDIFACT data directly into structured, AI-ready JSON Lines (JSONL) format at +40 MB/s end-to-end speed in under 35 MB RAM.
       </p>
     </div>
 
-    <!-- METRICS GRID -->
-    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 font-mono text-xs">
-      <div class="p-4 rounded-2xl bg-zinc-900/60 border border-border">
-        <div class="text-muted text-[10px]">Streaming Speed</div>
-        <div class="text-sky-400 font-bold text-sm mt-1">2.4 GB / sec</div>
+    <!-- PROJECT METRICS GRID -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 font-mono text-xs sm:text-sm">
+      <div class="p-5 rounded-2xl bg-zinc-950/90 border border-white/10 shadow-[0_8px_30px_rgba(0,0,0,0.5)]">
+        <div class="text-muted text-xs uppercase" data-i18n="edi_stat1_title">End-to-End Speed</div>
+        <div class="text-sky-300 font-bold text-sm sm:text-base mt-1" data-i18n="edi_stat1_val">+40 MB/s per Core</div>
       </div>
-      <div class="p-4 rounded-2xl bg-zinc-900/60 border border-border">
-        <div class="text-muted text-[10px]">Allocations (Hot Loop)</div>
-        <div class="text-emerald-400 font-bold text-sm mt-1">0 Bytes</div>
+      <div class="p-5 rounded-2xl bg-zinc-950/90 border border-white/10 shadow-[0_8px_30px_rgba(0,0,0,0.5)]">
+        <div class="text-muted text-xs uppercase" data-i18n="edi_stat2_title">RAM Footprint</div>
+        <div class="text-emerald-400 font-bold text-sm sm:text-base mt-1" data-i18n="edi_stat2_val">&lt;35 MB (O(1) Bounded)</div>
       </div>
-      <div class="p-4 rounded-2xl bg-zinc-900/60 border border-border">
-        <div class="text-muted text-[10px]">Throughput Records</div>
-        <div class="text-foreground font-bold text-sm mt-1">14M / sec</div>
+      <div class="p-5 rounded-2xl bg-zinc-950/90 border border-white/10 shadow-[0_8px_30px_rgba(0,0,0,0.5)]">
+        <div class="text-muted text-xs uppercase" data-i18n="edi_stat3_title">Deployment Security</div>
+        <div class="text-foreground font-bold text-sm sm:text-base mt-1" data-i18n="edi_stat3_val">100% Air-Gapped / Helm</div>
       </div>
-      <div class="p-4 rounded-2xl bg-zinc-900/60 border border-border">
-        <div class="text-muted text-[10px]">Memory Complexity</div>
-        <div class="text-foreground font-bold text-sm mt-1">O(1) Bounded</div>
+      <div class="p-5 rounded-2xl bg-zinc-950/90 border border-white/10 shadow-[0_8px_30px_rgba(0,0,0,0.5)]">
+        <div class="text-muted text-xs uppercase" data-i18n="edi_stat4_title">Mapping Logic</div>
+        <div class="text-amber-300 font-bold text-sm sm:text-base mt-1" data-i18n="edi_stat4_val">No-Code JSON Rules</div>
       </div>
     </div>
 
-    <!-- CODE EXCERPT -->
-    <div class="space-y-4 font-sans text-sm leading-relaxed text-zinc-300">
-      <h2 class="text-xl font-bold font-heading text-foreground">C++20 Zero-Allocation Token Evaluator</h2>
-      <div class="rounded-xl bg-zinc-950 border border-border p-4 overflow-x-auto font-mono text-xs text-sky-300">
-        <pre><code>std::string_view EdiParser::nextSegment(std::string_view& stream, char delimiter) noexcept {
-    const size_t pos = stream.find(delimiter);
-    if (pos == std::string_view::npos) {
-        std::string_view tok = stream;
-        stream = {};
-        return tok;
-    }
-    std::string_view tok = stream.substr(0, pos);
-    stream.remove_prefix(pos + 1);
-    return tok;
-}</code></pre>
+    <!-- LOGO SHOWCASE & HERO MEDIA CARD -->
+    <div class="rounded-3xl bg-zinc-950 border border-white/15 overflow-hidden p-4 sm:p-6 grid grid-cols-1 md:grid-cols-12 gap-6 items-center shadow-2xl">
+      <div class="md:col-span-5 flex justify-center">
+        <img src="../data/edi-jsonl/logo.png" alt="OBXID Engine High-Performance Data Gateway Logo" class="max-h-56 sm:max-h-64 object-contain rounded-2xl border border-white/10 p-4 bg-zinc-900/80 transition-transform hover:scale-[1.03] duration-300 cursor-zoom-in shadow-xl">
+      </div>
+      <div class="md:col-span-7 space-y-4 font-sans text-sm sm:text-base">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-950/80 border border-emerald-500/40 text-emerald-300 text-xs font-mono">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span>STEALTH ENTERPRISE GATEWAY</span>
+        </div>
+        <h3 class="text-xl sm:text-2xl font-bold font-heading text-foreground">Inbound Perimeter Security & Real-Time AI Readiness</h3>
+        <p class="text-zinc-300 leading-relaxed">
+          The OBXID Engine functions as an ultra-fast, self-contained inbound security shield directly in front of enterprise ERP and SAP boundaries. It intercepts raw EDIFACT streams, validates segment integrity, and converts data on the fly into AI-ready JSON Lines (JSONL).
+        </p>
+        <p class="text-xs font-mono text-muted italic" data-i18n="edi_stealth_note">
+          Stealth Commercial Project — Core source code and proprietary enterprise partner mappings remain confidential.
+        </p>
+      </div>
+    </div>
+
+    <!-- DETAILED ENGINEERING STORY & SYSTEM ARCHITECTURE -->
+    <div class="space-y-10 font-sans text-base sm:text-lg leading-relaxed text-zinc-200">
+      
+      <!-- Section 1 -->
+      <div class="space-y-3 bg-zinc-950/80 p-6 sm:p-8 rounded-3xl border border-white/10">
+        <h2 class="text-2xl sm:text-3xl font-bold font-heading text-foreground" data-i18n="edi_sec1_title">1. System Architectural Role & Perimeter Protection</h2>
+        <p data-i18n="edi_sec1_desc" class="text-zinc-300">
+          The OBXID Engine is designed as a high-speed, self-contained inbound security gateway positioned right before the enterprise IT boundary. It does not replace existing ERP or SAP environments; instead, it intercepts raw EDIFACT streams, catches corrupted segments or syntax mismatches in real time, and converts incoming data into clean, structured JSON Lines (JSONL) before downstream systems process it.
+        </p>
+      </div>
+
+      <!-- Section 2 -->
+      <div class="space-y-4 bg-zinc-950/80 p-6 sm:p-8 rounded-3xl border border-white/10">
+        <h2 class="text-2xl sm:text-3xl font-bold font-heading text-foreground" data-i18n="edi_sec2_title">2. Core Performance Parameters & Hardware Efficiency</h2>
+        <p data-i18n="edi_sec2_desc" class="text-zinc-300">
+          Built in modern C++20, the engine eliminates heavy monolithic converter overhead through maximum hardware efficiency:
+        </p>
+        <ul class="list-disc list-inside space-y-2.5 text-zinc-300 font-sans text-base sm:text-lg leading-relaxed">
+          <li data-i18n="edi_sec2_b1"><strong>High-Throughput Parsing:</strong> Achieves over 35 to 40 MB/s processing speed per CPU core end-to-end from initial file transmission to complete reception.</li>
+          <li data-i18n="edi_sec2_b2"><strong>Lean Memory Footprint:</strong> Bounded to strictly O(1) memory complexity (~24 MB to 35 MB RAM per instance), eliminating the need for expensive server upgrades or inflated cloud instances.</li>
+          <li data-i18n="edi_sec2_b3"><strong>Air-Gapped Cloud-Native Deployment:</strong> 100% self-contained air-gapped architecture provided with a customized Helm Chart for rapid, standardized Kubernetes cluster deployment in minutes.</li>
+          <li data-i18n="edi_sec2_b4"><strong>Guaranteed Data Sovereignty:</strong> Sensitive supplier and enterprise business data never leaves the protected internal infrastructure.</li>
+        </ul>
+      </div>
+
+      <!-- Section 3 -->
+      <div class="space-y-4 bg-zinc-950/80 p-6 sm:p-8 rounded-3xl border border-white/10">
+        <h2 class="text-2xl sm:text-3xl font-bold font-heading text-foreground" data-i18n="edi_sec3_title">3. No-Code Mapping, Express Debugging & AI Readiness</h2>
+        <p data-i18n="edi_sec3_desc" class="text-zinc-300">
+          Transformation rules are managed dynamically through a single central configuration file without requiring recompilation:
+        </p>
+        <ul class="list-disc list-inside space-y-2.5 text-zinc-300 font-sans text-base sm:text-lg leading-relaxed">
+          <li data-i18n="edi_sec3_b1"><strong>No-Code JSON Rules:</strong> Business rules, compliance checks, and field assignments are stored as human-readable JSON.</li>
+          <li data-i18n="edi_sec3_b2"><strong>Express-Debugging Diagnostics:</strong> Generates structured, machine-readable error logs on anomaly detection, eliminating manual string searches and saving hundreds of developer hours.</li>
+          <li data-i18n="edi_sec3_b3"><strong>AI & RAG Pipeline Readiness:</strong> Native output in JSON Lines (JSONL) allows direct streaming into vector databases, LLM Retrieval-Augmented Generation (RAG) pipelines, and real-time supplier dashboards.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- ROADMAP & FUTURE DEVELOPMENT PHASES -->
+    <div class="rounded-3xl bg-zinc-950/90 border border-white/15 p-6 sm:p-8 space-y-6 shadow-[0_16px_50px_rgba(0,0,0,0.6)]">
+      <h2 class="text-xl sm:text-2xl font-bold font-heading text-foreground flex items-center gap-3 border-b border-white/10 pb-4">
+        <span class="w-3 h-3 rounded-full bg-sky-400 glow-dot-sky animate-pulse"></span>
+        <span data-i18n="edi_roadmap_title">Project Status & Technological Roadmap</span>
+      </h2>
+
+      <div class="space-y-6 font-mono text-sm sm:text-base border-l-2 border-slate-700 pl-5">
+        <div class="space-y-1.5">
+          <span class="text-sky-300 font-bold text-base sm:text-lg block" data-i18n="edi_rm1_title">Phase 1 (Current) — Core Hardening & Verification</span>
+          <p class="text-zinc-300 font-sans leading-relaxed" data-i18n="edi_rm1_desc">
+            Focus on parser core hardening, zero-copy optimization, and building an automated test suite for regression-free performance.
+          </p>
+        </div>
+        <div class="space-y-1.5">
+          <span class="text-emerald-400 font-bold text-base sm:text-lg block" data-i18n="edi_rm2_title">Phase 2 — Enterprise Licensing & Kubernetes Orchestration</span>
+          <p class="text-zinc-300 font-sans leading-relaxed" data-i18n="edi_rm2_desc">
+            Development of the enterprise licensing module and high-availability Air-Gapped Kubernetes cluster orchestration.
+          </p>
+        </div>
+        <div class="space-y-1.5">
+          <span class="text-amber-300 font-bold text-base sm:text-lg block" data-i18n="edi_rm3_title">Phase 3 — Visual Drag-&-Drop Editor & EDIFACT Wiki</span>
+          <p class="text-zinc-300 font-sans leading-relaxed" data-i18n="edi_rm3_desc">
+            Deployment of an intuitive web mapping editor and interactive EDIFACT directory wiki with pre-built downloadable mappings.
+          </p>
+        </div>
       </div>
     </div>
 
     <!-- FOOTER ACTIONS -->
-    <div class="pt-8 border-t border-border flex items-center justify-between font-mono text-xs">
-      <a href="../index.html" class="text-primary hover:text-white transition-colors">← Back to Main Portfolio</a>
-      <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="text-muted hover:text-white transition-colors">View GitHub Repository →</a>
+    <div class="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-xs sm:text-sm">
+      <a href="../index.html" class="text-primary hover:text-white font-bold transition-colors" data-i18n="back_overview">← Back to Main Portfolio</a>
+      <span class="text-muted italic" data-i18n="edi_stealth_note">Stealth Commercial Project</span>
     </div>
 
   </main>
+
+  <!-- INSTANT FULL-SCREEN CLICK-TO-ZOOM LIGHTBOX MODAL -->
+  <div id="lightbox-modal" onclick="window.closeLightbox(event)" class="fixed inset-0 z-[99999] hidden bg-black/95 backdrop-blur-lg flex flex-col items-center justify-center p-4 cursor-zoom-out select-none transition-all duration-300">
+    <button id="lightbox-close" onclick="window.closeLightbox(event)" aria-label="Close Lightbox" class="absolute top-6 right-8 text-white/80 hover:text-white p-3 text-3xl font-mono focus:outline-none z-[100000] bg-zinc-900/90 rounded-full border border-white/20 hover:scale-110 transition-transform">✕</button>
+    <div onclick="window.closeLightbox(event)" class="w-[96vw] h-[88vh] flex flex-col items-center justify-center relative pointer-events-auto overflow-auto">
+      <img id="lightbox-img" onclick="window.toggleLightboxZoom(event)" class="max-w-[95vw] max-h-[82vh] w-auto h-auto object-contain rounded-2xl shadow-[0_0_60px_rgba(0,0,0,0.95)] border border-white/20 transition-transform duration-300 cursor-zoom-in">
+      <p id="lightbox-caption" onclick="window.closeLightbox(event)" class="text-sm sm:text-base font-mono text-zinc-200 mt-4 text-center max-w-3xl bg-zinc-900/90 px-5 py-2.5 rounded-xl border border-white/10 shadow-xl"></p>
+    </div>
+  </div>
+
+  <script>
+    window.openLightbox = function (src, caption) {
+      var modal = document.getElementById("lightbox-modal");
+      var modalImg = document.getElementById("lightbox-img");
+      var captionEl = document.getElementById("lightbox-caption");
+      if (!modal || !modalImg) return;
+      modalImg.classList.remove("scale-150", "cursor-zoom-out");
+      modalImg.classList.add("cursor-zoom-in");
+      modalImg.src = src;
+      if (captionEl) captionEl.textContent = caption || "";
+      modal.classList.remove("hidden");
+      document.body.style.overflow = "hidden";
+    };
+
+    window.closeLightbox = function (e) {
+      if (e) {
+        if (typeof e.stopPropagation === 'function') e.stopPropagation();
+      }
+      var modal = document.getElementById("lightbox-modal");
+      if (!modal) return;
+      modal.classList.add("hidden");
+      document.body.style.overflow = "";
+    };
+
+    window.toggleLightboxZoom = function (e) {
+      if (e) {
+        if (typeof e.stopPropagation === 'function') e.stopPropagation();
+      }
+      var modalImg = document.getElementById("lightbox-img");
+      if (!modalImg) return;
+      if (modalImg.classList.contains("scale-150")) {
+        modalImg.classList.remove("scale-150", "cursor-zoom-out");
+        modalImg.classList.add("cursor-zoom-in");
+      } else {
+        modalImg.classList.add("scale-150", "cursor-zoom-out");
+        modalImg.classList.remove("cursor-zoom-in");
+      }
+    };
+
+    document.addEventListener("click", function (e) {
+      var img = e.target.closest("img");
+      if (img && img.id !== "lightbox-img") {
+        e.preventDefault();
+        e.stopPropagation();
+        var caption = img.alt || img.getAttribute("data-caption") || (img.nextElementSibling ? img.nextElementSibling.textContent : "");
+        window.openLightbox(img.src, caption);
+      }
+    }, true);
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") {
+        window.closeLightbox();
+      }
+    });
+  </script>
 
   <script type="module" src="../js/main.js"></script>
 </body>

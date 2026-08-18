@@ -239,12 +239,51 @@ export const translations = {
     sim_link_repo: "GitHub Repository (C++ Code)",
 
     // Project 3: EDI Parser
-    proj3_title: "High-Performance Zero-Allocation EDI Engine",
+    proj3_title: "OBXID Engine: High-Performance Data Gateway",
     proj3_date: "Started April 2026 (Active Stealth Project)",
     proj3_desc: "High-throughput O(1) EDI streaming engine processing +40 MB/s end-to-end (from file transmission to final reception) in <35 MB RAM.",
     proj3_b1: "Binds memory footprint to strictly O(1) (~35 MB RAM) while maintaining +40 MB/s end-to-end processing speeds.",
     proj3_b2: "Engineered zero-code parsing logic driven dynamically by external JSON mapping configurations (V3/V4 standards).",
     proj3_b3: "Fully Dockerized, microservices-ready architecture currently under commercial evaluation for industrial partnerships.",
+
+    // EDI Subpage Specific EN Translations
+    edi_title: "OBXID Engine: High-Performance Data Gateway",
+    edi_date: "Started April 2026 (Active Stealth Project)",
+    edi_desc: "Autonomous inbound gateway engineered in C++20 for enterprise IT perimeters. Filters, validates, and streams industrial EDIFACT data directly into structured, AI-ready JSON Lines (JSONL) format at +40 MB/s end-to-end speed in under 35 MB RAM.",
+    edi_stat1_title: "End-to-End Speed",
+    edi_stat1_val: "+40 MB/s per Core",
+    edi_stat2_title: "RAM Footprint",
+    edi_stat2_val: "<35 MB (O(1) Bounded)",
+    edi_stat3_title: "Deployment Security",
+    edi_stat3_val: "100% Air-Gapped / Helm",
+    edi_stat4_title: "Mapping Logic",
+    edi_stat4_val: "No-Code JSON Rules",
+
+    edi_sec1_title: "1. System Architectural Role & Perimeter Protection",
+    edi_sec1_desc: "The OBXID Engine is designed as a high-speed, self-contained inbound security gateway positioned right before the enterprise IT boundary. It does not replace existing ERP or SAP environments; instead, it intercepts raw EDIFACT streams, catches corrupted segments or syntax mismatches in real time, and converts incoming data into clean, structured JSON Lines (JSONL) before downstream systems process it.",
+
+    edi_sec2_title: "2. Core Performance Parameters & Hardware Efficiency",
+    edi_sec2_desc: "Built in modern C++20, the engine eliminates heavy monolithic converter overhead through maximum hardware efficiency:",
+    edi_sec2_b1: "High-Throughput Parsing: Achieves over 35 to 40 MB/s processing speed per CPU core end-to-end from initial file transmission to complete reception.",
+    edi_sec2_b2: "Lean Memory Footprint: Bounded to strictly O(1) memory complexity (~24 MB to 35 MB RAM per instance), eliminating the need for expensive server upgrades or inflated cloud instances.",
+    edi_sec2_b3: "Air-Gapped Cloud-Native Deployment: 100% self-contained air-gapped architecture provided with a customized Helm Chart for rapid, standardized Kubernetes cluster deployment in minutes.",
+    edi_sec2_b4: "Guaranteed Data Sovereignty: Sensitive supplier and enterprise business data never leaves the protected internal infrastructure.",
+
+    edi_sec3_title: "3. No-Code Mapping, Express Debugging & AI Readiness",
+    edi_sec3_desc: "Transformation rules are managed dynamically through a single central configuration file without requiring recompilation:",
+    edi_sec3_b1: "No-Code JSON Rules: Business rules, compliance checks, and field assignments are stored as human-readable JSON.",
+    edi_sec3_b2: "Express-Debugging Diagnostics: Generates structured, machine-readable error logs on anomaly detection, eliminating manual string searches and saving hundreds of developer hours.",
+    edi_sec3_b3: "AI & RAG Pipeline Readiness: Native output in JSON Lines (JSONL) allows direct streaming into vector databases, LLM Retrieval-Augmented Generation (RAG) pipelines, and real-time supplier dashboards.",
+
+    edi_roadmap_title: "Project Status & Technological Roadmap",
+    edi_rm1_title: "Phase 1 (Current) — Core Hardening & Verification",
+    edi_rm1_desc: "Focus on parser core hardening, zero-copy optimization, and building an automated test suite for regression-free performance.",
+    edi_rm2_title: "Phase 2 — Enterprise Licensing & Kubernetes Orchestration",
+    edi_rm2_desc: "Development of the enterprise licensing module and high-availability Air-Gapped Kubernetes cluster orchestration.",
+    edi_rm3_title: "Phase 3 — Visual Drag-&-Drop Editor & EDIFACT Wiki",
+    edi_rm3_desc: "Deployment of an intuitive web mapping editor and interactive EDIFACT directory wiki with pre-built downloadable mappings.",
+
+    edi_stealth_note: "Stealth Commercial Project — Core source code and proprietary enterprise partner mappings remain confidential.",
 
     // Project 4: Tri-Tilt SAR VTOL
     proj4_title: "Tri-Tilt-Rotor SAR VTOL Drone (Diploma Thesis)",
@@ -512,12 +551,51 @@ export const translations = {
     sim_link_repo: "GitHub Repository (C++ Code)",
 
     // Project 3: EDI Parser
-    proj3_title: "High-Performance Zero-Allocation EDI Engine",
+    proj3_title: "OBXID Engine: High-Performance Data Gateway",
     proj3_date: "Gestartet April 2026 (Aktives Stealth-Projekt)",
     proj3_desc: "High-Throughput O(1) EDI-Streaming-Engine mit +40 MB/s End-to-End Verarbeitungsgeschwindigkeit (vom Senden bis zum Empfang) in <35 MB RAM.",
     proj3_b1: "Speicherbedarf strikt auf O(1) (~35 MB RAM) begrenzt bei +40 MB/s End-to-End Durchsatz.",
     proj3_b2: "Zero-Code Parsing-Logik gesteuert über externe JSON-Mapping-Regelwerke (V3/V4 Standards).",
     proj3_b3: "Vollständig Dockerisiert, Microservices-ready und aktuell in kommerzieller Evaluierung für Industriepartner.",
+
+    // EDI Subpage Specific DE Translations
+    edi_title: "OBXID Engine: High-Performance Daten-Gateway",
+    edi_date: "Gestartet April 2026 (Aktives Stealth-Projekt)",
+    edi_desc: "Autarkes Inbound-Gateway in C++20 für die Enterprise-IT Systemgrenze. Validiert und streamt industrielle EDIFACT-Daten direkt in strukturiertes, KI-fähiges JSON Lines (JSONL) Format mit +40 MB/s End-to-End Geschwindigkeit in unter 35 MB RAM.",
+    edi_stat1_title: "End-to-End Durchsatz",
+    edi_stat1_val: "+40 MB/s pro Core",
+    edi_stat2_title: "RAM Verbrauch",
+    edi_stat2_val: "<35 MB (O(1) Begrenzt)",
+    edi_stat3_title: "Deployment Sicherheit",
+    edi_stat3_val: "100% Air-Gapped / Helm",
+    edi_stat4_title: "Mapping Logik",
+    edi_stat4_val: "No-Code JSON Regeln",
+
+    edi_sec1_title: "1. Systemarchitektonische Einordnung & Infrastruktur-Schutz",
+    edi_sec1_desc: "Die OBXID-Engine versteht sich als ultraschnelles, autarkes Inbound-Gateway direkt an der Systemgrenze vor bestehenden ERP- oder SAP-Systemen. Ihre Kernaufgabe ist es, Datenströme zu validieren, syntaktische Fehlstrukturen in Echtzeit abzufangen und Daten lesbar sowie datenbank- und KI-fähig zu machen.",
+
+    edi_sec2_title: "2. Architektur, Leistungsparameter & Hardware-Effizienz",
+    edi_sec2_desc: "Um Risiken an der Systemgrenze zu eliminieren, bricht die in hochoptimiertem C++ geschriebene Engine mit monolithischen Strukturen:",
+    edi_sec2_b1: "Hohe Parsing-Geschwindigkeit: Erreicht eine Verarbeitungsgeschwindigkeit von über 35 bis 40 MB/s pro CPU-Kern End-to-End vom Dateiversand bis zum vollständigen Empfang.",
+    edi_sec2_b2: "Ressourcen- & Kosteneffizienz: Strikter Speicherbedarf von O(1) (~24 MB bis 35 MB RAM pro Instanz) verhindert teure Hardware-Upgrades oder überdimensionierte Cloud-Instanzen.",
+    edi_sec2_b3: "Nahtlose Cloud-Native Integration: Über ein maßgeschneidertes Helm Chart lässt sich die Software extrem flexibel in Kubernetes-Cluster minutenschnell deployen.",
+    edi_sec2_b4: "Garantierte Datensouveränität: Als 100% autarke Air-Gapped-Lösung verlassen sensible Unternehmens- und Lieferantendaten zu keinem Zeitpunkt das interne Netz.",
+
+    edi_sec3_title: "3. No-Code Konfiguration, Express-Debugging & KI-Readiness",
+    edi_sec3_desc: "Die Transformation erfolgt über eine zentrale Konfigurationsdatei ohne operative Softwareentwicklung:",
+    edi_sec3_b1: "No-Code JSON Regeln: Geschäftsregeln und Prüfungen werden ohne Programmieraufwand direkt im klaren JSON-Format hinterlegt.",
+    edi_sec3_b2: "Kostenreduktion durch Express-Debugging: Erzeugt bei Anomalien struktuierte maschinenlesbare Protokolle, die manuelle Suchen in kryptischen Zeichenketten ersetzen und Entwicklerstunden sparen.",
+    edi_sec3_b3: "KI- & RAG-Readiness: Generiert direkt das Industriestandard-Format JSON Lines (JSONL), das ohne komplexe Zwischenschritte direkt in Vector-Datenbanken und LLM RAG-Pipelines fließt.",
+
+    edi_roadmap_title: "Projektstatus & Technologische Roadmap",
+    edi_rm1_title: "Phase 1 (Aktuell) — Kernhärtung & Testsuite",
+    edi_rm1_desc: "Fokus auf Optimierung und Absicherung des Parser-Kerns sowie Aufbau einer automatisierten Testsuite für dauerhafte Regressionsfreiheit.",
+    edi_rm2_title: "Phase 2 — Skalierbarkeit & Kubernetes Orchestrierung",
+    edi_rm2_desc: "Entwicklung des Enterprise-Lizenzsystems und Orchestrierung für hochverfügbare, lokale Air-Gapped Kubernetes-Infrastrukturen.",
+    edi_rm3_title: "Phase 3 — Drag-&-Drop Editor & EDIFACT-Wiki",
+    edi_rm3_desc: "Bereitstellung des visuellen Online-Editors und Aufbereitung der EDIFACT-Verzeichnisse zu einem interaktiven Wiki inkl. Vorlagen.",
+
+    edi_stealth_note: "Vertrauliches Business-Projekt — Quellcode und spezifische Partner-Mappings bleiben geschützt.",
 
     // Project 4: Tri-Tilt SAR VTOL
     proj4_title: "Tri-Tilt-Rotor SAR VTOL Drohne (Diplomarbeit)",
