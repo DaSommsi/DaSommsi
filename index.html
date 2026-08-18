@@ -450,7 +450,7 @@
       <div class="space-y-8">
 
         <!-- Project 1: Crazy Car RL -->
-        <article data-category="ai lowlevel hardware" class="sub-card rounded-3xl p-6 lg:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center border border-white/10 hover:border-amber-400/50">
+        <article data-category="ai lowlevel hardware" onclick="if(!event.target.closest('a')) window.location.href='projects/crazy-car.html'" class="sub-card rounded-3xl p-6 lg:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center border border-white/10 hover:border-amber-400/50 cursor-pointer group transition-all duration-300">
           <div class="lg:col-span-8 space-y-4">
             <div class="flex flex-wrap items-center gap-2">
               <span data-i18n="proj1_date" class="px-3 py-1 text-xs font-mono rounded-full bg-amber-950/80 text-amber-300 font-bold border border-amber-500/50 glow-dot-amber">Aug 2025 - Feb 2026 (Graz Competition)</span>
@@ -458,7 +458,7 @@
               <span class="px-3 py-1 text-xs font-mono rounded-full bg-sky-950/80 text-sky-300 border border-sky-500/40">Unity ML-Agents (PPO)</span>
             </div>
 
-            <h3 data-i18n="proj1_title" class="text-2xl sm:text-3xl font-bold text-foreground font-heading tracking-tight">Crazy Car: Autonomous AI/RL RC Car</h3>
+            <h3 data-i18n="proj1_title" class="text-2xl sm:text-3xl font-bold text-foreground font-heading tracking-tight group-hover:text-sky-400 transition-colors">Crazy Car: Autonomous AI/RL RC Car</h3>
             <p data-i18n="proj1_desc" class="text-sm sm:text-base text-zinc-300 leading-relaxed">Our first major robotics experiment built from a €30 Amazon RC car. Trained a neural policy in Unity ML-Agents to directly control motor PWM and steering, serving as an invaluable hands-on learning testbed.</p>
 
             <ul class="space-y-2.5 text-sm sm:text-base text-zinc-200 list-disc list-inside font-sans leading-relaxed border-t border-border pt-4">
@@ -473,15 +473,15 @@
             </div>
           </div>
 
-          <a href="projects/crazy-car.html" class="lg:col-span-4 h-56 rounded-2xl bg-zinc-950 border border-white/15 overflow-hidden relative group shadow-xl block cursor-pointer">
+          <div class="lg:col-span-4 h-56 rounded-2xl bg-zinc-950 border border-white/15 overflow-hidden relative group shadow-xl">
             <img src="data/crazy-car/Picture_Lambo_Closed.jpg" alt="Crazy Car Amazon RC Car Project" class="w-full h-full object-cover">
             <div class="absolute inset-0 bg-gradient-to-t from-zinc-950/90 via-transparent to-transparent"></div>
             <span class="absolute bottom-3 left-3 text-xs font-mono text-zinc-200 bg-zinc-900/90 px-2.5 py-1 rounded-lg border border-white/15 shadow">30€ Amazon RC Car Hardware</span>
-          </a>
+          </div>
         </article>
 
         <!-- Project 2: 6DoF Driving Simulator -->
-        <article data-category="hardware lowlevel" class="sub-card rounded-3xl p-6 lg:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center border border-white/10 hover:border-emerald-400/50">
+        <article data-category="hardware lowlevel" onclick="if(!event.target.closest('a')) window.location.href='projects/6dof-driving-sim.html'" class="sub-card rounded-3xl p-6 lg:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center border border-white/10 hover:border-emerald-400/50 cursor-pointer group transition-all duration-300">
           <div class="lg:col-span-8 space-y-4">
             <div class="flex flex-wrap items-center gap-2">
               <span data-i18n="proj2_date" class="px-3 py-1 text-xs font-mono rounded-full bg-emerald-950/80 text-emerald-300 font-bold border border-emerald-500/50 glow-dot-emerald">May 2025 - Jan 2026</span>
@@ -489,7 +489,7 @@
               <span class="px-3 py-1 text-xs font-mono rounded-full bg-sky-950/80 text-sky-300 border border-sky-500/40">Modular C++ Control</span>
             </div>
 
-            <h3 data-i18n="proj2_title" class="text-2xl sm:text-3xl font-bold text-foreground font-heading tracking-tight">6DoF Dynamic Motion Simulator Rig</h3>
+            <h3 data-i18n="proj2_title" class="text-2xl sm:text-3xl font-bold text-foreground font-heading tracking-tight group-hover:text-emerald-400 transition-colors">6DoF Dynamic Motion Simulator Rig</h3>
             <p data-i18n="proj2_desc" class="text-sm sm:text-base text-zinc-300 leading-relaxed">Fully restored and repaired a broken, legacy 6DoF motion rig at HTL Salzburg by diagnosing electrical/mechanical faults and building custom C++ control software.</p>
 
             <ul class="space-y-2.5 text-sm sm:text-base text-zinc-200 list-disc list-inside font-sans leading-relaxed border-t border-border pt-4">
@@ -504,15 +504,15 @@
             </div>
           </div>
 
-          <a href="projects/6dof-driving-sim.html" class="lg:col-span-4 h-56 rounded-2xl bg-zinc-950 border border-white/15 overflow-hidden relative group shadow-xl block cursor-pointer">
+          <div class="lg:col-span-4 h-56 rounded-2xl bg-zinc-950 border border-white/15 overflow-hidden relative group shadow-xl">
             <img src="data/6dof-sim-rig/Picture_Concept-CAD.png" alt="6DoF Motion Simulator Rig CAD Concept Model" class="w-full h-full object-cover">
             <div class="absolute inset-0 bg-gradient-to-t from-zinc-950/90 via-transparent to-transparent"></div>
             <span class="absolute bottom-3 left-3 text-xs font-mono text-zinc-200 bg-zinc-900/90 px-2.5 py-1 rounded-lg border border-white/15 shadow">3D CAD Stewart Platform</span>
-          </a>
+          </div>
         </article>
 
         <!-- Project 3: EDI-to-JSONL Streaming Parser -->
-        <article data-category="lowlevel" class="sub-card rounded-3xl p-6 lg:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center border border-white/10 hover:border-sky-400/50">
+        <article data-category="lowlevel" onclick="if(!event.target.closest('a')) window.location.href='projects/edi-jsonl-parser.html'" class="sub-card rounded-3xl p-6 lg:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center border border-white/10 hover:border-sky-400/50 cursor-pointer group transition-all duration-300">
           <div class="lg:col-span-8 space-y-4">
             <div class="flex flex-wrap items-center gap-2">
               <span data-i18n="proj3_date" class="px-3 py-1 text-xs font-mono rounded-full bg-sky-950/80 text-sky-300 font-bold border border-sky-500/40">Started April 2026 (Stealth)</span>
@@ -520,7 +520,7 @@
               <span class="px-3 py-1 text-xs font-mono rounded-full bg-sky-950/80 text-sky-300 border border-sky-500/40">O(1) Memory Engine</span>
             </div>
 
-            <h3 data-i18n="proj3_title" class="text-2xl sm:text-3xl font-bold text-foreground font-heading tracking-tight">High-Performance Zero-Allocation EDI Engine</h3>
+            <h3 data-i18n="proj3_title" class="text-2xl sm:text-3xl font-bold text-foreground font-heading tracking-tight group-hover:text-sky-400 transition-colors">High-Performance Zero-Allocation EDI Engine</h3>
             <p data-i18n="proj3_desc" class="text-sm sm:text-base text-zinc-300 leading-relaxed">High-throughput O(1) EDI streaming engine processing +40 MB/s end-to-end (from file transmission to final reception) in &lt;35 MB RAM.</p>
 
             <ul class="space-y-2.5 text-sm sm:text-base text-zinc-200 list-disc list-inside font-sans leading-relaxed border-t border-border pt-4">
@@ -534,15 +534,15 @@
             </div>
           </div>
 
-          <a href="projects/edi-jsonl-parser.html" class="lg:col-span-4 h-56 rounded-2xl bg-zinc-950 border border-white/15 overflow-hidden relative group shadow-xl p-3 flex items-center justify-center block cursor-pointer">
+          <div class="lg:col-span-4 h-56 rounded-2xl bg-zinc-950 border border-white/15 overflow-hidden relative group shadow-xl p-3 flex items-center justify-center">
             <img src="data/edi-jsonl/logo.png" alt="OBXID Engine High-Performance Data Gateway Logo" class="max-h-full max-w-full object-contain">
             <div class="absolute inset-0 bg-gradient-to-t from-zinc-950/90 via-transparent to-transparent pointer-events-none"></div>
             <span class="absolute bottom-3 left-3 text-xs font-mono text-zinc-200 bg-zinc-900/90 px-2.5 py-1 rounded-lg border border-white/15 shadow">OBXID Engine Gateway</span>
-          </a>
+          </div>
         </article>
 
         <!-- Project 4: Tri-Tilt VTOL SAR -->
-        <article data-category="ai hardware" class="sub-card rounded-3xl p-6 lg:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center border border-white/10 hover:border-emerald-400/50">
+        <article data-category="ai hardware" onclick="if(!event.target.closest('a')) window.location.href='projects/tri-tilt-vtol.html'" class="sub-card rounded-3xl p-6 lg:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center border border-white/10 hover:border-emerald-400/50 cursor-pointer group transition-all duration-300">
           <div class="lg:col-span-8 space-y-4">
             <div class="flex flex-wrap items-center gap-2">
               <span data-i18n="proj4_date" class="px-3 py-1 text-xs font-mono rounded-full bg-emerald-950/80 text-emerald-300 font-bold border border-emerald-500/50 glow-dot-emerald">Started June 2026 • Target 2028 (Diploma Thesis)</span>
@@ -550,7 +550,7 @@
               <span class="px-3 py-1 text-xs font-mono rounded-full bg-sky-950/80 text-sky-300 border border-sky-500/40">ROS2 & SORA SAIL II</span>
             </div>
 
-            <h3 data-i18n="proj4_title" class="text-2xl sm:text-3xl font-bold text-foreground font-heading tracking-tight">Tri-Tilt-Rotor SAR VTOL Drone (Diploma Thesis)</h3>
+            <h3 data-i18n="proj4_title" class="text-2xl sm:text-3xl font-bold text-foreground font-heading tracking-tight group-hover:text-emerald-400 transition-colors">Tri-Tilt-Rotor SAR VTOL Drone (Diploma Thesis)</h3>
             <p data-i18n="proj4_desc" class="text-sm sm:text-base text-zinc-300 leading-relaxed">Search & rescue 3-rotor VTOL drone engineered to locate missing persons and broadcast live GPS coordinates to emergency ground teams.</p>
 
             <ul class="space-y-2.5 text-sm sm:text-base text-zinc-200 list-disc list-inside font-sans leading-relaxed border-t border-border pt-4">
@@ -565,15 +565,15 @@
             </div>
           </div>
 
-          <a href="projects/tri-tilt-vtol.html" class="lg:col-span-4 h-56 rounded-2xl bg-zinc-950 border border-white/15 overflow-hidden relative group shadow-xl p-3 flex items-center justify-center block cursor-pointer">
+          <div class="lg:col-span-4 h-56 rounded-2xl bg-zinc-950 border border-white/15 overflow-hidden relative group shadow-xl p-3 flex items-center justify-center">
             <img src="data/vtol/Picutre_Drone_Concept.png" alt="Tri-Tilt-Rotor SAR VTOL Drone Concept Model" class="max-h-full max-w-full object-contain">
             <div class="absolute inset-0 bg-gradient-to-t from-zinc-950/90 via-transparent to-transparent pointer-events-none"></div>
             <span class="absolute bottom-3 left-3 text-xs font-mono text-zinc-200 bg-zinc-900/90 px-2.5 py-1 rounded-lg border border-white/15 shadow">3D CAD SAR VTOL Drone</span>
-          </a>
+          </div>
         </article>
 
         <!-- Project 5: C++ Physics Engine -->
-        <article data-category="lowlevel" class="sub-card rounded-3xl p-6 lg:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center border border-white/10 hover:border-sky-400/50">
+        <article data-category="lowlevel" onclick="if(!event.target.closest('a')) window.location.href='projects/cpp-physics-engine.html'" class="sub-card rounded-3xl p-6 lg:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center border border-white/10 hover:border-sky-400/50 cursor-pointer group transition-all duration-300">
           <div class="lg:col-span-8 space-y-4">
             <div class="flex flex-wrap items-center gap-2">
               <span data-i18n="proj5_date" class="px-3 py-1 text-xs font-mono rounded-full bg-sky-950/80 text-sky-300 font-bold border border-sky-500/40">March 2026 - May 2026</span>
@@ -581,7 +581,7 @@
               <span class="px-3 py-1 text-xs font-mono rounded-full bg-sky-950/80 text-sky-300 border border-sky-500/40">RK4 Integrator</span>
             </div>
 
-            <h3 data-i18n="proj5_title" class="text-2xl sm:text-3xl font-bold text-foreground font-heading tracking-tight">Deterministic 6DoF C++ Physics Engine</h3>
+            <h3 data-i18n="proj5_title" class="text-2xl sm:text-3xl font-bold text-foreground font-heading tracking-tight group-hover:text-sky-400 transition-colors">Deterministic 6DoF C++ Physics Engine</h3>
             <p data-i18n="proj5_desc" class="text-sm sm:text-base text-zinc-300 leading-relaxed">Zero-dependency rigid body flight simulator built from scratch in C++20 with RK4 integration to master physics mechanics & C++ for the SAR VTOL project.</p>
 
             <ul class="space-y-2.5 text-sm sm:text-base text-zinc-200 list-disc list-inside font-sans leading-relaxed border-t border-border pt-4">
@@ -606,7 +606,7 @@
         </article>
 
         <!-- Project 6: Ground Effect Vehicle -->
-        <article data-category="hardware lowlevel" class="sub-card rounded-3xl p-6 lg:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center border border-white/10 hover:border-emerald-400/50">
+        <article data-category="hardware lowlevel" onclick="if(!event.target.closest('a')) window.location.href='projects/ground-effect-vehicle.html'" class="sub-card rounded-3xl p-6 lg:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center border border-white/10 hover:border-emerald-400/50 cursor-pointer group transition-all duration-300">
           <div class="lg:col-span-8 space-y-4">
             <div class="flex flex-wrap items-center gap-2">
               <span data-i18n="proj6_date" class="px-3 py-1 text-xs font-mono rounded-full bg-emerald-950/80 text-emerald-300 font-bold border border-emerald-500/50 glow-dot-emerald">Started April 2026 (Comp 2027)</span>
@@ -614,7 +614,7 @@
               <span class="px-3 py-1 text-xs font-mono rounded-full bg-sky-950/80 text-sky-300 border border-sky-500/40">13 kg Downforce Cushion</span>
             </div>
 
-            <h3 data-i18n="proj6_title" class="text-2xl sm:text-3xl font-bold text-foreground font-heading tracking-tight">DIN A4 Ground Effect Autonomous Vehicle</h3>
+            <h3 data-i18n="proj6_title" class="text-2xl sm:text-3xl font-bold text-foreground font-heading tracking-tight group-hover:text-emerald-400 transition-colors">DIN A4 Ground Effect Autonomous Vehicle</h3>
             <p data-i18n="proj6_desc" class="text-sm sm:text-base text-zinc-300 leading-relaxed">Direct successor to Crazy Car started 8 months ahead! Features 13 kg ground-effect downforce cushion on 2 kg chassis, Bugatti-like acceleration, and STM32H7 MPC.</p>
 
             <ul class="space-y-2.5 text-sm sm:text-base text-zinc-200 list-disc list-inside font-sans leading-relaxed border-t border-border pt-4">
