@@ -100,7 +100,7 @@ export const translations = {
 
     edu_heading: "Education & Workshop Fabrication Skills",
     edu_1_title: "HTL Elektrotechnik Salzburg",
-    edu_1_subtitle: "Higher Technical Institute for Electrical Engineering • 2023 - 2028",
+    edu_1_subtitle: "Höhere Technische Lehranstalt für Elektrotechnik • 2023 - 2028",
     edu_1_desc: "5-year intensive engineering program covering power systems, control engineering, embedded C/C++, CAD design, electronics, and software development.",
 
     workshop_title: "Hands-on Workshop & Manufacturing Competencies",
@@ -250,6 +250,12 @@ export const translations = {
     edi_title: "OBXID Engine: High-Performance Data Gateway",
     edi_date: "Started April 2026 (Active Stealth Project)",
     edi_desc: "Autonomous inbound gateway engineered in C++20 for enterprise IT perimeters. Filters, validates, and streams industrial EDIFACT data directly into structured, AI-ready JSON Lines (JSONL) format at +40 MB/s end-to-end speed in under 35 MB RAM.",
+    edi_tag1: "C++20 High-Throughput Engine",
+    edi_tag2: "O(1) Bounded Memory",
+    edi_tag3: "Air-Gapped Kubernetes / Helm",
+    edi_stealth_badge: "STEALTH ENTERPRISE GATEWAY",
+    edi_card_heading: "Inbound Perimeter Security & Real-Time AI Readiness",
+    edi_card_desc: "The OBXID Engine functions as an ultra-fast, self-contained inbound security shield directly in front of enterprise ERP and SAP boundaries. It intercepts raw EDIFACT streams, validates segment integrity, and converts data on the fly into AI-ready JSON Lines (JSONL).",
     edi_stat1_title: "End-to-End Speed",
     edi_stat1_val: "+40 MB/s per Core",
     edi_stat2_title: "RAM Footprint",
@@ -264,16 +270,16 @@ export const translations = {
 
     edi_sec2_title: "2. Core Performance Parameters & Hardware Efficiency",
     edi_sec2_desc: "Built in modern C++20, the engine eliminates heavy monolithic converter overhead through maximum hardware efficiency:",
-    edi_sec2_b1: "High-Throughput Parsing: Achieves over 35 to 40 MB/s processing speed per CPU core end-to-end from initial file transmission to complete reception.",
-    edi_sec2_b2: "Lean Memory Footprint: Bounded to strictly O(1) memory complexity (~24 MB to 35 MB RAM per instance), eliminating the need for expensive server upgrades or inflated cloud instances.",
-    edi_sec2_b3: "Air-Gapped Cloud-Native Deployment: 100% self-contained air-gapped architecture provided with a customized Helm Chart for rapid, standardized Kubernetes cluster deployment in minutes.",
-    edi_sec2_b4: "Guaranteed Data Sovereignty: Sensitive supplier and enterprise business data never leaves the protected internal infrastructure.",
+    edi_sec2_b1: "<strong>High-Throughput Parsing:</strong> Achieves over 35 to 40 MB/s processing speed per CPU core end-to-end from initial file transmission to complete reception.",
+    edi_sec2_b2: "<strong>Lean Memory Footprint:</strong> Bounded to strictly O(1) memory complexity (~24 MB to 35 MB RAM per instance), eliminating the need for expensive server upgrades or inflated cloud instances.",
+    edi_sec2_b3: "<strong>Air-Gapped Cloud-Native Deployment:</strong> 100% self-contained air-gapped architecture provided with a customized Helm Chart for rapid, standardized Kubernetes cluster deployment in minutes.",
+    edi_sec2_b4: "<strong>Guaranteed Data Sovereignty:</strong> Sensitive supplier and enterprise business data never leaves the protected internal infrastructure.",
 
     edi_sec3_title: "3. No-Code Mapping, Express Debugging & AI Readiness",
     edi_sec3_desc: "Transformation rules are managed dynamically through a single central configuration file without requiring recompilation:",
-    edi_sec3_b1: "No-Code JSON Rules: Business rules, compliance checks, and field assignments are stored as human-readable JSON.",
-    edi_sec3_b2: "Express-Debugging Diagnostics: Generates structured, machine-readable error logs on anomaly detection, eliminating manual string searches and saving hundreds of developer hours.",
-    edi_sec3_b3: "AI & RAG Pipeline Readiness: Native output in JSON Lines (JSONL) allows direct streaming into vector databases, LLM Retrieval-Augmented Generation (RAG) pipelines, and real-time supplier dashboards.",
+    edi_sec3_b1: "<strong>No-Code JSON Rules:</strong> Business rules, compliance checks, and field assignments are stored as human-readable JSON.",
+    edi_sec3_b2: "<strong>Express-Debugging Diagnostics:</strong> Generates structured, machine-readable error logs on anomaly detection, eliminating manual string searches and saving hundreds of developer hours.",
+    edi_sec3_b3: "<strong>AI & RAG Pipeline Readiness:</strong> Native output in JSON Lines (JSONL) allows direct streaming into vector databases, LLM Retrieval-Augmented Generation (RAG) pipelines, and real-time supplier dashboards.",
 
     edi_roadmap_title: "Project Status & Technological Roadmap",
     edi_rm1_title: "Phase 1 (Current) — Core Hardening & Verification",
@@ -562,6 +568,12 @@ export const translations = {
     edi_title: "OBXID Engine: High-Performance Daten-Gateway",
     edi_date: "Gestartet April 2026 (Aktives Stealth-Projekt)",
     edi_desc: "Autarkes Inbound-Gateway in C++20 für die Enterprise-IT Systemgrenze. Validiert und streamt industrielle EDIFACT-Daten direkt in strukturiertes, KI-fähiges JSON Lines (JSONL) Format mit +40 MB/s End-to-End Geschwindigkeit in unter 35 MB RAM.",
+    edi_tag1: "C++20 High-Throughput Engine",
+    edi_tag2: "O(1) Begrenzter Speicher",
+    edi_tag3: "Air-Gapped Kubernetes / Helm",
+    edi_stealth_badge: "STEALTH ENTERPRISE GATEWAY",
+    edi_card_heading: "Inbound-Sicherheit & Echtzeit KI-Bereitschaft",
+    edi_card_desc: "Die OBXID-Engine agiert als ultraschnelles, autarkes Inbound-Gateway direkt vor der Systemgrenze bestehender ERP- und SAP-Systeme. Sie fängt fehlerhafte EDIFACT-Strukturen ab und wandelt Daten in Echtzeit in KI-fähiges JSON Lines (JSONL) um.",
     edi_stat1_title: "End-to-End Durchsatz",
     edi_stat1_val: "+40 MB/s pro Core",
     edi_stat2_title: "RAM Verbrauch",
@@ -576,16 +588,16 @@ export const translations = {
 
     edi_sec2_title: "2. Architektur, Leistungsparameter & Hardware-Effizienz",
     edi_sec2_desc: "Um Risiken an der Systemgrenze zu eliminieren, bricht die in hochoptimiertem C++ geschriebene Engine mit monolithischen Strukturen:",
-    edi_sec2_b1: "Hohe Parsing-Geschwindigkeit: Erreicht eine Verarbeitungsgeschwindigkeit von über 35 bis 40 MB/s pro CPU-Kern End-to-End vom Dateiversand bis zum vollständigen Empfang.",
-    edi_sec2_b2: "Ressourcen- & Kosteneffizienz: Strikter Speicherbedarf von O(1) (~24 MB bis 35 MB RAM pro Instanz) verhindert teure Hardware-Upgrades oder überdimensionierte Cloud-Instanzen.",
-    edi_sec2_b3: "Nahtlose Cloud-Native Integration: Über ein maßgeschneidertes Helm Chart lässt sich die Software extrem flexibel in Kubernetes-Cluster minutenschnell deployen.",
-    edi_sec2_b4: "Garantierte Datensouveränität: Als 100% autarke Air-Gapped-Lösung verlassen sensible Unternehmens- und Lieferantendaten zu keinem Zeitpunkt das interne Netz.",
+    edi_sec2_b1: "<strong>Hohe Parsing-Geschwindigkeit:</strong> Erreicht eine Verarbeitungsgeschwindigkeit von über 35 bis 40 MB/s pro CPU-Kern End-to-End vom Dateiversand bis zum vollständigen Empfang.",
+    edi_sec2_b2: "<strong>Ressourcen- & Kosteneffizienz:</strong> Strikter Speicherbedarf von O(1) (~24 MB bis 35 MB RAM pro Instanz) verhindert teure Hardware-Upgrades oder überdimensionierte Cloud-Instanzen.",
+    edi_sec2_b3: "<strong>Nahtlose Cloud-Native Integration:</strong> Über ein maßgeschneidertes Helm Chart lässt sich die Software extrem flexibel in Kubernetes-Cluster minutenschnell deployen.",
+    edi_sec2_b4: "<strong>Garantierte Datensouveränität:</strong> Als 100% autarke Air-Gapped-Lösung verlassen sensible Unternehmens- und Lieferantendaten zu keinem Zeitpunkt das interne Netz.",
 
     edi_sec3_title: "3. No-Code Konfiguration, Express-Debugging & KI-Readiness",
     edi_sec3_desc: "Die Transformation erfolgt über eine zentrale Konfigurationsdatei ohne operative Softwareentwicklung:",
-    edi_sec3_b1: "No-Code JSON Regeln: Geschäftsregeln und Prüfungen werden ohne Programmieraufwand direkt im klaren JSON-Format hinterlegt.",
-    edi_sec3_b2: "Kostenreduktion durch Express-Debugging: Erzeugt bei Anomalien struktuierte maschinenlesbare Protokolle, die manuelle Suchen in kryptischen Zeichenketten ersetzen und Entwicklerstunden sparen.",
-    edi_sec3_b3: "KI- & RAG-Readiness: Generiert direkt das Industriestandard-Format JSON Lines (JSONL), das ohne komplexe Zwischenschritte direkt in Vector-Datenbanken und LLM RAG-Pipelines fließt.",
+    edi_sec3_b1: "<strong>No-Code JSON Regeln:</strong> Geschäftsregeln und Prüfungen werden ohne Programmieraufwand direkt im klaren JSON-Format hinterlegt.",
+    edi_sec3_b2: "<strong>Kostenreduktion durch Express-Debugging:</strong> Erzeugt bei Anomalien strukturierte maschinenlesbare Protokolle, die manuelle Suchen in kryptischen Zeichenketten ersetzen und Entwicklerstunden sparen.",
+    edi_sec3_b3: "<strong>KI- & RAG-Readiness:</strong> Generiert direkt das Industriestandard-Format JSON Lines (JSONL), das ohne komplexe Zwischenschritte direkt in Vector-Datenbanken und LLM RAG-Pipelines fließt.",
 
     edi_roadmap_title: "Projektstatus & Technologische Roadmap",
     edi_rm1_title: "Phase 1 (Aktuell) — Kernhärtung & Testsuite",
@@ -671,7 +683,11 @@ export class I18nManager {
     elements.forEach((el) => {
       const key = el.getAttribute("data-i18n");
       if (dict[key]) {
-        el.textContent = dict[key];
+        if (dict[key].includes("<") && dict[key].includes(">")) {
+          el.innerHTML = dict[key];
+        } else {
+          el.textContent = dict[key];
+        }
       }
     });
 
