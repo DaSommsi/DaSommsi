@@ -257,9 +257,62 @@
       </div>
       <p id="lightbox-caption" class="text-xs sm:text-sm font-mono text-zinc-300 mt-4 text-center max-w-2xl"></p>
     </div>
-  </div>
+  <!-- LIGHTBOX SCRIPT -->
+  <script>
+    window.openLightbox = function (src, caption) {
+      var modal = document.getElementById("lightbox");
+      var modalImg = document.getElementById("lightbox-img");
+      var captionEl = document.getElementById("lightbox-caption");
+      
+      if (!modal || !modalImg) return;
+      modalImg.classList.remove("scale-150", "cursor-zoom-out");
+      modalImg.classList.add("cursor-zoom-in");
+      modalImg.src = src;
+      if (captionEl) captionEl.textContent = caption || "";
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+      document.body.style.overflow = "hidden";
+    };
+
+    window.closeLightbox = function (e) {
+      if (e) e.stopPropagation();
+      var modal = document.getElementById("lightbox");
+      if (!modal) return;
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+      document.body.style.overflow = "";
+    };
+
+    window.toggleLightboxZoom = function (e) {
+      if (e) e.stopPropagation();
+      var modalImg = document.getElementById("lightbox-img");
+      if (!modalImg) return;
+      if (modalImg.classList.contains("scale-150")) {
+        modalImg.classList.remove("scale-150", "cursor-zoom-out");
+        modalImg.classList.add("cursor-zoom-in");
+      } else {
+        modalImg.classList.add("scale-150", "cursor-zoom-out");
+        modalImg.classList.remove("cursor-zoom-in");
+      }
+    };
+
+    document.addEventListener("click", function (e) {
+      var img = e.target.closest("img.cursor-zoom-in");
+      if (img && img.id !== "lightbox-img") {
+        e.preventDefault();
+        e.stopPropagation();
+        var caption = img.alt || img.getAttribute("data-caption") || (img.nextElementSibling ? img.nextElementSibling.textContent : "");
+        window.openLightbox(img.src, caption);
+      }
+    }, true);
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") {
+        window.closeLightbox();
+      }
+    });
+  </script>
 
   <script type="module" src="../js/main.js"></script>
-  <script src="../js/lightbox.js"></script>
 </body>
 </html>
