@@ -1,7 +1,7 @@
 /**
  * @file i18n.js
  * @description Comprehensive Dual-Language Translation Dictionary (EN Primary, DE Secondary)
- * Tailored for David Sommerer — Avionics, Embedded Systems, Electronics & Software Engineer.
+ * Tailored for David Sommerer — Electrical Engineering Student & Systems Engineer.
  */
 
 export const translations = {
@@ -21,10 +21,10 @@ export const translations = {
     hero_greeting: "Hi, I'm",
     hero_name: "David Sommerer.",
     hero_role_prefix: "I'm an",
-    hero_role: "Electrical & Systems Engineering Student",
+    hero_role: "Electrical Engineering Student & Systems Engineer",
     hero_specializing: "specializing in",
     hero_focus: "Avionics, Embedded Systems, Electronics & Software Engineering.",
-    hero_subtitle: "Student at HTL Elektrotechnik Salzburg. Engineering avionics systems, embedded firmware, electronics, autonomous vehicles, and software architecture.",
+    hero_subtitle: "Student at the Higher Technical Institute for Electrical Engineering Salzburg (HTL). Engineering avionics systems, embedded firmware, electronics, autonomous vehicles, and software architecture.",
     hero_cta_projects: "Explore Projects",
     hero_cta_contact: "Direct Contact",
 
@@ -46,7 +46,7 @@ export const translations = {
     // Terminal Text
     term_title: "david@htl-salzburg:~/systems",
     term_cmd_whoami: "whoami",
-    term_whoami_desc: "17-year-old Systems Engineering Student at HTL Elektrotechnik Salzburg specializing in avionics, embedded firmware, electronics planning, and software engineering.",
+    term_whoami_desc: "17-year-old Electrical Engineering Student & Systems Engineer at the Higher Technical Institute for Electrical Engineering Salzburg (HTL) specializing in avionics, embedded firmware, electronics planning, and software engineering.",
     term_cmd_grep: 'grep -r "expertise" /var/log/systems.log',
     term_expertise: "Avionics · Embedded C/C++ · Electronics · Software Engineering",
     term_cmd_conf: "cat /etc/tech-ecosystem.conf",
@@ -59,8 +59,8 @@ export const translations = {
 
     // 3 Quick Cards Below Hero
     card1_title: "Education & Schooling",
-    card1_role1: "HTL Elektrotechnik Salzburg",
-    card1_date1: "Higher Technical Institute • 2023 - 2028",
+    card1_role1: "Higher Technical Institute for Electrical Engineering Salzburg (HTL)",
+    card1_date1: "5-Year Engineering Program • 2023 - 2028",
     card1_role2: "Diploma Thesis R&D Project",
     card1_date2: "SAR VTOL Drone & SORA • 2026 - 2028",
     card1_role3: "Specialization",
@@ -99,8 +99,8 @@ export const translations = {
     intern_2_b2: "Constructed high-power electrical distribution assemblies tailored for major industrial companies across Austria.",
 
     edu_heading: "Education & Workshop Fabrication Skills",
-    edu_1_title: "HTL Elektrotechnik Salzburg",
-    edu_1_subtitle: "Höhere Technische Lehranstalt für Elektrotechnik • 2023 - 2028",
+    edu_1_title: "Higher Technical Institute for Electrical Engineering Salzburg (HTL)",
+    edu_1_subtitle: "5-Year Higher Engineering Program • 2023 - 2028",
     edu_1_desc: "5-year intensive engineering program covering power systems, control engineering, embedded C/C++, CAD design, electronics, and software development.",
 
     workshop_title: "Hands-on Workshop & Manufacturing Competencies",
@@ -129,7 +129,7 @@ export const translations = {
     projects_sub: "Documented engineering projects featuring AI reinforcement learning, 6DoF motion simulation, high-performance parsers, and custom hardware.",
 
     filter_all: "All Systems",
-    filter_ai: "AI & Autonomy",
+    filter_ai: "AI & Autonomie",
     filter_lowlevel: "Embedded C/C++",
     filter_hardware: "Hardware & Sim",
 
@@ -321,7 +321,7 @@ export const translations = {
     link_deepdive: "Explore Project Story →",
 
     // Footer
-    footer_copy: "© 2026 David Sommerer — HTL Elektrotechnik Salzburg."
+    footer_copy: "© 2026 David Sommerer — Higher Technical Institute for Electrical Engineering Salzburg (HTL)."
   },
   de: {
     // Navigation & General
@@ -339,7 +339,7 @@ export const translations = {
     hero_greeting: "Hallo, ich bin",
     hero_name: "David Sommerer.",
     hero_role_prefix: "Ich bin ein",
-    hero_role: "Elektrotechnik & Systemtechnik Schüler",
+    hero_role: "Elektrotechnik-Schüler & Systemtechnik-Engineer",
     hero_specializing: "spezialisiert auf",
     hero_focus: "Avionik, Embedded Systeme, Elektronik & Software Engineering.",
     hero_subtitle: "Schüler an der HTL Elektrotechnik Salzburg. Entwicklung von Avioniksystemen, Embedded Firmware, Elektronik, autonomen Fahrzeugen und Software-Architektur.",
@@ -364,7 +364,7 @@ export const translations = {
     // Terminal Text
     term_title: "david@htl-salzburg:~/systems",
     term_cmd_whoami: "whoami",
-    term_whoami_desc: "17-jähriger Systemtechnik-Schüler an der HTL Elektrotechnik Salzburg spezialisiert auf Avionik, Embedded Firmware, Elektronikplanung und Software Engineering.",
+    term_whoami_desc: "17-jähriger Elektrotechnik-Schüler & Systemtechnik-Engineer an der HTL Elektrotechnik Salzburg spezialisiert auf Avionik, Embedded Firmware, Elektronikplanung und Software Engineering.",
     term_cmd_grep: 'grep -r "expertise" /var/log/systems.log',
     term_expertise: "Avionik · Embedded C/C++ · Elektronik · Software Engineering",
     term_cmd_conf: "cat /etc/tech-ecosystem.conf",
@@ -639,7 +639,7 @@ export const translations = {
     link_deepdive: "Projektstory & Post-Mortem →",
 
     // Footer
-    footer_copy: "© 2026 David Sommerer — HTL Elektrotechnik Salzburg."
+    footer_copy: "© 2026 David Sommerer — Höhere Technische Lehranstalt für Elektrotechnik Salzburg (HTL)."
   }
 };
 

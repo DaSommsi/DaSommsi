@@ -1,71 +1,59 @@
-# David Sommerer — Personal Engineering Portfolio Website
+# Hi there, I'm David Sommerer 👋
 
-> **Electrical & Systems Engineering Student** at **HTL Elektrotechnik Salzburg** specializing in **Avionics, Embedded Systems, Electronics & Software Engineering**.
+<div align="center">
+
+  ### 🎓 Electrical Engineering Student & 🛠️ Systems Engineer
+  **Higher Technical Institute for Electrical Engineering Salzburg (HTL)**  
+  *Specializing in Avionics, Embedded Systems, Electronics Planning & Software Engineering*
+
+  [![Portfolio Website](https://img.shields.io/badge/Website-Portfolio_Live-0ea5e9?style=for-the-badge&logo=googlechrome&logoColor=white)](https://dasommsi.github.io)
+  [![LinkedIn](https://img.shields.io/badge/LinkedIn-David_Sommerer-0077b5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/david-sommerer-131535405)
+  [![GitHub](https://img.shields.io/badge/GitHub-DaSommsi-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/DaSommsi)
+  [![Email](https://img.shields.io/badge/Email-Contact_Me-ea4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:david.sommerer.200811@gmail.com)
+
+</div>
 
 ---
 
-## ⚡ Overview
+## ⚡ About Me
 
-This repository contains the official personal engineering portfolio of **David Sommerer**. The website showcases documented real-world projects spanning autonomous vehicle reinforcement learning, 6DoF motion simulator restoration, zero-allocation C++ data streaming engines, and tri-tilt-rotor search & rescue VTOL drone development.
-
-- 🌐 **Live Website**: [https://dasommsi.github.io](https://github.com/DaSommsi/DaSommsi)
-- 👤 **LinkedIn**: [david-sommerer-131535405](https://www.linkedin.com/in/david-sommerer-131535405)
-- 🐙 **GitHub**: [@DaSommsi](https://github.com/DaSommsi)
-- 📧 **Contact**: [david.sommerer.200811@gmail.com](mailto:david.sommerer.200811@gmail.com)
+- 🎓 **Primary Role**: **Electrical Engineering Student** at the *Higher Technical Institute for Electrical Engineering Salzburg* (2023 – 2028).
+- 🛠️ **Secondary Role**: **Systems Engineer**, designing avionics systems, embedded firmware, electronics distribution, autonomous vehicles, and high-throughput software architecture.
+- 📍 **Location**: Salzburg, Austria.
+- ⚡ **Core Competencies**: Embedded C/C++, STM32 Microcontrollers, Control Engineering, KiCad PCB Design, Power Flow Calculations (NEPlan), CAD (SolidEdge), Linux, and Autonomous AI Systems.
 
 ---
 
 ## 🚀 Featured Engineering Projects
 
-### 1. 🏎️ [Crazy Car: Autonomous AI/RL RC Car](projects/crazy-car.html)
-- **Timeframe**: Aug 2025 – Feb 2026 (Graz Competition)
-- **Overview**: Amazon 30€ RC car rebuilt with ESP32 microcontrollers, steering micro-servos, custom PCB hardware, and AI trained in Unity ML-Agents.
-- **Key Takeaways**: Vital experiment documenting direct AI motor control latency, PCB routing EMI fixes, and version control discipline.
-
-### 2. 🏎️ [6DoF Dynamic Motion Simulator Rig](projects/6dof-driving-sim.html)
-- **Timeframe**: May 2025 – Jan 2026 (HTL Open Door Day Highlight)
-- **Overview**: Full restoration of a broken legacy 6DoF Stewart platform motion rig at HTL Salzburg. Features physical signal/power EMI cable separation, custom distribution fuse box, modular C++ inverse kinematics control software, and €5,500 in department sponsorships.
-- **Press Coverage**: Featured in Austria's *Kronen Zeitung* newspaper and official HTL Instagram media.
-
-### 3. ⚡ [OBXID Engine: High-Performance Inbound Data Gateway](projects/edi-jsonl-parser.html)
-- **Timeframe**: Started April 2026 (Active Stealth Project)
-- **Overview**: C++20 zero-allocation streaming parser functioning as an air-gapped inbound security gateway for enterprise IT boundaries. Converts raw industrial EDIFACT streams to structured, AI-ready JSON Lines (JSONL).
-- **Performance**: Processing speeds exceeding **+40 MB/s per core** end-to-end in under **35 MB RAM** ($O(1)$ memory complexity).
-
-### 4. 🛸 [Tri-Tilt-Rotor SAR VTOL Drone](projects/tri-tilt-vtol.html)
-- **Timeframe**: Started June 2026 • Target 2028 (HTL Diploma Thesis)
-- **Overview**: 3-rotor tilt-mechanism VTOL drone engineered for alpine Search & Rescue (SAR). Features thermal IR person detection and live GPS coordinate broadcasting to emergency rescue teams.
+| Project | Domain / Highlights | Links |
+| :--- | :--- | :--- |
+| 🏁 **[6DoF Dynamic Motion Simulator Rig](projects/6dof-driving-sim.html)** | Restored non-functional HTL 6DoF Stewart platform motion rig. Solved EMI noise via physical signal/power cable isolation, designed a custom fuse box, programmed modular C++ control software, and secured **€5,500 in sponsorships**. Featured in Austria's *Kronen Zeitung* newspaper. | [Subpage View](projects/6dof-driving-sim.html) • [GitHub Repo](https://github.com/DaSommsi/6DoF_Fahrsimulator_HTBLuVA) • [Press Article](https://www.krone.at/4084686) |
+| ⚡ **[OBXID Engine: High-Performance Data Gateway](projects/edi-jsonl-parser.html)** | Autonomous inbound security gateway in C++20 for enterprise IT boundaries. Filters, validates, and streams industrial EDIFACT streams to AI-ready JSON Lines (JSONL) at **+40 MB/s per core** in under **35 MB RAM** ($O(1)$ memory). | [Subpage View](projects/edi-jsonl-parser.html) • *Stealth Project* |
+| 🛸 **[Tri-Tilt-Rotor SAR VTOL Drone](projects/tri-tilt-vtol.html)** | HTL Diploma Thesis project. 3-rotor tilt-mechanism VTOL drone engineered for alpine Search & Rescue (SAR). Features thermal IR person detection and live GPS coordinate broadcasting to rescue teams. | [Subpage View](projects/tri-tilt-vtol.html) |
+| 🏎️ **[Crazy Car: Autonomous AI/RL RC Car](projects/crazy-car.html)** | Rebuilt 30€ Amazon RC car with micro-servos, ESP32 microcontrollers, custom PCB, and reinforcement learning AI trained in Unity ML-Agents. Essential post-mortem on EMI noise, direct motor control, and Git discipline. | [Subpage View](projects/crazy-car.html) |
+| 🏎️ **[DIN A4 Ground Effect Autonomous Vehicle](projects/ground-effect-vehicle.html)** | 2027 competition vehicle started 8 months early. Features **13 kg ground-effect downforce cushion** on a 2 kg chassis, SolidEdge CAD layout (1:6.5 power-to-weight ratio), and Model Predictive Control (MPC) on STM32H7. | [Subpage View](projects/ground-effect-vehicle.html) |
 
 ---
 
-## 🛠️ Technology Stack & Architecture
+## 💻 Tech Stack & Tools
 
-- **Frontend**: Vanilla HTML5, Vanilla CSS3, Tailwind CSS CDN with custom design tokens.
-- **Typography**: `Space Grotesk` (Headings), `Inter` (Prose), `JetBrains Mono` (Code & Technical Metrics).
-- **Internationalization (i18n)**: Native dual-language engine (`js/i18n.js`) providing instant **English (EN)** and **German (DE)** translation toggles without page reloads.
-- **Media & Lightbox**: Custom full-screen click-to-zoom Lightbox modal (`js/lightbox.js`) supporting 1.5x magnification, high-resolution technical schematics, CAD assembly renders, and 9:16 portrait video streaming.
-
----
-
-## 💻 Local Development
-
-To run the portfolio website locally:
-
-```bash
-# Clone the repository
-git clone https://github.com/DaSommsi/DaSommsi.git
-
-# Navigate into project directory
-cd DaSommsi
-
-# Start local web server
-python -m http.server 8000
+```
+[Languages]        C, C++20, Python, HTML5, CSS3, JavaScript
+[Embedded & MCU]   STM32H7, ESP32, MSP430, Arduino, PX4, DroneCAN, CAN bus
+[CAD & Hardware]   KiCad PCB, SolidEdge 3D, NEPlan Power Grid, EPlan, TIA Portal
+[Software & AI]    Unity ML-Agents (RL), MATLAB / Simulink, POSIX mmap, Linux / Ubuntu, Git
+[Workshop Fabrication] CNC Machining (TNC 640), Welding (MIG/MAG/TIG), SMD/THT Soldering, 3D Printing
 ```
 
-Open `http://localhost:8000` in your web browser.
-
 ---
 
-## 📜 License & Copyright
+## 📬 Connect With Me
 
-© 2026 **David Sommerer**. All rights reserved. Registered student at HTL Elektrotechnik Salzburg.
+- 📧 **Email**: [david.sommerer.200811@gmail.com](mailto:david.sommerer.200811@gmail.com)
+- 💼 **LinkedIn**: [linkedin.com/in/david-sommerer-131535405](https://www.linkedin.com/in/david-sommerer-131535405)
+- 🐙 **GitHub Profile**: [@DaSommsi](https://github.com/DaSommsi)
+- 🌐 **Portfolio Website**: [https://dasommsi.github.io](https://github.com/DaSommsi/DaSommsi)
+
+---
+*© 2026 David Sommerer — Higher Technical Institute for Electrical Engineering Salzburg (HTL).*
