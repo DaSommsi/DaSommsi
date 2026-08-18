@@ -299,6 +299,51 @@ export const translations = {
     proj4_b2: "Specs: 15-20 kg mass, 3m wingspan, 130 km/h top speed, 85 km/h cruise speed, 120-400m operational altitude (up to 4000m travel mode).",
     proj4_b3: "In active sponsorship & testing site talks with the Austrian Armed Forces (Österreichisches Bundesheer).",
 
+    // VTOL Subpage Specific EN Translations
+    vtol_title: "Tri-Tilt-Rotor SAR VTOL Drone (Diploma Thesis)",
+    vtol_date: "Started June 2026 • Target 2028 (Diploma Thesis)",
+    vtol_desc: "BVLOS Search & Rescue 3-rotor VTOL drone built under AustroControl SORA SAIL II safety guidelines. Dual Pixhawk FMU + Nvidia Jetson ROS2 swarm architecture with thermal IR AI person detection and live GPS coordinate broadcasting.",
+    vtol_hero_tag1: "Started June 2026 • Target 2028 (Diploma Thesis)",
+    vtol_hero_tag2: "AustroControl SORA SAIL II",
+    vtol_hero_tag3: "Dual Pixhawk + Nvidia Jetson ROS2",
+    vtol_hero_tag4: "BVLOS Swarm Architecture",
+
+    vtol_stat1_title: "Mass & Wingspan",
+    vtol_stat1_val: "15 - 20 kg | 3.0m Span",
+    vtol_stat2_title: "Top / Cruise Speed",
+    vtol_stat2_val: "130 km/h | 85 km/h",
+    vtol_stat3_title: "Operational Ceiling",
+    vtol_stat3_val: "120-400m (Up to 4000m)",
+    vtol_stat4_title: "Cooperation Target",
+    vtol_stat4_val: "Austrian Armed Forces",
+
+    vtol_time1_title: "June 2026: Project Inception & Team Alignment",
+    vtol_time1_desc: "Formed 2-person team for HTL Diploma Thesis (Diplomarbeit). David selected as team lead for avionics, software, SORA safety, GCS ground control station, and military partner contacts.",
+    vtol_time2_title: "July 2026: SORA SAIL II Certification Drafting",
+    vtol_time2_desc: "Authored Technical Design Document (TDD) adhering to AustroControl SORA SAIL II guidelines for BVLOS operations in Alpine search & rescue terrain.",
+    vtol_time3_title: "2026 - 2028: Development, ROS2 Swarm & Military Contact",
+    vtol_time3_desc: "Developing decentralized ROS2 companion computer architecture on Nvidia Jetson towards 2028 graduation. In active talks with the Austrian Armed Forces (Österreichisches Bundesheer) for testing sites and sponsorship.",
+
+    vtol_sec1_title: "1. System Division & Team Responsibilities",
+    vtol_sec1_desc: "Our team split responsibilities cleanly: my teammate focuses on carbon composite chassis mechanics, propulsion sizing, power distribution, and the 90° tilt mechanism. As team lead, I engineer all avionics, electronic redundancy, SORA safety compliance, ROS2 companion software, PID mixers, GCS ground control station, and military partner contacts.",
+
+    vtol_sec2_title: "2. Vehicle Specifications & Operational Profile",
+    vtol_sec2_desc: "The Tri-Tilt-Rotor SAR VTOL drone is engineered for extreme Alpine conditions where traditional multirotors lack range and fixed-wing aircraft cannot land:",
+    vtol_sec2_b1: "<strong>Mass & Airframe:</strong> 15 to 20 kg total takeoff mass with a 3.0-meter wingspan for efficient long-range gliding.",
+    vtol_sec2_b2: "<strong>Flight Speeds:</strong> Top speed of 130 km/h with an efficient cruise speed of 85 km/h.",
+    vtol_sec2_b3: "<strong>Operational Ceiling:</strong> Operational search altitude between 120m and 400m AGL, with a maximum travel altitude capability up to 4,000m MSL for mountain ridge crossings.",
+
+    vtol_sec3_title: "3. Thermal IR AI Person Detection & Jamming-Safe Navigation",
+    vtol_sec3_desc: "Designed for harsh Alpine search & rescue operations, the drone carries a thermal IR camera streaming to an onboard AI vision pipeline executing on the Nvidia Jetson companion computer. When a missing person is recognized, real-time GPS coordinates are broadcast back to ground emergency rescue teams. To counter Electronic Warfare (EW) and GPS jamming in remote mountains, an optical flow camera algorithm maps terrain features to bound position drift within ±2m without satellite signal.",
+
+    vtol_sec4_title: "4. SORA SAIL II Compliance & Military Partnership",
+    vtol_sec4_desc: "Operating Beyond Visual Line of Sight (BVLOS) in Austria requires strict adherence to AustroControl SORA SAIL II safety guidelines. Our Technical Design Document (TDD) outlines dual-redundant flight control units (Pixhawk FMU), fail-safe parachute recovery systems, and encrypted telecommunications links. We are currently in active talks with the Austrian Armed Forces (Österreichisches Bundesheer) regarding specialized flight testing grounds and tactical sponsorship.",
+
+    vtol_media_sub: "CAD 3D concept renders, structural technical design document (TDD), and flight architecture schematics.",
+    vtol_fig1: "Figure 1: CAD 3D Concept Render of the Tri-Tilt-Rotor SAR VTOL Drone.",
+    vtol_pdf_title: "Technical Design Document (TDD)",
+    vtol_pdf_sub: "AustroControl SORA SAIL II Draft Spec (PDF)",
+
     // Project 5: C++ Physics Engine
     proj5_title: "Deterministic 6DoF C++ Physics Engine",
     proj5_date: "March 2026 - May 2026",
@@ -616,6 +661,51 @@ export const translations = {
     proj4_b1: "Entwickelt für alpine Rettungseinsätze mit Wärmebild-KI Personenerkennung und Live-GPS-Koordinatenübertragung an Einsatzkräfte.",
     proj4_b2: "Specs: 15-20 kg Masse, 3m Spannweite, 130 km/h Höchstgeschwindigkeit, 85 km/h Reiseflug, 120-400m Einsatzhöhe (bis 4000m im Reisemodus).",
     proj4_b3: "In aktiven Sponsoring- und Testgelände-Gesprächen mit dem Österreichischen Bundesheer.",
+
+    // VTOL Subpage Specific DE Translations
+    vtol_title: "Tri-Tilt-Rotor SAR VTOL Drohne (Diplomarbeit)",
+    vtol_date: "Gestartet Juni 2026 • Ziel 2028 (Diplomarbeit)",
+    vtol_desc: "BVLOS Such- & Rettungs-VTOL-Drohne entwickelt nach AustroControl SORA SAIL II Richtlinien. Dual Pixhawk FMU + Nvidia Jetson ROS2 Schwarm-Architektur mit Wärmebild-KI Personenerkennung und Live-GPS-Koordinatenübertragung.",
+    vtol_hero_tag1: "Gestartet Juni 2026 • Ziel 2028 (Diplomarbeit)",
+    vtol_hero_tag2: "AustroControl SORA SAIL II",
+    vtol_hero_tag3: "Dual Pixhawk + Nvidia Jetson ROS2",
+    vtol_hero_tag4: "BVLOS Schwarm-Architektur",
+
+    vtol_stat1_title: "Masse & Spannweite",
+    vtol_stat1_val: "15 - 20 kg | 3,0m Spannweite",
+    vtol_stat2_title: "Max- / Reise-Geschwindigkeit",
+    vtol_stat2_val: "130 km/h | 85 km/h",
+    vtol_stat3_title: "Einsatzhöhe",
+    vtol_stat3_val: "120-400m (Bis zu 4000m)",
+    vtol_stat4_title: "Kooperationspartner",
+    vtol_stat4_val: "Österreichisches Bundesheer",
+
+    vtol_time1_title: "Juni 2026: Projektstart & Team-Aufteilung",
+    vtol_time1_desc: "Team-Bildung für die HTL Diplomarbeit. David übernimmt die Rolle des Teamleiters für Avionik, Software, SORA-Sicherheitsanalysen, Bodenstation und Bundesheer-Kontakte.",
+    vtol_time2_title: "Juli 2026: SORA SAIL II Zertifizierungs-Entwurf",
+    vtol_time2_desc: "Erstellung des Technical Design Documents (TDD) nach AustroControl SORA SAIL II Richtlinien für BVLOS-Flüge im alpinen Such- und Rettungsgelände.",
+    vtol_time3_title: "2026 - 2028: Entwicklung, ROS2 Schwarm & Bundesheer-Kontakt",
+    vtol_time3_desc: "Entwicklung der dezentralen ROS2 Companion Computer Architektur auf Nvidia Jetson bis zum Abschluss 2028. In aktiven Gesprächen mit dem Österreichischen Bundesheer für Testgelände und Sponsoring.",
+
+    vtol_sec1_title: "1. Systemaufteilung & Team-Verantwortung",
+    vtol_sec1_desc: "Klare Aufgabenverteilung im Team: Mein Teamkollege konzentriert sich auf Mechanik, Carbon-Chassis, Antriebsauslegung, Stromverteilung und den 90°-Schwenkmechanismus. Als Teamleiter entwickle ich die gesamte Avionik, redundante Elektronik, SORA-Sicherheitseinhaltung, ROS2 Companion Software, PID-Mischer, die Bodenstation (GCS) und führe die Bundesheer-Kontakte.",
+
+    vtol_sec2_title: "2. Fahrzeugspezifikationen & Einsatzprofil",
+    vtol_sec2_desc: "Die Tri-Tilt-Rotor SAR VTOL Drohne ist für extreme alpine Bedingungen konzipiert, wo herkömmliche Multirotoren an Reichweite verlieren und Flächenflugzeuge nicht landen können:",
+    vtol_sec2_b1: "<strong>Masse & Zelle:</strong> 15 bis 20 kg Abflugmasse bei 3,0 Metern Spannweite für effizienten Langstrecken-Gleitflug.",
+    vtol_sec2_b2: "<strong>Fluggeschwindigkeiten:</strong> 130 km/h Höchstgeschwindigkeit bei 85 km/h effizienter Reisegeschwindigkeit.",
+    vtol_sec2_b3: "<strong>Einsatzhöhe:</strong> Operationssuchhöhe zwischen 120m und 400m über Grund, mit einer Reiseflughöhe von bis zu 4.000m über Meeresspiegel für Bergkammüberquerungen.",
+
+    vtol_sec3_title: "3. Wärmebild-KI Personenerkennung & Störungssichere Navigation",
+    vtol_sec3_desc: "Entwickelt für alpine Such- und Rettungseinsätze, trägt die Drohne eine Wärmebildkamera, die einen KI-Vision-Stream auf dem Nvidia Jetson Companion Computer auswertet. Wird eine vermisste Person erkannt, werden Live-GPS-Koordinaten an Rettungsteams übertragen. Um GPS-Störungen im Gebirge auszugleichen, hält ein Optischer-Fluss-Kamera-Algorithmus das Abdriften ohne Satellitensignal unter ±2m.",
+
+    vtol_sec4_title: "4. SORA SAIL II Zertifizierung & Bundesheer-Kooperation",
+    vtol_sec4_desc: "Flüge außerhalb der Sichtweite (BVLOS) in Österreich erfordern die strikte Einhaltung der AustroControl SORA SAIL II Sicherheitsrichtlinien. Unser Technical Design Document (TDD) spezifiziert dual-redundante Flugsteuerungen (Pixhawk FMU), Fallschirm-Rettungssysteme und verschlüsselte Telemetrielinks. Wir stehen in aktiven Gesprächen mit dem Österreichischen Bundesheer bezüglich Erprobungsgeländen und Sponsoring.",
+
+    vtol_media_sub: "CAD 3D-Konzept-Renders, technisches Design-Dokument (TDD) und Flugarchitektur-Schaltpläne.",
+    vtol_fig1: "Abbildung 1: CAD 3D-Konzept-Render der Tri-Tilt-Rotor SAR VTOL Drohne.",
+    vtol_pdf_title: "Technical Design Document (TDD)",
+    vtol_pdf_sub: "AustroControl SORA SAIL II Entwurf (PDF)",
 
     // Project 5: C++ Physics Engine
     proj5_title: "Deterministische 6DoF C++ Physik-Engine",

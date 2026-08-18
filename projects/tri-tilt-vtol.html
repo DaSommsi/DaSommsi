@@ -32,137 +32,252 @@
   <!-- Custom Styles stylesheet -->
   <link rel="stylesheet" href="../css/style.css">
 </head>
-<body class="bg-[#05050a] text-zinc-200 antialiased selection:bg-sky-500/30 selection:text-sky-300 min-h-screen">
+<body class="bg-[#05050a] text-zinc-200 antialiased selection:bg-sky-500/30 selection:text-sky-300 min-h-screen relative overflow-x-hidden">
+
+  <!-- ENHANCED AMBIENT BACKGROUND DEPTH & SUBTLE TACTILE MESH -->
+  <div class="pointer-events-none fixed inset-0 z-0 overflow-hidden">
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1100px] h-[550px] bg-[radial-gradient(ellipse_at_top,rgba(56,189,248,0.18),transparent_70%)]"></div>
+    <div class="absolute top-1/3 -left-32 w-[650px] h-[650px] bg-[radial-gradient(circle_at_center,rgba(16,185,129,0.08),transparent_60%)]"></div>
+    <div class="absolute top-2/3 -right-32 w-[750px] h-[750px] bg-[radial-gradient(circle_at_center,rgba(56,189,248,0.09),transparent_60%)]"></div>
+    <div class="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
+  </div>
 
   <!-- STICKY HEADER -->
-  <header class="sticky top-0 z-40 w-full backdrop-blur-md bg-[#05050a]/80 border-b border-white/5 transition-all duration-300">
+  <header class="sticky top-0 z-40 w-full backdrop-blur-md bg-[#05050a]/85 border-b border-white/10 transition-all duration-300">
     <div class="max-w-6xl mx-auto px-6 md:px-12 h-16 flex items-center justify-between">
       
       <!-- Back Link & Identity -->
       <div class="flex items-center space-x-4">
-        <a href="../index.html#projects" class="flex items-center space-x-2 text-xs font-mono text-primary hover:text-white transition-colors">
+        <a href="../index.html#projects" class="flex items-center space-x-2 text-xs sm:text-sm font-mono text-primary hover:text-white transition-colors">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
-          <span data-i18n="back_overview">← Back to Main Portfolio</span>
+          <span data-i18n="back_overview">← Back to Projects</span>
         </a>
         <span class="text-zinc-700 text-xs">/</span>
-        <span class="text-xs font-mono text-muted">david sommerer</span>
+        <span class="text-xs sm:text-sm font-mono text-muted">david sommerer</span>
       </div>
 
-      <!-- Language Toggle EN | DE -->
+      <!-- Language Switcher EN | DE -->
       <div class="flex items-center space-x-1 p-1 rounded-full bg-zinc-900 border border-border">
-        <button data-lang-btn="en" class="px-2.5 py-0.5 rounded-full text-[11px] font-bold text-sky-400">EN</button>
-        <button data-lang-btn="de" class="px-2.5 py-0.5 rounded-full text-[11px] text-muted hover:text-foreground">DE</button>
+        <button data-lang-btn="en" class="px-3 py-0.5 rounded-full text-xs font-bold text-sky-400">EN</button>
+        <button data-lang-btn="de" class="px-3 py-0.5 rounded-full text-xs text-muted hover:text-foreground">DE</button>
       </div>
     </div>
   </header>
 
-  <main class="max-w-4xl mx-auto px-6 md:px-12 py-12 space-y-12">
+  <main class="max-w-5xl mx-auto px-6 md:px-12 py-16 space-y-16 relative z-10">
 
-    <!-- PROJECT TITLE & HEADER -->
-    <div class="space-y-4 border-b border-border pb-8">
-      <div class="flex flex-wrap gap-2">
-        <span data-i18n="proj4_date" class="px-2.5 py-0.5 text-xs font-mono rounded-full bg-emerald-950/60 text-emerald-400 border border-emerald-800/50">Started June 2026 • Target 2028 (Diploma Thesis)</span>
-        <span class="px-2.5 py-0.5 text-xs font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">AustroControl SORA SAIL II</span>
-        <span class="px-2.5 py-0.5 text-xs font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">Pixhawk + Nvidia Jetson ROS2</span>
-        <span class="px-2.5 py-0.5 text-xs font-mono rounded-full bg-sky-950/60 text-sky-400 border border-sky-800/50">BVLOS Swarm Architecture</span>
+    <!-- PROJECT HEADER & TAGS -->
+    <div class="space-y-6 border-b border-white/10 pb-10">
+      <div class="flex flex-wrap gap-2.5">
+        <span data-i18n="vtol_hero_tag1" class="px-3.5 py-1.5 text-xs font-mono rounded-full bg-emerald-950/80 text-emerald-300 font-bold border border-emerald-500/50 glow-dot-emerald">Started June 2026 • Target 2028 (Diploma Thesis)</span>
+        <span data-i18n="vtol_hero_tag2" class="px-3.5 py-1.5 text-xs font-mono rounded-full bg-sky-950/80 text-sky-300 border border-sky-500/40">AustroControl SORA SAIL II</span>
+        <span data-i18n="vtol_hero_tag3" class="px-3.5 py-1.5 text-xs font-mono rounded-full bg-sky-950/80 text-sky-300 border border-sky-500/40">Dual Pixhawk + Nvidia Jetson ROS2</span>
+        <span data-i18n="vtol_hero_tag4" class="px-3.5 py-1.5 text-xs font-mono rounded-full bg-sky-950/80 text-sky-300 border border-sky-500/40">BVLOS Swarm Architecture</span>
       </div>
 
-      <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold font-heading text-foreground tracking-tight" data-i18n="proj4_title">
+      <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-heading text-foreground tracking-tight" data-i18n="vtol_title">
         Tri-Tilt-Rotor SAR VTOL Drone (Diploma Thesis)
       </h1>
 
-      <p class="text-sm sm:text-base text-muted font-mono leading-relaxed" data-i18n="proj4_desc">
-        BVLOS Search & Rescue 3-rotor VTOL drone built under AustroControl SORA SAIL II safety guidelines. Dual Pixhawk FMU + Nvidia Jetson ROS2 swarm architecture.
+      <p class="text-base sm:text-lg text-zinc-300 font-mono leading-relaxed max-w-4xl" data-i18n="vtol_desc">
+        BVLOS Search & Rescue 3-rotor VTOL drone built under AustroControl SORA SAIL II safety guidelines. Dual Pixhawk FMU + Nvidia Jetson ROS2 swarm architecture with thermal IR AI person detection and live GPS coordinate broadcasting.
       </p>
     </div>
 
     <!-- PROJECT METRICS GRID -->
-    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 font-mono text-xs">
-      <div class="p-4 rounded-2xl bg-zinc-900/60 border border-border">
-        <div class="text-muted text-[10px]">Mass & Wingspan</div>
-        <div class="text-sky-400 font-bold text-sm mt-1">15 - 20 kg | 3.0m Span</div>
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 font-mono text-xs sm:text-sm">
+      <div class="p-5 rounded-2xl bg-zinc-950 border border-white/10 shadow-lg space-y-1">
+        <div class="text-muted text-xs uppercase tracking-wider font-semibold" data-i18n="vtol_stat1_title">Mass & Wingspan</div>
+        <div class="text-sky-400 font-bold text-base sm:text-lg" data-i18n="vtol_stat1_val">15 - 20 kg | 3.0m Span</div>
       </div>
-      <div class="p-4 rounded-2xl bg-zinc-900/60 border border-border">
-        <div class="text-muted text-[10px]">Top / Cruise Speed</div>
-        <div class="text-emerald-400 font-bold text-sm mt-1">130 km/h | 85 km/h</div>
+      <div class="p-5 rounded-2xl bg-zinc-950 border border-white/10 shadow-lg space-y-1">
+        <div class="text-muted text-xs uppercase tracking-wider font-semibold" data-i18n="vtol_stat2_title">Top / Cruise Speed</div>
+        <div class="text-emerald-400 font-bold text-base sm:text-lg" data-i18n="vtol_stat2_val">130 km/h | 85 km/h</div>
       </div>
-      <div class="p-4 rounded-2xl bg-zinc-900/60 border border-border">
-        <div class="text-muted text-[10px]">Jamming-Safe Nav</div>
-        <div class="text-foreground font-bold text-sm mt-1">Optical Flow (±2m)</div>
+      <div class="p-5 rounded-2xl bg-zinc-950 border border-white/10 shadow-lg space-y-1">
+        <div class="text-muted text-xs uppercase tracking-wider font-semibold" data-i18n="vtol_stat3_title">Operational Ceiling</div>
+        <div class="text-sky-300 font-bold text-base sm:text-lg" data-i18n="vtol_stat3_val">120-400m (Up to 4000m)</div>
       </div>
-      <div class="p-4 rounded-2xl bg-zinc-900/60 border border-border">
-        <div class="text-muted text-[10px]">Cooperation Target</div>
-        <div class="text-foreground font-bold text-sm mt-1">Austrian Armed Forces</div>
-      </div>
-    </div>
-
-    <!-- TIMELINE SECTION -->
-    <div class="rounded-2xl bg-zinc-950 border border-border p-6 space-y-4">
-      <h2 class="text-lg font-bold font-heading text-foreground flex items-center gap-2">
-        <span class="w-2 h-2 rounded-full bg-sky-400"></span>
-        <span data-i18n="timeline_title">Project Timeline & Milestones</span>
-      </h2>
-
-      <div class="space-y-4 font-mono text-xs border-l-2 border-slate-800 pl-4">
-        <div class="space-y-1">
-          <span class="text-sky-400 font-bold">June 2026: Project Inception & Team Alignment</span>
-          <p class="text-muted font-sans">Formed 2-person team for HTL Diploma Thesis (Diplomarbeit). David selected as lead for avionics, software, SORA safety, GCS, and military partner contacts.</p>
-        </div>
-        <div class="space-y-1">
-          <span class="text-sky-400 font-bold">July 2026: SORA SAIL II Certification Drafting</span>
-          <p class="text-muted font-sans">Authored Technical Design Document (TDD) adhering to AustroControl SORA SAIL II guidelines for BVLOS operations in Alpine search & rescue terrain.</p>
-        </div>
-        <div class="space-y-1">
-          <span class="text-emerald-400 font-bold">2026 - 2028: Development, ROS2 Swarm & Military Contact</span>
-          <p class="text-muted font-sans">Developing decentralised ROS2 companion computer architecture on Nvidia Jetson towards 2028 graduation. In active talks with the Austrian Armed Forces (Österreichisches Bundesheer) for testing sites and sponsorship.</p>
-        </div>
+      <div class="p-5 rounded-2xl bg-zinc-950 border border-white/10 shadow-lg space-y-1">
+        <div class="text-muted text-xs uppercase tracking-wider font-semibold" data-i18n="vtol_stat4_title">Cooperation Target</div>
+        <div class="text-emerald-400 font-bold text-base sm:text-lg" data-i18n="vtol_stat4_val">Austrian Armed Forces</div>
       </div>
     </div>
 
-    <!-- TECHNICAL CASE STUDY -->
-    <div class="space-y-8 font-sans text-sm leading-relaxed text-zinc-300">
+    <!-- TIMELINE & MILESTONES -->
+    <div class="sub-card rounded-3xl p-6 lg:p-8 space-y-6 bg-zinc-950/90 border border-white/10 shadow-[0_12px_40px_rgba(0,0,0,0.5)]">
+      <div class="flex items-center gap-3 border-b border-white/10 pb-4">
+        <span class="w-3 h-3 rounded-full bg-sky-400 glow-dot-sky"></span>
+        <h2 class="text-xl sm:text-2xl font-bold font-heading text-foreground" data-i18n="timeline_title">
+          Project Timeline & Milestones
+        </h2>
+      </div>
+
+      <div class="space-y-6 font-mono text-xs sm:text-sm border-l-2 border-sky-500/40 pl-6">
+        <div class="space-y-1.5">
+          <span class="text-sky-400 font-bold text-sm" data-i18n="vtol_time1_title">June 2026: Project Inception & Team Alignment</span>
+          <p class="text-zinc-300 font-sans text-base leading-relaxed" data-i18n="vtol_time1_desc">
+            Formed 2-person team for HTL Diploma Thesis (Diplomarbeit). David selected as team lead for avionics, software, SORA safety, GCS ground control station, and military partner contacts.
+          </p>
+        </div>
+        <div class="space-y-1.5">
+          <span class="text-sky-400 font-bold text-sm" data-i18n="vtol_time2_title">July 2026: SORA SAIL II Certification Drafting</span>
+          <p class="text-zinc-300 font-sans text-base leading-relaxed" data-i18n="vtol_time2_desc">
+            Authored Technical Design Document (TDD) adhering to AustroControl SORA SAIL II guidelines for BVLOS operations in Alpine search & rescue terrain.
+          </p>
+        </div>
+        <div class="space-y-1.5">
+          <span class="text-emerald-400 font-bold text-sm" data-i18n="vtol_time3_title">2026 - 2028: Development, ROS2 Swarm & Military Contact</span>
+          <p class="text-zinc-300 font-sans text-base leading-relaxed" data-i18n="vtol_time3_desc">
+            Developing decentralized ROS2 companion computer architecture on Nvidia Jetson towards 2028 graduation. In active talks with the Austrian Armed Forces (Österreichisches Bundesheer) for testing sites and sponsorship.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- TECHNICAL CASE STUDY SECTIONS -->
+    <div class="space-y-10 font-sans text-base sm:text-lg leading-relaxed text-zinc-300">
       
       <!-- Section 1 -->
-      <div class="space-y-3">
-        <h2 class="text-xl font-bold font-heading text-foreground">1. System Division & Team Responsibilities</h2>
-        <p>
-          Our team split responsibilities cleanly: my teammate focuses on carbon composite chassis mechanics, propulsion sizing, power distribution, and the 90° tilt mechanism. I serve as team lead and engineer all avionics, electronic redundancy, SORA safety compliance, ROS2 companion software, PID mixers, GCS ground control station, and military partner contacts.
+      <div class="sub-card rounded-3xl p-6 lg:p-8 space-y-4 bg-zinc-950/90 border border-white/10 shadow-[0_12px_40px_rgba(0,0,0,0.5)]">
+        <h2 class="text-2xl sm:text-3xl font-bold font-heading text-foreground tracking-tight" data-i18n="vtol_sec1_title">
+          1. System Division & Team Responsibilities
+        </h2>
+        <p class="text-zinc-200" data-i18n="vtol_sec1_desc">
+          Our team split responsibilities cleanly: my teammate focuses on carbon composite chassis mechanics, propulsion sizing, power distribution, and the 90° tilt mechanism. As team lead, I engineer all avionics, electronic redundancy, SORA safety compliance, ROS2 companion software, PID mixers, GCS ground control station, and military partner contacts.
         </p>
       </div>
 
       <!-- Section 2 -->
-      <div class="space-y-3">
-        <h2 class="text-xl font-bold font-heading text-foreground">2. Thermal IR AI Vision & Jamming-Safe Navigation</h2>
-        <p>
-          Designed for harsh Alpine environments, the drone carries a thermal IR camera streaming to an onboard AI model on the Nvidia Jetson. When a missing person is recognized, real-time GPS coordinates are transmitted back to the operator. To counter GPS jamming, an optical flow camera algorithm maps terrain features, bounding drift to within $\pm 2\text{m}$.
+      <div class="sub-card rounded-3xl p-6 lg:p-8 space-y-4 bg-zinc-950/90 border border-white/10 shadow-[0_12px_40px_rgba(0,0,0,0.5)]">
+        <h2 class="text-2xl sm:text-3xl font-bold font-heading text-foreground tracking-tight" data-i18n="vtol_sec2_title">
+          2. Vehicle Specifications & Operational Profile
+        </h2>
+        <p class="text-zinc-200" data-i18n="vtol_sec2_desc">
+          The Tri-Tilt-Rotor SAR VTOL drone is engineered for extreme Alpine conditions where traditional multirotors lack range and fixed-wing aircraft cannot land:
+        </p>
+        <ul class="space-y-3 text-zinc-200 list-disc list-inside pt-2">
+          <li data-i18n="vtol_sec2_b1"><strong>Mass & Airframe:</strong> 15 to 20 kg total takeoff mass with a 3.0-meter wingspan for efficient long-range gliding.</li>
+          <li data-i18n="vtol_sec2_b2"><strong>Flight Speeds:</strong> Top speed of 130 km/h with an efficient cruise speed of 85 km/h.</li>
+          <li data-i18n="vtol_sec2_b3"><strong>Operational Ceiling:</strong> Operational search altitude between 120m and 400m AGL, with a maximum travel altitude capability up to 4,000m MSL for mountain ridge crossings.</li>
+        </ul>
+      </div>
+
+      <!-- Section 3 -->
+      <div class="sub-card rounded-3xl p-6 lg:p-8 space-y-4 bg-zinc-950/90 border border-white/10 shadow-[0_12px_40px_rgba(0,0,0,0.5)]">
+        <h2 class="text-2xl sm:text-3xl font-bold font-heading text-foreground tracking-tight" data-i18n="vtol_sec3_title">
+          3. Thermal IR AI Person Detection & Jamming-Safe Navigation
+        </h2>
+        <p class="text-zinc-200" data-i18n="vtol_sec3_desc">
+          Designed for harsh Alpine search & rescue operations, the drone carries a thermal IR camera streaming to an onboard AI vision pipeline executing on the Nvidia Jetson companion computer. When a missing person is recognized, real-time GPS coordinates are broadcast back to ground emergency rescue teams. To counter Electronic Warfare (EW) and GPS jamming in remote mountains, an optical flow camera algorithm maps terrain features to bound position drift within ±2m without satellite signal.
+        </p>
+      </div>
+
+      <!-- Section 4 -->
+      <div class="sub-card rounded-3xl p-6 lg:p-8 space-y-4 bg-zinc-950/90 border border-white/10 shadow-[0_12px_40px_rgba(0,0,0,0.5)]">
+        <h2 class="text-2xl sm:text-3xl font-bold font-heading text-foreground tracking-tight" data-i18n="vtol_sec4_title">
+          4. SORA SAIL II Compliance & Military Partnership
+        </h2>
+        <p class="text-zinc-200" data-i18n="vtol_sec4_desc">
+          Operating Beyond Visual Line of Sight (BVLOS) in Austria requires strict adherence to AustroControl SORA SAIL II safety guidelines. Our Technical Design Document (TDD) outlines dual-redundant flight control units (Pixhawk FMU), fail-safe parachute recovery systems, and encrypted telecommunications links. We are currently in active talks with the Austrian Armed Forces (Österreichisches Bundesheer) regarding specialized flight testing grounds and tactical sponsorship.
         </p>
       </div>
 
     </div>
 
-    <!-- MEDIA & CODE GALLERY PLACEHOLDERS -->
-    <div class="space-y-4">
-      <h2 class="text-lg font-bold font-heading text-foreground" data-i18n="gallery_title">Project Media, Code & CAD Assets</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 font-mono text-xs">
-        <div class="h-44 rounded-2xl bg-zinc-950 border border-border p-4 flex flex-col justify-between items-center text-center">
-          <svg class="w-8 h-8 text-sky-400/60 mt-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-          <span class="text-muted text-[11px] mb-2">[PDF Document Placeholder: AustroControl SORA SAIL II Technical Design Document (TDD)]</span>
+    <!-- MEDIA & DOCUMENTATION SHOWCASE -->
+    <div class="space-y-6">
+      <div class="flex items-center justify-between border-b border-white/10 pb-4">
+        <h2 class="text-xl sm:text-2xl font-bold font-heading text-foreground" data-i18n="gallery_title">
+          Project Media, Code & CAD Assets
+        </h2>
+        <p class="text-xs sm:text-sm font-mono text-muted" data-i18n="vtol_media_sub">
+          CAD 3D concept renders, structural technical design document (TDD), and flight architecture schematics.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Showcase 1: CAD 3D Concept Render (Image with Click-to-Zoom Lightbox) -->
+        <div class="sub-card rounded-3xl p-6 space-y-4 bg-zinc-950/90 border border-white/10 shadow-[0_12px_40px_rgba(0,0,0,0.5)] flex flex-col justify-between">
+          <div class="space-y-3">
+            <h3 class="font-mono text-sm sm:text-base font-bold text-foreground" data-i18n="vtol_fig1">
+              Figure 1: CAD 3D Concept Render of the Tri-Tilt-Rotor SAR VTOL Drone.
+            </h3>
+            <div class="rounded-2xl overflow-hidden border border-white/15 bg-zinc-900/90 relative group cursor-pointer h-72 flex items-center justify-center p-2" onclick="window.openLightbox && window.openLightbox('../data/vtol/Picutre_Drone_Concept.png', 'Tri-Tilt-Rotor SAR VTOL Drone Concept Model CAD Render')">
+              <img src="../data/vtol/Picutre_Drone_Concept.png" alt="Tri-Tilt-Rotor SAR VTOL Drone Concept Model" class="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2 text-xs font-mono text-white pointer-events-none">
+                <svg class="w-5 h-5 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+                <span>Click to Zoom</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="h-44 rounded-2xl bg-zinc-950 border border-border p-4 flex flex-col justify-between items-center text-center">
-          <svg class="w-8 h-8 text-emerald-400/60 mt-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
-          <span class="text-muted text-[11px] mb-2">[Code Repository Placeholder: ROS2 Humble Companion Node GitHub Repo]</span>
+
+        <!-- Showcase 2: Technical Design Document (PDF Download Card) -->
+        <div class="sub-card rounded-3xl p-6 space-y-4 bg-zinc-950/90 border border-white/10 shadow-[0_12px_40px_rgba(0,0,0,0.5)] flex flex-col justify-between">
+          <div class="space-y-4">
+            <div>
+              <h3 class="font-mono text-sm sm:text-base font-bold text-foreground" data-i18n="vtol_pdf_title">
+                Technical Design Document (TDD)
+              </h3>
+              <p class="text-xs text-sky-400 font-mono mt-1" data-i18n="vtol_pdf_sub">
+                AustroControl SORA SAIL II Draft Spec (PDF)
+              </p>
+            </div>
+            
+            <div class="p-6 rounded-2xl bg-zinc-900 border border-white/15 space-y-4 font-mono text-xs text-zinc-300">
+              <div class="flex items-center gap-3">
+                <svg class="w-8 h-8 text-sky-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                <div>
+                  <div class="font-bold text-foreground text-sm">Technical_Design_Document.pdf</div>
+                  <div class="text-muted text-xs">482 KB • Early Stage AustroControl Draft</div>
+                </div>
+              </div>
+              <p class="text-zinc-400 font-sans text-sm">
+                Contains comprehensive flight envelope safety analysis, redundancy metrics, and SORA SAIL II risk assessments.
+              </p>
+            </div>
+          </div>
+
+          <a href="../data/vtol/Technical_Design_Document_Not_Finished_Early_Stage.pdf" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-full bg-sky-950/80 border border-sky-400/50 text-sky-200 font-mono font-bold text-xs sm:text-sm hover:bg-sky-900 transition-colors flex items-center justify-center gap-2">
+            <svg class="w-4 h-4 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+            <span>Open PDF Specification</span>
+          </a>
         </div>
+
       </div>
     </div>
 
     <!-- FOOTER ACTIONS -->
-    <div class="pt-8 border-t border-border flex items-center justify-between font-mono text-xs">
-      <a href="../index.html#projects" class="text-primary hover:text-white transition-colors" data-i18n="back_overview">← Back to Main Portfolio</a>
-      <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="text-muted hover:text-white transition-colors">View GitHub Repository →</a>
+    <div class="pt-8 border-t border-white/10 flex items-center justify-between font-mono text-xs sm:text-sm">
+      <a href="../index.html#projects" class="text-sky-400 hover:text-white font-bold transition-colors" data-i18n="back_overview">← Back to Projects</a>
+      <a href="https://github.com/DaSommsi" target="_blank" rel="noopener noreferrer" class="text-muted hover:text-white transition-colors">View GitHub Repository →</a>
     </div>
 
   </main>
 
+  <!-- LIGHTBOX MODAL CONTAINER -->
+  <div id="lightbox" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden items-center justify-center p-4 sm:p-8" onclick="window.closeLightbox && window.closeLightbox(event)">
+    <div class="relative max-w-5xl max-h-[90vh] flex flex-col items-center" onclick="event.stopPropagation()">
+      <div class="absolute -top-12 right-0 flex items-center gap-4 text-white font-mono text-xs">
+        <button onclick="window.toggleLightboxZoom && window.toggleLightboxZoom()" class="hover:text-sky-400 transition-colors flex items-center gap-1 bg-zinc-900/80 px-3 py-1 rounded-full border border-white/20">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+          <span>Zoom (1.5x)</span>
+        </button>
+        <button onclick="window.closeLightbox && window.closeLightbox()" class="hover:text-red-400 transition-colors flex items-center gap-1 bg-zinc-900/80 px-3 py-1 rounded-full border border-white/20">
+          <span>✕ Close</span>
+        </button>
+      </div>
+      
+      <div class="overflow-auto max-h-[80vh] rounded-2xl border border-white/20 bg-zinc-950 flex items-center justify-center">
+        <img id="lightbox-img" src="" alt="Zoomed view" class="max-h-[80vh] object-contain transition-transform duration-200 cursor-zoom-in" onclick="window.toggleLightboxZoom && window.toggleLightboxZoom()" />
+      </div>
+      <p id="lightbox-caption" class="text-xs sm:text-sm font-mono text-zinc-300 mt-4 text-center max-w-2xl"></p>
+    </div>
+  </div>
+
   <script type="module" src="../js/main.js"></script>
+  <script src="../js/lightbox.js"></script>
 </body>
 </html>
