@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AeroPhysicsEngine: C++ Physics Experiment | David Sommerer</title>
-  <meta name="description" content="A simple C++ sandbox experiment by David Sommerer built to learn C++ at a deeper level and understand rigid-body physics mechanics, quaternion dynamics, and RK4 numerical integration.">
+  <meta name="description" content="A simple C++ sandbox experiment by David Sommerer built to learn C++ at a deeper level and understand rigid-body physics mechanics and vector dynamics.">
 
   <!-- Tailwind CSS CDN & Config -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -70,8 +70,8 @@
     <div class="space-y-6 border-b border-white/10 pb-10">
       <div class="flex flex-wrap gap-2.5">
         <span data-i18n="pe_hero_tag1" class="px-3 py-1 text-xs font-mono rounded-full bg-sky-950/80 text-sky-300 font-bold border border-sky-500/50">Personal C++ Learning Project</span>
-        <span data-i18n="pe_hero_tag2" class="px-3 py-1 text-xs font-mono rounded-full bg-sky-950/80 text-sky-300 border border-sky-500/40">C++20 & Eigen Matrix</span>
-        <span data-i18n="pe_hero_tag3" class="px-3 py-1 text-xs font-mono rounded-full bg-sky-950/80 text-sky-300 border border-sky-500/40">RK4 Integrator</span>
+        <span data-i18n="pe_hero_tag2" class="px-3 py-1 text-xs font-mono rounded-full bg-sky-950/80 text-sky-300 border border-sky-500/40">C++20 Language Practice</span>
+        <span data-i18n="pe_hero_tag3" class="px-3 py-1 text-xs font-mono rounded-full bg-sky-950/80 text-sky-300 border border-sky-500/40">Vector Dynamics</span>
         <span data-i18n="pe_hero_tag4" class="px-3 py-1 text-xs font-mono rounded-full bg-emerald-950/80 text-emerald-300 border border-emerald-500/40">Open Source Sandbox</span>
       </div>
 
@@ -80,23 +80,23 @@
       </h1>
 
       <p class="text-base sm:text-lg text-zinc-300 font-mono leading-relaxed max-w-3xl" data-i18n="pe_desc">
-        A small C++ sandbox experiment built to dive deeper into modern C++ concepts, memory management, rigid-body kinematic math, and numerical physics integration.
+        A small C++ sandbox experiment built to learn C++ at a deeper level and understand rigid-body physics mechanics and vector dynamics from first principles.
       </p>
     </div>
 
     <!-- PROJECT METRICS GRID -->
     <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 font-mono text-xs sm:text-sm">
       <div class="p-5 rounded-2xl bg-zinc-950/90 border border-white/10 shadow-[0_8px_30px_rgba(0,0,0,0.5)]">
-        <div class="text-muted text-xs uppercase" data-i18n="pe_stat1_title">Integration Step</div>
-        <div class="text-sky-300 font-bold text-sm sm:text-base mt-1" data-i18n="pe_stat1_val">1,000 Hz Fixed</div>
+        <div class="text-muted text-xs uppercase" data-i18n="pe_stat1_title">Language</div>
+        <div class="text-sky-300 font-bold text-sm sm:text-base mt-1" data-i18n="pe_stat1_val">Modern C++20</div>
       </div>
       <div class="p-5 rounded-2xl bg-zinc-950/90 border border-white/10 shadow-[0_8px_30px_rgba(0,0,0,0.5)]">
-        <div class="text-muted text-xs uppercase" data-i18n="pe_stat2_title">Numerical Method</div>
-        <div class="text-emerald-300 font-bold text-sm sm:text-base mt-1" data-i18n="pe_stat2_val">Runge-Kutta 4 (RK4)</div>
+        <div class="text-muted text-xs uppercase" data-i18n="pe_stat2_title">Focus Area</div>
+        <div class="text-emerald-300 font-bold text-sm sm:text-base mt-1" data-i18n="pe_stat2_val">Vector & Physics Math</div>
       </div>
       <div class="p-5 rounded-2xl bg-zinc-950/90 border border-white/10 shadow-[0_8px_30px_rgba(0,0,0,0.5)]">
         <div class="text-muted text-xs uppercase" data-i18n="pe_stat3_title">Primary Purpose</div>
-        <div class="text-sky-300 font-bold text-sm sm:text-base mt-1" data-i18n="pe_stat3_val">C++ Mastery & Math</div>
+        <div class="text-sky-300 font-bold text-sm sm:text-base mt-1" data-i18n="pe_stat3_val">C++ Language Mastery</div>
       </div>
       <div class="p-5 rounded-2xl bg-zinc-950/90 border border-white/10 shadow-[0_8px_30px_rgba(0,0,0,0.5)]">
         <div class="text-muted text-xs uppercase" data-i18n="pe_stat4_title">Repository</div>
@@ -116,7 +116,7 @@
           This project is not meant to compete with commercial physics engines like PhysX or Bullet. Instead, it was built as a focused coding sandbox to learn C++ at a deeper level—exploring modern C++ features, memory layout, object lifetimes, and template mechanics while understanding physics calculation algorithms from first principles.
         </p>
         <p data-i18n="pe_intent_desc2">
-          By programming 6DoF rigid body kinematics, quaternion rotation math, and 4th-Order Runge-Kutta (RK4) integration from scratch, I gained a strong intuitive grasp of vector calculus and software architecture that directly benefited my work on complex robotics, embedded microcontrollers, and autonomous systems.
+          By practicing vector dynamics and basic rigid-body motion calculations in code, I built a solid foundation in C++ programming and spatial mathematics that directly supported my engineering work on microcontrollers, avionics, and autonomous systems.
         </p>
       </div>
     </div>
@@ -136,45 +136,6 @@
           <text x="70" y="145" font-family="monospace" font-size="11" fill="#38bdf8">+Y (Roll / Lateral)</text>
         </svg>
       </div>
-    </div>
-
-    <!-- TECHNICAL DETAILS & CODE SNIPPET -->
-    <div class="space-y-10 font-sans text-base sm:text-lg leading-relaxed text-zinc-200">
-      
-      <!-- Section 1 -->
-      <div class="space-y-3 bg-zinc-950/80 p-6 sm:p-8 rounded-3xl border border-white/10">
-        <h2 class="text-2xl sm:text-3xl font-bold font-heading text-foreground" data-i18n="pe_sec1_title">
-          1. Rigid Body Kinematics & Quaternion Math
-        </h2>
-        <p class="text-zinc-300" data-i18n="pe_sec1_desc">
-          To prevent gimbal lock issues inherent to Euler angle representations during 3D rotations, orientation is calculated using quaternions ($q = [w, x, y, z]$). Linear and angular velocities are tracked in body-fixed frame coordinates, allowing clean transformation of forces and torques.
-        </p>
-      </div>
-
-      <!-- Section 2 -->
-      <div class="space-y-3 bg-zinc-950/80 p-6 sm:p-8 rounded-3xl border border-white/10">
-        <h2 class="text-2xl sm:text-3xl font-bold font-heading text-foreground" data-i18n="pe_sec2_title">
-          2. 4th-Order Runge-Kutta (RK4) Integrator Implementation
-        </h2>
-        <p class="text-zinc-300" data-i18n="pe_sec2_desc">
-          Euler integration often suffers from numerical accumulation errors. I implemented a 4th-Order Runge-Kutta (RK4) integrator step to evaluate state derivatives at 4 intermediate time steps per tick, maintaining stability during fixed 1,000 Hz loop updates:
-        </p>
-
-        <!-- Code Block Container -->
-        <div class="mt-4 rounded-2xl bg-[#05050a] border border-white/15 p-4 sm:p-6 font-mono text-xs sm:text-sm text-sky-300 overflow-x-auto shadow-inner">
-          <pre><code>// 4th-Order Runge-Kutta (RK4) Step Implementation
-State6DoF PhysicsEngine::integrateRK4(const State6DoF& s, float dt) {
-    Derivative k1 = computeDerivatives(s, 0.0f);
-    Derivative k2 = computeDerivatives(s + k1 * (dt * 0.5f), dt * 0.5f);
-    Derivative k3 = computeDerivatives(s + k2 * (dt * 0.5f), dt * 0.5f);
-    Derivative k4 = computeDerivatives(s + k3 * dt, dt);
-
-    Derivative dState = (k1 + (k2 * 2.0f) + (k3 * 2.0f) + k4) * (1.0f / 6.0f);
-    return s + dState * dt;
-}</code></pre>
-        </div>
-      </div>
-
     </div>
 
     <!-- HARDWARE DOCUMENTATION & GITHUB REPOSITORY LINK -->
