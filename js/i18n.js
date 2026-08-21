@@ -24,7 +24,7 @@ export const translations = {
     hero_role: "Electrical Engineering Student & Systems Engineer",
     hero_specializing: "specializing in",
     hero_focus: "Avionics, Embedded Systems, Electronics & Software Engineering.",
-    hero_subtitle: "Student at the Higher Technical Institute for Electrical Engineering Salzburg (HTL). Engineering avionics systems, embedded firmware, electronics, autonomous vehicles, and software architecture.",
+    hero_subtitle: "Student at the Higher Technical Institute for Electrical Engineering Salzburg (HTL). Engineering avionics systems, embedded firmware, electronics, autonomous vehicles and software architecture.",
     hero_cta_projects: "Explore Projects",
     hero_cta_contact: "Direct Contact",
 
@@ -46,7 +46,7 @@ export const translations = {
     // Terminal Text
     term_title: "david@htl-salzburg:~/systems",
     term_cmd_whoami: "whoami",
-    term_whoami_desc: "17-year-old Electrical Engineering Student & Systems Engineer at the Higher Technical Institute for Electrical Engineering Salzburg (HTL) specializing in avionics, embedded firmware, electronics planning, and software engineering.",
+    term_whoami_desc: "17-year-old Electrical Engineering Student & Systems Engineer at the Higher Technical Institute for Electrical Engineering Salzburg (HTL) specializing in avionics, embedded firmware, electronics planning and software engineering.",
     term_cmd_grep: 'grep -r "expertise" /var/log/systems.log',
     term_expertise: "Avionics · Embedded C/C++ · Electronics · Software Engineering",
     term_cmd_conf: "cat /etc/tech-ecosystem.conf",
@@ -82,7 +82,7 @@ export const translations = {
 
     // Experience & Education Section
     exp_heading: "work experience & education",
-    exp_sub: "Industrial engineering internships, municipal power grid calculations, custom switchgear manufacturing, and hands-on workshop fabrication.",
+    exp_sub: "Industrial engineering internships, municipal power grid calculations, custom switchgear manufacturing and hands-on workshop fabrication.",
     work_heading: "Practical Work Experience",
 
     intern_1_title: "Electrical Grid Planning & Calculation Intern",
@@ -95,13 +95,13 @@ export const translations = {
     intern_2_title: "Industrial Switchgear & Fuse Box Engineering Intern",
     intern_2_company: "ERA - Elektrotechnik Ramsauer GmbH",
     intern_2_date: "Summer 2025 • 4 Weeks",
-    intern_2_b1: "Independently built and wired large-scale industrial fuse boxes, main distribution switchgear, and control cabinets.",
+    intern_2_b1: "Independently built and wired large-scale industrial fuse boxes, main distribution switchgear and control cabinets.",
     intern_2_b2: "Constructed high-power electrical distribution assemblies tailored for major industrial companies across Austria.",
 
     edu_heading: "Education & Workshop Fabrication Skills",
     edu_1_title: "Higher Technical Institute for Electrical Engineering Salzburg (HTL)",
     edu_1_subtitle: "5-Year Higher Engineering Program • 2023 - 2028",
-    edu_1_desc: "5-year intensive engineering program covering power systems, control engineering, embedded C/C++, CAD design, electronics, and software development.",
+    edu_1_desc: "5-year intensive engineering program covering power systems, control engineering, embedded C/C++, CAD design, electronics and software development.",
 
     workshop_title: "Hands-on Workshop & Manufacturing Competencies",
     ws_1: "Welding (MIG/MAG/TIG)",
@@ -116,7 +116,9 @@ export const translations = {
 
     // Technical Skills Section
     skills_title: "technical skills & stack",
-    skills_sub: "Structured engineering competencies across software, microcontrollers, CAD automation, media production, AI technologies, and active learning.",
+    // Technical Skills Section
+    skills_title: "technical skills & stack",
+    skills_sub: "Structured engineering competencies across software, microcontrollers, CAD automation, media production, AI technologies and active learning.",
 
     skills_cat1: "Languages, Web & Version Control",
     skills_cat2: "CAD, Automation & PLC Engineering",
@@ -126,7 +128,7 @@ export const translations = {
 
     // Projects Section
     projects_title: "featured engineering projects",
-    projects_sub: "Documented engineering projects featuring AI reinforcement learning, 6DoF motion simulation, high-performance parsers, and custom hardware.",
+    projects_sub: "Documented engineering projects featuring AI reinforcement learning, 6DoF motion simulation, high-performance parsers and custom hardware.",
 
     filter_all: "All Systems",
     filter_ai: "AI & Autonomie",
@@ -136,9 +138,9 @@ export const translations = {
     // Project 1: Crazy Car
     proj1_title: "Crazy Car: Autonomous AI/RL RC Car",
     proj1_date: "Aug 2025 - Feb 2026 (Graz Competition)",
-    proj1_desc: "Our very first real engineering project besides the 6DoF simulator. We bought a cheap 30€ Amazon RC car, rebuilt it with a microcontroller and servo, and trained an AI model in Unity to drive autonomously. A vital experiment built to test boundaries, learn from failures, and succeed in future competitions.",
-    proj1_b1: "Trained RL agent in Unity ML-Agents (Aug-Dec 2025) taking velocity, IMU, and 3 ToF sensors to directly output motor speed & servo steering angle (no intermediate PID).",
-    proj1_b2: "Faced PCB hardware flaws: IMU trace routing was accidentally omitted during CAD layout, and high motor current noise interrupted sensor signals under load.",
+    proj1_desc: "Our very first real engineering project besides the 6DoF simulator. We bought a cheap 30€ Amazon RC car, rebuilt it with a microcontroller and servo and trained an AI model in Unity to drive autonomously. A vital experiment built to test boundaries, learn from failures and succeed in future competitions.",
+    proj1_b1: "Trained RL agent in Unity ML-Agents (Aug-Dec 2025) taking velocity, IMU and 3 ToF sensors to directly output motor speed & servo steering angle (no intermediate PID).",
+    proj1_b2: "Faced PCB hardware flaws: IMU trace routing was accidentally omitted during CAD layout and high motor current noise interrupted sensor signals under load.",
     proj1_b3: "Completed assembly only days before the Graz competition (Feb 2026); despite 2 intense days of on-site debugging, signal noise prevented driving, teaching us crucial engineering discipline for future projects.",
 
     // Crazy Car Subpage Specific EN Translations
@@ -152,22 +154,22 @@ export const translations = {
     cc_time1_desc: "As project lead, I spent countless hours in Unity ML-Agents coding and training the reinforcement learning agents. I used progressive learning—giving the AI an easy track first before transitioning to the full racetrack layout. Simultaneously, we rebuilt the 30€ RC car with a micro-servo and designed our custom PCB in CAD.",
     
     cc_time2_title: "Jan 2026 – Feb 2026: Delayed Hardware Assembly & Uncovered Problems",
-    cc_time2_desc: "The main mistake was waiting too long to finish the physical build. The car was assembled only a few days before the Graz competition. Last-minute bench testing revealed critical issues: PCB trace routing errors omitted the IMU sensor connection, and high motor current draw generated EMI noise that corrupted sensor signals.",
+    cc_time2_desc: "The main mistake was waiting too long to finish the physical build. The car was assembled only a few days before the Graz competition. Last-minute bench testing revealed critical issues: PCB trace routing errors omitted the IMU sensor connection and high motor current draw generated EMI noise that corrupted sensor signals.",
 
     cc_time3_title: "Feb 2026: Competition in Graz & On-Site Debugging",
     cc_time3_desc: "Even though the car wasn't running properly at home, we still went to Graz determined to compete. At the venue, nothing worked—the vehicle failed to respond to control commands. We spent 2 intense days troubleshooting power lines and noise on-site, but couldn't resolve the hardware flaws before our run. Though we didn't score points, this failure motivated us to start our 2027 Ground Effect vehicle 8 months early!",
 
     cc_prob1_title: "1. Direct AI End-to-End Motor Control (No PID Buffer)",
-    cc_prob1_desc: "In our initial design, the trained neural network directly controlled the motor speed percentage and steering servo angle based on velocity, IMU values, and 3 Time-of-Flight (ToF) distance sensors. There was no PID controller or safety filter in between. While this end-to-end approach worked seamlessly in the Unity simulation, real-world motor latency and unbuffered sensor spikes caused erratic responses on the physical track.",
+    cc_prob1_desc: "In our initial design, the trained neural network directly controlled the motor speed percentage and steering servo angle based on velocity, IMU values and 3 Time-of-Flight (ToF) distance sensors. There was no PID controller or safety filter in between. While this end-to-end approach worked seamlessly in the Unity simulation, real-world motor latency and unbuffered sensor spikes caused erratic responses on the physical track.",
 
     cc_prob2_title: "2. PCB Routing Flaws & Motor Current Noise",
     cc_prob2_desc: "Designing the custom PCB during the Aug–Dec window was a huge learning curve. During board routing, traces for the IMU sensor were accidentally omitted from the layout. Furthermore, powering the drive motor from the same rail as the sensors caused severe voltage sags and electromagnetic interference (EMI) whenever the motor accelerated, causing sensor readings to drop.",
 
     cc_prob3_title: "Why Version Control (Git) Matters & Key Takeaways",
-    cc_prob3_desc: "Stupidly, we didn't use Git for source control on this project. When code edits were made late at night before Graz, tracking working states became impossible. We learned these lessons the hard way: all future projects now enforce strict Git commits, decoupled power isolation, PID control buffers, and early hardware integration!",
+    cc_prob3_desc: "Stupidly, we didn't use Git for source control on this project. When code edits were made late at night before Graz, tracking working states became impossible. We learned these lessons the hard way: all future projects now enforce strict Git commits, decoupled power isolation, PID control buffers and early hardware integration!",
 
     cc_pdf_heading: "PCB Engineering Schematics & Gerber Files",
-    cc_pdf_sub: "Official CAD schematic diagrams, PCB layout board drawings, and manufacturing Gerber files designed between Aug–Dec 2025.",
+    cc_pdf_sub: "Official CAD schematic diagrams, PCB layout board drawings and manufacturing Gerber files designed between Aug–Dec 2025.",
     cc_pdf1_title: "PCB Circuit Schematic",
     cc_pdf1_sub: "ESP32 & ToF Circuitry",
     cc_pdf2_title: "PCB Layout Drawing",
@@ -177,7 +179,7 @@ export const translations = {
 
     cc_gallery_sub: "Click any image to view in full-screen zoom mode. Captions document the build evolution and Graz competition venue.",
     cc_fig1: "Figure 1: Modified 30€ Amazon Lamborghini RC car body and chassis.",
-    cc_fig2: "Figure 2: Interior electronics layout with ESP32, steering micro-servo, and custom PCB.",
+    cc_fig2: "Figure 2: Interior electronics layout with ESP32, steering micro-servo and custom PCB.",
     cc_fig3: "Figure 3: On-site hardware assembly and diagnostic session at the Graz competition venue.",
     cc_fig4: "Figure 4: Open chassis power & sensor wiring troubleshooting taken at the Graz competition.",
     cc_fig5: "Figure 5: 3D CAD layout of the custom microcontroller PCB designed in late 2025.",
@@ -189,12 +191,12 @@ export const translations = {
     proj2_desc: "Fully restored and repaired a broken, legacy 6DoF motion rig at HTL Salzburg by diagnosing electrical/mechanical faults and building custom C++ control software.",
     proj2_b1: "Diagnosed root cause EMI interference and mechanical faults; separated signal & power wiring and built a custom electrical distribution fuse box.",
     proj2_b2: "Wrote modular C++ control software and secured €2,000 monitors & €3.5k gaming PC sponsorships from department leadership.",
-    proj2_b3: "Featured as the main highlight at HTL Salzburg Open Door Day 2026; proved David's passion for avionics & embedded electronics.",
+    proj2_b3: "Featured as the main highlight at HTL Salzburg Open Door Day 2026.",
 
     // 6DoF Subpage Specific EN Translations
     sim_title: "6DoF Dynamic Motion Simulator Rig",
     sim_date: "May 2025 - Jan 2026 (HTL Open Door Day Highlight)",
-    sim_desc: "In 2nd grade at HTL Salzburg, we took on a non-functional legacy 6DoF Stewart platform motion rig. Through comprehensive electrical troubleshooting, physical cable rewiring, custom fuse box construction, and C++ software development, we fully restored the rig to live operation.",
+    sim_desc: "In 2nd grade at HTL Salzburg, we took on a non-functional legacy 6DoF Stewart platform motion rig. Through comprehensive electrical troubleshooting, physical cable rewiring, custom fuse box construction and C++ software development, we fully restored the rig to live operation.",
     sim_stat1_title: "Actuation Platform",
     sim_stat1_val: "6-Axis Stewart Platform",
     sim_stat2_title: "Sponsorship Acquired",
@@ -205,7 +207,8 @@ export const translations = {
     sim_stat4_val: "Kronen Zeitung & HTL IG",
 
     sim_time1_title: "May 2025: Discovery & Comprehensive Diagnosis",
-    sim_time1_desc: "During our 2nd grade at HTL Salzburg, we discovered a non-functional legacy 6DoF motion rig sitting forgotten in the workshop. We initiated a systemic tear-down, tracing every electrical connection, motor controller, and power line to diagnose root cause failures.",
+    sim_time1_title: "May 2025: Discovery & Comprehensive Diagnosis",
+    sim_time1_desc: "During our 2nd grade at HTL Salzburg, we discovered a non-functional legacy 6DoF motion rig sitting forgotten in the workshop. We initiated a systemic tear-down, tracing every electrical connection, motor controller and power line to diagnose root cause failures.",
     
     sim_time2_title: "Summer – Autumn 2025: Rewiring & Custom Fuse Box Construction",
     sim_time2_desc: "We solved severe signal jitter and random cut-outs by completely rewiring the platform. Teammate designed a custom power distribution fuse box while we physically isolated high-current AC/DC motor power cables away from delicate sensor & control telemetry lines.",
@@ -220,20 +223,20 @@ export const translations = {
     sim_sec1_desc: "The primary challenge was resolving severe electromagnetic interference (EMI) and power sags that caused the linear actuators to stall randomly. By completely separating high-voltage power feeds from micro-level signal cables and building a custom fuse box, we restored 100% electrical stability.",
 
     sim_sec2_title: "2. Custom C++ Control Engine & Kinematics",
-    sim_sec2_desc: "I developed the modular C++ telemetry reader and control engine. The software receives live telemetry physics data from racing simulators (Assetto Corsa / F1), calculates inverse kinematics for the 6 linear actuators, and outputs synchronized PWM/CAN position targets in real time.",
+    sim_sec2_desc: "I developed the modular C++ telemetry reader and control engine. The software receives live telemetry physics data from racing simulators (Assetto Corsa / F1), calculates inverse kinematics for the 6 linear actuators and outputs synchronized PWM/CAN position targets in real time.",
 
     sim_sec3_title: "Key Lessons & Impact on Career Focus",
-    sim_sec3_b1: "Hands-on mastery of EMC isolation, high-voltage wiring, and power distribution fuse boxes.",
+    sim_sec3_b1: "Hands-on mastery of EMC isolation, high-voltage wiring and power distribution fuse boxes.",
     sim_sec3_b2: "Practical C++ software engineering experience interfacing real-time telemetry to physical actuators.",
-    sim_sec3_b3: "This successful restoration solidified my determination to pursue Avionics, Flight Control Systems, and Embedded Hardware.",
+    sim_sec3_b3: "This successful restoration solidified my determination to pursue Avionics, Flight Control Systems and Embedded Hardware.",
 
-    sim_media_sub: "Real video of the 6DoF motion rig operating live during racing simulation, CAD 3D assembly models, and MATLAB kinematic simulation plots.",
+    sim_media_sub: "Real video of the 6DoF motion rig operating live during racing simulation, CAD 3D assembly models and MATLAB kinematic simulation plots.",
     sim_fig1: "Figure 1: CAD 3D concept model of the 6DoF Stewart platform motion chassis.",
     sim_fig2: "Figure 2: MATLAB kinematic simulation trajectory plot for actuator displacement.",
     sim_fig3: "Video 1: Live demonstration video of the restored 6DoF simulator operating during a high-speed racing run.",
 
     sim_press_heading: "Press Articles, Instagram Reel & GitHub Source Code",
-    sim_press_sub: "Featured in Kronen Zeitung, official HTL Salzburg Instagram media, and complete C++ source code on GitHub.",
+    sim_press_sub: "Featured in Kronen Zeitung, official HTL Salzburg Instagram media and complete C++ source code on GitHub.",
     sim_link_krone: "Kronen Zeitung Article",
     sim_link_insta: "HTL Instagram Reel Video",
     sim_link_repo: "GitHub Repository (C++ Code)",
@@ -249,13 +252,13 @@ export const translations = {
     // EDI Subpage Specific EN Translations
     edi_title: "OBXID Engine: High-Performance Data Gateway",
     edi_date: "Started April 2026 (Active Stealth Project)",
-    edi_desc: "Autonomous inbound gateway engineered in C++20 for enterprise IT perimeters. Filters, validates, and streams industrial EDIFACT data directly into structured, AI-ready JSON Lines (JSONL) format at +40 MB/s end-to-end speed in under 35 MB RAM.",
+    edi_desc: "Autonomous inbound gateway engineered in C++20 for enterprise IT perimeters. Filters, validates and streams industrial EDIFACT data directly into structured, AI-ready JSON Lines (JSONL) format at +40 MB/s end-to-end speed in under 35 MB RAM.",
     edi_tag1: "C++20 High-Throughput Engine",
     edi_tag2: "O(1) Bounded Memory",
     edi_tag3: "Air-Gapped Kubernetes / Helm",
     edi_stealth_badge: "STEALTH ENTERPRISE GATEWAY",
     edi_card_heading: "Inbound Perimeter Security & Real-Time AI Readiness",
-    edi_card_desc: "The OBXID Engine functions as an ultra-fast, self-contained inbound security shield directly in front of enterprise ERP and SAP boundaries. It intercepts raw EDIFACT streams, validates segment integrity, and converts data on the fly into AI-ready JSON Lines (JSONL).",
+    edi_card_desc: "The OBXID Engine functions as an ultra-fast, self-contained inbound security shield directly in front of enterprise ERP and SAP boundaries. It intercepts raw EDIFACT streams, validates segment integrity and converts data on the fly into AI-ready JSON Lines (JSONL).",
     edi_stat1_title: "End-to-End Speed",
     edi_stat1_val: "+40 MB/s per Core",
     edi_stat2_title: "RAM Footprint",
@@ -266,7 +269,7 @@ export const translations = {
     edi_stat4_val: "No-Code JSON Rules",
 
     edi_sec1_title: "1. System Architectural Role & Perimeter Protection",
-    edi_sec1_desc: "The OBXID Engine is designed as a high-speed, self-contained inbound security gateway positioned right before the enterprise IT boundary. It does not replace existing ERP or SAP environments; instead, it intercepts raw EDIFACT streams, catches corrupted segments or syntax mismatches in real time, and converts incoming data into clean, structured JSON Lines (JSONL) before downstream systems process it.",
+    edi_sec1_desc: "The OBXID Engine is designed as a high-speed, self-contained inbound security gateway positioned right before the enterprise IT boundary. It does not replace existing ERP or SAP environments; instead, it intercepts raw EDIFACT streams, catches corrupted segments or syntax mismatches in real time and converts incoming data into clean, structured JSON Lines (JSONL) before downstream systems process it.",
 
     edi_sec2_title: "2. Core Performance Parameters & Hardware Efficiency",
     edi_sec2_desc: "Built in modern C++20, the engine eliminates heavy monolithic converter overhead through maximum hardware efficiency:",
@@ -277,13 +280,13 @@ export const translations = {
 
     edi_sec3_title: "3. No-Code Mapping, Express Debugging & AI Readiness",
     edi_sec3_desc: "Transformation rules are managed dynamically through a single central configuration file without requiring recompilation:",
-    edi_sec3_b1: "<strong>No-Code JSON Rules:</strong> Business rules, compliance checks, and field assignments are stored as human-readable JSON.",
+    edi_sec3_b1: "<strong>No-Code JSON Rules:</strong> Business rules, compliance checks and field assignments are stored as human-readable JSON.",
     edi_sec3_b2: "<strong>Express-Debugging Diagnostics:</strong> Generates structured, machine-readable error logs on anomaly detection, eliminating manual string searches and saving hundreds of developer hours.",
-    edi_sec3_b3: "<strong>AI & RAG Pipeline Readiness:</strong> Native output in JSON Lines (JSONL) allows direct streaming into vector databases, LLM Retrieval-Augmented Generation (RAG) pipelines, and real-time supplier dashboards.",
+    edi_sec3_b3: "<strong>AI & RAG Pipeline Readiness:</strong> Native output in JSON Lines (JSONL) allows direct streaming into vector databases, LLM Retrieval-Augmented Generation (RAG) pipelines and real-time supplier dashboards.",
 
     edi_roadmap_title: "Project Status & Technological Roadmap",
     edi_rm1_title: "Phase 1 (Current) — Core Hardening & Verification",
-    edi_rm1_desc: "Focus on parser core hardening, zero-copy optimization, and building an automated test suite for regression-free performance.",
+    edi_rm1_desc: "Focus on parser core hardening, zero-copy optimization and building an automated test suite for regression-free performance.",
     edi_rm2_title: "Phase 2 — Enterprise Licensing & Kubernetes Orchestration",
     edi_rm2_desc: "Development of the enterprise licensing module and high-availability Air-Gapped Kubernetes cluster orchestration.",
     edi_rm3_title: "Phase 3 — Visual Drag-&-Drop Editor & EDIFACT Wiki",
@@ -318,14 +321,15 @@ export const translations = {
     vtol_stat4_val: "Austrian Armed Forces",
 
     vtol_time1_title: "June 2026: Project Inception & Team Alignment",
-    vtol_time1_desc: "Formed 2-person team for HTL Diploma Thesis (Diplomarbeit). David selected as team lead for avionics, software, SORA safety, GCS ground control station, and military partner contacts.",
+    vtol_time1_title: "June 2026: Project Inception & Team Alignment",
+    vtol_time1_desc: "Formed 2-person team for HTL Diploma Thesis (Diplomarbeit). David selected as team lead for avionics, software, SORA safety, GCS ground control station and military partner contacts.",
     vtol_time2_title: "July 2026: SORA SAIL II Certification Drafting",
     vtol_time2_desc: "Authored Technical Design Document (TDD) adhering to AustroControl SORA SAIL II guidelines for BVLOS operations in Alpine search & rescue terrain.",
     vtol_time3_title: "2026 - 2028: Development, ROS2 Swarm & Military Contact",
     vtol_time3_desc: "Developing decentralized ROS2 companion computer architecture on Nvidia Jetson towards 2028 graduation. In active talks with the Austrian Armed Forces (Österreichisches Bundesheer) for testing sites and sponsorship.",
 
     vtol_sec1_title: "1. System Division & Team Responsibilities",
-    vtol_sec1_desc: "Our team split responsibilities cleanly: my teammate focuses on carbon composite chassis mechanics, propulsion sizing, power distribution, and the 90° tilt mechanism. As team lead, I engineer all avionics, electronic redundancy, SORA safety compliance, ROS2 companion software, PID mixers, GCS ground control station, and military partner contacts.",
+    vtol_sec1_desc: "Our team split responsibilities cleanly: my teammate focuses on carbon composite chassis mechanics, propulsion sizing, power distribution and the 90° tilt mechanism. As team lead, I engineer all avionics, electronic redundancy, SORA safety compliance, ROS2 companion software, PID mixers, GCS ground control station and military partner contacts.",
 
     vtol_sec2_title: "2. Vehicle Specifications & Operational Profile",
     vtol_sec2_desc: "The Tri-Tilt-Rotor SAR VTOL drone is engineered for extreme Alpine conditions where traditional multirotors lack range and fixed-wing aircraft cannot land:",
@@ -337,9 +341,9 @@ export const translations = {
     vtol_sec3_desc: "Designed for harsh Alpine search & rescue operations, the drone carries a thermal IR camera streaming to an onboard AI vision pipeline executing on the Nvidia Jetson companion computer. When a missing person is recognized, real-time GPS coordinates are broadcast back to ground emergency rescue teams. To counter Electronic Warfare (EW) and GPS jamming in remote mountains, an optical flow camera algorithm maps terrain features to bound position drift within ±2m without satellite signal.",
 
     vtol_sec4_title: "4. SORA SAIL II Compliance & Military Partnership",
-    vtol_sec4_desc: "Operating Beyond Visual Line of Sight (BVLOS) in Austria requires strict adherence to AustroControl SORA SAIL II safety guidelines. Our Technical Design Document (TDD) outlines dual-redundant flight control units (Pixhawk FMU), fail-safe parachute recovery systems, and encrypted telecommunications links. We are currently in active talks with the Austrian Armed Forces (Österreichisches Bundesheer) regarding specialized flight testing grounds and tactical sponsorship.",
+    vtol_sec4_desc: "Operating Beyond Visual Line of Sight (BVLOS) in Austria requires strict adherence to AustroControl SORA SAIL II safety guidelines. Our Technical Design Document (TDD) outlines dual-redundant flight control units (Pixhawk FMU), fail-safe parachute recovery systems and encrypted telecommunications links. We are currently in active talks with the Austrian Armed Forces (Österreichisches Bundesheer) regarding specialized flight testing grounds and tactical sponsorship.",
 
-    vtol_media_sub: "CAD 3D concept renders, structural technical design document (TDD), and flight architecture schematics.",
+    vtol_media_sub: "CAD 3D concept renders, structural technical design document (TDD) and flight architecture schematics.",
     vtol_fig1: "Figure 1: CAD 3D Concept Render of the Tri-Tilt-Rotor SAR VTOL Drone.",
     vtol_pdf_title: "Technical Design Document (TDD)",
     vtol_pdf_sub: "AustroControl SORA SAIL II Draft Spec (PDF)",
@@ -368,8 +372,8 @@ export const translations = {
     pe_stat4_title: "Repository",
     pe_stat4_val: "GitHub Open Source",
     pe_intent_title: "Project Goal & Learning Purpose",
-    pe_intent_desc1: "This project is not meant to compete with commercial physics engines like PhysX or Bullet. Instead, it was built as a focused coding sandbox to learn C++ at a deeper level—exploring modern C++ features, memory layout, object lifetimes, and template mechanics while understanding physics calculation algorithms from first principles.",
-    pe_intent_desc2: "By practicing vector dynamics and basic rigid-body motion calculations in code, I built a solid foundation in C++ programming and spatial mathematics that directly supported my engineering work on microcontrollers, avionics, and autonomous systems.",
+    pe_intent_desc1: "This project is not meant to compete with commercial physics engines like PhysX or Bullet. Instead, it was built as a focused coding sandbox to learn C++ at a deeper level—exploring modern C++ features, memory layout, object lifetimes and template mechanics while understanding physics calculation algorithms from first principles.",
+    pe_intent_desc2: "By practicing vector dynamics and basic rigid-body motion calculations in code, I built a solid foundation in C++ programming and spatial mathematics that directly supported my engineering work on microcontrollers, avionics and autonomous systems.",
     pe_diag_lbl: "// 6DoF KINEMATICS & VECTOR SCHEMATIC",
     pe_repo_heading: "GitHub Source Code Repository",
     pe_repo_sub: "Explore the C++ physics engine repository on GitHub.",
@@ -378,7 +382,7 @@ export const translations = {
     // Project 6: Ground Effect Car
     proj6_title: "DIN A4 Ground Effect Autonomous Vehicle",
     proj6_date: "Started April 2026 (Comp 2027)",
-    proj6_desc: "Direct successor to Crazy Car started 8 months ahead! Features 13 kg ground-effect downforce cushion on 2 kg chassis, Bugatti-like acceleration, and STM32H7 MPC.",
+    proj6_desc: "Direct successor to Crazy Car started 8 months ahead! Features 13 kg ground-effect downforce cushion on 2 kg chassis, Bugatti-like acceleration and STM32H7 MPC.",
     proj6_b1: "Designed CAD chassis in SolidEdge achieving 1:6.5 power-to-weight ratio; secured €400 component sponsorship.",
     proj6_b2: "Developing Model Predictive Control (MPC) in MATLAB/Simulink deployed to STM32H7 for track position estimation.",
     proj6_b3: "Engineered optimal racing line solver with ToF sensor obstacle avoidance to secure victory at 2027 competition.",
@@ -389,7 +393,7 @@ export const translations = {
     ge_hero_tag3: "13 kg Downforce Air Cushion",
     ge_hero_tag4: "€400 Component Sponsorship",
     ge_title: "DIN A4 Ground Effect Autonomous Vehicle",
-    ge_desc: "Direct successor to Crazy Car started 8 months ahead! Features 13 kg ground-effect downforce cushion on a 2 kg chassis, Bugatti-like launch acceleration, and STM32H7 Model Predictive Control (MPC).",
+    ge_desc: "Direct successor to Crazy Car started 8 months ahead! Features 13 kg ground-effect downforce cushion on a 2 kg chassis, Bugatti-like launch acceleration and STM32H7 Model Predictive Control (MPC).",
     ge_stat1_title: "Downforce Cushion",
     ge_stat1_val: "13 kg Suction Seal",
     ge_stat2_title: "Power Ratio",
@@ -399,16 +403,16 @@ export const translations = {
     ge_stat4_title: "Control Hardware",
     ge_stat4_val: "STM32H7 @ 480 MHz",
     ge_time1_title: "April 2026: Concept Inception & Early Sponsorship",
-    ge_time1_desc: "Directly applying lessons from our Graz Crazy Car experience, we started the 2027 competition vehicle 8 months ahead. Pitching our technical concept secured €400 in component sponsorship for high-torque motors, sensors, and power electronics.",
+    ge_time1_desc: "Directly applying lessons from our Graz Crazy Car experience, we started the 2027 competition vehicle 8 months ahead. Pitching our technical concept secured €400 in component sponsorship for high-torque motors, sensors and power electronics.",
     ge_time2_title: "May – June 2026: SolidEdge 3D CAD & Ground-Effect Aerodynamics",
-    ge_time2_desc: "Engineered the complete CAD chassis and ground-effect skirt sealed layout in SolidEdge. Designed a vacuum suction fan generating 13 kg downforce cushion on a 2 kg vehicle mass, enabling extreme cornering G-forces without tire slippage.",
+    ge_time2_desc: "Engineered the complete CAD chassis and ground-effect skirt sealed layout in SolidEdge. Designed a vacuum suction fan generating 13 kg downforce cushion on a 2 kg vehicle mass enabling extreme cornering G-forces without tire slippage.",
     ge_time3_title: "July 2026 – Present: MATLAB/Simulink MPC & STM32H7 Integration",
     ge_time3_desc: "Developing Model Predictive Control (MPC) in MATLAB/Simulink deployed to an STM32H7 dual-core MCU @ 480 MHz. Time-of-Flight (ToF) sensors detect opponents dynamically to adjust racing lines and secure victory in 2027.",
     ge_sec1_title: "1. Aerodynamic Ground Cushion & Explosive Acceleration",
     ge_sec1_desc: "Because competition tracks feature technical, tight turns where acceleration is far more critical than raw top speed, we optimized the vehicle for explosive launch acceleration (capped at 18 km/h). An active ground-effect fan creates a 13 kg downward suction cushion against the track surface, preventing wheelspin and allowing maximum torque delivery.",
     ge_sec2_title: "2. Model Predictive Control (MPC) & ToF Opponent Avoidance",
     ge_sec2_desc: "Using MATLAB/Simulink code generation, a Model Predictive Controller runs on the STM32H7 microcontroller to estimate vehicle trajectory along the circuit. Integrated Time-of-Flight (ToF) distance sensors detect opponent vehicles in real time, calculating evasive racing line offsets while preserving optimal speed.",
-    ge_media_sub: "SolidEdge 3D CAD concept models, aerodynamic skirt layouts, and component packaging schematics.",
+    ge_media_sub: "SolidEdge 3D CAD concept models, aerodynamic skirt layouts and component packaging schematics.",
     ge_fig1: "Figure 1: 3D CAD Concept Model of the DIN A4 Ground Effect Autonomous Vehicle designed in SolidEdge.",
 
     // Action Links
@@ -552,7 +556,7 @@ export const translations = {
     proj1_date: "Aug 2025 - Feb 2026 (Wettbewerb Graz)",
     proj1_desc: "Unser allererstes echtes Ingenieurprojekt neben dem 6DoF Simulator. Wir kauften ein günstiges 30€ Amazon RC-Car, bauten es mit Mikrocontroller und Servo um und trainierten ein KI-Modell in Unity für autonomes Fahren. Ein wichtiges Experiment, um Grenzen zu testen, aus Fehlern zu lernen und bei zukünftigen Bewerben erfolgreich zu sein.",
     proj1_b1: "Training der KI in Unity ML-Agents (Aug-Dez 2025) mit Eingabe von Geschwindigkeit, IMU & 3 ToF-Sensoren zur direkten Motor- & Servosteuerung (ohne PID-Filter).",
-    proj1_b2: "Hardware-Probleme auf der Platine: Leiterbahnen zum IMU-Sensor wurden beim CAD-Routing vergessen, und hohe Motorströme störten die Sensorsignale.",
+    proj1_b2: "Hardware-Probleme auf der Platine: Leiterbahnen zum IMU-Sensor wurden beim CAD-Routing vergessen und hohe Motorströme störten die Sensorsignale.",
     proj1_b3: "Fertigstellung erst wenige Tage vor dem Bewerb in Graz (Feb 2026); trotz 2 Tagen intensiver Fehlersuche vor Ort reagierte das Auto nicht, was uns wertvolle Lektionen für Folgeprojekte lehrte.",
 
     // Crazy Car Subpage Specific DE Translations
@@ -566,7 +570,7 @@ export const translations = {
     cc_time1_desc: "Als Projektleiter habe ich unzählige Stunden in Unity ML-Agents verbracht, um die Reinforcement Learning Agenten zu programmieren und zu trainieren. Ich nutzte Curriculum Learning—zuerst auf einer einfachen Teststrecke, bevor es auf die echte Rennstrecke ging. Parallel dazu bauten wir das 30€ RC-Car um und entwarfen unsere Platine im CAD.",
 
     cc_time2_title: "Jan 2026 – Feb 2026: Verzögerter Aufbau & Entdeckte Hardwarefehler",
-    cc_time2_desc: "Unser größter Fehler war, zu lange mit der Fertigstellung des physischen Autos zu warten. Der Zusammenbau wurde erst wenige Tage vor dem Wettbewerb in Graz fertig. Letzte Prüfstandstests zeigten kritische Mängel: Beim PCB-Routing wurden die IMU-Leiterbahnen vergessen, und hohe Motorströme erzeugten EMV-Störungen.",
+    cc_time2_desc: "Unser größter Fehler war, zu lange mit der Fertigstellung des physischen Autos zu warten. Der Zusammenbau wurde erst wenige Tage vor dem Wettbewerb in Graz fertig. Letzte Prüfstandstests zeigten kritische Mängel: Beim PCB-Routing wurden die IMU-Leiterbahnen vergessen und hohe Motorströme erzeugten EMV-Störungen.",
 
     cc_time3_title: "Feb 2026: Wettbewerb in Graz & Fehlersuche vor Ort",
     cc_time3_desc: "Obwohl das Auto zu Hause nicht richtig funktionierte, fuhren wir entschlossen nach Graz. Vor Ort funktionierte nichts—das Fahrzeug reagierte nicht auf Steuerbefehle. Wir verbrachten 2 intensive Tage vor Ort mit der Fehlersuche an Stromleitungen und Signalen, konnten die Hardwarefehler aber nicht mehr rechtzeitig beheben. Dieser Misserfolg motivierte uns jedoch, unser Bodeneffekt-Fahrzeug 2027 ganze 8 Monate früher zu starten!",

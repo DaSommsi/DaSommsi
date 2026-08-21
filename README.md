@@ -18,9 +18,9 @@
 ## ⚡ About Me
 
 - 🎓 **Primary Role**: **Electrical Engineering Student** at the *Higher Technical Institute for Electrical Engineering Salzburg* (2023 – 2028).
-- 🛠️ **Secondary Role**: **Systems Engineer**, designing avionics systems, embedded firmware, electronics distribution, autonomous vehicles, and high-throughput software architecture.
+- 🛠️ **Secondary Role**: **Systems Engineer**, designing avionics systems, embedded firmware, electronics distribution, autonomous vehicles and high-throughput software architecture.
 - 📍 **Location**: Salzburg, Austria.
-- ⚡ **Core Competencies**: Embedded C/C++, STM32 Microcontrollers, Control Engineering, KiCad PCB Design, Power Flow Calculations (NEPlan), CAD (SolidEdge), Linux, and Autonomous AI Systems.
+- ⚡ **Core Competencies**: Embedded C/C++, STM32 Microcontrollers, Control Engineering, KiCad PCB Design, Power Flow Calculations (NEPlan), CAD (SolidEdge), Linux and Autonomous AI Systems.
 
 ---
 
@@ -28,12 +28,12 @@
 
 | Project | Domain / Highlights | Links |
 | :--- | :--- | :--- |
-| 🏁 **[6DoF Dynamic Motion Simulator Rig](projects/6dof-driving-sim.html)** | Restored non-functional HTL 6DoF Stewart platform motion rig. Solved EMI noise via physical signal/power cable isolation, designed a custom fuse box, programmed modular C++ control software, and secured **€5,500 in sponsorships**. Featured in Austria's *Kronen Zeitung* newspaper. | [Subpage View](projects/6dof-driving-sim.html) • [GitHub Repo](https://github.com/DaSommsi/6DoF_Fahrsimulator_HTBLuVA) • [Press Article](https://www.krone.at/4084686) |
-| ⚡ **[OBXID Engine: High-Performance Data Gateway](projects/edi-jsonl-parser.html)** | Autonomous inbound security gateway in C++20 for enterprise IT boundaries. Filters, validates, and streams industrial EDIFACT streams to AI-ready JSON Lines (JSONL) at **+40 MB/s per core** in under **35 MB RAM** ($O(1)$ memory). | [Subpage View](projects/edi-jsonl-parser.html) • *Stealth Project* |
+| 🏁 **[6DoF Dynamic Motion Simulator Rig](projects/6dof-driving-sim.html)** | Restored non-functional HTL 6DoF Stewart platform motion rig. Solved EMI noise via physical signal/power cable isolation, designed a custom fuse box, programmed modular C++ control software and secured **€5,500 in sponsorships**. Featured in Austria's *Kronen Zeitung* newspaper. | [Subpage View](projects/6dof-driving-sim.html) • [GitHub Repo](https://github.com/DaSommsi/6DoF_Fahrsimulator_HTBLuVA) • [Press Article](https://www.krone.at/4084686) |
+| ⚡ **[OBXID Engine: High-Performance Data Gateway](projects/edi-jsonl-parser.html)** | Autonomous inbound security gateway in C++20 for enterprise IT boundaries. Filters, validates and streams industrial EDIFACT streams to AI-ready JSON Lines (JSONL) at **+40 MB/s per core** in under **35 MB RAM** ($O(1)$ memory). | [Subpage View](projects/edi-jsonl-parser.html) • *Stealth Project* |
 | 🛸 **[Tri-Tilt-Rotor SAR VTOL Drone](projects/tri-tilt-vtol.html)** | HTL Diploma Thesis project. 3-rotor tilt-mechanism VTOL drone engineered for alpine Search & Rescue (SAR). Features thermal IR person detection and live GPS coordinate broadcasting to rescue teams. | [Subpage View](projects/tri-tilt-vtol.html) • [GitHub Repo](https://github.com/DaSommsi/vtol-drohne-diplomarbeit) |
 | 🧮 **[AeroPhysicsEngine: C++ Physics Sandbox](projects/cpp-physics-engine.html)** | Personal coding sandbox built in modern C++ to master C++ concepts at a deeper level and understand rigid-body physics mechanics and vector dynamics. | [Subpage View](projects/cpp-physics-engine.html) • [GitHub Repo](https://github.com/DaSommsi/AreoPhysicsEngine) |
-| 🏎️ **[Crazy Car: Autonomous AI/RL RC Car](projects/crazy-car.html)** | Rebuilt 30€ Amazon RC car with micro-servos, ESP32 microcontrollers, custom PCB, and reinforcement learning AI trained in Unity ML-Agents. Essential post-mortem on EMI noise, direct motor control, and Git discipline. | [Subpage View](projects/crazy-car.html) |
-| 🏎️ **[DIN A4 Ground Effect Autonomous Vehicle](projects/ground-effect-vehicle.html)** | 2027 competition vehicle started 8 months early. Features **13 kg ground-effect downforce cushion** on a 2 kg chassis, SolidEdge CAD layout (1:6.5 power-to-weight ratio), and Model Predictive Control (MPC) on STM32H7. | [Subpage View](projects/ground-effect-vehicle.html) |
+| 🏎️ **[Crazy Car: Autonomous AI/RL RC Car](projects/crazy-car.html)** | Rebuilt 30€ Amazon RC car with micro-servos, ESP32 microcontrollers, custom PCB and reinforcement learning AI trained in Unity ML-Agents. Essential post-mortem on EMI noise, direct motor control and Git discipline. | [Subpage View](projects/crazy-car.html) |
+| 🏎️ **[DIN A4 Ground Effect Autonomous Vehicle](projects/ground-effect-vehicle.html)** | 2027 competition vehicle started 8 months early. Features **13 kg ground-effect downforce cushion** on a 2 kg chassis, SolidEdge CAD layout (1:6.5 power-to-weight ratio) and Model Predictive Control (MPC) on STM32H7. | [Subpage View](projects/ground-effect-vehicle.html) |
 
 ---
 

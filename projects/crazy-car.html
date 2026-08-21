@@ -79,7 +79,7 @@
       </h1>
 
       <p class="text-base sm:text-lg text-zinc-300 font-mono leading-relaxed max-w-3xl" data-i18n="proj1_desc">
-        Our very first real engineering project besides the 6DoF simulator. We bought a cheap 30€ Amazon RC car, rebuilt it with a microcontroller and servo, and trained an AI model in Unity to drive autonomously. A vital experiment built to test boundaries, learn from failures, and succeed in future competitions.
+        Our very first real engineering project besides the 6DoF simulator. We bought a cheap 30€ Amazon RC car, rebuilt it with a microcontroller and servo and trained an AI model in Unity to drive autonomously. A vital experiment built to test boundaries, learn from failures and succeed in future competitions.
       </p>
     </div>
 
@@ -120,7 +120,7 @@
         <div class="space-y-1.5">
           <span class="text-amber-300 font-bold text-base sm:text-lg block" data-i18n="cc_time2_title">Jan 2026 – Feb 2026: Delayed Hardware Assembly & Uncovered Problems</span>
           <p class="text-zinc-300 font-sans leading-relaxed" data-i18n="cc_time2_desc">
-            The main mistake was waiting too long to finish the physical build. The car was assembled only a few days before the Graz competition. Last-minute bench testing revealed critical issues: PCB trace routing errors omitted the IMU sensor connection, and high motor current draw generated EMI noise that corrupted sensor signals.
+            The main mistake was waiting too long to finish the physical build. The car was assembled only a few days before the Graz competition. Last-minute bench testing revealed critical issues: PCB trace routing errors omitted the IMU sensor connection and high motor current draw generated EMI noise that corrupted sensor signals.
           </p>
         </div>
         <div class="space-y-1.5">
@@ -139,7 +139,7 @@
       <div class="space-y-3 bg-zinc-950/80 p-6 sm:p-8 rounded-3xl border border-white/10">
         <h2 class="text-2xl sm:text-3xl font-bold font-heading text-foreground" data-i18n="cc_prob1_title">1. Direct AI End-to-End Motor Control (No PID Buffer)</h2>
         <p data-i18n="cc_prob1_desc" class="text-zinc-300">
-          In our initial design, the trained neural network directly controlled the motor speed percentage and steering servo angle based on velocity, IMU values, and 3 Time-of-Flight (ToF) distance sensors. There was no PID controller or safety filter in between. While this end-to-end approach worked seamlessly in the Unity simulation, real-world motor latency and unbuffered sensor spikes caused erratic responses on the physical track.
+          In our initial design, the trained neural network directly controlled the motor speed percentage and steering servo angle based on velocity, IMU values and 3 Time-of-Flight (ToF) distance sensors. There was no PID controller or safety filter in between. While this end-to-end approach worked seamlessly in the Unity simulation, real-world motor latency and unbuffered sensor spikes caused erratic responses on the physical track.
         </p>
       </div>
 
@@ -155,7 +155,7 @@
       <div class="space-y-3 border-l-4 border-rose-500/80 pl-6 py-4 bg-rose-950/20 rounded-r-3xl border-y border-r border-rose-500/20 font-mono text-sm sm:text-base">
         <h3 class="text-base sm:text-lg font-bold text-rose-300" data-i18n="cc_prob3_title">Why Version Control (Git) Matters & Key Takeaways</h3>
         <p class="text-zinc-200 leading-relaxed font-sans" data-i18n="cc_prob3_desc">
-          Stupidly, we didn't use Git for source control on this project. When code edits were made late at night before Graz, tracking working states became impossible. We learned these lessons the hard way: all future projects now enforce strict Git commits, decoupled power isolation, PID control buffers, and early hardware integration!
+          Stupidly, we didn't use Git for source control on this project. When code edits were made late at night before Graz, tracking working states became impossible. We learned these lessons the hard way: all future projects now enforce strict Git commits, decoupled power isolation, PID control buffers and early hardware integration!
         </p>
       </div>
 
@@ -164,7 +164,7 @@
     <!-- HARDWARE DOCUMENTATION & PDF DOWNLOADS -->
     <div class="space-y-6 border-t border-white/10 pt-10 font-mono text-xs sm:text-sm">
       <h2 class="text-xl sm:text-2xl font-bold font-heading text-foreground" data-i18n="cc_pdf_heading">PCB Engineering Schematics & Gerber Files</h2>
-      <p class="text-zinc-300 text-sm sm:text-base font-sans" data-i18n="cc_pdf_sub">Official CAD schematic diagrams, PCB layout board drawings, and manufacturing Gerber files designed between Aug–Dec 2025.</p>
+      <p class="text-zinc-300 text-sm sm:text-base font-sans" data-i18n="cc_pdf_sub">Official CAD schematic diagrams, PCB layout board drawings and manufacturing Gerber files designed between Aug–Dec 2025.</p>
       
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
         <!-- PDF 1: PCB Schematic -->
