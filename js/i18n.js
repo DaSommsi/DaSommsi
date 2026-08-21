@@ -435,7 +435,7 @@ export const translations = {
     hero_greeting: "Hallo, ich bin",
     hero_name: "David Sommerer.",
     hero_role_prefix: "Ich bin ein",
-    hero_role: "Elektrotechnik-Schüler & Systemtechnik-Engineer",
+    hero_role: "Elektrotechnik-Schüler & Systemtechnik-Ingenieur",
     hero_specializing: "spezialisiert auf",
     hero_focus: "Avionik, Embedded Systeme, Elektronik & Software Engineering.",
     hero_subtitle: "Schüler an der HTL Elektrotechnik Salzburg. Entwicklung von Avioniksystemen, Embedded Firmware, Elektronik, autonomen Fahrzeugen und Software-Architektur.",
@@ -460,7 +460,7 @@ export const translations = {
     // Terminal Text
     term_title: "david@htl-salzburg:~/systems",
     term_cmd_whoami: "whoami",
-    term_whoami_desc: "17-jähriger Elektrotechnik-Schüler & Systemtechnik-Engineer an der HTL Elektrotechnik Salzburg spezialisiert auf Avionik, Embedded Firmware, Elektronikplanung und Software Engineering.",
+    term_whoami_desc: "17-jähriger Elektrotechnik-Schüler & Systemtechnik-Ingenieur an der HTL Elektrotechnik Salzburg spezialisiert auf Avionik, Embedded Firmware, Elektronikplanung und Software Engineering.",
     term_cmd_grep: 'grep -r "expertise" /var/log/systems.log',
     term_expertise: "Avionik · Embedded C/C++ · Elektronik · Software Engineering",
     term_cmd_conf: "cat /etc/tech-ecosystem.conf",
